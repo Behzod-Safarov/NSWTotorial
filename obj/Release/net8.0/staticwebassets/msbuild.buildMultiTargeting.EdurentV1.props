@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EdurentV1.props" />
+</Project>

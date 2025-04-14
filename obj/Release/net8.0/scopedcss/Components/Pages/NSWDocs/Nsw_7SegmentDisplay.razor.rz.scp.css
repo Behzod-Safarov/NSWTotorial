@@ -1,0 +1,50 @@
+
+.container[b-zgidbquiru] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-zgidbquiru] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-zgidbquiru] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-zgidbquiru] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-zgidbquiru],
+    .table td[b-zgidbquiru] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-zgidbquiru] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-zgidbquiru] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-zgidbquiru] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-zgidbquiru] {
+        font-size: 1rem;
+    }
+}
