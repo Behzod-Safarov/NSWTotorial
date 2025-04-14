@@ -9,7 +9,7 @@
     <!-- Google Fonts (Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Ensure body has no default margin to avoid positioning issues */
+        /* Reset body margin */
         body {
             margin: 0;
         }
@@ -31,7 +31,7 @@
         }
 
         .sidebar.collapsed {
-            transform: translateX(-100%); /* Fully hide sidebar */
+            transform: translateX(-100%);
         }
 
         .sidebar-content {
@@ -50,13 +50,13 @@
         .toggle-btn {
             position: fixed;
             top: 50%;
-            left: 280px; /* Aligns with sidebar edge when open */
+            left: 280px; /* Open state */
             transform: translateY(-50%);
             width: 44px;
             height: 44px;
             background: #1a73e8;
             color: #fff;
-            border: 2px solid #fff; /* Added for visibility */
+            border: 2px solid #fff;
             border-radius: 50%;
             cursor: pointer;
             font-size: 1.1rem;
@@ -64,12 +64,13 @@
             align-items: center;
             justify-content: center;
             transition: left 0.3s ease, background 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            z-index: 2000; /* Higher z-index to ensure visibility */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
         }
 
-        .sidebar.collapsed .toggle-btn {
-            left: 0; /* Always at screen edge when collapsed */
+        .sidebar-collapsed {
+            left: 0 !important; /* Collapsed state */
+            background: #ff4500; /* Debug: bright color to confirm visibility */
         }
 
         .toggle-btn:hover,
@@ -185,17 +186,16 @@
                 left: 240px;
             }
 
-            .sidebar.collapsed .toggle-btn {
-                left: 0;
+            .sidebar-collapsed {
+                left: 0 !important;
+                background: #ff4500; /* Debug: bright color */
             }
         }
     </style>
 </head>
 <body>
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar" aria-label="Sidebar navigation">
-        <button class="toggle-btn" onclick="toggleSidebar()" id="toggleBtn" aria-label="Toggle sidebar">
-            <span class="toggle-icon">◄</span>
-        </button>
         <div class="sidebar-content">
             <div class="sidebar-header">
                 <span>NSWblock Qo'llanma</span>
@@ -242,6 +242,10 @@
             </nav>
         </div>
     </div>
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleSidebar()" id="toggleBtn" aria-label="Toggle sidebar">
+        <span class="toggle-icon">◄</span>
+    </button>
 
     <script>
         function toggleSidebar() {
@@ -250,9 +254,15 @@
             const toggleIcon = toggleBtn.querySelector(".toggle-icon");
 
             sidebar.classList.toggle("collapsed");
+            toggleBtn.classList.toggle("sidebar-collapsed");
             const isCollapsed = sidebar.classList.contains("collapsed");
             toggleBtn.setAttribute("aria-expanded", !isCollapsed);
             toggleIcon.textContent = isCollapsed ? "►" : "◄";
+
+            // Debug: Log class state
+            console.log("Sidebar collapsed:", isCollapsed);
+            console.log("Button classes:", toggleBtn.className);
+            console.log("Button left style:", toggleBtn.style.left);
         }
 
         function toggleCategory(listId) {

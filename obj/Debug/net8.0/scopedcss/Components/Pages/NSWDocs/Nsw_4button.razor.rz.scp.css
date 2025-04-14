@@ -1,0 +1,120 @@
+.nsw-4button-page[b-ues3dqmfeq] {
+    font-family: 'Arial', sans-serif;
+    margin-top: 80px;
+}
+
+.hero-section[b-ues3dqmfeq] {
+    padding: 80px 0;
+    background: url('images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+    .hero-section[b-ues3dqmfeq]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    .hero-section h1[b-ues3dqmfeq] {
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+    .hero-section p.lead[b-ues3dqmfeq] {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+.features .feature[b-ues3dqmfeq] {
+    padding: 20px;
+}
+
+.features .icon[b-ues3dqmfeq] {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.about-us img[b-ues3dqmfeq] {
+    margin-bottom: 20px;
+}
+
+.applications ul[b-ues3dqmfeq] {
+    padding-left: 0;
+    list-style: none;
+}
+
+.applications li[b-ues3dqmfeq] {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.applications i[b-ues3dqmfeq] {
+    color: #007bff;
+    margin-right: 8px;
+}
+
+.setup h5[b-ues3dqmfeq] {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.setup ol[b-ues3dqmfeq] {
+    padding-left: 20px;
+}
+
+.setup pre[b-ues3dqmfeq] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action[b-ues3dqmfeq] {
+    background-color: #007bff;
+    color: white;
+    padding: 2.5rem 1rem;
+}
+
+    .call-to-action h2[b-ues3dqmfeq] {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .call-to-action p[b-ues3dqmfeq] {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+@media (max-width: 768px) {
+    .hero-section[b-ues3dqmfeq] {
+        padding: 50px 0;
+    }
+
+        .hero-section h1[b-ues3dqmfeq] {
+            font-size: 2.5rem;
+        }
+
+        .hero-section p.lead[b-ues3dqmfeq] {
+            font-size: 1rem;
+        }
+
+    .features .icon[b-ues3dqmfeq] {
+        font-size: 2rem;
+    }
+
+    .call-to-action h2[b-ues3dqmfeq] {
+        font-size: 1.5rem;
+    }
+
+    .call-to-action p[b-ues3dqmfeq] {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,1868 @@
+/* _content/EdurentV1/Components/Layout/MainLayout.razor.rz.scp.css */
+/*.page {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}*/
+
+/* Container layout */
+.article[b-u6xw4346bj]{
+    padding: 0;
+}
+.page[b-u6xw4346bj] {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ekranning to'liq balandligi */
+    margin: 0;
+}
+
+.navmenu[b-u6xw4346bj] {
+    background: linear-gradient(90deg, #11cb84 0%, #2575FC 100%);
+    color: white;
+    position: fixed; /* Ensure it stays fixed on top */
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Very high value to stay above all elements */
+    width: 100%;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Navbar ichidagi elementlarni joylash */
+.navmenu-content[b-u6xw4346bj] {
+    display: flex;
+    align-items: center; /* O'rtada joylashuv */    
+    width: 100%;
+    padding: 0 20px; /* Ikkala tomondan bo'sh joy qo'shadi */
+}
+
+/* Navbar tugmalarini chapdan joylashtirish */
+nav ul[b-u6xw4346bj] {
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* Tugmalarni chapdan joylash */
+    padding-left: 20px; /* Chap tomondan bo'sh joy */
+    list-style: none; /* Ro'yxat belgisini olib tashlash */
+    margin: 0;
+}
+
+nav ul .left-buttons[b-u6xw4346bj] {
+    display: flex;
+    gap: 10px; /* Tugmalar orasidagi masofa */
+}
+
+nav ul .right-buttons[b-u6xw4346bj] {
+    display: flex;
+    gap: 10px;
+    right: 0;
+    position: fixed;
+}
+
+/* Nav tugmalari */
+nav ul li a[b-u6xw4346bj] {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+/* Hamburger menyu */
+.hamburger-menu[b-u6xw4346bj] {
+    display: none; /* Mobilga o‘tguncha ko‘rinmaydi */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto; /* Hamburger tugmasini o'ng tomonga itaradi */
+}
+
+/* Hamburger chiziqlarining ko'rinishi */
+.hamburger-menu span[b-u6xw4346bj] {
+    background: white; /* Chiziqlarning rangi */
+    height: 2px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Mobil ekranlar uchun */
+@media (max-width: 768px) {
+    .auth-buttons[b-u6xw4346bj] {
+        display: none; /* Mobilda login va register tugmalarini yashiradi */
+    }
+
+    /* Nav ro'yxatini yashiradi va ochilishi uchun tayyorlaydi */
+    nav ul[b-u6xw4346bj] {
+        display: none; /* Yashirin holat */
+        flex-direction: column; /* Vertikal joylashuv */
+        position: absolute; /* Navbar konteyneridan chiqib turgan joylashuv */
+        background-color: #2575FC; /* Fon rangi */
+        top: 100%; /* Navbar ostida joylashadi */
+        right: 0; /* O‘ng tomonga yopishadi */
+        padding: 0;
+        margin: 0;
+        border-radius: 5px;
+    }
+    
+    nav ul .left-buttons[b-u6xw4346bj] {
+        display: block;
+    }
+
+    nav ul .right-buttons[b-u6xw4346bj] {
+        display: block;
+        position: sticky;
+    }
+
+    /* Ro'yxatdagi tugmalar orasidagi bo'shliqni kamaytirish */
+    nav ul li[b-u6xw4346bj] {
+        width: auto; /* Tugmalar uzunligini matn uzunligiga moslaydi */
+        text-align: center; /* Matnni o'rtaga qo'yish */
+        display: flex; /* Flex konteynerini faollashtiradi */
+        justify-content: center; /* Gorizontal o'rtalash */
+        align-items: center; /* Vertikal o'rtalash */
+        background: transparent;
+        color: white; /* Matn rangi */
+        font-size: 16px; /* Matn kattaligi */
+        font-family: 'Poppins', sans-serif; /* Matn shrift turi */
+    }
+    
+
+    /* Linklar to'liq uzunlikda bo'ladi */
+    nav ul li a[b-u6xw4346bj] {
+        display: block; /* Tugmalarni vertikal joylashtiradi */
+        width: 100%; /* Link uzunligi butun element bo'ylab qoplaydi */
+    }
+
+    .hamburger-menu[b-u6xw4346bj] {
+        display: flex; /* Mobilda ko‘rinadi */
+    }
+    /* Hamburger tugmasi faollashganda */
+    .hamburger-menu.active span:nth-child(1)[b-u6xw4346bj] {
+        transform: rotate(45deg); /* Birinchi chiziqni aylantiradi */
+        position: relative;
+        top: 8px;
+    }
+
+    .hamburger-menu.active span:nth-child(2)[b-u6xw4346bj] {
+        opacity: 0; /* Ikkinchi chiziqni yashiradi */
+    }
+
+    .hamburger-menu.active span:nth-child(3)[b-u6xw4346bj] {
+        transform: rotate(-45deg); /* Uchinchi chiziqni aylantiradi */
+        position: relative;
+        top: -8px;
+    }
+
+    /* Menyu ochilganida */
+    .hamburger-menu.active + nav ul[b-u6xw4346bj] {
+        display: flex; /* Menyu ko'rsatiladi */
+    }
+}
+
+
+.auth-buttons[b-u6xw4346bj] {
+    position: absolute; /* Place the buttons in a fixed position */
+    top: 10px; /* Adjust distance from the top */
+    left: 20px; /* Adjust distance from the right */
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons .btn[b-u6xw4346bj] {
+    padding: 10px 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.auth-buttons .btn:hover[b-u6xw4346bj] {
+    background-color: white;
+    color: #20c7d2;
+}
+
+
+/* Logo uchun o'lchamlar */
+.logo[b-u6xw4346bj] {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* Kompyuter uchun: Tugmalar gorizontal bo‘lib turadi */
+@media (min-width: 769px) {
+    .hamburger-menu[b-u6xw4346bj] {
+        display: none; /* Kompyuterda hamburger menyu ko‘rinmasin */
+    }
+
+    nav ul[b-u6xw4346bj] {
+        display: flex; /* Gorizontal joylashuv */
+        gap: 20px; /* Tugmalar orasidagi bo‘shliq */
+    }
+
+    nav ul li a[b-u6xw4346bj] {
+        font-size: 18px;
+    }
+
+    .auth-buttons[b-u6xw4346bj] {
+        display: flex;
+    }
+}
+
+
+/* Main content - Body */
+main[b-u6xw4346bj] {
+    flex: 1; /* Bo'sh joyni to'ldiradi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* Footer - pastda yopishib turadi */
+.footer[b-u6xw4346bj] {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.top-row[b-u6xw4346bj] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-u6xw4346bj]  a, .top-row[b-u6xw4346bj]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-u6xw4346bj]  a:hover, .top-row[b-u6xw4346bj]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-u6xw4346bj]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row[b-u6xw4346bj] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-u6xw4346bj]  a, .top-row[b-u6xw4346bj]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-u6xw4346bj] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-u6xw4346bj] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-u6xw4346bj] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-u6xw4346bj]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-u6xw4346bj], article[b-u6xw4346bj] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+#blazor-error-ui[b-u6xw4346bj] {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-u6xw4346bj] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_4button.razor.rz.scp.css */
+.nsw-4button-page[b-ues3dqmfeq] {
+    font-family: 'Arial', sans-serif;
+    margin-top: 80px;
+}
+
+.hero-section[b-ues3dqmfeq] {
+    padding: 80px 0;
+    background: url('images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+    .hero-section[b-ues3dqmfeq]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    .hero-section h1[b-ues3dqmfeq] {
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+    .hero-section p.lead[b-ues3dqmfeq] {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+.features .feature[b-ues3dqmfeq] {
+    padding: 20px;
+}
+
+.features .icon[b-ues3dqmfeq] {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.about-us img[b-ues3dqmfeq] {
+    margin-bottom: 20px;
+}
+
+.applications ul[b-ues3dqmfeq] {
+    padding-left: 0;
+    list-style: none;
+}
+
+.applications li[b-ues3dqmfeq] {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.applications i[b-ues3dqmfeq] {
+    color: #007bff;
+    margin-right: 8px;
+}
+
+.setup h5[b-ues3dqmfeq] {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.setup ol[b-ues3dqmfeq] {
+    padding-left: 20px;
+}
+
+.setup pre[b-ues3dqmfeq] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action[b-ues3dqmfeq] {
+    background-color: #007bff;
+    color: white;
+    padding: 2.5rem 1rem;
+}
+
+    .call-to-action h2[b-ues3dqmfeq] {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .call-to-action p[b-ues3dqmfeq] {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+@media (max-width: 768px) {
+    .hero-section[b-ues3dqmfeq] {
+        padding: 50px 0;
+    }
+
+        .hero-section h1[b-ues3dqmfeq] {
+            font-size: 2.5rem;
+        }
+
+        .hero-section p.lead[b-ues3dqmfeq] {
+            font-size: 1rem;
+        }
+
+    .features .icon[b-ues3dqmfeq] {
+        font-size: 2rem;
+    }
+
+    .call-to-action h2[b-ues3dqmfeq] {
+        font-size: 1.5rem;
+    }
+
+    .call-to-action p[b-ues3dqmfeq] {
+        font-size: 1rem;
+    }
+}
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_7SegmentDisplay.razor.rz.scp.css */
+
+.container[b-zgidbquiru] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-zgidbquiru] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-zgidbquiru] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-zgidbquiru] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-zgidbquiru],
+    .table td[b-zgidbquiru] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-zgidbquiru] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-zgidbquiru] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-zgidbquiru] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-zgidbquiru] {
+        font-size: 1rem;
+    }
+}
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_Bloetooth.razor.rz.scp.css */
+.container[b-5t6trnjfad] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-5t6trnjfad] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-5t6trnjfad] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-5t6trnjfad] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-5t6trnjfad],
+    .table td[b-5t6trnjfad] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-5t6trnjfad] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-5t6trnjfad] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-5t6trnjfad] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-5t6trnjfad] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_Buzzer.razor.rz.scp.css */
+
+.container[b-mmejd1s06s] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-mmejd1s06s] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-mmejd1s06s] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-mmejd1s06s] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-mmejd1s06s],
+    .table td[b-mmejd1s06s] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-mmejd1s06s] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-mmejd1s06s] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-mmejd1s06s] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-mmejd1s06s] {
+        font-size: 1rem;
+    }
+}
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_ColorSensor.razor.rz.scp.css */
+
+.container[b-mkaiyr70sn] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-mkaiyr70sn] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-mkaiyr70sn] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-mkaiyr70sn] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-mkaiyr70sn],
+    .table td[b-mkaiyr70sn] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-mkaiyr70sn] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-mkaiyr70sn] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-mkaiyr70sn] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-mkaiyr70sn] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_Compass.razor.rz.scp.css */
+
+.container[b-1cg647gexz] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-1cg647gexz] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-1cg647gexz] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-1cg647gexz] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-1cg647gexz],
+    .table td[b-1cg647gexz] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-1cg647gexz] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-1cg647gexz] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-1cg647gexz] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-1cg647gexz] {
+        font-size: 1rem;
+    }
+}
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_DcMotor.razor.rz.scp.css */
+.container[b-e3dzrqkda8] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-e3dzrqkda8] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-e3dzrqkda8] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-e3dzrqkda8] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-e3dzrqkda8],
+    .table td[b-e3dzrqkda8] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-e3dzrqkda8] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-e3dzrqkda8] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-e3dzrqkda8] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-e3dzrqkda8] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_FlameSensor.razor.rz.scp.css */
+.container[b-awqfvzse1k] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-awqfvzse1k] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-awqfvzse1k] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-awqfvzse1k] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-awqfvzse1k],
+    .table td[b-awqfvzse1k] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-awqfvzse1k] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-awqfvzse1k] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-awqfvzse1k] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-awqfvzse1k] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_GasSensor.razor.rz.scp.css */
+.container[b-hbii47joyu] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-hbii47joyu] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-hbii47joyu] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-hbii47joyu] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-hbii47joyu],
+    .table td[b-hbii47joyu] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-hbii47joyu] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-hbii47joyu] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-hbii47joyu] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-hbii47joyu] {
+        font-size: 1rem;
+    }
+}
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_Gyro.razor.rz.scp.css */
+.container[b-30s1a6zo2o] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-30s1a6zo2o] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-30s1a6zo2o] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-30s1a6zo2o] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-30s1a6zo2o],
+    .table td[b-30s1a6zo2o] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-30s1a6zo2o] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-30s1a6zo2o] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-30s1a6zo2o] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-30s1a6zo2o] {
+        font-size: 1rem;
+    }
+}
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_HumitureSensor.razor.rz.scp.css */
+.container[b-qd2yyevm0c] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-qd2yyevm0c] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-qd2yyevm0c] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-qd2yyevm0c] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-qd2yyevm0c],
+    .table td[b-qd2yyevm0c] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-qd2yyevm0c] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-qd2yyevm0c] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-qd2yyevm0c] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-qd2yyevm0c] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_I2ScanSensor.razor.rz.scp.css */
+.container[b-ly47u9u61x] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-ly47u9u61x] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-ly47u9u61x] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-ly47u9u61x] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-ly47u9u61x],
+    .table td[b-ly47u9u61x] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-ly47u9u61x] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-ly47u9u61x] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-ly47u9u61x] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-ly47u9u61x] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_InfraredReceiver.razor.rz.scp.css */
+.container[b-qc7mvyge3a] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-qc7mvyge3a] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-qc7mvyge3a] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-qc7mvyge3a] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-qc7mvyge3a],
+    .table td[b-qc7mvyge3a] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-qc7mvyge3a] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-qc7mvyge3a] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-qc7mvyge3a] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-qc7mvyge3a] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_Joystick.razor.rz.scp.css */
+.container[b-7wyqcv0v9c] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-7wyqcv0v9c] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-7wyqcv0v9c] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-7wyqcv0v9c] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-7wyqcv0v9c],
+    .table td[b-7wyqcv0v9c] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-7wyqcv0v9c] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-7wyqcv0v9c] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-7wyqcv0v9c] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-7wyqcv0v9c] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_LedMatrix.razor.rz.scp.css */
+.container[b-lwxwotpyo6] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-lwxwotpyo6] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-lwxwotpyo6] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-lwxwotpyo6] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-lwxwotpyo6],
+    .table td[b-lwxwotpyo6] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-lwxwotpyo6] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-lwxwotpyo6] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-lwxwotpyo6] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-lwxwotpyo6] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_LightSensor.razor.rz.scp.css */
+.container[b-p7zx5aomak] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-p7zx5aomak] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-p7zx5aomak] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-p7zx5aomak] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-p7zx5aomak],
+    .table td[b-p7zx5aomak] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-p7zx5aomak] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-p7zx5aomak] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-p7zx5aomak] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-p7zx5aomak] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_LimitSwitch.razor.rz.scp.css */
+.container[b-xzxw311g4o] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-xzxw311g4o] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-xzxw311g4o] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-xzxw311g4o] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-xzxw311g4o],
+    .table td[b-xzxw311g4o] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-xzxw311g4o] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-xzxw311g4o] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-xzxw311g4o] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-xzxw311g4o] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_LineFollower.razor.rz.scp.css */
+.container[b-b0htn6ppzb] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-b0htn6ppzb] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-b0htn6ppzb] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-b0htn6ppzb] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-b0htn6ppzb],
+    .table td[b-b0htn6ppzb] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-b0htn6ppzb] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-b0htn6ppzb] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-b0htn6ppzb] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-b0htn6ppzb] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_PIRMotion.razor.rz.scp.css */
+.container[b-6z847oz0i2] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-6z847oz0i2] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-6z847oz0i2] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-6z847oz0i2] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-6z847oz0i2],
+    .table td[b-6z847oz0i2] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-6z847oz0i2] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-6z847oz0i2] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-6z847oz0i2] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-6z847oz0i2] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_Pm25Sensor.razor.rz.scp.css */
+.container[b-i6pystbk0v] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-i6pystbk0v] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-i6pystbk0v] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-i6pystbk0v] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-i6pystbk0v],
+    .table td[b-i6pystbk0v] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-i6pystbk0v] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6.
+    }
+
+    .table tbody + tbody[b-i6pystbk0v] {
+        border-top: 2px solid #dee2e6.
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-i6pystbk0v] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-i6pystbk0v] {
+        font-size: 1rem.
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_Potentiometer.razor.rz.scp.css */
+.container[b-z4n1eub3kg] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-z4n1eub3kg] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-z4n1eub3kg] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-z4n1eub3kg] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-z4n1eub3kg],
+    .table td[b-z4n1eub3kg] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-z4n1eub3kg] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-z4n1eub3kg] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-z4n1eub3kg] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-z4n1eub3kg] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_PressureSensor.razor.rz.scp.css */
+.container[b-k2jhocu47c] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-k2jhocu47c] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-k2jhocu47c] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-k2jhocu47c] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-k2jhocu47c],
+    .table td[b-k2jhocu47c] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-k2jhocu47c] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-k2jhocu47c] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-k2jhocu47c] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-k2jhocu47c] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_PS2.razor.rz.scp.css */
+.container[b-arn0o7hj39] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-arn0o7hj39] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-arn0o7hj39] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-arn0o7hj39] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-arn0o7hj39],
+    .table td[b-arn0o7hj39] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-arn0o7hj39] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-arn0o7hj39] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-arn0o7hj39] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-arn0o7hj39] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_RGBLed.razor.rz.scp.css */
+.container[b-d6tfim5f48] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-d6tfim5f48] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-d6tfim5f48] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-d6tfim5f48] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-d6tfim5f48],
+    .table td[b-d6tfim5f48] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-d6tfim5f48] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-d6tfim5f48] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-d6tfim5f48] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-d6tfim5f48] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_RJ25Adapter.razor.rz.scp.css */
+.container[b-iaeq1zp8d7] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-iaeq1zp8d7] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-iaeq1zp8d7] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-iaeq1zp8d7] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-iaeq1zp8d7],
+    .table td[b-iaeq1zp8d7] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-iaeq1zp8d7] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-iaeq1zp8d7] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-iaeq1zp8d7] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-iaeq1zp8d7] {
+        font-size: 1rem;
+    }
+}
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_Servo.razor.rz.scp.css */
+
+.container[b-y0b34d3upr] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-y0b34d3upr] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-y0b34d3upr] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-y0b34d3upr] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-y0b34d3upr],
+    .table td[b-y0b34d3upr] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-y0b34d3upr] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-y0b34d3upr] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-y0b34d3upr] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-y0b34d3upr] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_Shutter.razor.rz.scp.css */
+.container[b-ouc2icwzl8] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-ouc2icwzl8] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-ouc2icwzl8] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-ouc2icwzl8] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-ouc2icwzl8],
+    .table td[b-ouc2icwzl8] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-ouc2icwzl8] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-ouc2icwzl8] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-ouc2icwzl8] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-ouc2icwzl8] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_SmartServo.razor.rz.scp.css */
+.container[b-vxnzp0p706] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-vxnzp0p706] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-vxnzp0p706] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-vxnzp0p706] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-vxnzp0p706],
+    .table td[b-vxnzp0p706] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-vxnzp0p706] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-vxnzp0p706] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-vxnzp0p706] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-vxnzp0p706] {
+        font-size: 1rem;
+    }
+}
+
+/* _content/EdurentV1/Components/Pages/NSWDocs/Nsw_SoundSensor.razor.rz.scp.css */
+.container[b-db9qrg3xe9] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-db9qrg3xe9] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-db9qrg3xe9] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-db9qrg3xe9] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-db9qrg3xe9],
+    .table td[b-db9qrg3xe9] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-db9qrg3xe9] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-db9qrg3xe9] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-db9qrg3xe9] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-db9qrg3xe9] {
+        font-size: 1rem;
+    }
+}
+

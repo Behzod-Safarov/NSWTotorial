@@ -1,0 +1,50 @@
+.container[b-k2jhocu47c] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-k2jhocu47c] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-k2jhocu47c] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-k2jhocu47c] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-k2jhocu47c],
+    .table td[b-k2jhocu47c] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-k2jhocu47c] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-k2jhocu47c] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-k2jhocu47c] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-k2jhocu47c] {
+        font-size: 1rem;
+    }
+}
+

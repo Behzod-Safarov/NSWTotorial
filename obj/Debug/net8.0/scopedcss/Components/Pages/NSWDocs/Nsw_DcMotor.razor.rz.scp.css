@@ -1,0 +1,50 @@
+.container[b-e3dzrqkda8] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-e3dzrqkda8] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-e3dzrqkda8] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-e3dzrqkda8] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-e3dzrqkda8],
+    .table td[b-e3dzrqkda8] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-e3dzrqkda8] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-e3dzrqkda8] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-e3dzrqkda8] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-e3dzrqkda8] {
+        font-size: 1rem;
+    }
+}
+
