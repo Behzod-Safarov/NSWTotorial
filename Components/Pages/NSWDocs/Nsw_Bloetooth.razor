@@ -1,0 +1,166 @@
+﻿@page "/nsw_bluetooth"
+@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+<NSWLayout />
+<br>
+<br>
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Bluetooth Moduli</h1>
+    <p class="lead text-center">NSW Bluetooth Moduli bilan Loyihalaringizni simsiz bog'lang</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Bluetooth Moduli simsiz aloqa imkoniyatlarini taqdim etadi va loyihalaringizni boshqa qurilmalarga ulashda foydalaniladi. U Arduino, Raspberry Pi va boshqa mikrokontrollerlar bilan mos keladi, bu esa uni turli xil loyihalar uchun juda mos qiladi.</p>
+        <img src="images/bluetooth.jpg" alt="NSW Bluetooth Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 3.3V-5V DC</li>
+            <li>Bluetooth versiyasi: 4.0</li>
+            <li>Ulash masofasi: 10 metr</li>
+            <li>Modul hajmi: 28 x 15 x 2.4 mm</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW Bluetooth Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <ul>
+            <li>Simsiz Ma'lumot Uzatish</li>
+            <li>Uy Avtomatlashtirish</li>
+            <li>Robototexnika Boshqaruvlari</li>
+            <li>Ta'lim Loyiha</li>
+            <li>DIY Gadjetlar</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Tafsilotlari</h2>
+        <p>NSW Bluetooth Moduli portida quyidagi pinlar mavjud:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to'k</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvatlantirish manbai</td>
+                </tr>
+                <tr>
+                    <td>TXD</td>
+                    <td>Transmit (Ma'lumot uzatish)</td>
+                </tr>
+                <tr>
+                    <td>RXD</td>
+                    <td>Receive (Ma'lumot qabul qilish)</td>
+                </tr>
+                <tr>
+                    <td>STATE</td>
+                    <td>Modul holatini ko'rsatish</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Simlarni Ulash Rejimi</h2>
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Bluetooth Moduli RJ25 porti orqali ulanishi mumkin. Makeblock Orion-da RJ25 portidan foydalanganda, uni mos keluvchi portga ulashingiz kerak:</p>
+        <img src="images/nsw_bluetooth_rj25.jpg" alt="NSW Bluetooth RJ25 Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simidan modulni Arduino UNO asos paneliga ulash uchun foydalanilganda, uning TX va RX pinlarini Arduino TX va RX pinlariga quyidagicha ulash lozim:</p>
+        <img src="images/nsw_bluetooth_dupont.jpg" alt="NSW Bluetooth Dupont Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash Bo'yicha Qo'llanma</h2>
+        <p>Arduino Dasturlash</p>
+        <p>Agar dastur yozish uchun Arduino dan foydalansangiz, NSW Bluetooth Moduli orqali simsiz aloqa o'rnatish uchun quyidagi koddan foydalanishingiz mumkin:</p>
+        <pre><code class="language-cpp">
+// Arduino dastur kodi
+#include "SoftwareSerial.h
+
+SoftwareSerial bluetooth(10, 11); // RX, TX
+
+void setup() {
+    Serial.begin(9600);
+    bluetooth.begin(9600);
+    Serial.println("Bluetooth moduli tayyor");
+}
+
+void loop() {
+    if (bluetooth.available()) {
+        Serial.write(bluetooth.read());
+    }
+    if (Serial.available()) {
+        bluetooth.write(Serial.read());
+    }
+}
+        </code></pre>
+    </div>
+
+    <div class="my-5">
+        <h3>Prinsipiy Tahlil</h3>
+        <p>NSW Bluetooth Moduli boshqa qurilmalar bilan simsiz aloqa o'rnatish uchun mo'ljallangan. Modulning TX va RX pinlari orqali ma'lumot uzatish va qabul qilish amalga oshiriladi. Ushbu modul loyihalaringizda simsiz bog'lanishni ta'minlashda yordam beradi.</p>
+    </div>
+
+<div class="text-center my-5">
+    <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_7segment_display" role="button">
+        <i class="fas fa-arrow-left"></i> Orqaga
+    </a>
+    <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_buzzer" role="button">
+        Keyingisi <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+
+</style>
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+    }
+}
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+</script>

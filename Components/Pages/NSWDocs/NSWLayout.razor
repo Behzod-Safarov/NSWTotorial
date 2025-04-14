@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSWblock Sidebar</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Ensure body has no default margin to avoid positioning issues */
+        body {
+            margin: 0;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 280px;
+            height: calc(100vh - 60px);
+            background: linear-gradient(180deg, #ffffff, #f1f4f8);
+            overflow-y: auto;
+            border-right: 1px solid #e0e4e8;
+            transition: transform 0.3s ease;
+            box-shadow: 2px 0 12px rgba(0, 0, 0, 0.05);
+            font-family: 'Inter', sans-serif;
+            z-index: 1000;
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(-100%); /* Fully hide sidebar */
+        }
+
+        .sidebar-content {
+            padding: 15px;
+        }
+
+        .sidebar-header {
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 15px;
+            color: #1a2a44;
+            border-bottom: 1px solid #e0e4e8;
+            text-align: center;
+        }
+
+        .toggle-btn {
+            position: fixed;
+            top: 50%;
+            left: 280px; /* Aligns with sidebar edge when open */
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            background: #1a73e8;
+            color: #fff;
+            border: 2px solid #fff; /* Added for visibility */
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: left 0.3s ease, background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 2000; /* Higher z-index to ensure visibility */
+        }
+
+        .sidebar.collapsed .toggle-btn {
+            left: 0; /* Always at screen edge when collapsed */
+        }
+
+        .toggle-btn:hover,
+        .toggle-btn:focus {
+            background: #1557b0;
+            transform: translateY(-50%) scale(1.05);
+            outline: none;
+        }
+
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .search-container {
+            padding: 10px 15px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        #searchInput:focus {
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+        }
+
+        .nav-links {
+            padding: 10px 0;
+        }
+
+        .menu-category {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1a2a44;
+            padding: 12px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e4e8;
+            transition: background 0.2s ease;
+        }
+
+        .menu-category:hover {
+            background: #f1f4f8;
+        }
+
+        .category-toggle {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-list.collapsed .category-toggle {
+            transform: rotate(-90deg);
+        }
+
+        .nav-list {
+            max-height: 1000px;
+            transition: max-height 0.3s ease;
+            overflow: hidden;
+        }
+
+        .nav-list.collapsed {
+            max-height: 0;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            color: #1a73e8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            margin: 2px 10px;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .nav-item i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .nav-item:hover,
+        .nav-item:focus {
+            background: #e8f0fe;
+            color: #1557b0;
+            outline: none;
+        }
+
+        .nav-item:active {
+            background: #d2e3fc;
+        }
+
+        /* Responsive Design */
+        @@media (max-width: 768px) {
+            .sidebar {
+                width: 240px;
+            }
+
+            .sidebar.collapsed {
+                transform: translateX(-100%);
+            }
+
+            .toggle-btn {
+                left: 240px;
+            }
+
+            .sidebar.collapsed .toggle-btn {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar" aria-label="Sidebar navigation">
+        <button class="toggle-btn" onclick="toggleSidebar()" id="toggleBtn" aria-label="Toggle sidebar">
+            <span class="toggle-icon">◄</span>
+        </button>
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <span>NSWblock Qo'llanma</span>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Komponentlarni qidirish..." aria-label="Search components">
+            </div>
+            <nav class="nav-links" aria-label="Component navigation">
+                <div class="menu-category" id="componentsCategory" role="button" aria-expanded="true" onclick="toggleCategory('componentsList')">
+                    NSW Komponentlar
+                    <span class="category-toggle">▼</span>
+                </div>
+                <div class="nav-list" id="componentsList">
+                    <a class="nav-item" href="/nsw_4button"><i class="fas fa-square"></i> Nsw_4Button</a>
+                    <a class="nav-item" href="/nsw_7segment_display"><i class="fas fa-seven"></i> Nsw_7SegmentDisplay</a>
+                    <a class="nav-item" href="/nsw_bluetooth"><i class="fas fa-bluetooth"></i> Nsw_Bluetooth</a>
+                    <a class="nav-item" href="/nsw_buzzer"><i class="fas fa-volume-up"></i> Nsw_Buzzer</a>
+                    <a class="nav-item" href="/nsw_colorsensor"><i class="fas fa-palette"></i> Nsw_ColorSensor</a>
+                    <a class="nav-item" href="/nsw_compass"><i class="fas fa-compass"></i> Nsw_Compass</a>
+                    <a class="nav-item" href="/nsw_dcmotor"><i class="fas fa-fan"></i> Nsw_DCMotor</a>
+                    <a class="nav-item" href="/nsw_flamesensor"><i class="fas fa-fire"></i> Nsw_FlameSensor</a>
+                    <a class="nav-item" href="/nsw_gassensor"><i class="fas fa-smog"></i> Nsw_GasSensor</a>
+                    <a class="nav-item" href="/nsw_gyro"><i class="fas fa-sync"></i> Nsw_Gyro</a>
+                    <a class="nav-item" href="/nsw_humituresensor"><i class="fas fa-thermometer-half"></i> Nsw_HumitureSensor</a>
+                    <a class="nav-item" href="/nsw_i2cscanner"><i class="fas fa-search"></i> Nsw_I2CScan</a>
+                    <a class="nav-item" href="/nsw_infraredreceiver"><i class="fas fa-signal"></i> Nsw_InfraredReceiver</a>
+                    <a class="nav-item" href="/nsw_joystick"><i class="fas fa-gamepad"></i> Nsw_Joystick</a>
+                    <a class="nav-item" href="/nsw_ledmatrix"><i class="fas fa-th"></i> Nsw_LEDMatrix</a>
+                    <a class="nav-item" href="/nsw_lightsensor"><i class="fas fa-lightbulb"></i> Nsw_LightSensor</a>
+                    <a class="nav-item" href="/nsw_limitswitch"><i class="fas fa-toggle-on"></i> Nsw_LimitSwitch</a>
+                    <a class="nav-item" href="/nsw_linefollower"><i class="fas fa-route"></i> Nsw_LineFollower</a>
+                    <a class="nav-item" href="/nsw_pirmotionsensor"><i class="fas fa-running"></i> Nsw_PIRMotionSensor</a>
+                    <a class="nav-item" href="/pm25sensor"><i class="fas fa-cloud"></i> Nsw_Pm25Sensor</a>
+                    <a class="nav-item" href="/nsw_potentiometer"><i class="fas fa-sliders-h"></i> Nsw_Potentiometer</a>
+                    <a class="nav-item" href="/nsw_pressuresensor"><i class="fas fa-compress-arrows-alt"></i> Nsw_PressureSensor</a>
+                    <a class="nav-item" href="/nsw_ps2"><i class="fas fa-gamepad"></i> Nsw_PS2</a>
+                    <a class="nav-item" href="/nsw_rgbled"><i class="fas fa-lightbulb"></i> Nsw_RGBLed</a>
+                    <a class="nav-item" href="/nsw_rj25adapter"><i class="fas fa-plug"></i> Nsw_RJ25Adapter</a>
+                    <a class="nav-item" href="/nsw_servo"><i class="fas fa-robot"></i> Nsw_Servo</a>
+                    <a class="nav-item" href="/nsw_shutter"><i class="fas fa-camera"></i> Nsw_Shutter</a>
+                    <a class="nav-item" href="/nsw_smartservo"><i class="fas fa-cogs"></i> Nsw_SmartServo</a>
+                    <a class="nav-item" href="/nsw_soundsensor"><i class="fas fa-microphone"></i> Nsw_SoundSensor</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const toggleBtn = document.getElementById("toggleBtn");
+            const toggleIcon = toggleBtn.querySelector(".toggle-icon");
+
+            sidebar.classList.toggle("collapsed");
+            const isCollapsed = sidebar.classList.contains("collapsed");
+            toggleBtn.setAttribute("aria-expanded", !isCollapsed);
+            toggleIcon.textContent = isCollapsed ? "►" : "◄";
+        }
+
+        function toggleCategory(listId) {
+            const list = document.getElementById(listId);
+            const category = document.getElementById("componentsCategory");
+            list.classList.toggle("collapsed");
+            category.setAttribute("aria-expanded", !list.classList.contains("collapsed"));
+        }
+
+        document.getElementById("searchInput").addEventListener("input", function () {
+            const searchTerm = this.value.toLowerCase();
+            const items = document.querySelectorAll(".nav-item");
+
+            items.forEach((item) => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? "flex" : "none";
+            });
+        });
+
+        // Keyboard navigation for accessibility
+        document.querySelectorAll(".nav-item, .menu-category, .toggle-btn").forEach((element) => {
+            element.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    element.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

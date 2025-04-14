@@ -1,0 +1,153 @@
+﻿@page "/nsw_4button"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW 4-Tugma Moduli</h1>
+    <p class="lead text-center">Loyihalaringizni NSW 4-Tugma Moduli bilan soddalashtiring</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW 4-Button Moduli Push buttonchalaridan tashkil topgan. Bu moduldagi qora belgi uning Nsw Boarddagi qora belgili (Analog) portga ulanishi kerak ekanligini anglatadi. Sodda foydalanuvchi interfeysidan tortib, murakkab boshqaruv tizimigacha bo'lgan loyihalarni qurishda bu modul sizga moslashuvchanlik va qulaylikni ta'minlaydi.</p>
+        <img src="images/nsw_4button.jpg" alt="NSW 4-Tugma Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 5V DC</li>
+            <li>Tugmalar soni: 4</li>
+            <li>Boshqarish rejimi: bir tomonlama analog port</li>
+            <li>Modul hajmi: 51 x 24 x 18 mm (U x G x Y)</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW 4-Tugma Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <ul>
+            <li>Uy Avtomatlashtirish Tizimlari</li>
+            <li>Robototexnika Boshqaruvlari</li>
+            <li>Foydalanuvchi Interfeysi Panellari</li>
+            <li>Ta'lim Loyiha</li>
+            <li>DIY Gadjetlar</li>
+        </ul>
+    </div>
+
+     <div class="my-5">
+        <h2> Pin ta'rifi</h2>
+        <p>Me 4-Button portida uchta pin bor va ularning vazifalari quyidagicha</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to'k</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvatlantirish manbai</td>
+                </tr>
+                <tr>
+                    <td>Analog pin</td>
+                    <td>Signal uzatish uchun</td>
+                </tr>
+            </tbody>
+        </table>
+     </div>
+
+     <div class="my-5">
+        <h2>Simlarni ulash rejimi</h2>
+
+              <p>● RJ25 bilan ulanish</p>
+        <p>Me 4-Button porti qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan portni ulashingiz kerak. Makeblock Orion-ni misol qilib olsak, uni № 6, 7 va 8 portlarga quyidagicha ulashingiz mumkin:</p>
+        <img src="images/_4button.jpg" alt="NSW 4-Tugma Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+    <div class="my-5">
+
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simidan modulni Arduino UNO asos paneliga ulash uchun foydalanilganda, uning OUT pinini analog pinga quyidagicha ulash lozim:</p>
+        <img src="images/_4button.jpg" alt="NSW 4-Tugma Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo'yicha qo'llanma</h2>
+
+        <p>Arduino dasturlash</p>
+        <p>Agar dastur yozish uchun Arduino dan foydalansangiz, Me 4-tugmachasini boshqarish uchun Makeblock- Library-master kutubxonasi ishga tushirilishi kerak. Ushbu dastur bosilgan tugmaning kalit qiymatini o'qish va uni Arduino dasturlash orqali ketma-ket portga chiqarish uchun xizmat qiladi.</p>
+        <img src="images/_4button.jpg" alt="NSW 4-Tugma Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+
+        <h3>Prinsipiy tahlil</h3>
+        <p>
+            Me 4-Button modulida metall prujina tasmasi bilan himoyalangan to'rt oyoqli tugmalar mavjud. To'rt oyoqli tugmachali kalitda, tugma bosilganda, sxema yoqiladi; u qo'yib yuborilganda, sxema o'chiriladi. Qo'llaniladigan kuch - biz tugmani bosish yoki qo'yib yuborish uchun qo'llarimizdan foydalanamiz. Kommutatordagi to'rtta tugma analog chiqish portiga ega. Turli xil tugma bosilganda, chiqish analog qiymati boshqacha bo'ladi. Shunday qilib, qaysi tugma bosilishini aniqlash mumkin.
+        </p>
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_7segment_display" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+       await  JSRuntime.InvokeVoidAsync("scrollToTop");
+       await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();  // Simulate a click to open the menu
+        }
+    };
+
+</script>

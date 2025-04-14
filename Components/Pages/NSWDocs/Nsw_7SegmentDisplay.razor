@@ -1,0 +1,163 @@
+﻿@page "/nsw_7segment_display"
+@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+<NSWLayout />
+<br>
+<br>
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW 7-Segment Displey</h1>
+    <p class="lead text-center">Raqamli Loyihalaringizni NSW 7-Segment Displeyi bilan Soddalashtiring</p>
+    
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW 7-Segment Displeyi raqamli ma'lumotlarni ko'rsatish uchun keng qo'llaniladigan komponentdir. Oddiy hisoblagichlardan tortib, murakkab displey tizimlarigacha, bu displey sizning loyihalaringizni vizual jihatdan yanada jozibador qiladi.</p>
+        <img src="images/nsw_7segmentdisplay.jpg" alt="NSW 7-Segment Displeyi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+    
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 5V DC</li>
+            <li>Segmentlar soni: 7</li>
+            <li>Boshqarish rejimi: bir tomonlama port</li>
+            <li>Modul hajmi: 51 x 24 x 18 mm (U x G x Y)</li>
+        </ul>
+    </div>
+    
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW 7-Segment Displeyi quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <ul>
+            <li>Raqamli Soatlar</li>
+            <li>Hisoblagichlar</li>
+            <li>Termometrlar</li>
+            <li>DIY Gadjetlar</li>
+            <li>Ta'lim Loyiha</li>
+        </ul>
+    </div>
+    
+    <div class="my-5">
+        <h2>Pin Tafsilotlari</h2>
+        <p>NSW 7-Segment Displeyi portida uchta pin bor va ularning vazifalari quyidagicha:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to'k</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvatlantirish manbai</td>
+                </tr>
+                <tr>
+                    <td>Signal pin</td>
+                    <td>Raqamli ma'lumotlarni uzatish uchun</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Simlarni Ulash Rejimi</h2>
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW 7-Segment Displeyi porti qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan portni ulashingiz kerak. Makeblock Orion-ni misol qilib olsak, uni № 6, 7 va 8 portlarga quyidagicha ulashingiz mumkin:</p>
+        <img src="images/nsw_7segment_rj25.jpg" alt="NSW 7-Segment RJ25 Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simidan modulni Arduino UNO asos paneliga ulash uchun foydalanilganda, uning OUT pinini analog pinga quyidagicha ulash lozim:</p>
+        <img src="images/nsw_7segment_dupont.jpg" alt="NSW 7-Segment Dupont Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash Bo'yicha Qo'llanma</h2>
+        <p>Arduino Dasturlash</p>
+        <p>Agar dastur yozish uchun Arduino dan foydalansangiz, NSW 7-Segment Displeyini boshqarish uchun Makeblock-Library-master kutubxonasi ishga tushirilishi kerak. Ushbu dastur raqamlarni displeyda ko'rsatish uchun xizmat qiladi.</p>
+        <pre><code class="language-cpp">
+// Arduino dastur kodi
+#include &lt;Arduino.h&gt;
+#include &lt;SevSeg.h&gt;
+
+SevSeg sevseg;
+
+void setup() {
+    byte numDigits = 4;
+    byte digitPins[] = {2, 3, 4, 5};
+    byte segmentPins[] = {6, 7, 8, 9, 10, 11, 12, 13};
+    bool resistorsOnSegments = false; 
+    bool updateWithDelays = false; 
+    bool leadingZeros = true; 
+    bool disableDecPoint = false;
+
+    sevseg.begin(COMMON_ANODE, numDigits, digitPins, segmentPins, resistorsOnSegments, updateWithDelays, leadingZeros, disableDecPoint);
+    sevseg.setBrightness(90);
+}
+
+void loop() {
+    sevseg.setNumber(1234, 1);
+    sevseg.refreshDisplay(); 
+}
+        </code></pre>
+    </div>
+
+    <div class="my-5">
+        <h3>Prinsipiy Tahlil</h3>
+        <p>NSW 7-Segment Displeyi raqamli ma'lumotlarni ko'rsatish uchun yoritilgan segmentlardan foydalanadi. Har bir segment mustaqil ravishda boshqariladi va raqamlarni ko'rsatish uchun yoqiladi yoki o'chiriladi. Turli segmentlarning yoqilishi orqali turli raqamlar ko'rsatilishi mumkin.</p>
+    </div>
+
+<div class="text-center my-5">
+    <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_4button" role="button">
+        <i class="fas fa-arrow-left"></i> Orqaga
+    </a>
+    <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_bluetooth" role="button">
+        Keyingisi <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+
+</style>
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+</script>

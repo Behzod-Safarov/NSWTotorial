@@ -1,0 +1,92 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthenticationStateProvider
+<div class="page">
+    <header class="navmenu">
+        <div class="navmenu-content">
+            <img src="Images/logo.png" alt="Logo" class="logo">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <div class="left-buttons">
+                        <li><a class="btn" href="/">Home</a></li>
+                    </div>
+                    <!-- Dynamic role-based navigation -->
+                    @if (isAuthenticated)
+                    {
+                        if (userRole == "Admin")
+                        {
+                            <li><a class="btn" href="/">Admin Panel</a></li>
+                        }
+                        <div class="right-buttons">
+                            <li><a class="btn" href="user-profile">Profile</a></li>
+                            <li><a class="btn" href="logout">Logout</a></li>
+                        </div>
+
+                    }
+                    else
+                    {
+                        <div class="right-buttons">
+                            <li><a class="btn" href="/nsw_4button">Qo'llanma</a></li>
+                            <li><a class="btn" href="https://robomarket.uz/">Maxsulotlar</a></li>
+                        </div>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+
+    <main>
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const navMenu = document.querySelector("nav ul");
+
+    hamburgerMenu.addEventListener("click", function() {
+        // Hamburger tugmasi bosilganda, "active" klassini qo'shadi yoki olib tashlaydi
+        hamburgerMenu.classList.toggle("active");
+        
+        // Menu elementlarini ko'rsatadi yoki yashiradi
+        navMenu.classList.toggle("active");
+    });
+});
+
+</script>
+
+@code{
+    private string userRole = string.Empty;
+    private bool isAuthenticated = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        isAuthenticated = user.Identity != null && user.Identity.IsAuthenticated;
+        if (isAuthenticated)
+        {
+            var roles = user.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
+            userRole = roles.FirstOrDefault() ?? string.Empty; // Assuming one role per user
+        }
+    }
+}

@@ -1,0 +1,168 @@
+﻿@page "/nsw_soundsensor"
+@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+<NSWLayout />
+<br>
+<br>
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Ovoz Sensor Moduli</h1>
+    <p class="lead text-center">NSW Ovoz Sensor Moduli bilan Ovoz Darajasini Aniqlang</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Ovoz Sensor Moduli atrof-muhitdagi ovoz darajasini aniqlash uchun mo'ljallangan. Bu modul robototexnika, avtomatlashtirish tizimlari va boshqa turli xil loyihalarda keng qo'llanilishi mumkin. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
+        <img src="images/nsw_soundsensor.jpg" alt="NSW Ovoz Sensor Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 3.3V-5V DC</li>
+            <li>Ovoz darajasini aniqlash</li>
+            <li>Analog va raqamli chiqishlar</li>
+            <li>Modul hajmi: 30 x 20 x 10 mm</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW Ovoz Sensor Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <ul>
+            <li>Robototexnika</li>
+            <li>Avtomatlashtirish Tizimlari</li>
+            <li>Xavfsizlik Tizimlari</li>
+            <li>DIY Gadjetlar</li>
+            <li>Ta'lim Loyiha</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Tafsilotlari</h2>
+        <p>NSW Ovoz Sensor Moduli portida quyidagi pinlar mavjud:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to'k</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvatlantirish manbai</td>
+                </tr>
+                <tr>
+                    <td>AOUT</td>
+                    <td>Analog chiqish</td>
+                </tr>
+                <tr>
+                    <td>DOUT</td>
+                    <td>Raqamli chiqish</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Simlarni Ulash Rejimi</h2>
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Ovoz Sensor Moduli RJ25 porti orqali ulanishi mumkin. Makeblock Orion-da RJ25 portidan foydalanganda, uni mos keluvchi portga ulashingiz kerak:</p>
+        <img src="images/nsw_soundsensor_rj25.jpg" alt="NSW Ovoz Sensor RJ25 Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simidan modulni Arduino UNO asos paneliga ulash uchun foydalanilganda, uning AOUT va DOUT pinlarini analog va raqamli pinlarga quyidagicha ulash lozim:</p>
+        <img src="images/nsw_soundsensor_dupont.jpg" alt="NSW Ovoz Sensor Dupont Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash Bo'yicha Qo'llanma</h2>
+        <p>Arduino Dasturlash</p>
+        <p>Agar dastur yozish uchun Arduino dan foydalansangiz, NSW Ovoz Sensor Modulini boshqarish uchun quyidagi koddan foydalanishingiz mumkin:</p>
+        <pre><code class="language-cpp">
+// Arduino dastur kodi
+const int analogPin = A0;
+const int digitalPin = 2;
+const int ledPin = 13;
+
+void setup() {
+    pinMode(digitalPin, INPUT);
+    pinMode(ledPin, OUTPUT);
+    Serial.begin(9600);
+}
+
+void loop() {
+    int analogValue = analogRead(analogPin);
+    int digitalValue = digitalRead(digitalPin);
+    
+    Serial.print("Analog Qiymat: ");
+    Serial.print(analogValue);
+    Serial.print(" | Raqamli Qiymat: ");
+    Serial.println(digitalValue);
+    
+    if (digitalValue == HIGH) {
+        digitalWrite(ledPin, HIGH);
+    } else {
+        digitalWrite(ledPin, LOW);
+    }
+    delay(100);
+}
+        </code></pre>
+    </div>
+
+    <div class="my-5">
+        <h3>Prinsipiy Tahlil</h3>
+        <p>NSW Ovoz Sensor Moduli atrof-muhitdagi ovoz darajasini aniqlash uchun mo'ljallangan. Bu modulning asosiy funktsiyasi ovoz darajasini aniqlash va avtomatlashtirish tizimlarida foydalanishdir. AOUT va DOUT pinlari orqali analog va raqamli signal uzatish amalga oshiriladi.</p>
+    </div>
+
+  <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_smartservo" role="button">
+            <i class="fas fa-arrow-left"></i> Orqaga
+        </a>
+    </div>
+
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+</script>
