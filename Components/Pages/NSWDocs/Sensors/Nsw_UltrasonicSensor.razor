@@ -1,0 +1,181 @@
+@page "/nsw_ultrasonicsensor"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Ultrasonik Sensor Moduli</h1>
+    <p class="lead text-center">Loyihalaringizda NSW Ultrasonik Sensor Moduli bilan masofani aniq o'lchang</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Ultrasonik Sensor Moduli masofani o'lchash uchun mo'ljallangan elektron modul bo'lib, 2 sm dan 400 sm gacha bo'lgan masofalarni aniqlay oladi. Bu modul sariq belgi bilan belgilangan bo'lib, u Nsw Boarddagi sariq belgili (Raqamli) portga ulanadi. Ultrasonik to'lqinlar yordamida masofani o'lchaydi, bu esa robotlarning to'siqlardan qochishi yoki masofa o'lchash loyihalari uchun ideal qiladi. Modulda ultrasonik transmitter (T) va qabul qiluvchi (R) mavjud bo'lib, 40 kHz chastotali to'lqinlar yuboradi va qaytgan aks sado vaqtini o'lchaydi.</p>
+        <img src="images/nsw_ultrasonicsensor.jpg" alt="NSW Ultrasonik Sensor Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 5V DC</li>
+            <li>Masofa diapazoni: 2 sm - 400 sm</li>
+            <li>Aniqlik: ±3 mm</li>
+            <li>Chiqish signali: Raqamli (impuls uzunligi)</li>
+            <li>Chastota: 40 kHz</li>
+            <li>Modul hajmi: 45 x 20 x 15 mm (U x G x Y)</li>
+            <li>Ulanish: RJ25 yoki 3-pinli Dupont simlari</li>
+            <li>Energiya sarfi: ~15 mA (faol holatda)</li>
+        </ul>
+        <p>Eslatma: Yumshoq materiallar (masalan, mato) aks sadoni yomon qaytarishi mumkin, bu esa o'lchov aniqligiga ta'sir qiladi. Sensorning old qismida to'siq bo'lmasligiga ishonch hosil qiling.</p>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW Ultrasonik Sensor Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <ul>
+            <li>Robototexnika loyihalarida to'siqlardan qochish</li>
+            <li>Masofa o'lchash va park radarlari</li>
+            <li>Ta'lim loyihalari va ultrasonik texnologiyani o'rganish</li>
+            <li>Aqlli qurilmalarda sath monitoringi</li>
+            <li>Avtomatik eshik ochish tizimlari</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Ta'rifi</h2>
+        <p>NSW Ultrasonik Sensor Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to'k (Ground)</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvatlantirish manbai (5V)</td>
+                </tr>
+                <tr>
+                    <td>SIG</td>
+                    <td>Raqamli signal (Trigger va Echo birlashgan)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Eslatma: Agar modul 4-pinli (VCC, GND, TRIG, ECHO) bo'lsa, TRIG va ECHO alohida raqamli pinlarga ulanadi.</p>
+    </div>
+
+    <div class="my-5">
+        <h2>Simlarni Ulanish Rejimi</h2>
+
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Ultrasonik Sensor Moduli sariq IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da sariq ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 3, 4, 5, 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
+        <img src="images/ultrasonicsensor_rj25.jpg" alt="NSW Ultrasonik Sensor RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+    <div class="my-5">
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, SIG pinini raqamli pinga (masalan, D9) ulash lozim. Quyidagi rasmda ulanish ko'rsatilgan:</p>
+        <img src="images/ultrasonicsensor_dupont.jpg" alt="NSW Ultrasonik Sensor Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo'yicha Qo'llanma</h2>
+
+        <p>Arduino dasturlash</p>
+        <p>Arduino yordamida NSW Ultrasonik Sensor Modulini boshqarish uchun SIG piniga 10 mikrosekundlik impuls yuborish va qaytgan impuls uzunligini o'lchash kerak. Quyidagi misol masofani o'lchab, ketma-ket monitorga chop etadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino funktsiyalari yetarli:</p>
+        <pre>
+const int sigPin = 9; // SIG pinini D9 ga uladik
+
+void setup() {
+  pinMode(sigPin, OUTPUT); // SIG pinini chiqish sifatida sozlash
+  pinMode(sigPin, INPUT);  // Keyin kirish sifatida ishlatiladi
+  Serial.begin(9600);      // Ketma-ket portni ishga tushirish
+}
+
+void loop() {
+  digitalWrite(sigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(sigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(sigPin, LOW);
+  
+  long duration = pulseIn(sigPin, HIGH); // Impuls uzunligini o'lchash
+  float distance = duration * 0.034 / 2; // Masofani sm da hisoblash
+  
+  Serial.print("Masofa: ");
+  Serial.print(distance);
+  Serial.println(" sm");
+  
+  delay(100); // 100 ms kutish
+}
+        </pre>
+        <p>Ushbu kod SIG piniga impuls yuboradi, qaytgan aks sado impulsini o'lchaydi va masofani santimetrda hisoblab, ketma-ket monitorga chiqaradi. Masofa hisoblash formulasi: <code>masofa = (impuls vaqti * tovush tezligi) / 2</code>, bu erda tovush tezligi 340 m/s.</p>
+    </div>
+
+    <div class="my-5">
+        <h3>Prinsipiy Tahlil</h3>
+        <p>NSW Ultrasonik Sensor Moduli sonar printsipiga asoslanadi. Ultrasonik transmitter 40 kHz chastotali to'lqinlarni yuboradi, bu to'lqinlar to'siqqa urilib qaytadi. Qabul qiluvchi qaytgan aks sadoni aniqlaydi va SIG pinida impuls hosil qiladi. Impuls uzunligi to'lqinlarning borib-kelish vaqtiga bog'liq. Masofa quyidagi formula yordamida hisoblanadi: <code>s = (340 m/s × t) / 2</code>, bu erda <code>t</code> — impuls vaqti. Sensorning aniqligi akustik shovqin va yumshoq materiallardan ta'sirlanishi mumkin.</p>
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_soilsensor" role="button">
+            Oldingisi <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_4button" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+        await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();  // Simulate a click to open the menu
+        }
+    };
+</script>

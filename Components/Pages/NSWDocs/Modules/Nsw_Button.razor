@@ -1,0 +1,169 @@
+@page "/nsw_button"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Button Moduli</h1>
+    <p class="lead text-center">Loyihalaringizni NSW Button Moduli bilan interaktiv qiling</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Button Moduli bitta push-button kalitidan iborat bo'lib, loyihalaringizga oddiy va ishonchli foydalanuvchi kiritish imkoniyatini qo'shish uchun mo'ljallangan. Bu modul qora belgi bilan belgilangan bo'lib, u Nsw Boarddagi qora belgili (Raqamli yoki Analog) portga ulanadi. Tugma bosilganda past darajali (LOW) signal, qo'yib yuborilganda esa yuqori darajali (HIGH) signal ishlab chiqaradi. Oddiy boshqaruv tizimlaridan tortib, ta'lim loyihalarigacha bo'lgan ilovalarda foydalanish uchun qulay va ko'p qirrali yechim taqdim etadi.</p>
+        <img src="images/nsw_button.jpg" alt="NSW Button Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 3.3V - 5V DC</li>
+            <li>Tugma turi: 12 x 12 x 5 mm push-button</li>
+            <li>Boshqarish rejimi: Raqamli signal (HIGH/LOW)</li>
+            <li>Modul hajmi: 20 x 20 x 10 mm (U x G x Y)</li>
+            <li>Ulanish: RJ25 yoki 3-pinli Dupont simlari</li>
+            <li>Signal chiqishi: Bosilganda LOW, qo'yib yuborilganda HIGH</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW Button Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <ul>
+            <li>Foydalanuvchi interfeysi boshqaruvlari (masalan, yoqish/o'chirish)</li>
+            <li>Robototexnika loyihalarida trigger signallari</li>
+            <li>Ta'lim loyihalari va raqamli signalni o'rganish</li>
+            <li>Uy avtomatlashtirish tizimlari</li>
+            <li>DIY elektron loyihalar (masalan, qo'ng'iroqlar)</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Ta'rifi</h2>
+        <p>NSW Button Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to'k (Ground)</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvatlantirish manbai (3.3V yoki 5V)</td>
+                </tr>
+                <tr>
+                    <td>Signal</td>
+                    <td>Raqamli signal chiqishi (LOW/HIGH)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Simlarni Ulanish Rejimi</h2>
+
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Button Moduli qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
+        <img src="images/button_rj25.jpg" alt="NSW Button RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+    <div class="my-5">
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, Signal pinini raqamli yoki analog pinga (masalan, D7 yoki A0) ulash lozim. Quyidagi rasmda ulanish ko'rsatilgan:</p>
+        <img src="images/button_dupont.jpg" alt="NSW Button Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo'yicha Qo'llanma</h2>
+
+        <p>Arduino dasturlash</p>
+        <p>Arduino yordamida NSW Button Modulini boshqarish uchun oddiy dastur yozish kifoya. Quyidagi misol tugma bosilganini aniqlab, ketma-ket monitorga holatni chop etadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino funktsiyalari yetarli:</p>
+        <pre>
+int buttonPin = 7; // Signal pinini D7 ga uladik
+
+void setup() {
+  pinMode(buttonPin, INPUT_PULLUP); // Tugma pinini kirish sifatida sozlash
+  Serial.begin(9600);              // Ketma-ket portni ishga tushirish
+}
+
+void loop() {
+  int buttonState = digitalRead(buttonPin); // Tugma holatini o'qish
+  if (buttonState == LOW) {
+    Serial.println("Tugma bosildi");
+  } else {
+    Serial.println("Tugma bosilmadi");
+  }
+  delay(100); // 100 ms kutish
+}
+        </pre>
+        <p>Ushbu kod tugma bosilganini aniqlaydi va holatni ketma-ket monitorga chiqaradi. Tugma bosilganda LOW signal, qo'yib yuborilganda HIGH signal yuboriladi.</p>
+    </div>
+
+    <div class="my-5">
+        <h3>Prinsipiy Tahlil</h3>
+        <p>NSW Button Moduli oddiy elektromexanik kalitga asoslanadi. Tugma bosilganda ichki kontaktlar yopilib, Signal pinini GND ga ulaydi, bu esa LOW signal ishlab chiqaradi. Tugma qo'yib yuborilganda kontaktlar ochilib, ichki pull-up rezistori (yoki tashqi, agar kerak bo'lsa) tufayli Signal pini HIGH holatga qaytadi. Modul odatda ichki rezistor bilan jihozlangan bo'lib, bu tashqi pull-up rezistorlariga ehtiyojni kamaytiradi va ulanishni soddalashtiradi.</p>
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_passivebuzzer" role="button">
+            Oldingisi <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_4button" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+        await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();  // Simulate a click to open the menu
+        }
+    };
+</script>

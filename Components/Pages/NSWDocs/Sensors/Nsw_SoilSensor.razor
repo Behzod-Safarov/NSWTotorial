@@ -1,0 +1,174 @@
+@page "/nsw_soilsensor"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Soil Sensor Moduli</h1>
+    <p class="lead text-center">Loyihalaringizda NSW Soil Sensor Moduli bilan tuproq namligini samarali monitoring qiling</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Soil Sensor Moduli tuproqning namlik darajasini o'lchash uchun mo'ljallangan kapacitiv sensor bo'lib, qishloq xo'jaligi va aqlli bog'dorchilik loyihalari uchun ideal. Bu modul qora belgi bilan belgilangan bo'lib, u Nsw Boarddagi qora belgili (Analog) portga ulanadi. Modul tuproqdagi suv miqdorini kapacitiv o'lchash orqali aniqlaydi, bu korroziyaga chidamli bo'lib, an'anaviy rezistiv sensorlarga nisbatan uzoq muddatli ishonchlilikni ta'minlaydi. Sensor tuproq namligiga qarab analog signal (0-3.3V yoki 0-5V) chiqaradi, bu signal mikrocontroller (masalan, Arduino) yordamida o'qiladi.</p>
+        <img src="images/nsw_soilsensor.jpg" alt="NSW Soil Sensor Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 3.3V - 5V DC</li>
+            <li>Chiqish signali: Analog (0V dan VCC gacha, namlikka teskari proportsional)</li>
+            <li>Sensor turi: Kapacitiv, korroziyaga chidamli</li>
+            <li>O'lchash diapazoni: Quruq tuproq (~600-1000) dan nam tuproq (~200-500) gacha</li>
+            <li>Modul hajmi: 98 x 23 x 4 mm (U x G x Y)</li>
+            <li>Ulanish: PH2.54-3P yoki Dupont simlari</li>
+            <li>Energiya sarfi: ~5 mA (faol holatda)</li>
+        </ul>
+        <p>Eslatma: Sensorning elektronik qismini tuproqqa yoki suvga botirmaslik kerak, faqat zond qismi tuproqqa joylashtiriladi. Kalibrlash tuproq turi va sharoitlariga qarab talab qilinishi mumkin.</p>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW Soil Sensor Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <ul>
+            <li>Aqlli sug'orish tizimlari (avtomatik sug'orish)</li>
+            <li>Qishloq xo'jaligi va issiqxona monitoringi</li>
+            <li>Ta'lim loyihalari va tuproq namligini o'rganish</li>
+            <li>Uy o'simliklari uchun avtomatlashtirilgan parvarish</li>
+            <li>IoT asosidagi tuproq monitoring tizimlari</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Ta'rifi</h2>
+        <p>NSW Soil Sensor Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to'k (Ground)</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvatlantirish manbai (3.3V - 5V)</td>
+                </tr>
+                <tr>
+                    <td>AOUT</td>
+                    <td>Analog signal chiqishi (namlikka teskari proportsional)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Simlarni Ulanish Rejimi</h2>
+
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Soil Sensor Moduli qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
+        <img src="images/soilsensor_rj25.jpg" alt="NSW Soil Sensor RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+    <div class="my-5">
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, AOUT pinini analog pinga (masalan, A0) ulash lozim. Quyidagi rasmda ulanish ko'rsatilgan:</p>
+        <img src="images/soilsensor_dupont.jpg" alt="NSW Soil Sensor Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo'yicha Qo'llanma</h2>
+
+        <p>Arduino dasturlash</p>
+        <p>Arduino yordamida NSW Soil Sensor Modulini boshqarish uchun analog signalni o'qish kifoya. Quyidagi misol sensorning analog chiqishini o'qib, tuproq namligini foiz sifatida hisoblaydi va ketma-ket monitorga chop etadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino funktsiyalari yetarli:</p>
+        <pre>
+const int soilPin = A0; // AOUT pinini A0 ga uladik
+const int dryValue = 1000; // Quruq tuproq qiymati (kalibrlash kerak)
+const int wetValue = 300;  // Nam tuproq qiymati (kalibrlash kerak)
+
+void setup() {
+  Serial.begin(9600); // Ketma-ket portni ishga tushirish
+}
+
+void loop() {
+  int sensorValue = analogRead(soilPin); // Sensor qiymatini o'qish
+  int moisturePercent = map(sensorValue, dryValue, wetValue, 0, 100); // Foizga aylantirish
+  moisturePercent = constrain(moisturePercent, 0, 100); // Qiymatni 0-100 oralig'ida cheklash
+  
+  Serial.print("Tuproq namligi: ");
+  Serial.print(moisturePercent);
+  Serial.println("%");
+  
+  delay(1000); // 1 soniya kutish
+}
+        </pre>
+        <p>Ushbu kod tuproq namligini foiz sifatida hisoblaydi va ketma-ket monitorga chiqaradi. Quruq va nam tuproq uchun <code>dryValue</code> va <code>wetValue</code> qiymatlari tuproq turi va sharoitlariga qarab kalibrlanishi kerak.</p>
+    </div>
+
+    <div class="my-5">
+        <h3>Prinsipiy Tahlil</h3>
+        <p>NSW Soil Sensor Moduli kapacitiv o'lchash texnologiyasiga asoslanadi, bu tuproqdagi suv miqdorini dielektrik o'tkazuvchanlik orqali aniqlaydi. Sensorning zond qismida joylashgan elektrodlar tuproqdagi suv miqdoriga qarab sig'im o'zgarishini hosil qiladi, bu esa analog signal sifatida chiqariladi. Suv miqdori ko'p bo'lganda, dielektrik o'tkazuvchanlik yuqori bo'ladi va chiqish kuchlanishi pasayadi. Kapacitiv sensorlar korroziyaga chidamli bo'lib, tuproqqa oqim o'tkazmaydi, bu ularni rezistiv sensorlardan afzal qiladi.</p>
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_touchsensor" role="button">
+            Oldingisi <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_4button" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+        await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();  // Simulate a click to open the menu
+        }
+    };
+</script>

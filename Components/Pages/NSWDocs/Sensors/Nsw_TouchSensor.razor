@@ -1,0 +1,174 @@
+@page "/nsw_touchsensor"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Touch Sensor Moduli</h1>
+    <p class="lead text-center">Loyihalaringizga NSW Touch Sensor Moduli bilan zamonaviy sensorli boshqaruv qo'shing</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Touch Sensor Moduli kapacitiv sensorli kalit bo'lib, foydalanuvchi teginishini aniqlash uchun mo'ljallangan. Bu modul qora belgi bilan belgilangan bo'lib, u Nsw Boarddagi qora belgili (Raqamli) portga ulanadi. Modul odatda TTP223 sensorli IC asosida ishlaydi, tegilganda yuqori darajali (HIGH) signal, teginish bo'lmaganda esa past darajali (LOW) signal ishlab chiqaradi. An'anaviy mexanik tugmalar o'rniga ishlatiladigan bu modul loyihalarga zamonaviy va silliq interfeys qo'shadi, masalan, yorug'likni yoqish/o'chirish yoki boshqa qurilmalarni boshqarish uchun.</p>
+        <img src="images/nsw_touchsensor.jpg" alt="NSW Touch Sensor Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 2.0V - 5.5V DC</li>
+            <li>Chiqish signali: Raqamli (HIGH tegilganda, LOW teginish bo'lmaganda)</li>
+            <li>Sensor maydoni: Taxminan 11 x 10.5 mm</li>
+            <li>Sezuvchanlik diapazoni: ~5 mm (nozik sirtlar orqali ishlaydi)</li>
+            <li>Modul hajmi: 15 x 11 x 5 mm (U x G x Y)</li>
+            <li>Ulanish: RJ25 yoki 3-pinli Dupont simlari</li>
+            <li>Energiya sarfi: 6 µA (sokin holatda), 16 mA (faol holatda)</li>
+        </ul>
+        <p>Eslatma: Modul nozik sirtlar (masalan, shisha yoki plastmassa) orqali teginishni aniqlay oladi, lekin metall yuzalar bilan ishlatilganda sezuvchanlikni sozlash talab qilinishi mumkin.</p>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW Touch Sensor Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <ul>
+            <li>Uy avtomatlashtirish tizimlari (masalan, sensorli yorug'lik kalitlari)</li>
+            <li>Robototexnika loyihalarida interaktiv boshqaruv</li>
+            <li>Ta'lim loyihalari va kapacitiv sensorlarni o'rganish</li>
+            <li>DIY elektron loyihalar (masalan, sensorli lampalar)</li>
+            <li>Prototip ishlab chiqish va tezkor sinovlar</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Ta'rifi</h2>
+        <p>NSW Touch Sensor Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to'k (Ground)</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvatlantirish manbai (2.0V - 5.5V)</td>
+                </tr>
+                <tr>
+                    <td>Signal (OUT)</td>
+                    <td>Raqamli signal chiqishi (HIGH/LOW)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Simlarni Ulanish Rejimi</h2>
+
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Touch Sensor Moduli qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
+        <img src="images/touchsensor_rj25.jpg" alt="NSW Touch Sensor RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+    <div class="my-5">
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, Signal pinini raqamli pinga (masalan, D2) ulash lozim. Quyidagi rasmda ulanish ko'rsatilgan:</p>
+        <img src="images/touchsensor_dupont.jpg" alt="NSW Touch Sensor Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo'yicha Qo'llanma</h2>
+
+        <p>Arduino dasturlash</p>
+        <p>Arduino yordamida NSW Touch Sensor Modulini boshqarish uchun oddiy dastur yozish kifoya. Quyidagi misol sensor tegilganini aniqlab, ketma-ket monitorga holatni chop etadi va Arduino'dagi o'rnatilgan LEDni yoqadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino funktsiyalari yetarli:</p>
+        <pre>
+const int touchPin = 2; // Signal pinini D2 ga uladik
+
+void setup() {
+  pinMode(touchPin, INPUT);         // Sensor pinini kirish sifatida sozlash
+  pinMode(LED_BUILTIN, OUTPUT);     // O'rnatilgan LEDni chiqish sifatida sozlash
+  Serial.begin(9600);               // Ketma-ket portni ishga tushirish
+}
+
+void loop() {
+  int touchState = digitalRead(touchPin); // Sensor holatini o'qish
+  if (touchState == HIGH) {
+    Serial.println("Tegildi!");
+    digitalWrite(LED_BUILTIN, HIGH); // LEDni yoqish
+  } else {
+    Serial.println("Tegilmadi...");
+    digitalWrite(LED_BUILTIN, LOW);  // LEDni o'chirish
+  }
+  delay(100); // 100 ms kutish
+}
+        </pre>
+        <p>Ushbu kod sensor tegilganini aniqlaydi va holatni ketma-ket monitorga chiqaradi, shu bilan birga LEDni boshqaradi. Sensor tegilganda HIGH signal, teginish bo'lmaganda LOW signal yuboriladi.</p>
+    </div>
+
+    <div class="my-5">
+        <h3>Prinsipiy Tahlil</h3>
+        <p>NSW Touch Sensor Moduli kapacitiv teginish texnologiyasiga asoslanadi, odatda TTP223 IC yordamida ishlaydi. Foydalanuvchi sensor yuzasiga tegib, uning sig'imini o'zgartirganda, modul ichki sxemasi bu o'zgarishni aniqlaydi va Signal pinida HIGH signal ishlab chiqaradi. Tegnish bo'lmaganda, Signal pini LOW holatda qoladi. Modul past quvvat sarfi va 5 mm gacha bo'lgan nozik sirtlar orqali ishlash qobiliyatiga ega bo'lib, zamonaviy va ishonchli boshqaruv interfeysini ta'minlaydi.</p>
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_button" role="button">
+            Oldingisi <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_4button" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+        await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();  // Simulate a click to open the menu
+        }
+    };
+</script>

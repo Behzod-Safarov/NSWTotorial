@@ -1,0 +1,136 @@
+@page "/nsw_irremote"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Infraqizil Masofadan Boshqaruv (Remote) Moduli</h1>
+    <p class="lead text-center">Loyihalaringizni IR pult orqali qulay boshqaring</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Infraqizil Remote Moduli infraqizil (IR) texnologiyasiga asoslangan bo‘lib, foydalanuvchilarga qurilmalarni masofadan boshqarish imkonini beradi. Bu modul masofadan boshqaruv pulti (remote control) va qabul qiluvchi moduldan iborat bo‘lib, turli xil tugmalar orqali Arduino yoki boshqa mikrokontrollerga buyruqlar yuboriladi. U odatda televizor pultiga o‘xshash IR signal jo‘natadi, qabul qiluvchi modul esa ushbu signalni qabul qilib, raqamli signalga aylantiradi.</p>
+        <img src="images/nsw_remote.jpg" alt="NSW Remote Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 3.3V – 5V</li>
+            <li>Signal turi: Infraqizil (IR)</li>
+            <li>Masofa: 2 metrgacha samarali ishlaydi</li>
+            <li>Yuboruvchi qurilma: IR masofadan boshqaruv pulti (RC-5, NEC va h.k.)</li>
+            <li>Qabul qiluvchi chip: VS1838B yoki unga o‘xshash</li>
+            <li>Ulanish interfeysi: Raqamli pinlar orqali (OUT → Arduino pin)</li>
+        </ul>
+        <p>Eslatma: IR signal yoritilgan muhitda yoki to‘sqinlik mavjud bo‘lsa, qabul qilish samaradorligi pasayishi mumkin.</p>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <ul>
+            <li>Masofadan LEDni yoqish/o‘chirish</li>
+            <li>Robotlarda harakatlarni masofadan boshqarish</li>
+            <li>Menular va interfeyslar uchun tugmali navigatsiya</li>
+            <li>O‘yinchoqlar va o‘quv qurilmalari</li>
+            <li>Havoni sovutish/tizimlarni faollashtirish yoki taymerni ishga tushirish</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Ta'rifi</h2>
+        <p>IR qabul qiluvchi modulda odatda uchta pin mavjud:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to‘k (Ground)</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
+                </tr>
+                <tr>
+                    <td>OUT</td>
+                    <td>Raqamli signal chiqishi (IR kod qabul qilinganida faollashadi)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Ulanish</h2>
+        <p>NSW Remote modulini Arduino UNO ga quyidagicha ulash mumkin:</p>
+        <ul>
+            <li><b>VCC</b> → 5V</li>
+            <li><b>GND</b> → GND</li>
+            <li><b>OUT</b> → D11 (yoki boshqa raqamli pin)</li>
+        </ul>
+        <img src="images/remote_connection.jpg" alt="NSW Remote Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_7segment_display" role="button">
+            Oldingisi <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_flamesensor" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+        await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();
+        }
+    };
+</script>

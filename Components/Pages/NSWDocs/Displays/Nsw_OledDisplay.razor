@@ -1,0 +1,175 @@
+@page "/nsw_oleddisplay"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW OLED Display Moduli</h1>
+    <p class="lead text-center">Loyihalaringizga OLED displey bilan grafik va matnli interfeys qo‘shing</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW OLED Display Moduli 128x64 pikselli o‘lchamga ega, 0.96 dyuymli ekran bo‘lib, ko‘k yoki oq rangli displeyda matn, grafik yoki belgilarni ko‘rsatish imkonini beradi. Bu modul I2C interfeys orqali ishlaydi va Arduino kabi mikrokontrollerlar bilan juda yaxshi mos keladi. Juda kam quvvat sarflashi va kompaktligi uni turli elektron loyihalar uchun ideal qiladi.</p>
+        <img src="images/nsw_oleddisplay.jpg" alt="NSW OLED Display Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Displey o‘lchami: 0.96 dyuym</li>
+            <li>Ruxsat (Resolution): 128 x 64 piksel</li>
+            <li>Interfeys: I2C (SCL, SDA)</li>
+            <li>Ishlash kuchlanishi: 3.3V – 5V</li>
+            <li>Chastota: 400 kHz (I2C)</li>
+            <li>Energiya sarfi: Juda past (ultraboy energiya tejamkorlik)</li>
+            <li>Chip: SSD1306 drayver chipi</li>
+        </ul>
+        <p>Eslatma: Displey fon yoritgichga ega emas, lekin OLED texnologiyasi tufayli yuqori kontrast bilan o‘qilishi oson.</p>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW OLED Display Moduli quyidagi sohalarda keng qo‘llaniladi:</p>
+        <ul>
+            <li>Robototexnika va IoT qurilmalari interfeysi</li>
+            <li>Harorat, namlik, bosim va boshqa sensor natijalarini ko‘rsatish</li>
+            <li>Mini o‘yinlar va animatsiyalar</li>
+            <li>Haqiqiy vaqtli soat (RTC) ko‘rsatkichi</li>
+            <li>Matnli xabarlar, grafikalar, tugmalar interfeysi</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Ta'rifi</h2>
+        <p>NSW OLED Display Modulining 4 ta pin mavjud:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to‘k (Ground)</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
+                </tr>
+                <tr>
+                    <td>SCL</td>
+                    <td>Soat signali (I2C interfeys)</td>
+                </tr>
+                <tr>
+                    <td>SDA</td>
+                    <td>Ma'lumot signali (I2C interfeys)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Ulanish</h2>
+        <p>Arduino UNO bilan ulanish (I2C):</p>
+        <ul>
+            <li><b>VCC</b> → 5V</li>
+            <li><b>GND</b> → GND</li>
+            <li><b>SCL</b> → A5 (Arduino UNO)</li>
+            <li><b>SDA</b> → A4 (Arduino UNO)</li>
+        </ul>
+        <img src="images/oled_arduino_connection.jpg" alt="OLED Arduino bilan ulanish" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo'yicha Qo'llanma</h2>
+        <p>Quyidagi Arduino kodi yordamida OLED displeyga "Salom, Dunyo!" matnini chiqarish mumkin. <code>Adafruit SSD1306</code> va <code>Adafruit GFX</code> kutubxonalarini kutubxona menejeri orqali o‘rnating.</p>
+        <pre>
+<!-- #include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h> -->
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
+void setup() {
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println(F("OLED topilmadi"));
+    for(;;);
+  }
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(10, 20);
+  display.println("Salom, Dunyo!");
+  display.display();
+}
+
+void loop() {
+  // Hech nima qilinmaydi
+}
+        </pre>
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_ultrasonicsensor" role="button">
+            Oldingisi <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_buzzer" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+        await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();
+        }
+    };
+</script>

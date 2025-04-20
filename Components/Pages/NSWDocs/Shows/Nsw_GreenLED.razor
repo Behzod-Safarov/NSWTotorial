@@ -1,0 +1,162 @@
+@page "/nsw_greenled"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Green LED Moduli</h1>
+    <p class="lead text-center">Loyihalaringizni NSW Green LED Moduli bilan yoritib bering</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Green LED Moduli yorqin yashil LEDdan tashkil topgan bo'lib, loyihalaringizga vizual indikatorlar qo'shish uchun ideal. Bu modul qora belgi bilan belgilangan bo'lib, u Nsw Boarddagi qora belgili (Analog yoki Raqamli) portga ulanadi. Oddiy signal ko'rsatkichlaridan tortib, dekorativ yoritishgacha bo'lgan loyihalarda foydalanish uchun moslashuvchan va oson ishlatiladigan yechim taqdim etadi.</p>
+        <img src="images/nsw_greenled.jpg" alt="NSW Green LED Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 3.3V - 5V DC</li>
+            <li>LED turi: Yashil, yuqori yorqinlik</li>
+            <li>Boshqarish rejimi: Raqamli yoki analog signal</li>
+            <li>Modul hajmi: 40 x 20 x 15 mm (U x G x Y)</li>
+            <li>Ulanish: RJ25 yoki Dupont simlari</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW Green LED Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <ul>
+            <li>Holatni ko'rsatuvchi indikatorlar (masalan, yoqish/o'chirish holati)</li>
+            <li>Robototexnika loyihalarida vizual signal</li>
+            <li>Ta'lim loyihalari va tajribalar</li>
+            <li>DIY dekorativ yoritish</li>
+            <li>Sensorli tizimlar uchun ko'rsatkichlar</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Ta'rifi</h2>
+        <p>NSW Green LED Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to'k (Ground)</td>
+                </tr>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvatlantirish manbai (3.3V yoki 5V)</td>
+                </tr>
+                <tr>
+                    <td>Signal</td>
+                    <td>LEDni yoqish/o'chirish uchun raqamli signal</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Simlarni Ulanish Rejimi</h2>
+
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Green LED Moduli qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
+        <img src="images/greenled_rj25.jpg" alt="NSW Green LED RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+    <div class="my-5">
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, Signal pinini raqamli yoki analog pinga (masalan, D2 yoki A0) ulash lozim. Quyidagi rasmda ulanish ko'rsatilgan:</p>
+        <img src="images/greenled_dupont.jpg" alt="NSW Green LED Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo'yicha Qo'llanma</h2>
+
+        <p>Arduino dasturlash</p>
+        <p>Arduino yordamida NSW Green LED Modulini boshqarish uchun oddiy dastur yozish kifoya. Quyidagi misol LEDni har soniyada yoqib va o'chirib turadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin oddiy LED boshqaruvi uchun standart Arduino funktsiyalari yetarli:</p>
+        <pre>
+void setup() {
+  pinMode(2, OUTPUT); // Signal pinini D2 ga uladik
+}
+
+void loop() {
+  digitalWrite(2, HIGH); // LEDni yoqish
+  delay(1000);           // 1 soniya kutish
+  digitalWrite(2, LOW);  // LEDni o'chirish
+  delay(1000);           // 1 soniya kutish
+}
+        </pre>
+        <p>Ushbu kod LEDni miltillatib turadi. Signal pinini o'zgartirish uchun pin raqamini moslashtiring.</p>
+    </div>
+
+    <div class="my-5">
+        <h3>Prinsipiy Tahlil</h3>
+        <p>NSW Green LED Moduli oddiy LED sxemasiga asoslanadi, unda LED VCC va GND orqali quvvatlanadi, Signal pini esa LEDni yoqish yoki o'chirish uchun ishlatiladi. Signal piniga HIGH (5V) berilganda LED yonadi, LOW (0V) berilganda esa o'chadi. Modul ichidagi rezistor LEDni haddan tashqari oqimdan himoya qiladi, bu esa xavfsiz va uzoq muddatli ishlashni ta'minlaydi.</p>
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_4button" role="button">
+            Oldingisi <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_7segment_display" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+        await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();  // Simulate a click to open the menu
+        }
+    };
+</script>

@@ -1,0 +1,165 @@
+@page "/nsw_timermodule"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Timer Moduli</h1>
+    <p class="lead text-center">Vaqtni aniq o‘lchash, taymer va sanash funksiyalari uchun NSW Timer modulidan foydalaning</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Timer Moduli vaqtni o‘lchash, soniya sanash, taymer funksiyalarini bajarish uchun mo‘ljallangan. Modul yordamida foydalanuvchi belgilangan vaqtdan keyin LEDni yoqish, signal chiqarish yoki boshqa harakatlarni amalga oshirishi mumkin. Odatda bu modulda raqamli displey va tugmalar mavjud bo‘lib, u real vaqtli taymer sifatida ishlatiladi.</p>
+        <img src="images/nsw_timer.jpg" alt="NSW Timer Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 5V DC</li>
+            <li>Displey: 4-digit 7-segment (ko‘pincha TM1637 bilan)</li>
+            <li>Interfeys: Raqamli pinlar (CLK, DIO)</li>
+            <li>Taymer funksiyasi: Orqaga yoki oldinga sanash</li>
+            <li>Qo‘llab-quvvatlaydi: LED yoki signal chiqaruvchi qurilmalarni boshqarish</li>
+            <li>Modul hajmi: ~42mm x 24mm</li>
+        </ul>
+        <p>Eslatma: Moduldan samarali foydalanish uchun kutubxona (masalan, <code>TM1637Display</code>) dan foydalaning.</p>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <ul>
+            <li>Orqaga sanovchi taymer (Countdown timer)</li>
+            <li>Sport o‘yinlari uchun vaqtni boshqarish</li>
+            <li>Signallarni vaqt bo‘yicha faollashtirish</li>
+            <li>LED yoritish tizimlarida vaqt asosida boshqaruv</li>
+            <li>Dars vaqtini yoki tanaffusni hisoblash tizimlari</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Ta'rifi</h2>
+        <p>Timer modulining ulanish pinlari quyidagicha bo‘ladi (TM1637 asosidagi versiya uchun):</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>VCC</td>
+                    <td>Quvvat manbai (5V)</td>
+                </tr>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to‘k (Ground)</td>
+                </tr>
+                <tr>
+                    <td>DIO</td>
+                    <td>Ma’lumot liniyasi (Data)</td>
+                </tr>
+                <tr>
+                    <td>CLK</td>
+                    <td>Soat liniyasi (Clock)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Ulanish (Arduino bilan)</h2>
+        <ul>
+            <li><b>VCC</b> → 5V</li>
+            <li><b>GND</b> → GND</li>
+            <li><b>DIO</b> → D2</li>
+            <li><b>CLK</b> → D3</li>
+        </ul>
+        <img src="images/timer_arduino_connection.jpg" alt="Timer Arduino bilan ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo'yicha Qo'llanma</h2>
+        <p>Quyidagi kod `TM1637Display` kutubxonasi yordamida displeyga son ko‘rsatadi:</p>
+        <pre>
+<!-- #include <TM1637Display.h> -->
+
+#define CLK 3
+#define DIO 2
+
+<!-- TM1637Display display(CLK, DIO);
+
+void setup() {
+  display.setBrightness(0x0f); // Maks yorqinlik
+}
+
+void loop() {
+  for (int i = 0; i < 100; i++) {
+    display.showNumberDec(i, true); // Raqamlarni ko‘rsatish
+    delay(1000); // Har bir soniyani kutish
+  }
+} -->
+        </pre>
+        <p>Ushbu kod yordamida displeyda 0 dan 99 gacha bo‘lgan sonlar har soniyada yangilanadi.</p>
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_oleddisplay" role="button">
+            Oldingisi <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_7segment_display" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+        await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();
+        }
+    };
+</script>

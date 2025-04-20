@@ -1,277 +1,157 @@
-/*.page {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-}*/
-
-/* Container layout */
-.article{
-    padding: 0;
-}
-.page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ekranning to'liq balandligi */
-    margin: 0;
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #4f46e5;
+    --text-color: #1f2937;
+    --bg-color: rgba(255, 255, 255, 0.95);
+    --hover-color: #1d4ed8;
+    --gradient: linear-gradient(90deg, #2563eb, #4f46e5);
 }
 
 .navmenu {
     background: linear-gradient(90deg, #11cb84 0%, #2575FC 100%);
     color: white;
-    position: fixed; /* Ensure it stays fixed on top */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999; /* Very high value to stay above all elements */
+    z-index: 9999;
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0; /* Increased padding for better vertical spacing */
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center content horizontally */
     align-items: center;
 }
 
-
-/* Navbar ichidagi elementlarni joylash */
 .navmenu-content {
+    max-width: 1280px;
+    width: 100%; /* Ensure it takes full width within max-width */
+    margin: 0 auto;
     display: flex;
-    align-items: center; /* O'rtada joylashuv */    
-    width: 100%;
-    padding: 0 20px; /* Ikkala tomondan bo'sh joy qo'shadi */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    gap: 1rem; /* Add gap to prevent crowding */
 }
 
-/* Navbar tugmalarini chapdan joylashtirish */
-nav ul {
-    position: relative;
+.logo-container {
+    flex-shrink: 0;
     display: flex;
-    justify-content: flex-start; /* Tugmalarni chapdan joylash */
-    padding-left: 20px; /* Chap tomondan bo'sh joy */
-    list-style: none; /* Ro'yxat belgisini olib tashlash */
+    align-items: center; /* Vertically center logo */
+}
+
+.logo {
+    height: 60px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+nav ul li {
     margin: 0;
 }
 
-nav ul .left-buttons {
-    display: flex;
-    gap: 10px; /* Tugmalar orasidagi masofa */
-}
-
-nav ul .right-buttons {
-    display: flex;
-    gap: 10px;
-    right: 0;
-    position: fixed;
-}
-
-/* Nav tugmalari */
-nav ul li a {
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    font-family: cursive;
-    font-weight: bold;
-}
-
-/* Hamburger menyu */
-.hamburger-menu {
-    display: none; /* Mobilga o‘tguncha ko‘rinmaydi */
-    flex-direction: column;
-    cursor: pointer;
-    margin-left: auto; /* Hamburger tugmasini o'ng tomonga itaradi */
-}
-
-/* Hamburger chiziqlarining ko'rinishi */
-.hamburger-menu span {
-    background: white; /* Chiziqlarning rangi */
-    height: 2px;
-    width: 25px;
-    margin: 3px 0;
-}
-
-/* Mobil ekranlar uchun */
-@media (max-width: 768px) {
-    .auth-buttons {
-        display: none; /* Mobilda login va register tugmalarini yashiradi */
-    }
-
-    /* Nav ro'yxatini yashiradi va ochilishi uchun tayyorlaydi */
-    nav ul {
-        display: none; /* Yashirin holat */
-        flex-direction: column; /* Vertikal joylashuv */
-        position: absolute; /* Navbar konteyneridan chiqib turgan joylashuv */
-        background-color: #2575FC; /* Fon rangi */
-        top: 100%; /* Navbar ostida joylashadi */
-        right: 0; /* O‘ng tomonga yopishadi */
-        padding: 0;
-        margin: 0;
-        border-radius: 5px;
-    }
-    
-    nav ul .left-buttons {
-        display: block;
-    }
-
-    nav ul .right-buttons {
-        display: block;
-        position: sticky;
-    }
-
-    /* Ro'yxatdagi tugmalar orasidagi bo'shliqni kamaytirish */
-    nav ul li {
-        width: auto; /* Tugmalar uzunligini matn uzunligiga moslaydi */
-        text-align: center; /* Matnni o'rtaga qo'yish */
-        display: flex; /* Flex konteynerini faollashtiradi */
-        justify-content: center; /* Gorizontal o'rtalash */
-        align-items: center; /* Vertikal o'rtalash */
-        background: transparent;
-        color: white; /* Matn rangi */
-        font-size: 16px; /* Matn kattaligi */
-        font-family: 'Poppins', sans-serif; /* Matn shrift turi */
-    }
-    
-
-    /* Linklar to'liq uzunlikda bo'ladi */
-    nav ul li a {
-        display: block; /* Tugmalarni vertikal joylashtiradi */
-        width: 100%; /* Link uzunligi butun element bo'ylab qoplaydi */
-    }
-
-    .hamburger-menu {
-        display: flex; /* Mobilda ko‘rinadi */
-    }
-    /* Hamburger tugmasi faollashganda */
-    .hamburger-menu.active span:nth-child(1) {
-        transform: rotate(45deg); /* Birinchi chiziqni aylantiradi */
-        position: relative;
-        top: 8px;
-    }
-
-    .hamburger-menu.active span:nth-child(2) {
-        opacity: 0; /* Ikkinchi chiziqni yashiradi */
-    }
-
-    .hamburger-menu.active span:nth-child(3) {
-        transform: rotate(-45deg); /* Uchinchi chiziqni aylantiradi */
-        position: relative;
-        top: -8px;
-    }
-
-    /* Menyu ochilganida */
-    .hamburger-menu.active + nav ul {
-        display: flex; /* Menyu ko'rsatiladi */
-    }
-}
-
-
-.auth-buttons {
-    position: absolute; /* Place the buttons in a fixed position */
-    top: 10px; /* Adjust distance from the top */
-    left: 20px; /* Adjust distance from the right */
-    display: flex;
-    gap: 10px;
-}
-
-.auth-buttons .btn {
-    padding: 10px 20px;
-    border: 1px solid white;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.auth-buttons .btn:hover {
-    background-color: white;
-    color: #20c7d2;
-}
-
-
-/* Logo uchun o'lchamlar */
-.logo {
-    height: 50px;
-    width: auto;
-    margin-right: 20px;
-    border-radius: 5px;
-}
-
-/* Kompyuter uchun: Tugmalar gorizontal bo‘lib turadi */
-@media (min-width: 769px) {
-    .hamburger-menu {
-        display: none; /* Kompyuterda hamburger menyu ko‘rinmasin */
-    }
-
-    nav ul {
-        display: flex; /* Gorizontal joylashuv */
-        gap: 20px; /* Tugmalar orasidagi bo‘shliq */
-    }
-
-    nav ul li a {
-        font-size: 18px;
-    }
-
-    .auth-buttons {
-        display: flex;
-    }
-}
-
-
-/* Main content - Body */
-main {
-    flex: 1; /* Bo'sh joyni to'ldiradi */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-}
-
-/* Footer - pastda yopishib turadi */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
     width: 100%;
-    margin-top: 50px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
 }
 
-.top-row {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
+.btn:hover::before {
+    left: 100%;
 }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
-
-    .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
-        text-decoration: underline;
-    }
-
-    .top-row ::deep a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-@media (max-width: 640.98px) {
-    .top-row {
-        justify-content: space-between;
-    }
-
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        margin-left: 0;
-    }
+.btn:hover {
+    background: var(--hover-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 641px) {
-    .page {
-        flex-direction: row;
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    background-color: #ffffff;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+        margin-left: auto; /* Push hamburger to the right */
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 75%;
+        height: 100vh;
+        background: var(--gradient);
+        background-color: #2563eb; /* Fallback color */
+        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        padding-top: 5rem;
+    }
+
+    nav.active {
+        transform: translateX(0);
     }
 
     .sidebar {
@@ -281,39 +161,43 @@ main {
         top: 0;
     }
 
-    .top-row {
-        position: sticky;
-        top: 0;
-        z-index: 1;
+    nav ul {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
     }
 
-    .top-row.auth ::deep a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
+    nav ul li {
+        width: 100%;
+        text-align: center;
     }
 
-    .top-row, article {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
+    .btn {
+        display: block;
+        padding: 1.25rem;
+        font-size: 1.2rem;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .logo-container {
+        margin-right: auto; /* Push logo to the left */
     }
 }
 
-#blazor-error-ui {
-    background: lightyellow;
-    bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-    #blazor-error-ui .dismiss {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
+@media (max-width: 480px) {
+    .logo {
+        height: 48px;
     }
+
+    .navmenu-content {
+        padding: 0 1rem; /* Reduced padding for smaller screens */
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        margin-right: 0.5rem; /* Ensure hamburger isn't too close to edge */
+    }
+}

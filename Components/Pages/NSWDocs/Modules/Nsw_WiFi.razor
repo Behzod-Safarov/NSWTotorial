@@ -1,0 +1,152 @@
+@page "/nsw_wifimodule"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Wi-Fi Moduli</h1>
+    <p class="lead text-center">IoT loyihalaringiz uchun simsiz aloqani oson tashkil qiling</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Wi-Fi Moduli simsiz (wireless) tarmoq orqali ma’lumot almashish imkonini beruvchi IoT komponentidir. Bu modul yordamida Arduino yoki boshqa mikrokontrollerlarni internetga ulash, masofadan boshqaruv, ma’lumotlarni serverga yuborish yoki olish, real vaqtli monitoring kabi vazifalarni bajarish mumkin.</p>
+        <p>NSW Wi-Fi moduli odatda ESP8266 yoki ESP32 chiplariga asoslangan bo‘lib, o‘zida Wi-Fi tarmog‘iga ulanadigan imkoniyat, HTTP/HTTPS so‘rovlarni yuborish va hatto o‘rnatilgan web-serverlarni ishga tushirish funksiyalarini o‘z ichiga oladi.</p>
+        <img src="images/nsw_wifi.jpg" alt="NSW Wi-Fi Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 3.3V (ba'zilari 5V converter bilan)</li>
+            <li>Wi-Fi standarti: 802.11 b/g/n</li>
+            <li>Protokollar: TCP/IP, UDP, HTTP, MQTT va boshqalar</li>
+            <li>Serial aloqa: UART (RX/TX)</li>
+            <li>Ichki flash xotira: 1 MB – 4 MB (modelga qarab)</li>
+            <li>Modul turi: ESP8266 yoki ESP32 (ko‘p yadroli variant)</li>
+        </ul>
+        <p>Eslatma: Modulni 3.3V da ishlating yoki darajani tushiruvchi (level shifter) sxemadan foydalaning. 5V to‘g‘ridan-to‘g‘ri ulash modulga zarar yetkazishi mumkin.</p>
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <ul>
+            <li>Sensorlardan ma’lumotlarni bulutga yuborish</li>
+            <li>Telegram botlar orqali boshqaruv</li>
+            <li>Smart Home (aqlli uy) tizimlari</li>
+            <li>Masofadan monitoring va nazorat qilish</li>
+            <li>HTTP server yoki klient sifatida ishlatish</li>
+            <li>Firebase, Blynk, ThingSpeak, MQTT kabi xizmatlar bilan integratsiya</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Ta'rifi</h2>
+        <p>Wi-Fi modulining pinlar soni va tartibi modellar orasida farqlanishi mumkin. Quyida ESP8266 (ESP-01) modulining asosiy pinlari keltirilgan:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>VCC</td>
+                    <td>3.3V kuchlanish</td>
+                </tr>
+                <tr>
+                    <td>GND</td>
+                    <td>Manfiy to‘k (Ground)</td>
+                </tr>
+                <tr>
+                    <td>TX</td>
+                    <td>Ma’lumot yuborish (Serial OUT)</td>
+                </tr>
+                <tr>
+                    <td>RX</td>
+                    <td>Ma’lumot qabul qilish (Serial IN)</td>
+                </tr>
+                <tr>
+                    <td>CH_PD / EN</td>
+                    <td>Chipni faollashtirish (HIGH holatga ulanishi kerak)</td>
+                </tr>
+                <tr>
+                    <td>GPIO0, GPIO2</td>
+                    <td>Umumiy maqsadli kirish-chiqish pinlari</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="my-5">
+        <h2>Ulanish (Arduino bilan)</h2>
+        <ul>
+            <li><b>VCC</b> → 3.3V (e’tibor bering: 5V ulanmasin!)</li>
+            <li><b>GND</b> → GND</li>
+            <li><b>TX</b> → Arduino RX (past kuchlanishga moslashtirilgan)</li>
+            <li><b>RX</b> → Arduino TX (darajani tushiruvchi orqali)</li>
+            <li><b>CH_PD</b> → 3.3V (doimiy HIGH bo‘lishi kerak)</li>
+        </ul>
+        <img src="images/wifi_arduino_connection.jpg" alt="Wi-Fi Arduino bilan ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>ESP32 modeli bo‘lsa, u mustaqil mikrokontroller bo‘lib, qo‘shimcha Arduino kerak emas.</p>
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_flamesensor" role="button">
+            Oldingisi <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_colorsensor" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+        await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();
+        }
+    };
+</script>

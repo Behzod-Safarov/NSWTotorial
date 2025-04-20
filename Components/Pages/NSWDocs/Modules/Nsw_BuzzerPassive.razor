@@ -1,0 +1,171 @@
+@page "/nsw_passivebuzzer"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+<NSWLayout />
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center">NSW Passive Buzzer Moduli</h1>
+    <p class="lead text-center">Loyihalaringizga NSW Passive Buzzer Moduli bilan turli xil ovozli effektlar qo'shing</p>
+
+    <div class="my-5">
+        <h2>Umumiy Ma'lumot</h2>
+        <p>NSW Passive Buzzer Moduli piezoelektrik komponent bo'lib, turli chastotali ovozli signallar ishlab chiqarish uchun mo'ljallangan. Bu modul qora belgi bilan belgilangan bo'lib, u Nsw Boarddagi qora belgili (Raqamli) portga ulanadi. Ichki osilatorga ega emas, shuning uchun ovoz ishlab chiqarish uchun mikrocontroller (masalan, Arduino) orqali 1.5–2.5 kHz chastotali kvadrat to'lqin signali talab qilinadi. Oddiy ogohlantirish signallaridan tortib, musiqiy ohanglarni ijro etishgacha bo'lgan loyihalarda foydalanish uchun moslashuvchan va ko'p qirrali yechim taqdim etadi.</p>[](https://grobotronics.com/passive-buzzer-module.html?sl=en)[](https://arduinomodules.info/ky-006-passive-buzzer-module/)
+        <img src="images/nsw_passivebuzzer.jpg" alt="NSW Passive Buzzer Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Asosiy Xususiyatlari</h2>
+        <ul>
+            <li>Ishlash kuchlanishi: 1.5V - 15V DC</li>
+            <li>Ovoz chastotasi: 1.5 kHz - 2.5 kHz (PWM signaliga bog'liq)</li>
+            <li>Boshqarish rejimi: Raqamli PWM signal</li>
+            <li>Modul hajmi: 26 x 15 x 11 mm (U x G x Y)</li>
+            <li>Ulanish: RJ25 yoki Dupont simlari</li>
+            <li>Impedans: Taxminan 15 Ohm</li>
+        </ul>
+        <p>Eslatma: Buzzer'ni to'g'ridan-to'g'ri mikrocontroller piniga ulashda oqimni cheklash uchun 120 Ohm yoki undan yuqori rezistor ishlatish tavsiya etiladi, chunki buzzer 20–40 mA dan ortiq oqim talab qilishi mumkin.</p>[](https://protosupplies.com/product/passive-buzzer-5v-module/)
+    </div>
+
+    <div class="my-5">
+        <h2>Ilovalar</h2>
+        <p>NSW Passive Buzzer Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <ul>
+            <li>Musiqiy ohanglar va melodiyalar ishlab chiqarish</li>
+            <li>Robototexnika loyihalarida ovozli ko'rsatkichlar</li>
+            <li>Ta'lim loyihalari va PWM signalini o'rganish</li>
+            <li>Ogohlantirish signallari va bildirishnomalar</li>
+            <li>DIY elektron loyihalar (masalan, o'yinchoqlar)</li>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h2>Pin Ta'rifi</h2>
+        <p>NSW Passive Buzzer Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pin</th>
+                    <th>Vazifasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GND (-)</td>
+                    <td>Manfiy to'k (Ground)</td>
+                </tr>
+                <tr>
+                    <td>VCC (+)</td>
+                    <td>Quvvatlantirish manbai (1.5V - 15V, odatda 5V)</td>
+                </tr>
+                <tr>
+                    <td>Signal (S)</td>
+                    <td>Ovozni ishlab chiqarish uchun PWM signal</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Eslatma: O'rta pin ba'zi modullarda ishlatilmaydi.</p>[](https://arduinomodules.info/ky-006-passive-buzzer-module/)
+    </div>
+
+    <div class="my-5">
+        <h2>Simlarni Ulanish Rejimi</h2>
+
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Passive Buzzer Moduli qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
+        <img src="images/passivebuzzer_rj25.jpg" alt="NSW Passive Buzzer RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+    <div class="my-5">
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, Signal pinini raqamli PWM piniga (masalan, D8) ulash lozim. Oqimni cheklash uchun Signal piniga ketma-ket 120–220 Ohm rezistor qo'shing. Quyidagi rasmda ulanish ko'rsatilgan:</p>
+        <img src="images/passivebuzzer_dupont.jpg" alt="NSW Passive Buzzer Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo'yicha Qo'llanma</h2>
+
+        <p>Arduino dasturlash</p>
+        <p>Arduino yordamida NSW Passive Buzzer Modulini boshqarish uchun PWM signali orqali turli chastotali ovozlar ishlab chiqarish mumkin. Quyidagi misol buzzer'da ikki xil ohangni ketma-ket ijro etadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino `tone()` funksiyasi yetarli:</p>
+        <pre>
+int buzzerPin = 8; // Signal pinini D8 ga uladik
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT); // Buzzer pinini chiqish sifatida sozlash
+}
+
+void loop() {
+  tone(buzzerPin, 1000); // 1 kHz ohang
+  delay(1000);           // 1 soniya kutish
+  noTone(buzzerPin);     // Ovozni to'xtatish
+  delay(500);            // 0.5 soniya kutish
+  tone(buzzerPin, 2000); // 2 kHz ohang
+  delay(1000);           // 1 soniya kutish
+  noTone(buzzerPin);     // Ovozni to'xtatish
+  delay(500);            // 0.5 soniya kutish
+}
+        </pre>
+        <p>Ushbu kod buzzer'da 1 kHz va 2 kHz chastotali ohanglarni navbatma-navbat ijro etadi. Turli melodiyalar ijro etish uchun `tone()` funksiyasiga boshqa chastotalarni kiriting yoki Arduino `pitches.h` kutubxonasidan foydalaning.</p>[](https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/components_basic/26-component_buzzer.html)
+    </div>
+
+    <div class="my-5">
+        <h3>Prinsipiy Tahlil</h3>
+        <p>NSW Passive Buzzer Moduli piezoelektrik effektga asoslanadi. Signal piniga kvadrat to'lqinli PWM signali (1.5–2.5 kHz) berilganda, ichidagi piezoelektrik kristal tebranib, ovoz ishlab chiqaradi. Chastota signalning tezligiga bog'liq, bu esa turli ohanglarni yaratish imkonini beradi. Modul ichki osilatorga ega emas, shuning uchun ovoz ishlab chiqarish uchun tashqi mikrocontroller talab qilinadi. Buzzer'ning impedansi taxminan 15 Ohm bo'lib, mikrocontroller pinini himoya qilish uchun seriyali rezistor yoki tranzistor ishlatish tavsiya etiladi.</p>[](https://protosupplies.com/product/passive-buzzer-5v-module/)[](https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/components_basic/26-component_buzzer.html)
+    </div>
+
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_activebuzzer" role="button">
+            Oldingisi <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_7segment_display" role="button">
+            Keyingisi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.custom-btn {
+    background: linear-gradient(135deg, rgb(0, 217, 255), rgb(0, 150, 200));
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, rgb(0, 150, 200), rgb(0, 217, 255));
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.custom-btn i {
+    margin: 0 8px;
+}
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+        await JSRuntime.InvokeVoidAsync("openNavMenu");
+    }
+}
+
+<script>
+    window.scrollToTop = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.openNavMenu = function () {
+        let toggler = document.querySelector('.navbar-toggler');
+        if (toggler && !toggler.checked) {
+            toggler.click();  // Simulate a click to open the menu
+        }
+    };
+</script>
