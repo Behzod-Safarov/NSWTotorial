@@ -1,3 +1,4 @@
+```razor
 @page "/nsw_button"
 @rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
@@ -7,40 +8,43 @@
 
 <div class="container mt-5">
     <h1 class="display-4 text-center">NSW Button Moduli</h1>
-    <p class="lead text-center">Loyihalaringizni NSW Button Moduli bilan interaktiv qiling</p>
+    <p class="lead text-center">Loyihalaringizni interaktiv qiling</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Button Moduli bitta tugmadan iborat. Sariq belgi bilan belgilangan bu modul NSW Boshqaruv Platasidagi sariq belgili (Raqamli) portlarga ulanadi. Tugma bosilganda LOW signal, qo'yib yuborilganda esa HIGH signal chiqaradi. Ta'lim loyihalaridan tortib, uy avtomatlashtirish tizimlarigacha bo'lgan keng ko'lamli ilovalar uchun ideal yechimdir.</p>
-        <img src="images/nsw_button.jpg" alt="NSW Button Moduli tasviri" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW Button Moduli bitta bosma tugmadan iborat bo‘lib, sariq identifikatorga ega va NSW Boshqaruv Platasining sariq (raqamli) portlariga ulanadi. Tugma bosilganda LOW signal, qo‘yib yuborilganda esa HIGH signal ishlab chiqaradi. Ta’lim loyihalaridan uy avtomatlashtirish tizimlarigacha keng qo‘llaniladi.</p>
+        <div class="image-container">
+            <img src="images/button.jpg" alt="NSW Button Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW Button Moduli – oddiy va interaktiv boshqaruv</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V - 5V DC</li>
-            <li>Boshqarish rejimi: Raqamli signal (HIGH/LOW)</li>
-            <li>Modul hajmi: 20 x 20 x 10 mm (X x Y x Z)</li>
-            <li>Ulanish: RJ25 yoki Ulash simlari</li>
-            <li>Signal chiqishi: Bosilganda LOW, qo'yib yuborilganda HIGH</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
+            <li>Boshqarish rejimi: Raqamli signal</li>
+            <li>Modul hajmi: 20×20×10 mm (U×B×H)</li>
+            <li>Ulanish: RJ25 yoki Dupont simlari</li>
+            <li>Signal chiqishi: Bosilganda LOW, qo‘yib yuborilganda HIGH</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Button Moduli quyidagi loyihalarda qo'llanilishi mumkin:</p>
+        <p>NSW Button Moduli quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Foydalanuvchi interfeysi boshqaruvlari (masalan, yoqish/o'chirish tugmasi)</li>
+            <li>Foydalanuvchi interfeysi boshqaruvlari (yoqish/o‘chirish tugmasi)</li>
             <li>Robototexnika loyihalarida trigger signallari</li>
-            <li>Ta'lim loyihalari va raqamli signallarni o'rganish</li>
+            <li>Ta’lim loyihalari va raqamli signallarni o‘rganish</li>
             <li>Uy avtomatlashtirish tizimlari</li>
-            <li>Muatqil loyihalar (masalan, qo'ng'iroqlar yoki boshqaruv panellari)</li>
+            <li>Mustaqil loyihalar (qo‘ng‘iroqlar, boshqaruv panellari)</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Ta'rifi</h2>
-        <p>Modulda uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>Modulda uchta pin mavjud:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -51,7 +55,7 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to'k (Ground)</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
@@ -66,49 +70,200 @@
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulanish Rejimi</h2>
-        <h3>RJ25 bilan ulanish</h3>
-        <p>NSW Button Moduli sariq IDga ega bo'lib, RJ25 porti orqali NSW Boshqaruv Platasidagi sariq ID bilan belgilangan barcha portlarga ulanadi </p>
-        <img src="images/button_rj25.jpg" alt="NSW Button Moduli RJ25 ulanish tasviri" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
-        
+        <h2>Simlarni ulash rejimi</h2>
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Button Moduli sariq identifikatorga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv Platasining sariq identifikatorli raqamli portlariga ulanadi.</p>
+        <div class="image-container">
+            <img src="images/button_rj25.jpg" alt="NSW Button RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
+
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda Signal pini raqamli pinga (masalan, D7) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_button_dupont.jpg" alt="NSW Button Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash bo'yicha Qo'llanma</h2>
-        <h3>Arduino dasturlash</h3>
-        <p>Quyidagi Arduino kodi tugma bosilganini aniqlab, holatni ketma-ket monitorga chiqaradi. Standart Arduino funktsiyalari yetarli bo'lib, qo'shimcha kutubxonalar talab qilinmaydi.</p>
-        <pre><code>
-int buttonPin = 7; // Signal pinini D7 ga uladik
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino dasturlash</p>
+        <p>Arduino IDE yordamida NSW Button Modulini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi. Quyidagi dastur tugma bosilishini aniqlab, holatni Serial monitorga chiqaradi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+int buttonPin = 7; // Signal pini D7 ga ulangan
 
 void setup() {
-  pinMode(buttonPin, INPUT_PULLUP); // Tugma pinini kirish sifatida sozlash
-  Serial.begin(9600);              // Ketma-ket portni ishga tushirish
+    pinMode(buttonPin, INPUT_PULLUP); // Tugma pinini kirish sifatida sozlash
+    Serial.begin(9600);              // Serial portni ishga tushirish
 }
 
 void loop() {
-  int buttonState = digitalRead(buttonPin); // Tugma holatini o'qish
-  if (buttonState == LOW) {
-    Serial.println("Tugma bosildi");
-  } else {
-    Serial.println("Tugma bosilmadi");
-  }
-  delay(100); // 100 ms kutish
+    int buttonState = digitalRead(buttonPin); // Tugma holatini o‘qish
+    if (buttonState == LOW) {
+        Serial.println("Tugma bosildi");
+    } else {
+        Serial.println("Tugma bosilmadi");
+    }
+    delay(100); // 100 ms kutish
 }
-        </code></pre>
-        <p>Bu kod tugma bosilganda LOW signalni, qo'yib yuborilganda esa HIGH signalni aniqlaydi va holatni ketma-ket monitorga chop etadi.</p>
+            </code></pre>
+        </div>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+
+        <style>
+        .code-container {
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            border-radius: 12px;
+            margin: 2rem 0;
+            padding: 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 2px solid #007bff;
+            transition: transform 0.3s ease;
+        }
+
+        .code-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            padding: 12px 20px;
+            border-bottom: 1px solid #004085;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        .copy-btn.copied {
+            background: #17a2b8;
+        }
+
+        .copy-btn.copied::after {
+            content: "Nusxa olindi!";
+            position: absolute;
+            top: -30px;
+            right: 0;
+            background: #17a2b8;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            animation: fadeInOut 1.5s ease;
+        }
+
+        @@keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(10px); }
+            20% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
+        }
+
+        pre.line-numbers {
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 0 0 12px 12px;
+        }
+
+        code {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 15px;
+        }
+
+        .prism-coy .line-numbers-rows {
+            border-right: 1px solid #ddd;
+            padding-right: 10px;
+            margin-right: 10px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .img-fluid {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+            border-radius: 10px;
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        </style>
+
+        <script>
+        function copyCode(button) {
+            const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                button.classList.add('copied');
+                button.textContent = 'Nusxa olindi!';
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.textContent = 'Nusxa olish';
+                }, 2000);
+            });
+        }
+        </script>
     </div>
 
     <div class="my-5">
-        <h3>Umumiy Tahlil</h3>
-        <p>NSW Button Moduli oddiy elektromexanik kalit printsipiga asoslanadi. Tugma bosilganda Signal pini GND ga ulanib, LOW signal ishlab chiqaradi. Qo'yib yuborilganda ichki pull-up rezistori tufayli Signal pini HIGH holatga qaytadi. Modul ichki rezistor bilan jihozlangan bo'lib, bu tashqi pull-up rezistorlariga ehtiyojni yo'qotadi va ulanishni soddalashtiradi.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW Button Moduli oddiy elektromexanik kalit sifatida ishlaydi. Tugma bosilganda Signal pini GND ga ulanib, LOW signal ishlab chiqaradi; qo‘yib yuborilganda ichki pull-up rezistori tufayli HIGH signal qaytaradi. Ichki rezistor tufayli tashqi rezistorlarga ehtiyoj yo‘q, bu esa ulanishni soddalashtiradi va uni ta’lim va interaktiv loyihalar uchun qulay qiladi.</p>
     </div>
 
     <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_passivebuzzer" role="button">
-            Oldingisi <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_4button" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 </div>
@@ -156,7 +311,8 @@ void loop() {
     window.openNavMenu = function () {
         let toggler = document.querySelector('.navbar-toggler');
         if (toggler && !toggler.checked) {
-            toggler.click();  // Simulate a click to open the menu
+            toggler.click();
         }
     };
 </script>
+```

@@ -1,3 +1,4 @@
+```razor
 @page "/nsw_oleddisplay"
 @rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
@@ -7,43 +8,46 @@
 
 <div class="container mt-5">
     <h1 class="display-4 text-center">NSW OLED Display Moduli</h1>
-    <p class="lead text-center">Loyihalaringizga OLED displey bilan grafik va matnli interfeys qo‘shing</p>
+    <p class="lead text-center">Loyihalaringizga grafik va matnli interfeys qo‘shing</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW OLED Display Moduli 128x64 pikselli o‘lchamga ega, 0.96 dyuymli ekran bo‘lib, ko‘k yoki oq rangli displeyda matn, grafik yoki belgilarni ko‘rsatish imkonini beradi. Bu modul I2C interfeys orqali ishlaydi va Arduino kabi mikrokontrollerlar bilan juda yaxshi mos keladi. Juda kam quvvat sarflashi va kompaktligi uni turli elektron loyihalar uchun ideal qiladi.</p>
-        <img src="images/nsw_oleddisplay.jpg" alt="NSW OLED Display Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW OLED Display Moduli 0.96 dyuymli, 128×64 pikselli ekran bo‘lib, ko‘k yoki oq rangda matn, grafik va belgilarni ko‘rsatadi. I2C interfeysi orqali ishlaydi va Arduino kabi mikrokontrollerlar bilan mos keladi. Kam quvvat sarfi va kompakt o‘lchami uni turli elektron loyihalar uchun ideal qiladi.</p>
+        <div class="image-container">
+            <img src="images/oledDisplay.jpg" alt="NSW OLED Display Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW OLED Display Moduli – yuqori kontrastli ko‘rsatish</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
             <li>Displey o‘lchami: 0.96 dyuym</li>
-            <li>Ruxsat (Resolution): 128 x 64 piksel</li>
+            <li>Ruxsat: 128×64 piksel</li>
             <li>Interfeys: I2C (SCL, SDA)</li>
-            <li>Ishlash kuchlanishi: 3.3V – 5V</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V</li>
             <li>Chastota: 400 kHz (I2C)</li>
-            <li>Energiya sarfi: Juda past (ultraboy energiya tejamkorlik)</li>
+            <li>Energiya sarfi: Juda kam</li>
             <li>Chip: SSD1306 drayver chipi</li>
         </ul>
-        <p>Eslatma: Displey fon yoritgichga ega emas, lekin OLED texnologiyasi tufayli yuqori kontrast bilan o‘qilishi oson.</p>
+        <p>Eslatma: OLED texnologiyasi fon yoritgichsiz yuqori kontrastli tasvirni ta’minlaydi.</p>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW OLED Display Moduli quyidagi sohalarda keng qo‘llaniladi:</p>
+        <p>NSW OLED Display Moduli quyidagi sohalarda qo‘llaniladi:</p>
         <ul>
             <li>Robototexnika va IoT qurilmalari interfeysi</li>
-            <li>Harorat, namlik, bosim va boshqa sensor natijalarini ko‘rsatish</li>
+            <li>Harorat, namlik va bosim sensorlari natijalarini ko‘rsatish</li>
             <li>Mini o‘yinlar va animatsiyalar</li>
-            <li>Haqiqiy vaqtli soat (RTC) ko‘rsatkichi</li>
-            <li>Matnli xabarlar, grafikalar, tugmalar interfeysi</li>
+            <li>Real vaqtdagi soat ko‘rsatkichi</li>
+            <li>Matnli xabarlar va grafik interfeyslar</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Ta'rifi</h2>
-        <p>NSW OLED Display Modulining 4 ta pin mavjud:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>NSW OLED Display Modulida 4 ta pin mavjud:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -54,7 +58,7 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to‘k (Ground)</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
@@ -66,7 +70,7 @@
                 </tr>
                 <tr>
                     <td>SDA</td>
-                    <td>Ma'lumot signali (I2C interfeys)</td>
+                    <td>Ma’lumot signali (I2C interfeys)</td>
                 </tr>
             </tbody>
         </table>
@@ -81,16 +85,26 @@
             <li><b>SCL</b> → A5 (Arduino UNO)</li>
             <li><b>SDA</b> → A4 (Arduino UNO)</li>
         </ul>
-        <img src="images/oled_arduino_connection.jpg" alt="OLED Arduino bilan ulanish" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <div class="image-container">
+            <img src="images/oled_arduino_connection.jpg" alt="OLED Arduino bilan ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Arduino UNO bilan I2C ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash bo'yicha Qo'llanma</h2>
-        <p>Quyidagi Arduino kodi yordamida OLED displeyga "Salom, Dunyo!" matnini chiqarish mumkin. <code>Adafruit SSD1306</code> va <code>Adafruit GFX</code> kutubxonalarini kutubxona menejeri orqali o‘rnating.</p>
-        <pre>
-<!-- #include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h> -->
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino IDE yordamida OLED displeyga “Salom, Dunyo!” matnini chiqarish uchun <code>Adafruit_SSD1306</code> va <code>Adafruit_GFX</code> kutubxonalarini o‘rnating. Quyidagi dastur namunasi displeyda matn ko‘rsatadi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+<pre class="line-numbers"><code class="language-cpp">
+
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
 
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
@@ -98,30 +112,172 @@
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
 void setup() {
-  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
-    Serial.println(F("OLED topilmadi"));
-    for(;;);
-  }
-  display.clearDisplay();
-  display.setTextSize(2);
-  display.setTextColor(SSD1306_WHITE);
-  display.setCursor(10, 20);
-  display.println("Salom, Dunyo!");
-  display.display();
+    if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+        Serial.println(F("OLED topilmadi"));
+        for(;;);
+    }
+    display.clearDisplay();
+    display.setTextSize(2);
+    display.setTextColor(SSD1306_WHITE);
+    display.setCursor(10, 20);
+    display.println("Salom, Dunyo!");
+    display.display();
 }
 
 void loop() {
-  // Hech nima qilinmaydi
+    // Hech narsa qilinmaydi
 }
-        </pre>
+            </code></pre>
+        </div>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+
+        <style>
+        .code-container {
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            border-radius: 12px;
+            margin: 2rem 0;
+            padding: 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 2px solid #007bff;
+            transition: transform 0.3s ease;
+        }
+
+        .code-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            padding: 12px 20px;
+            border-bottom: 1px solid #004085;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        .copy-btn.copied {
+            background: #17a2b8;
+        }
+
+        .copy-btn.copied::after {
+            content: "Nusxa olindi!";
+            position: absolute;
+            top: -30px;
+            right: 0;
+            background: #17a2b8;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            animation: fadeInOut 1.5s ease;
+        }
+
+        @@keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(10px); }
+            20% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
+        }
+
+        pre.line-numbers {
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 0 0 12px 12px;
+        }
+
+        code {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 15px;
+        }
+
+        .prism-coy .line-numbers-rows {
+            border-right: 1px solid #ddd;
+            padding-right: 10px;
+            margin-right: 10px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .img-fluid {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+            border-radius: 10px;
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        </style>
+
+        <script>
+        function copyCode(button) {
+            const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                button.classList.add('copied');
+                button.textContent = 'Nusxa olindi!';
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.textContent = 'Nusxa olish';
+                }, 2000);
+            });
+        }
+        </script>
+    </div>
+
+    <div class="my-5">
+        <h2>Umumiy tahlil</h2>
+        <p>NSW OLED Display Moduli SSD1306 chipi asosida ishlaydi va I2C interfeysi orqali ma’lumotlarni uzatadi. Har bir piksel mustaqil ravishda yoqilib-o‘chiriladi, bu esa yuqori kontrast va aniq tasvirni ta’minlaydi. Kam quvvat sarfi va kichik o‘lchami tufayli u IoT qurilmalari, sensor ma’lumotlari ko‘rsatkichi va interaktiv loyihalar uchun samarali yechimdir.</p>
     </div>
 
     <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_ultrasonicsensor" role="button">
-            Oldingisi <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_buzzer" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 </div>
@@ -173,3 +329,4 @@ void loop() {
         }
     };
 </script>
+```

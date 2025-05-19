@@ -1,45 +1,50 @@
-﻿@page "/nsw_potentiometer"
+﻿```razor
+@page "/nsw_potentiometer"
 @inherits LayoutComponentBase
 @inject IJSRuntime JSRuntime
 @rendermode InteractiveServer
 <NSWLayout />
 <br>
 <br>
+
 <div class="container mt-5">
     <h1 class="display-4 text-center">NSW Potensiometr Moduli</h1>
-    <p class="lead text-center">NSW Potensiometr Moduli bilan Silliq Qarshilik Boshqaruvi</p>
+    <p class="lead text-center">Silliq qarshilik boshqaruvi bilan loyihalarni sozlang</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Potensiometr Moduli kuchlanishni boshqarish va analog signal o'qish uchun mo'ljallangan. Bu modul robototexnika, avtomatlashtirish tizimlari va boshqa turli xil loyihalarda keng qo'llanilishi mumkin. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
-        <img src="images/nsw_potentiometer.jpg" alt="NSW Potensiometr Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW Potensiometr Moduli analog signal o‘qish va kuchlanishni boshqarish uchun mo‘ljallangan. Robototexnika, avtomatlashtirish va ta’lim loyihalarida keng qo‘llaniladi. Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
+        <div class="image-container">
+            <img src="images/nsw_potentiometer.jpg" alt="NSW Potensiometr Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW Potensiometr Moduli – analog boshqaruv uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V-5V DC</li>
-            <li>Qarshilik diapazoni: 0-10kΩ</li>
-            <li>Analog signal chiqishi</li>
-            <li>Modul hajmi: 30 x 20 x 10 mm</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
+            <li>Qarshilik diapazoni: 0–10 kΩ</li>
+            <li>Chiqish: Analog signal (0–5V)</li>
+            <li>Modul hajmi: 30×20×10 mm (U×B×H)</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Potensiometr Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW Potensiometr Moduli quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Robototexnika</li>
-            <li>Avtomatlashtirish Tizimlari</li>
-            <li>Xavfsizlik Tizimlari</li>
-            <li>DIY Gadjetlar</li>
-            <li>Ta'lim Loyiha</li>
+            <li>Robototexnikada boshqaruv elementlari</li>
+            <li>Avtomatlashtirish tizimlari</li>
+            <li>Xavfsizlik tizimlarida sozlash</li>
+            <li>Mustaqil gadjetlar</li>
+            <li>Ta’lim loyihalari</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Tafsilotlari</h2>
-        <p>NSW Potensiometr Moduli portida quyidagi pinlar mavjud:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>Modulda uchta pin mavjud:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -50,70 +55,217 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to'k</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvatlantirish manbai</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
                 </tr>
                 <tr>
                     <td>OUT</td>
-                    <td>Analog signal chiqishi</td>
+                    <td>Analog signal chiqishi (0–5V)</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulash Rejimi</h2>
+        <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Potensiometr Moduli RJ25 porti orqali ulanishi mumkin. Makeblock Orion-da RJ25 portidan foydalanganda, uni mos keluvchi portga ulashingiz kerak:</p>
-        <img src="images/nsw_potentiometer_rj25.jpg" alt="NSW Potensiometr RJ25 Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>NSW Potensiometr Moduli ko‘k identifikatorga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv Platasining ko‘k identifikatorli analog portlariga (masalan, A0 yoki A1) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_potentiometer_rj25.jpg" alt="NSW Potensiometr RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
 
         <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asos paneliga ulash uchun foydalanilganda, uning OUT pinini analog pinga quyidagicha ulash lozim:</p>
-        <img src="images/nsw_potentiometer_dupont.jpg" alt="NSW Potensiometr Dupont Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda OUT pini analog pinga (masalan, A0) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_potentiometer_dupont.jpg" alt="NSW Potensiometr Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash Bo'yicha Qo'llanma</h2>
-        <p>Arduino Dasturlash</p>
-        <p>Agar dastur yozish uchun Arduino dan foydalansangiz, NSW Potensiometr Modulini boshqarish uchun quyidagi koddan foydalanishingiz mumkin:</p>
-        <pre><code class="language-cpp">
-// Arduino dastur kodi
-const int potPin = A0; // Potensiometr chiqishi
-const int ledPin = 9;  // LED chiqishi
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino dasturlash</p>
+        <p>Arduino IDE yordamida NSW Potensiometr Modulini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi. Quyidagi dastur potensiometr qiymatini o‘qib, LED yorqinligini sozlaydi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+const int potPin = A0; // OUT pini A0 ga ulangan
+const int ledPin = 9;  // LED pini D9 ga ulangan (PWM qo‘llab-quvvatlaydi)
 
 void setup() {
-    pinMode(ledPin, OUTPUT);
-    Serial.begin(9600);
+    pinMode(ledPin, OUTPUT); // LED pinini chiqish sifatida sozlash
+    Serial.begin(9600);      // Serial portni ishga tushirish
 }
 
 void loop() {
-    int potValue = analogRead(potPin);
-    int brightness = map(potValue, 0, 1023, 0, 255);
-    analogWrite(ledPin, brightness);
-    Serial.print("Potensiometr Qiymati: ");
-    Serial.println(potValue);
-    delay(100);
+    int potValue = analogRead(potPin);           // Potensiometr qiymatini o‘qish (0–1023)
+    int brightness = map(potValue, 0, 1023, 0, 255); // Qiymatni 0–255 diapazoniga aylantirish
+    analogWrite(ledPin, brightness);             // LED yorqinligini sozlash
+    Serial.print("Potensiometr qiymati: ");
+    Serial.println(potValue);                    // Qiymatni Serial monitorga chiqarish
+    delay(100);                                  // 100 ms kutish
 }
-        </code></pre>
+            </code></pre>
+        </div>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+
+        <style>
+        .code-container {
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            border-radius: 12px;
+            margin: 2rem 0;
+            padding: 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 2px solid #007bff;
+            transition: transform 0.3s ease;
+        }
+
+        .code-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            padding: 12px 20px;
+            border-bottom: 1px solid #004085;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        .copy-btn.copied {
+            background: #17a2b8;
+        }
+
+        .copy-btn.copied::after {
+            content: "Nusxa olindi!";
+            position: absolute;
+            top: -30px;
+            right: 0;
+            background: #17a2b8;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            animation: fadeInOut 1.5s ease;
+        }
+
+        @@keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(10px); }
+            20% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
+        }
+
+        pre.line-numbers {
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 0 0 12px 12px;
+        }
+
+        code {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 15px;
+        }
+
+        .prism-coy .line-numbers-rows {
+            border-right: 1px solid #ddd;
+            padding-right: 10px;
+            margin-right: 10px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .img-fluid {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+            border-radius: 10px;
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        </style>
+
+        <script>
+        function copyCode(button) {
+            const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                button.classList.add('copied');
+                button.textContent = 'Nusxa olindi!';
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.textContent = 'Nusxa olish';
+                }, 2000);
+            });
+        }
+        </script>
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Potensiometr Moduli kuchlanishni boshqarish va analog signal o'qish uchun mo'ljallangan. Bu modulning asosiy funktsiyasi robototexnika va avtomatlashtirish tizimlarida kuchlanishni nazorat qilishdir. OUT pini orqali analog signal uzatish amalga oshiriladi.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW Potensiometr Moduli o‘zgaruvchan rezistor sifatida ishlaydi, OUT pinida 0–5V oralig‘idagi analog signal ishlab chiqaradi. Bu signal mikrokontrollerning analog pinlari orqali o‘qilib, yorqinlik, tezlik yoki boshqa parametrlarni sozlashda ishlatiladi. Modulning soddaligi va moslashuvchanligi uni ta’lim, robototexnika va avtomatlashtirish loyihalari uchun ideal qiladi.</p>
     </div>
 
-  <div class="text-center my-5">
+    <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/pm25sensor" role="button">
-            <i class="fas fa-arrow-left"></i> Orqaga
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_pressuresensor" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
-
 </div>
 
 <style>
@@ -155,3 +307,4 @@ void loop() {
         window.scrollTo(0, 0);
     };
 </script>
+```

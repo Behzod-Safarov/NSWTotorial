@@ -1,4 +1,5 @@
-﻿@page "/nsw_activebuzzer"
+﻿```razor
+@page "/nsw_activebuzzer"
 @rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
 <NSWLayout />
@@ -7,41 +8,44 @@
 
 <div class="container mt-5">
     <h1 class="display-4 text-center">NSW Active Buzzer Moduli</h1>
-    <p class="lead text-center">Loyihalaringizga NSW Active Buzzer Moduli bilan ovozli signallar qo'shing</p>
+    <p class="lead text-center">Loyihalaringizga ovozli signallar qo‘shing</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Active Buzzer Moduli ovozli signal beruvchi pyezolektrik komponent bo'lib, loyihalaringizga ovozli ogohlantirishlar yoki indikatorlar qo'shish uchun mo'ljallangan. Bu modul sariq belgi bilan belgilangan bo'lib, u Nsw Boarddagi sariq belgili (Raqamli) portga ulanadi. Ichki osilator tufayli, u faqat quvvat berilganda ~2.5 kHz chastotali doimiy ovoz chiqaradi. Oddiy signalizatsiyadan tortib, foydalanuvchi kiritishlarini tasdiqlashgacha bo'lgan loyihalarda foydalanish uchun qulay va samarali yechim taqdim etadi.</p>[](https://arduinomodules.info/ky-012-active-buzzer-module/)
-        <img src="images/nsw_activebuzzer.jpg" alt="NSW Active Buzzer Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW Active Buzzer Moduli pyezolektrik komponent bo‘lib, loyihalarga ovozli ogohlantirishlar yoki ko‘rsatkichlar qo‘shish uchun mo‘ljallangan. Sariq identifikatorga ega bu modul NSW Boshqaruv Platasining sariq (raqamli) portlariga ulanadi. Ichki osilator tufayli ~2.5 kHz chastotali doimiy ovoz chiqaradi, bu uni signalizatsiya va tasdiqlash loyihalari uchun qulay qiladi.</p>
+        <div class="image-container">
+            <img src="images/activebuzzer.jpg" alt="NSW Active Buzzer Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW Active Buzzer Moduli – ovozli signal uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V - 5V DC</li>
-            <li>Ovoz chastotasi: Taxminan 2.5 kHz</li>
-            <li>Boshqarish rejimi: Raqamli signal (HIGH/LOW)</li>
-            <li>Modul hajmi: 34 x 15 x 11 mm (X x Y x Z)</li>
-            <li>Ulanish: RJ25 yoki Ulash simlari</li>
-            <li>Ovoz balandligi: Taxminan 85 dB (10 sm masofada)</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
+            <li>Ovoz chastotasi: ~2.5 kHz</li>
+            <li>Boshqarish rejimi: Raqamli signal</li>
+            <li>Modul hajmi: 34×15×11 mm (U×B×H)</li>
+            <li>Ulanish: RJ25 yoki Dupont simlari</li>
+            <li>Ovoz balandligi: ~85 dB (10 sm masofada)</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Active Buzzer Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW Active Buzzer Moduli quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Signalizatsiya tizimlari (masalan, xavfdan ogohlantirish)</li>
-            <li>Robototexnika loyihalarida ovozli ko'rsatkichlar</li>
-            <li>Ta'lim loyihalari va tajribalar</li>
+            <li>Signalizatsiya tizimlari (xavf ogohlantirishlari)</li>
+            <li>Robototexnika loyihalarida ovozli ko‘rsatkichlar</li>
+            <li>Ta’lim loyihalari va tajribalar</li>
             <li>Timerlar va foydalanuvchi kiritishlarini tasdiqlash</li>
-            <li>Mustaqil loyihalar (masalan, eshik qo'ng'iroqlari)</li>
+            <li>Mustaqil loyihalar (eshik qo‘ng‘iroqlari)</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Ta'rifi</h2>
-        <p>NSW Active Buzzer Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>Modulda uchta pin mavjud:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -52,61 +56,211 @@
             <tbody>
                 <tr>
                     <td>GND (-)</td>
-                    <td>Manfiy to'k (Ground)</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC (+)</td>
-                    <td>Quvvatlantirish manbai (3.3V yoki 5V)</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
                 </tr>
                 <tr>
                     <td>Signal (S)</td>
-                    <td>Ovozni yoqish/o'chirish uchun raqamli signal</td>
+                    <td>Ovozni yoqish/o‘chirish uchun raqamli signal</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulanish Rejimi</h2>
-
+        <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Active Buzzer Moduli sariq IDga ega bo'lgani uchun RJ25 portidan foydalanganda Boshqaruv Platasi-da sariq ID bilan belgilangan portlarga ulanadi. Masalan, Boshqaruv Platasidagi barcha portlarga  ulashingiz mumkin:</p>
-        <!-- <img src="images/activebuzzer_rj25.jpg" alt="NSW Active Buzzer RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;"> -->
+        <p>NSW Active Buzzer Moduli sariq identifikatorga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv Platasining sariq identifikatorli raqamli portlariga (masalan, №6 yoki №8) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/activebuzzer_rj25.jpg" alt="NSW Active Buzzer RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
+
+        <p>● Dupont simi bilan ulanish</p>
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda Signal pini raqamli pinga (masalan, D9) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/activebuzzer_dupont.jpg" alt="NSW Active Buzzer Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash bo'yicha Qo'llanma</h2>
-
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduino dasturlash</p>
-        <p>Arduino yordamida NSW Active Buzzer Modulini boshqarish uchun oddiy dastur yozish kifoya. Quyidagi misol buzzer'ni har soniyada yoqib va o'chirib turadi, qisqa ovozli signallar hosil qiladi. Nswblock-Libraries kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin oddiy buzzer boshqaruvi uchun standart Arduino funktsiyalari yetarli:</p>[](https://arduinomodules.info/ky-012-active-buzzer-module/)
-        <pre>
-int buzzerPin = 9; // Signal pinini D9 ga uladik
+        <p>Arduino IDE yordamida NSW Active Buzzer Modulini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi. Quyidagi dastur buzzer’ni har soniyada yoqib-o‘chirib, qisqa ovozli signallar hosil qiladi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+int buzzerPin = 9; // Signal pini D9 ga ulangan
 
 void setup() {
-  pinMode(buzzerPin, OUTPUT); // Buzzer pinini chiqish sifatida sozlash
+    pinMode(buzzerPin, OUTPUT); // Buzzer pinini chiqish sifatida sozlash
 }
 
 void loop() {
-  digitalWrite(buzzerPin, HIGH); // Buzzer'ni yoqish
-  delay(500);                    // 0.5 soniya kutish
-  digitalWrite(buzzerPin, LOW);  // Buzzer'ni o'chirish
-  delay(500);                    // 0.5 soniya kutish
+    digitalWrite(buzzerPin, HIGH); // Buzzer’ni yoqish
+    delay(500);                   // 0.5 soniya kutish
+    digitalWrite(buzzerPin, LOW);  // Buzzer’ni o‘chirish
+    delay(500);                   // 0.5 soniya kutish
 }
-        </pre>
-        <p>Ushbu kod orqali buzzer qisqa vaqt oralig'ida davriy ovoz chiqarib turadi. Signal pinini o'zgartirish uchun pin raqamini moslashtiring.</p>
+            </code></pre>
+        </div>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+
+        <style>
+        .code-container {
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            border-radius: 12px;
+            margin: 2rem 0;
+            padding: 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 2px solid #007bff;
+            transition: transform 0.3s ease;
+        }
+
+        .code-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            padding: 12px 20px;
+            border-bottom: 1px solid #004085;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        .copy-btn.copied {
+            background: #17a2b8;
+        }
+
+        .copy-btn.copied::after {
+            content: "Nusxa olindi!";
+            position: absolute;
+            top: -30px;
+            right: 0;
+            background: #17a2b8;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            animation: fadeInOut 1.5s ease;
+        }
+
+        @@keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(10px); }
+            20% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
+        }
+
+        pre.line-numbers {
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 0 0 12px 12px;
+        }
+
+        code {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 15px;
+        }
+
+        .prism-coy .line-numbers-rows {
+            border-right: 1px solid #ddd;
+            padding-right: 10px;
+            margin-right: 10px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .img-fluid {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+            border-radius: 10px;
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        </style>
+
+        <script>
+        function copyCode(button) {
+            const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                button.classList.add('copied');
+                button.textContent = 'Nusxa olindi!';
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.textContent = 'Nusxa olish';
+                }, 2000);
+            });
+        }
+        </script>
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Active Buzzer Moduli ichki osilatorli pyezolektrik buzzer'ga asoslanadi. Signal piniga HIGH (3.3V yoki 5V) berilganda, modul taxminan 2.5 kHz chastotali doimiy ovoz chiqaradi. Signal LOW (0V) bo'lganda esa ovoz to'xtaydi. Modul o'z ichida tranzistor yoki boshqa komponentlarni o'z ichiga oladi, bu esa mikrokontroller pinlaridan minimal oqim talab qiladi. Ovoz balandligi odatda 85 dB atrofida bo'lib, signalizatsiya va ogohlantirishlar uchun yetarli.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW Active Buzzer Moduli pyezolektrik element va ichki osilator yordamida ~2.5 kHz chastotali ovoz ishlab chiqaradi. Raqamli signal (HIGH/LOW) orqali boshqariladi: HIGH signalda ovoz chiqaradi, LOW signalda to‘xtaydi. Modulning o‘zida tranzistor bo‘lib, mikrokontrollerdan minimal oqim talab qiladi. Ovoz balandligi (~85 dB) signalizatsiya va ogohlantirishlar uchun yetarli, bu uni ta’lim va mustaqil loyihalar uchun samarali qiladi.</p>
     </div>
 
     <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_yellowled" role="button">
-            Oldingisi <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_7segment_display" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 </div>
@@ -154,7 +308,8 @@ void loop() {
     window.openNavMenu = function () {
         let toggler = document.querySelector('.navbar-toggler');
         if (toggler && !toggler.checked) {
-            toggler.click();  // Simulate a click to open the menu
+            toggler.click();
         }
     };
 </script>
+```

@@ -1,45 +1,50 @@
-﻿@page "/nsw_linefollower"
+﻿```razor
+@page "/nsw_linefollower"
 @inherits LayoutComponentBase
 @inject IJSRuntime JSRuntime
 @rendermode InteractiveServer
 <NSWLayout />
 <br>
 <br>
+
 <div class="container mt-5">
     <h1 class="display-4 text-center">NSW Chiziq Kuzatuvchi Moduli</h1>
-    <p class="lead text-center">NSW Chiziq Kuzatuvchi Moduli bilan Robotingizni Yo'naltiring</p>
+    <p class="lead text-center">Robotingizni chiziq bo‘ylab yo‘naltiring</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Chiziq Kuzatuvchi Moduli oq chiziqlar yoki qoralangan yo'lni aniqlash uchun mo'ljallangan. Bu modul robototexnika, avtomatlashtirish tizimlari va boshqa turli xil loyihalarda keng qo'llanilishi mumkin. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
-        <img src="images/nsw_linefollower.jpg" alt="NSW Chiziq Kuzatuvchi Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW Chiziq Kuzatuvchi Moduli oq chiziqlar yoki qora yo‘llarni aniqlash uchun mo‘ljallangan infraqizil sensorli qurilma. Robototexnika, avtomatlashtirish tizimlari va ta’lim loyihalarida keng qo‘llaniladi. Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
+        <div class="image-container">
+            <img src="images/lineFollow.jpg" alt="NSW Chiziq Kuzatuvchi Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW Chiziq Kuzatuvchi Moduli – robotlar uchun yo‘l aniqlash</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V-5V DC</li>
-            <li>Oq chiziqlarni va qoralangan yo'lni aniqlash</li>
-            <li>Raqamli chiqish: HIGH yoki LOW</li>
-            <li>Modul hajmi: 35 x 20 x 10 mm</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
+            <li>Aniqlash: Oq chiziq yoki qora yo‘l</li>
+            <li>Chiqish: Raqamli signal (HIGH/LOW)</li>
+            <li>Modul hajmi: 35×20×10 mm (U×B×H)</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Chiziq Kuzatuvchi Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW Chiziq Kuzatuvchi Moduli quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Robototexnika</li>
-            <li>Avtomatlashtirish Tizimlari</li>
-            <li>Xavfsizlik Tizimlari</li>
-            <li>DIY Gadjetlar</li>
-            <li>Ta'lim Loyiha</li>
+            <li>Chiziq kuzatuvchi robotlar</li>
+            <li>Avtomatlashtirish tizimlari</li>
+            <li>Xavfsizlik tizimlari</li>
+            <li>Mustaqil gadjetlar</li>
+            <li>Ta’lim loyihalari</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Tafsilotlari</h2>
-        <p>NSW Chiziq Kuzatuvchi Moduli portida quyidagi pinlar mavjud:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>Modulda uchta pin mavjud:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -50,73 +55,220 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to'k</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvatlantirish manbai</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
                 </tr>
                 <tr>
                     <td>OUT</td>
-                    <td>Raqamli chiqish</td>
+                    <td>Raqamli chiqish (HIGH/LOW)</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulash Rejimi</h2>
+        <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Chiziq Kuzatuvchi Moduli RJ25 porti orqali ulanishi mumkin. Makeblock Orion-da RJ25 portidan foydalanganda, uni mos keluvchi portga ulashingiz kerak:</p>
-        <img src="images/nsw_linefollower_rj25.jpg" alt="NSW Chiziq Kuzatuvchi RJ25 Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>NSW Chiziq Kuzatuvchi Moduli sariq identifikatorga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv Platasining sariq identifikatorli raqamli portlariga (masalan, №6 yoki №8) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_linefollower_rj25.jpg" alt="NSW Chiziq Kuzatuvchi RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
 
         <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asos paneliga ulash uchun foydalanilganda, uning OUT pinini digital pinga quyidagicha ulash lozim:</p>
-        <img src="images/nsw_linefollower_dupont.jpg" alt="NSW Chiziq Kuzatuvchi Dupont Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda OUT pini raqamli pinga (masalan, D2) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_linefollower_dupont.jpg" alt="NSW Chiziq Kuzatuvchi Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash Bo'yicha Qo'llanma</h2>
-        <p>Arduino Dasturlash</p>
-        <p>Agar dastur yozish uchun Arduino dan foydalansangiz, NSW Chiziq Kuzatuvchi Modulini boshqarish uchun quyidagi koddan foydalanishingiz mumkin:</p>
-        <pre><code class="language-cpp">
-// Arduino dastur kodi
-const int lineSensorPin = 2; // Chiziq kuzatuvchi chiqishi
-const int ledPin = 13;  // LED chiqishi
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino dasturlash</p>
+        <p>Arduino IDE yordamida NSW Chiziq Kuzatuvchi Modulini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi. Quyidagi dastur sensor holatini o‘qib, chiziq aniqlanganda LED’ni yoqadi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+const int lineSensorPin = 2; // OUT pini D2 ga ulangan
+const int ledPin = 13;       // LED pini D13 ga ulangan
 
 void setup() {
-    pinMode(lineSensorPin, INPUT);
-    pinMode(ledPin, OUTPUT);
-    Serial.begin(9600);
+    pinMode(lineSensorPin, INPUT); // Sensor pinini kirish sifatida sozlash
+    pinMode(ledPin, OUTPUT);       // LED pinini chiqish sifatida sozlash
+    Serial.begin(9600);            // Serial portni ishga tushirish
 }
 
 void loop() {
-    int sensorState = digitalRead(lineSensorPin);
-    Serial.println(sensorState);
-    if (sensorState == LOW) {
-        digitalWrite(ledPin, HIGH);
+    int sensorState = digitalRead(lineSensorPin); // Sensor holatini o‘qish
+    Serial.println(sensorState);                  // Holatni Serial monitorga chiqarish
+    if (sensorState == LOW) {                     // Chiziq aniqlanganda
+        digitalWrite(ledPin, HIGH);              // LED’ni yoqish
     } else {
-        digitalWrite(ledPin, LOW);
+        digitalWrite(ledPin, LOW);               // LED’ni o‘chirish
     }
-    delay(100);
+    delay(100);                                  // 100 ms kutish
 }
-        </code></pre>
+            </code></pre>
+        </div>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+
+        <style>
+        .code-container {
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            border-radius: 12px;
+            margin: 2rem 0;
+            padding: 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 2px solid #007bff;
+            transition: transform 0.3s ease;
+        }
+
+        .code-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            padding: 12px 20px;
+            border-bottom: 1px solid #004085;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        .copy-btn.copied {
+            background: #17a2b8;
+        }
+
+        .copy-btn.copied::after {
+            content: "Nusxa olindi!";
+            position: absolute;
+            top: -30px;
+            right: 0;
+            background: #17a2b8;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            animation: fadeInOut 1.5s ease;
+        }
+
+        @@keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(10px); }
+            20% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
+        }
+
+        pre.line-numbers {
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 0 0 12px 12px;
+        }
+
+        code {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 15px;
+        }
+
+        .prism-coy .line-numbers-rows {
+            border-right: 1px solid #ddd;
+            padding-right: 10px;
+            margin-right: 10px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .img-fluid {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+            border-radius: 10px;
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        </style>
+
+        <script>
+        function copyCode(button) {
+            const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                button.classList.add('copied');
+                button.textContent = 'Nusxa olindi!';
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.textContent = 'Nusxa olish';
+                }, 2000);
+            });
+        }
+        </script>
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Chiziq Kuzatuvchi Moduli oq chiziqlar yoki qoralangan yo'lni aniqlash uchun mo'ljallangan. Bu modulning asosiy funktsiyasi robototexnika va avtomatlashtirish tizimlarida pozitsiyani aniqlash va nazorat qilishdir. OUT pini orqali raqamli signal uzatish amalga oshiriladi.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW Chiziq Kuzatuvchi Moduli infraqizil nurlarni aks ettirish prinsipiga asoslanadi. Oq yuzalar infraqizil nurni yaxshi aks ettirsa, qora yuzalar uni yutadi. Sensor bu farqni aniqlab, OUT pinida raqamli signal (HIGH yoki LOW) ishlab chiqaradi. Bu modul chiziq kuzatuvchi robotlar va avtomatlashtirish tizimlarida pozitsiyani aniqlash uchun samarali yechim bo‘lib, ta’limda sensorlar ishlashini o‘rganish uchun qulaydir.</p>
     </div>
 
-   <div class="text-center my-5">
+    <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_limitswitch" role="button">
-            <i class="fas fa-arrow-left"></i> Orqaga
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_pirmotionsensor" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
-
 </div>
 
 <style>
@@ -158,3 +310,4 @@ void loop() {
         window.scrollTo(0, 0);
     };
 </script>
+```
