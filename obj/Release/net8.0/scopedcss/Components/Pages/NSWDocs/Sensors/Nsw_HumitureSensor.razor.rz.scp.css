@@ -1,0 +1,50 @@
+.container[b-krcf8855kv] {
+    font-family: 'Arial', sans-serif;
+}
+
+.my-5[b-krcf8855kv] {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+pre[b-krcf8855kv] {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table[b-krcf8855kv] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+    .table th[b-krcf8855kv],
+    .table td[b-krcf8855kv] {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th[b-krcf8855kv] {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody[b-krcf8855kv] {
+        border-top: 2px solid #dee2e6;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1[b-krcf8855kv] {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead[b-krcf8855kv] {
+        font-size: 1rem;
+    }
+}
+

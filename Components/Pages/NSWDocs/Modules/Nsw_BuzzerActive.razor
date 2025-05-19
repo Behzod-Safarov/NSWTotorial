@@ -11,7 +11,7 @@
 
     <div class="my-5">
         <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Active Buzzer Moduli ovozli signal beruvchi piezoelektrik komponent bo'lib, loyihalaringizga ovozli ogohlantirishlar yoki indikatorlar qo'shish uchun mo'ljallangan. Bu modul qora belgi bilan belgilangan bo'lib, u Nsw Boarddagi qora belgili (Raqamli) portga ulanadi. Ichki osilator tufayli, u faqat quvvat berilganda ~2.5 kHz chastotali doimiy ovoz chiqaradi. Oddiy signalizatsiyadan tortib, foydalanuvchi kiritishlarini tasdiqlashgacha bo'lgan loyihalarda foydalanish uchun qulay va samarali yechim taqdim etadi.</p>[](https://arduinomodules.info/ky-012-active-buzzer-module/)
+        <p>NSW Active Buzzer Moduli ovozli signal beruvchi pyezolektrik komponent bo'lib, loyihalaringizga ovozli ogohlantirishlar yoki indikatorlar qo'shish uchun mo'ljallangan. Bu modul sariq belgi bilan belgilangan bo'lib, u Nsw Boarddagi sariq belgili (Raqamli) portga ulanadi. Ichki osilator tufayli, u faqat quvvat berilganda ~2.5 kHz chastotali doimiy ovoz chiqaradi. Oddiy signalizatsiyadan tortib, foydalanuvchi kiritishlarini tasdiqlashgacha bo'lgan loyihalarda foydalanish uchun qulay va samarali yechim taqdim etadi.</p>[](https://arduinomodules.info/ky-012-active-buzzer-module/)
         <img src="images/nsw_activebuzzer.jpg" alt="NSW Active Buzzer Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
     </div>
 
@@ -21,8 +21,8 @@
             <li>Ishlash kuchlanishi: 3.3V - 5V DC</li>
             <li>Ovoz chastotasi: Taxminan 2.5 kHz</li>
             <li>Boshqarish rejimi: Raqamli signal (HIGH/LOW)</li>
-            <li>Modul hajmi: 34 x 15 x 11 mm (U x G x Y)</li>
-            <li>Ulanish: RJ25 yoki Dupont simlari</li>
+            <li>Modul hajmi: 34 x 15 x 11 mm (X x Y x Z)</li>
+            <li>Ulanish: RJ25 yoki Ulash simlari</li>
             <li>Ovoz balandligi: Taxminan 85 dB (10 sm masofada)</li>
         </ul>
     </div>
@@ -31,11 +31,11 @@
         <h2>Ilovalar</h2>
         <p>NSW Active Buzzer Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
         <ul>
-            <li>Signalizatsiya tizimlari (masalan, xavf ogohlantirishlari)</li>
+            <li>Signalizatsiya tizimlari (masalan, xavfdan ogohlantirish)</li>
             <li>Robototexnika loyihalarida ovozli ko'rsatkichlar</li>
             <li>Ta'lim loyihalari va tajribalar</li>
             <li>Timerlar va foydalanuvchi kiritishlarini tasdiqlash</li>
-            <li>DIY elektron loyihalar (masalan, eshik qo'ng'iroqlari)</li>
+            <li>Mustaqil loyihalar (masalan, eshik qo'ng'iroqlari)</li>
         </ul>
     </div>
 
@@ -70,20 +70,15 @@
         <h2>Simlarni Ulanish Rejimi</h2>
 
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Active Buzzer Moduli qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
-        <img src="images/activebuzzer_rj25.jpg" alt="NSW Active Buzzer RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
-    </div>
-    <div class="my-5">
-        <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, Signal pinini raqamli pinga (masalan, D9) ulash lozim. Quyidagi rasmda ulanish ko'rsatilgan:</p>
-        <img src="images/activebuzzer_dupont.jpg" alt="NSW Active Buzzer Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>NSW Active Buzzer Moduli sariq IDga ega bo'lgani uchun RJ25 portidan foydalanganda Boshqaruv Platasi-da sariq ID bilan belgilangan portlarga ulanadi. Masalan, Boshqaruv Platasidagi barcha portlarga  ulashingiz mumkin:</p>
+        <!-- <img src="images/activebuzzer_rj25.jpg" alt="NSW Active Buzzer RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;"> -->
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo'yicha Qo'llanma</h2>
 
         <p>Arduino dasturlash</p>
-        <p>Arduino yordamida NSW Active Buzzer Modulini boshqarish uchun oddiy dastur yozish kifoya. Quyidagi misol buzzer'ni har soniyada yoqib va o'chirib turadi, qisqa ovozli signallar hosil qiladi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin oddiy buzzer boshqaruvi uchun standart Arduino funktsiyalari yetarli:</p>[](https://arduinomodules.info/ky-012-active-buzzer-module/)
+        <p>Arduino yordamida NSW Active Buzzer Modulini boshqarish uchun oddiy dastur yozish kifoya. Quyidagi misol buzzer'ni har soniyada yoqib va o'chirib turadi, qisqa ovozli signallar hosil qiladi. Nswblock-Libraries kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin oddiy buzzer boshqaruvi uchun standart Arduino funktsiyalari yetarli:</p>[](https://arduinomodules.info/ky-012-active-buzzer-module/)
         <pre>
 int buzzerPin = 9; // Signal pinini D9 ga uladik
 
@@ -98,12 +93,12 @@ void loop() {
   delay(500);                    // 0.5 soniya kutish
 }
         </pre>
-        <p>Ushbu kod buzzer'ni qisqa vaqtli ovoz chiqarib turadi. Signal pinini o'zgartirish uchun pin raqamini moslashtiring.</p>
+        <p>Ushbu kod orqali buzzer qisqa vaqt oralig'ida davriy ovoz chiqarib turadi. Signal pinini o'zgartirish uchun pin raqamini moslashtiring.</p>
     </div>
 
     <div class="my-5">
         <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Active Buzzer Moduli ichki osilatorli piezoelektrik buzzer'ga asoslanadi. Signal piniga HIGH (3.3V yoki 5V) berilganda, modul taxminan 2.5 kHz chastotali doimiy ovoz chiqaradi. Signal LOW (0V) bo'lganda esa ovoz to'xtaydi. Modul o'z ichida tranzistor yoki boshqa haydovchi sxemani o'z ichiga olishi mumkin, bu esa mikrokontroller pinlaridan minimal oqim talab qiladi. Ovoz balandligi odatda 85 dB atrofida bo'lib, signalizatsiya va ogohlantirishlar uchun yetarli.</p>[](https://protosupplies.com/product/buzzer-alarm-with-driver-module/)
+        <p>NSW Active Buzzer Moduli ichki osilatorli pyezolektrik buzzer'ga asoslanadi. Signal piniga HIGH (3.3V yoki 5V) berilganda, modul taxminan 2.5 kHz chastotali doimiy ovoz chiqaradi. Signal LOW (0V) bo'lganda esa ovoz to'xtaydi. Modul o'z ichida tranzistor yoki boshqa komponentlarni o'z ichiga oladi, bu esa mikrokontroller pinlaridan minimal oqim talab qiladi. Ovoz balandligi odatda 85 dB atrofida bo'lib, signalizatsiya va ogohlantirishlar uchun yetarli.</p>
     </div>
 
     <div class="text-center my-5">

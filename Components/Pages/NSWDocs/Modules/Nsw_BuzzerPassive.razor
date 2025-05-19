@@ -11,21 +11,19 @@
 
     <div class="my-5">
         <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Passive Buzzer Moduli piezoelektrik komponent bo'lib, turli chastotali ovozli signallar ishlab chiqarish uchun mo'ljallangan. Bu modul qora belgi bilan belgilangan bo'lib, u Nsw Boarddagi qora belgili (Raqamli) portga ulanadi. Ichki osilatorga ega emas, shuning uchun ovoz ishlab chiqarish uchun mikrocontroller (masalan, Arduino) orqali 1.5–2.5 kHz chastotali kvadrat to'lqin signali talab qilinadi. Oddiy ogohlantirish signallaridan tortib, musiqiy ohanglarni ijro etishgacha bo'lgan loyihalarda foydalanish uchun moslashuvchan va ko'p qirrali yechim taqdim etadi.</p>[](https://grobotronics.com/passive-buzzer-module.html?sl=en)[](https://arduinomodules.info/ky-006-passive-buzzer-module/)
+        <p>NSW Passive Buzzer Moduli pyezolektrikkomponent bo'lib, turli chastotali ovozli signallar ishlab chiqarish uchun mo'ljallangan. Bu modul sariq belgi bilan belgilangan bo'lib, u Nsw Boarddagi sariq belgili (Raqamli) portga ulanadi. Ichki osilatorga ega emas, shuning uchun ovoz ishlab chiqarish uchun mikrocontroller (masalan, Arduino) orqali 1.5–2.5 kHz chastotali kvadrat to'lqin signali talab qilinadi. Oddiy ogohlantirish signallaridan tortib, musiqiy ohanglarni ijro etishgacha bo'lgan loyihalarda foydalanish uchun moslashuvchan va ko'p qirrali yechim taqdim etadi.</p>[](https://grobotronics.com/passive-buzzer-module.html?sl=en)[](https://arduinomodules.info/ky-006-passive-buzzer-module/)
         <img src="images/nsw_passivebuzzer.jpg" alt="NSW Passive Buzzer Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
     </div>
 
     <div class="my-5">
         <h2>Asosiy Xususiyatlari</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 1.5V - 15V DC</li>
+            <li>Ishlash kuchlanishi: 1.5V - 5V DC</li>
             <li>Ovoz chastotasi: 1.5 kHz - 2.5 kHz (PWM signaliga bog'liq)</li>
             <li>Boshqarish rejimi: Raqamli PWM signal</li>
-            <li>Modul hajmi: 26 x 15 x 11 mm (U x G x Y)</li>
-            <li>Ulanish: RJ25 yoki Dupont simlari</li>
-            <li>Impedans: Taxminan 15 Ohm</li>
+            <li>Modul hajmi: 26 x 15 x 11 mm (X x Y x Z)</li>
+            <li>Ulanish: RJ25 yoki Ulash simlari</li>
         </ul>
-        <p>Eslatma: Buzzer'ni to'g'ridan-to'g'ri mikrocontroller piniga ulashda oqimni cheklash uchun 120 Ohm yoki undan yuqori rezistor ishlatish tavsiya etiladi, chunki buzzer 20–40 mA dan ortiq oqim talab qilishi mumkin.</p>[](https://protosupplies.com/product/passive-buzzer-5v-module/)
     </div>
 
     <div class="my-5">
@@ -36,7 +34,7 @@
             <li>Robototexnika loyihalarida ovozli ko'rsatkichlar</li>
             <li>Ta'lim loyihalari va PWM signalini o'rganish</li>
             <li>Ogohlantirish signallari va bildirishnomalar</li>
-            <li>DIY elektron loyihalar (masalan, o'yinchoqlar)</li>
+            <li>Mustaqil loyihalar (masalan, o'yinchoqlar)</li>
         </ul>
     </div>
 
@@ -57,7 +55,7 @@
                 </tr>
                 <tr>
                     <td>VCC (+)</td>
-                    <td>Quvvatlantirish manbai (1.5V - 15V, odatda 5V)</td>
+                    <td>Quvvatlantirish manbai (1.5V - 5V)</td>
                 </tr>
                 <tr>
                     <td>Signal (S)</td>
@@ -65,27 +63,20 @@
                 </tr>
             </tbody>
         </table>
-        <p>Eslatma: O'rta pin ba'zi modullarda ishlatilmaydi.</p>[](https://arduinomodules.info/ky-006-passive-buzzer-module/)
     </div>
 
     <div class="my-5">
         <h2>Simlarni Ulanish Rejimi</h2>
 
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Passive Buzzer Moduli qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
-        <img src="images/passivebuzzer_rj25.jpg" alt="NSW Passive Buzzer RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
-    </div>
-    <div class="my-5">
-        <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, Signal pinini raqamli PWM piniga (masalan, D8) ulash lozim. Oqimni cheklash uchun Signal piniga ketma-ket 120–220 Ohm rezistor qo'shing. Quyidagi rasmda ulanish ko'rsatilgan:</p>
-        <img src="images/passivebuzzer_dupont.jpg" alt="NSW Passive Buzzer Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>NSW Passive Buzzer Moduli sariq IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da sariq ID bilan belgilangan portlarga ulanadi. Masalan, Boshqaruv Platasidagi barcha portlarga ulashingiz mumkin:</p>
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo'yicha Qo'llanma</h2>
 
         <p>Arduino dasturlash</p>
-        <p>Arduino yordamida NSW Passive Buzzer Modulini boshqarish uchun PWM signali orqali turli chastotali ovozlar ishlab chiqarish mumkin. Quyidagi misol buzzer'da ikki xil ohangni ketma-ket ijro etadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino `tone()` funksiyasi yetarli:</p>
+        <p>Arduino yordamida NSW Passive Buzzer Modulini boshqarish uchun PWM signali orqali turli chastotali ovozlar ishlab chiqarish mumkin. Quyidagi misol buzzer'da ikki xil ohangni ketma-ket ijro etadi. Nswblock-Libraries kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino `tone()` funksiyasi yetarli:</p>
         <pre>
 int buzzerPin = 8; // Signal pinini D8 ga uladik
 
@@ -104,12 +95,12 @@ void loop() {
   delay(500);            // 0.5 soniya kutish
 }
         </pre>
-        <p>Ushbu kod buzzer'da 1 kHz va 2 kHz chastotali ohanglarni navbatma-navbat ijro etadi. Turli melodiyalar ijro etish uchun `tone()` funksiyasiga boshqa chastotalarni kiriting yoki Arduino `pitches.h` kutubxonasidan foydalaning.</p>[](https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/components_basic/26-component_buzzer.html)
+        <p>Ushbu kod buzzer'da 1 kHz va 2 kHz chastotali ohanglarni navbatma-navbat ijro etadi. Turli melodiyalar ijro etish uchun `tone()` funksiyasiga boshqa chastotalarni kiriting yoki Arduino `pitches.h` kutubxonasidan foydalaning.</p>
     </div>
 
     <div class="my-5">
         <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Passive Buzzer Moduli piezoelektrik effektga asoslanadi. Signal piniga kvadrat to'lqinli PWM signali (1.5–2.5 kHz) berilganda, ichidagi piezoelektrik kristal tebranib, ovoz ishlab chiqaradi. Chastota signalning tezligiga bog'liq, bu esa turli ohanglarni yaratish imkonini beradi. Modul ichki osilatorga ega emas, shuning uchun ovoz ishlab chiqarish uchun tashqi mikrocontroller talab qilinadi. Buzzer'ning impedansi taxminan 15 Ohm bo'lib, mikrocontroller pinini himoya qilish uchun seriyali rezistor yoki tranzistor ishlatish tavsiya etiladi.</p>[](https://protosupplies.com/product/passive-buzzer-5v-module/)[](https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/components_basic/26-component_buzzer.html)
+        <p>NSW Passive Buzzer Moduli pyezolektrik effektga asoslanadi. Signal piniga kvadrat to'lqinli PWM signali (1.5–2.5 kHz) berilganda, ichidagi pyezolektrikkristal tebranib, ovoz ishlab chiqaradi. Chastota signalning tezligiga bog'liq, bu esa turli ohanglarni yaratish imkonini beradi. Modul ichki osilatorga ega emas, shuning uchun ovoz ishlab chiqarish uchun tashqi mikrokontroller talab qilinadi. </p>
     </div>
 
     <div class="text-center my-5">

@@ -11,37 +11,36 @@
 
     <div class="my-5">
         <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Button Moduli bitta push-button kalitidan iborat bo'lib, loyihalaringizga oddiy va ishonchli foydalanuvchi kiritish imkoniyatini qo'shish uchun mo'ljallangan. Bu modul qora belgi bilan belgilangan bo'lib, u Nsw Boarddagi qora belgili (Raqamli yoki Analog) portga ulanadi. Tugma bosilganda past darajali (LOW) signal, qo'yib yuborilganda esa yuqori darajali (HIGH) signal ishlab chiqaradi. Oddiy boshqaruv tizimlaridan tortib, ta'lim loyihalarigacha bo'lgan ilovalarda foydalanish uchun qulay va ko'p qirrali yechim taqdim etadi.</p>
-        <img src="images/nsw_button.jpg" alt="NSW Button Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>NSW Button Moduli bitta tugmadan iborat. Sariq belgi bilan belgilangan bu modul NSW Boshqaruv Platasidagi sariq belgili (Raqamli) portlarga ulanadi. Tugma bosilganda LOW signal, qo'yib yuborilganda esa HIGH signal chiqaradi. Ta'lim loyihalaridan tortib, uy avtomatlashtirish tizimlarigacha bo'lgan keng ko'lamli ilovalar uchun ideal yechimdir.</p>
+        <img src="images/nsw_button.jpg" alt="NSW Button Moduli tasviri" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
     </div>
 
     <div class="my-5">
         <h2>Asosiy Xususiyatlari</h2>
         <ul>
             <li>Ishlash kuchlanishi: 3.3V - 5V DC</li>
-            <li>Tugma turi: 12 x 12 x 5 mm push-button</li>
             <li>Boshqarish rejimi: Raqamli signal (HIGH/LOW)</li>
-            <li>Modul hajmi: 20 x 20 x 10 mm (U x G x Y)</li>
-            <li>Ulanish: RJ25 yoki 3-pinli Dupont simlari</li>
+            <li>Modul hajmi: 20 x 20 x 10 mm (X x Y x Z)</li>
+            <li>Ulanish: RJ25 yoki Ulash simlari</li>
             <li>Signal chiqishi: Bosilganda LOW, qo'yib yuborilganda HIGH</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Button Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW Button Moduli quyidagi loyihalarda qo'llanilishi mumkin:</p>
         <ul>
-            <li>Foydalanuvchi interfeysi boshqaruvlari (masalan, yoqish/o'chirish)</li>
+            <li>Foydalanuvchi interfeysi boshqaruvlari (masalan, yoqish/o'chirish tugmasi)</li>
             <li>Robototexnika loyihalarida trigger signallari</li>
-            <li>Ta'lim loyihalari va raqamli signalni o'rganish</li>
+            <li>Ta'lim loyihalari va raqamli signallarni o'rganish</li>
             <li>Uy avtomatlashtirish tizimlari</li>
-            <li>DIY elektron loyihalar (masalan, qo'ng'iroqlar)</li>
+            <li>Muatqil loyihalar (masalan, qo'ng'iroqlar yoki boshqaruv panellari)</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Pin Ta'rifi</h2>
-        <p>NSW Button Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <p>Modulda uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -56,7 +55,7 @@
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvatlantirish manbai (3.3V yoki 5V)</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
                 </tr>
                 <tr>
                     <td>Signal</td>
@@ -68,23 +67,17 @@
 
     <div class="my-5">
         <h2>Simlarni Ulanish Rejimi</h2>
-
-        <p>● RJ25 bilan ulanish</p>
-        <p>NSW Button Moduli qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
-        <img src="images/button_rj25.jpg" alt="NSW Button RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
-    </div>
-    <div class="my-5">
-        <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, Signal pinini raqamli yoki analog pinga (masalan, D7 yoki A0) ulash lozim. Quyidagi rasmda ulanish ko'rsatilgan:</p>
-        <img src="images/button_dupont.jpg" alt="NSW Button Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h3>RJ25 bilan ulanish</h3>
+        <p>NSW Button Moduli sariq IDga ega bo'lib, RJ25 porti orqali NSW Boshqaruv Platasidagi sariq ID bilan belgilangan barcha portlarga ulanadi </p>
+        <img src="images/button_rj25.jpg" alt="NSW Button Moduli RJ25 ulanish tasviri" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo'yicha Qo'llanma</h2>
-
-        <p>Arduino dasturlash</p>
-        <p>Arduino yordamida NSW Button Modulini boshqarish uchun oddiy dastur yozish kifoya. Quyidagi misol tugma bosilganini aniqlab, ketma-ket monitorga holatni chop etadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino funktsiyalari yetarli:</p>
-        <pre>
+        <h3>Arduino dasturlash</h3>
+        <p>Quyidagi Arduino kodi tugma bosilganini aniqlab, holatni ketma-ket monitorga chiqaradi. Standart Arduino funktsiyalari yetarli bo'lib, qo'shimcha kutubxonalar talab qilinmaydi.</p>
+        <pre><code>
 int buttonPin = 7; // Signal pinini D7 ga uladik
 
 void setup() {
@@ -101,13 +94,13 @@ void loop() {
   }
   delay(100); // 100 ms kutish
 }
-        </pre>
-        <p>Ushbu kod tugma bosilganini aniqlaydi va holatni ketma-ket monitorga chiqaradi. Tugma bosilganda LOW signal, qo'yib yuborilganda HIGH signal yuboriladi.</p>
+        </code></pre>
+        <p>Bu kod tugma bosilganda LOW signalni, qo'yib yuborilganda esa HIGH signalni aniqlaydi va holatni ketma-ket monitorga chop etadi.</p>
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Button Moduli oddiy elektromexanik kalitga asoslanadi. Tugma bosilganda ichki kontaktlar yopilib, Signal pinini GND ga ulaydi, bu esa LOW signal ishlab chiqaradi. Tugma qo'yib yuborilganda kontaktlar ochilib, ichki pull-up rezistori (yoki tashqi, agar kerak bo'lsa) tufayli Signal pini HIGH holatga qaytadi. Modul odatda ichki rezistor bilan jihozlangan bo'lib, bu tashqi pull-up rezistorlariga ehtiyojni kamaytiradi va ulanishni soddalashtiradi.</p>
+        <h3>Umumiy Tahlil</h3>
+        <p>NSW Button Moduli oddiy elektromexanik kalit printsipiga asoslanadi. Tugma bosilganda Signal pini GND ga ulanib, LOW signal ishlab chiqaradi. Qo'yib yuborilganda ichki pull-up rezistori tufayli Signal pini HIGH holatga qaytadi. Modul ichki rezistor bilan jihozlangan bo'lib, bu tashqi pull-up rezistorlariga ehtiyojni yo'qotadi va ulanishni soddalashtiradi.</p>
     </div>
 
     <div class="text-center my-5">

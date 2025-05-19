@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UDl4aqMs2Tam7gMWsCduF9UA8aThnT086Zqy0RqaEj0=",
+  "Hash": "+COLc/EhjqBBLdOebK+i3oblYIqzMufrf/OtSUl0AVE=",
   "Source": "EdurentV1",
   "BasePath": "_content/EdurentV1",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "EdurentV1\\wwwroot",
       "Source": "EdurentV1",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\obj\\Release\\net8.0\\scopedcss\\bundle\\EdurentV1.styles.css",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\obj\\Release\\net8.0\\scopedcss\\bundle\\EdurentV1.styles.css",
       "SourceId": "EdurentV1",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "EdurentV1#[.{fingerprint}]?.styles.css",
+      "RelativePath": "EdurentV1.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -31,19 +31,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "79y4pa6efp",
-      "Integrity": "a4fTTey7pBo6l7+cIhor7AaVWcOwTuvP1sgh463M+ms=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\obj\\Release\\net8.0\\scopedcss\\bundle\\EdurentV1.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\obj\\Release\\net8.0\\scopedcss\\bundle\\EdurentV1.styles.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EdurentV1.bundle.scp.css",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EdurentV1.bundle.scp.css",
       "SourceId": "EdurentV1",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "EdurentV1#[.{fingerprint}]!.bundle.scp.css",
+      "RelativePath": "EdurentV1.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -52,5739 +50,1035 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "79y4pa6efp",
-      "Integrity": "a4fTTey7pBo6l7+cIhor7AaVWcOwTuvP1sgh463M+ms=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EdurentV1.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EdurentV1.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\app.css",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "app#[.{fingerprint}]?.css",
+      "RelativePath": "app.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zcd1y5bwdc",
-      "Integrity": "HcBnhoO99BLA68Mhu/3C0J6FQQ74kPF43/lJpN7URtE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6gzpyzhau4",
-      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8inm30yfxf",
-      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\favicon.png",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "RelativePath": "favicon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ifv42okdf2",
-      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\image.png",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\image.png",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "image#[.{fingerprint}]?.png",
+      "RelativePath": "image.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ikx35r2zjw",
-      "Integrity": "sh2WXmo99/FDtZrv8mC0SzsP1Ne+ZcSMuREIiyaxGr8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\accessories.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\accessories.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/accessories#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/accessories.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "n4oktrmv4c",
-      "Integrity": "2Z/RkoKEzf7mE25/LN5jUD0YJWshpaTUmwOn8d8c50s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\accessories.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\advanced-kit.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\advanced-kit.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/advanced-kit#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/advanced-kit.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3c5o3ao34b",
-      "Integrity": "/UNDFecMTL3hja9qVSEqG0v8RZIb2Lh/0aZxA517m+g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\advanced-kit.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\behzod.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\behzod.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/behzod#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/behzod.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7kujhtsxdk",
-      "Integrity": "d2ZPsrqRGT5HZPiBI1BV+cxZaAGvMrqGE8dduExi13c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\behzod.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\bluetooth.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\bluetooth.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/bluetooth#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/bluetooth.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "t3it1udlhh",
-      "Integrity": "FxaeVSuA19Dy0hBJd8izbehkImX8EkUOtCN3uKBewNk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\bluetooth.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\ceo.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\ceo.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/ceo#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/ceo.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "oz5kfwjsu9",
-      "Integrity": "rIWNc3ew9PmGfY0gyowxSQiVFlQaHAl1SIWg6UH8E1g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ceo.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\doppi.png",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\doppi.png",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/doppi#[.{fingerprint}]?.png",
+      "RelativePath": "Images/doppi.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "2etfnzczb3",
-      "Integrity": "iqU7BjU1i1F2gv3HMUuDKuTtVtL+kVxpXFTfZKDoxBg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\doppi.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\image.png",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\image.png",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/image#[.{fingerprint}]?.png",
+      "RelativePath": "Images/image.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cv1gsvqojg",
-      "Integrity": "iHpcOg62i6Tb49hCad6mPpMFtDD2SXLL5Ccus5TvG3Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\image.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\index.html",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\index.html",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/index#[.{fingerprint}]?.html",
+      "RelativePath": "Images/index.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "qkrtrz0p9t",
-      "Integrity": "JiixNuQL2RDfD2z2Rsec0U0EjqvldQi5bua1vrjhuCE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\index.html"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\kits.png",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\kits.png",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/kits#[.{fingerprint}]?.png",
+      "RelativePath": "Images/kits.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "qf8ylwm73l",
-      "Integrity": "NjRtwe7zdttvKVlgIOvf3Czzy/WxfK4OogrY0yH3Zyw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\kits.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\logo.png",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\logo.png",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/logo#[.{fingerprint}]?.png",
+      "RelativePath": "Images/logo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ijgfg472yg",
-      "Integrity": "fpEn/2j6ylNxJzsWgSvGKc0r00byOVFpkGw5Jb1cyy8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\milliyrasm.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\milliyrasm.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/milliyrasm#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/milliyrasm.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "h4hcyk3597",
-      "Integrity": "sYO+Y51m1W9VhCvc6eh5+Of/Voho4fGaKWEPwvM+nLE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\milliyrasm.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_4button.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_4button.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_4button#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_4button.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "0hr455p6o1",
-      "Integrity": "FM1CCx/H9sBNLlb443PXCIjMG04stmlL0ogaDXLqHT0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_4button.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_7segmentdisplay.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_7segmentdisplay.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_7segmentdisplay#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_7segmentdisplay.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7hw6vmc3t8",
-      "Integrity": "6wA2EyYdJVU+9KKr0HzamnaxSDXvnEktwgNQcXk6tGw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_7segmentdisplay.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_buzzer.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_buzzer.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_buzzer#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_buzzer.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "y918r7l412",
-      "Integrity": "ioD9gN3FN7nJ8xkrMLJEPvGtExvTc/WDqVXPz3nKw40=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_buzzer.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_colorsensor.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_colorsensor.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_colorsensor#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_colorsensor.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6o1lvlmk8x",
-      "Integrity": "SrESRcVrH5WXiuk8FTxSdYQ8jepq9PQ9eUfVhBvbBls=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_colorsensor.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_compass.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_compass.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_compass#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_compass.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "knl265wf0m",
-      "Integrity": "4Gv/KEb/ineilfV3VyAExskcB/EVnxVjB+DF8H2L4aQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_compass.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_dcmotor.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_dcmotor.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_dcmotor#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_dcmotor.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "onlwznc0bi",
-      "Integrity": "pLTkx68FQZxkE47wPLuIRBM8togmgG7KuP2DPRrcJVs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_dcmotor.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_flamesensor.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_flamesensor.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_flamesensor#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_flamesensor.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "qhul7pm8hq",
-      "Integrity": "YqdMN0nUO8etd0fxWGA/dfaor42M8jxPRzauT5JrXVo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_flamesensor.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_gassensor.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_gassensor.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_gassensor#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_gassensor.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pt5k5n1i5f",
-      "Integrity": "gzQ80V1bnLre42lZLEL6zR1szP/WoUeSdmWI+/6YgfU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_gassensor.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_gyro.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_gyro.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_gyro#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_gyro.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mraq8l4use",
-      "Integrity": "AvUa67FhBX5Cz5hr3J6bddklQg5T6zTC9ePP2egq33g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_gyro.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_humituresensor.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_humituresensor.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_humituresensor#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_humituresensor.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ofb7f5cy3j",
-      "Integrity": "pBgTT0xTbs8qoht9DmWEF5w34xlBfHttugUm0f+VbBs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_humituresensor.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_i2scansensor.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_i2scansensor.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_i2scansensor#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_i2scansensor.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ks9ox3anfn",
-      "Integrity": "lFTYzP4FRogK6yLNGVRqQRQ3rDI5Im+cwsdfxTITjms=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_i2scansensor.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_Infraredreceiver.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_Infraredreceiver.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_Infraredreceiver#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_Infraredreceiver.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jkviceocdh",
-      "Integrity": "U3QrYfQAdY95e/TM4ncuifuD/V4OdqpbmouiHzZoOhE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_Infraredreceiver.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_joystic.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_joystic.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_joystic#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_joystic.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c0i1s83bqh",
-      "Integrity": "bL27+S6n5P5pCPVSu4iLXXzISlLEvWBjokFjloUvjiI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_joystic.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_ledmatrix.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_ledmatrix.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_ledmatrix#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_ledmatrix.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1bv2g8mxv0",
-      "Integrity": "AyUe09Mq5fKZ+Xrb9WmCULlG16D8ulffk6ervkLCEls=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_ledmatrix.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_ledmatrix1.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_ledmatrix1.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_ledmatrix1#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_ledmatrix1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "e6g7jkap0t",
-      "Integrity": "pvAvEGUBiiFhR6WQiiAdnkquMNIksQA/3ueZuy2k15o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_ledmatrix1.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_lightsensor.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_lightsensor.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_lightsensor#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_lightsensor.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "55z17w6a9v",
-      "Integrity": "KS8nx5osclIpW5ZjQJ2B6a353n/DF9b1u+9XSEqdEFc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_lightsensor.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_limitswitch.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_limitswitch.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_limitswitch#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_limitswitch.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4eoe1rt2f5",
-      "Integrity": "BFBYWnHkitGFPFzFWbG6zecqiWsy75QBr4kDsxUt0XY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_limitswitch.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_linefollower.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_linefollower.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_linefollower#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_linefollower.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "g58shjans6",
-      "Integrity": "vKrb8mW8auzvwzghu9Qvp1tWZH/GYsk719YFaCbFCKo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_linefollower.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_pirmotion.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_pirmotion.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_pirmotion#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_pirmotion.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "asnnsz3hyv",
-      "Integrity": "KlDAhREW4JdwszaQ1ZuS5kuYsekt61QWtn/E8SCfHdo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_pirmotion.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_pm25sensor.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_pm25sensor.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_pm25sensor#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_pm25sensor.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7nclyl6gxo",
-      "Integrity": "vZYKo9UKtzLHIOmkuUZOvpkDWC8vtxJoHDPqQw4rDbk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_pm25sensor.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_potentiometer.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_potentiometer.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_potentiometer#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_potentiometer.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "x4z7o6i3uc",
-      "Integrity": "X4KbM49L8GrpLBJT1TU0cXSKDzcPT87AnQXt/4DyvuA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_potentiometer.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_pressuresensor.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_pressuresensor.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_pressuresensor#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_pressuresensor.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "k85odzik5g",
-      "Integrity": "fBZ8PdjmjCWqGtppTu7T0XhihkcZ+XydsbNSdPfs/DA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_pressuresensor.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_ps2.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_ps2.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_ps2#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_ps2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1ruuuwwwh8",
-      "Integrity": "06op8ugnSAOXIefQ619/uOBef6Uy1/MdAfmfgx1RyPE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_ps2.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_rg25adapter.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_rg25adapter.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_rg25adapter#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_rg25adapter.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "134xldys3e",
-      "Integrity": "7Ttmb1a2mExPSgYBBwIqnd2ucVd6AmcbdA03ZsR5SaY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_rg25adapter.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_rgbled.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_rgbled.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_rgbled#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_rgbled.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "njknj7rz1q",
-      "Integrity": "PVkLfjZzrZC9BSa2yCYrqV2cAYktpqgase9zSTbv4EI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_rgbled.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_servo.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_servo.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_servo#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_servo.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "gbo2qtqotr",
-      "Integrity": "ZIrYnZtM1m7H0yI7I1B3PTU7d2a+J94mhDt6y0pmng8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_servo.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_shutter.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_shutter.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_shutter#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_shutter.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hnc7g3h3fa",
-      "Integrity": "M/j+Siv5Q3bmw16wpUB9sg+eBVdKgoFr/d25DC1F5hE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_shutter.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_smartservo.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_smartservo.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_smartservo#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_smartservo.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4odzlx24pz",
-      "Integrity": "DFdx+EWZjjrzOFat3rxc3w0i+fg/u+NE4fNP8yxPBYs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_smartservo.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_soundsensor.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nsw_soundsensor.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nsw_soundsensor#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nsw_soundsensor.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xiayd178zl",
-      "Integrity": "yarSwCsjO743h+luphTClZmOhl/rTqjRlUPcq21IGY0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nsw_soundsensor.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nswmain.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\nswmain.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/nswmain#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/nswmain.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "s8iwu5ao64",
-      "Integrity": "XNZfuUpolv5R1GMN2cjeUGr7RUsp63qPbensMdmlmz0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\nswmain.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\productmanager.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\productmanager.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/productmanager#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/productmanager.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8ygc42hby4",
-      "Integrity": "0HyjDrG2scwc7vR6LUZsIE+jDpCehxRHXeNTR1vA9gw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\productmanager.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\starter-kit.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\starter-kit.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/starter-kit#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/starter-kit.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ftwievb9q1",
-      "Integrity": "Xe/9RXzcbSG7Yv/JT5vIhtmXwE+0/j2N2/21r0xNIxM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\starter-kit.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\ulugbek.jpg",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\Images\\ulugbek.jpg",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "Images/ulugbek#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/ulugbek.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pjfuepdi3l",
-      "Integrity": "NczBQPLpxkNhvV1ybkW1gIjbjLJVfaaMsz7PpiwVf7s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ulugbek.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\index.html",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "index#[.{fingerprint}]?.html",
+      "RelativePath": "index.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vgll94x3vb",
-      "Integrity": "72iH55Rt5Rste9W+KOUtXXwazqePK7XvZtrKVtvblHE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\js\\ModalHelper.js",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\js\\ModalHelper.js",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "js/ModalHelper#[.{fingerprint}]?.js",
+      "RelativePath": "js/ModalHelper.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "l6mlzchmwl",
-      "Integrity": "jaY99msrIcUg/PYaR0eCKNoCyFYT2CxM/ajZzhJ8g5k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\ModalHelper.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\js\\scrollToTop.js",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\js\\scrollToTop.js",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "js/scrollToTop#[.{fingerprint}]?.js",
+      "RelativePath": "js/scrollToTop.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "y1eu2fhpw9",
-      "Integrity": "ptAQUa58X5wBM8B8NnhBFxUgiRuwuIaLOpYNvLZLll0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\scrollToTop.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\js\\site.js",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "js/site#[.{fingerprint}]?.js",
+      "RelativePath": "js/site.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bp2yfyk10c",
-      "Integrity": "0QaSimuEnzDvaV2woOMuIkLCoyb5n6ZXhYEmkDZpoV0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\scrollToTop.js",
+      "Identity": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\scrollToTop.js",
       "SourceId": "EdurentV1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Labaratory\\Desktop\\DEV TOOLS\\NSWTotorial\\wwwroot\\",
       "BasePath": "_content/EdurentV1",
-      "RelativePath": "scrollToTop#[.{fingerprint}]?.js",
+      "RelativePath": "scrollToTop.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "y1eu2fhpw9",
-      "Integrity": "ptAQUa58X5wBM8B8NnhBFxUgiRuwuIaLOpYNvLZLll0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scrollToTop.js"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "app.css",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2609"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HcBnhoO99BLA68Mhu/3C0J6FQQ74kPF43/lJpN7URtE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 14:10:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-HcBnhoO99BLA68Mhu/3C0J6FQQ74kPF43/lJpN7URtE="
-        }
-      ]
-    },
-    {
-      "Route": "app.zcd1y5bwdc.css",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2609"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HcBnhoO99BLA68Mhu/3C0J6FQQ74kPF43/lJpN7URtE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 14:10:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zcd1y5bwdc"
-        },
-        {
-          "Name": "label",
-          "Value": "app.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-HcBnhoO99BLA68Mhu/3C0J6FQQ74kPF43/lJpN7URtE="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162726"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 15 Dec 2024 05:32:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6gzpyzhau4"
-        },
-        {
-          "Name": "label",
-          "Value": "bootstrap/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162726"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 15 Dec 2024 05:32:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "449111"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 15 Dec 2024 05:32:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8inm30yfxf"
-        },
-        {
-          "Name": "label",
-          "Value": "bootstrap/bootstrap.min.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "449111"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 15 Dec 2024 05:32:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "EdurentV1.79y4pa6efp.bundle.scp.css",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EdurentV1.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "42066"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"a4fTTey7pBo6l7+cIhor7AaVWcOwTuvP1sgh463M+ms=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 12:20:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "79y4pa6efp"
-        },
-        {
-          "Name": "label",
-          "Value": "EdurentV1.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-a4fTTey7pBo6l7+cIhor7AaVWcOwTuvP1sgh463M+ms="
-        }
-      ]
-    },
-    {
-      "Route": "EdurentV1.79y4pa6efp.styles.css",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\obj\\Release\\net8.0\\scopedcss\\bundle\\EdurentV1.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "42066"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"a4fTTey7pBo6l7+cIhor7AaVWcOwTuvP1sgh463M+ms=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 12:20:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "79y4pa6efp"
-        },
-        {
-          "Name": "label",
-          "Value": "EdurentV1.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-a4fTTey7pBo6l7+cIhor7AaVWcOwTuvP1sgh463M+ms="
-        }
-      ]
-    },
-    {
-      "Route": "EdurentV1.bundle.scp.css",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EdurentV1.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "42066"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"a4fTTey7pBo6l7+cIhor7AaVWcOwTuvP1sgh463M+ms=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 12:20:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-a4fTTey7pBo6l7+cIhor7AaVWcOwTuvP1sgh463M+ms="
-        }
-      ]
-    },
-    {
-      "Route": "EdurentV1.styles.css",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\obj\\Release\\net8.0\\scopedcss\\bundle\\EdurentV1.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "42066"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"a4fTTey7pBo6l7+cIhor7AaVWcOwTuvP1sgh463M+ms=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 12:20:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-a4fTTey7pBo6l7+cIhor7AaVWcOwTuvP1sgh463M+ms="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\favicon.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1148"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 15 Dec 2024 05:32:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ifv42okdf2"
-        },
-        {
-          "Name": "label",
-          "Value": "favicon.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\favicon.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1148"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 15 Dec 2024 05:32:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
-        }
-      ]
-    },
-    {
-      "Route": "image.ikx35r2zjw.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\image.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "311310"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sh2WXmo99/FDtZrv8mC0SzsP1Ne+ZcSMuREIiyaxGr8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 15 Dec 2024 05:32:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ikx35r2zjw"
-        },
-        {
-          "Name": "label",
-          "Value": "image.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sh2WXmo99/FDtZrv8mC0SzsP1Ne+ZcSMuREIiyaxGr8="
-        }
-      ]
-    },
-    {
-      "Route": "image.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\image.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "311310"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sh2WXmo99/FDtZrv8mC0SzsP1Ne+ZcSMuREIiyaxGr8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 15 Dec 2024 05:32:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-sh2WXmo99/FDtZrv8mC0SzsP1Ne+ZcSMuREIiyaxGr8="
-        }
-      ]
-    },
-    {
-      "Route": "Images/accessories.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\accessories.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "47298"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Z/RkoKEzf7mE25/LN5jUD0YJWshpaTUmwOn8d8c50s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Feb 2025 11:32:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-2Z/RkoKEzf7mE25/LN5jUD0YJWshpaTUmwOn8d8c50s="
-        }
-      ]
-    },
-    {
-      "Route": "Images/accessories.n4oktrmv4c.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\accessories.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "47298"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Z/RkoKEzf7mE25/LN5jUD0YJWshpaTUmwOn8d8c50s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Feb 2025 11:32:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "n4oktrmv4c"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/accessories.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-2Z/RkoKEzf7mE25/LN5jUD0YJWshpaTUmwOn8d8c50s="
-        }
-      ]
-    },
-    {
-      "Route": "Images/advanced-kit.3c5o3ao34b.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\advanced-kit.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "87332"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/UNDFecMTL3hja9qVSEqG0v8RZIb2Lh/0aZxA517m+g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Feb 2025 11:31:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3c5o3ao34b"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/advanced-kit.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/UNDFecMTL3hja9qVSEqG0v8RZIb2Lh/0aZxA517m+g="
-        }
-      ]
-    },
-    {
-      "Route": "Images/advanced-kit.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\advanced-kit.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "87332"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/UNDFecMTL3hja9qVSEqG0v8RZIb2Lh/0aZxA517m+g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Feb 2025 11:31:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-/UNDFecMTL3hja9qVSEqG0v8RZIb2Lh/0aZxA517m+g="
-        }
-      ]
-    },
-    {
-      "Route": "Images/behzod.7kujhtsxdk.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\behzod.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72127"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"d2ZPsrqRGT5HZPiBI1BV+cxZaAGvMrqGE8dduExi13c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 05 Feb 2025 09:35:10 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7kujhtsxdk"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/behzod.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-d2ZPsrqRGT5HZPiBI1BV+cxZaAGvMrqGE8dduExi13c="
-        }
-      ]
-    },
-    {
-      "Route": "Images/behzod.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\behzod.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72127"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"d2ZPsrqRGT5HZPiBI1BV+cxZaAGvMrqGE8dduExi13c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 05 Feb 2025 09:35:10 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-d2ZPsrqRGT5HZPiBI1BV+cxZaAGvMrqGE8dduExi13c="
-        }
-      ]
-    },
-    {
-      "Route": "Images/bluetooth.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\bluetooth.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "21272"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"FxaeVSuA19Dy0hBJd8izbehkImX8EkUOtCN3uKBewNk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-FxaeVSuA19Dy0hBJd8izbehkImX8EkUOtCN3uKBewNk="
-        }
-      ]
-    },
-    {
-      "Route": "Images/bluetooth.t3it1udlhh.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\bluetooth.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "21272"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"FxaeVSuA19Dy0hBJd8izbehkImX8EkUOtCN3uKBewNk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "t3it1udlhh"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/bluetooth.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-FxaeVSuA19Dy0hBJd8izbehkImX8EkUOtCN3uKBewNk="
-        }
-      ]
-    },
-    {
-      "Route": "Images/ceo.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\ceo.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "50467"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rIWNc3ew9PmGfY0gyowxSQiVFlQaHAl1SIWg6UH8E1g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 08 Feb 2025 10:59:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-rIWNc3ew9PmGfY0gyowxSQiVFlQaHAl1SIWg6UH8E1g="
-        }
-      ]
-    },
-    {
-      "Route": "Images/ceo.oz5kfwjsu9.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\ceo.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "50467"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rIWNc3ew9PmGfY0gyowxSQiVFlQaHAl1SIWg6UH8E1g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 08 Feb 2025 10:59:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "oz5kfwjsu9"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/ceo.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-rIWNc3ew9PmGfY0gyowxSQiVFlQaHAl1SIWg6UH8E1g="
-        }
-      ]
-    },
-    {
-      "Route": "Images/doppi.2etfnzczb3.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\doppi.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "510760"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iqU7BjU1i1F2gv3HMUuDKuTtVtL+kVxpXFTfZKDoxBg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 12:14:52 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "2etfnzczb3"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/doppi.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-iqU7BjU1i1F2gv3HMUuDKuTtVtL+kVxpXFTfZKDoxBg="
-        }
-      ]
-    },
-    {
-      "Route": "Images/doppi.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\doppi.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "510760"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iqU7BjU1i1F2gv3HMUuDKuTtVtL+kVxpXFTfZKDoxBg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 12:14:52 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-iqU7BjU1i1F2gv3HMUuDKuTtVtL+kVxpXFTfZKDoxBg="
-        }
-      ]
-    },
-    {
-      "Route": "Images/image.cv1gsvqojg.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\image.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "689456"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iHpcOg62i6Tb49hCad6mPpMFtDD2SXLL5Ccus5TvG3Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Jan 2025 05:19:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "cv1gsvqojg"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/image.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-iHpcOg62i6Tb49hCad6mPpMFtDD2SXLL5Ccus5TvG3Q="
-        }
-      ]
-    },
-    {
-      "Route": "Images/image.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\image.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "689456"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iHpcOg62i6Tb49hCad6mPpMFtDD2SXLL5Ccus5TvG3Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Jan 2025 05:19:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-iHpcOg62i6Tb49hCad6mPpMFtDD2SXLL5Ccus5TvG3Q="
-        }
-      ]
-    },
-    {
-      "Route": "Images/index.html",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "961"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JiixNuQL2RDfD2z2Rsec0U0EjqvldQi5bua1vrjhuCE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 05:18:31 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-JiixNuQL2RDfD2z2Rsec0U0EjqvldQi5bua1vrjhuCE="
-        }
-      ]
-    },
-    {
-      "Route": "Images/index.qkrtrz0p9t.html",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "961"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JiixNuQL2RDfD2z2Rsec0U0EjqvldQi5bua1vrjhuCE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 05:18:31 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "qkrtrz0p9t"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JiixNuQL2RDfD2z2Rsec0U0EjqvldQi5bua1vrjhuCE="
-        }
-      ]
-    },
-    {
-      "Route": "Images/kits.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\kits.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1088806"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NjRtwe7zdttvKVlgIOvf3Czzy/WxfK4OogrY0yH3Zyw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 06:11:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NjRtwe7zdttvKVlgIOvf3Czzy/WxfK4OogrY0yH3Zyw="
-        }
-      ]
-    },
-    {
-      "Route": "Images/kits.qf8ylwm73l.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\kits.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1088806"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NjRtwe7zdttvKVlgIOvf3Czzy/WxfK4OogrY0yH3Zyw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 07 Feb 2025 06:11:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "qf8ylwm73l"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/kits.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NjRtwe7zdttvKVlgIOvf3Czzy/WxfK4OogrY0yH3Zyw="
-        }
-      ]
-    },
-    {
-      "Route": "Images/logo.ijgfg472yg.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\logo.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "186931"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fpEn/2j6ylNxJzsWgSvGKc0r00byOVFpkGw5Jb1cyy8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Feb 2025 12:15:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ijgfg472yg"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/logo.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-fpEn/2j6ylNxJzsWgSvGKc0r00byOVFpkGw5Jb1cyy8="
-        }
-      ]
-    },
-    {
-      "Route": "Images/logo.png",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\logo.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "186931"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fpEn/2j6ylNxJzsWgSvGKc0r00byOVFpkGw5Jb1cyy8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Feb 2025 12:15:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-fpEn/2j6ylNxJzsWgSvGKc0r00byOVFpkGw5Jb1cyy8="
-        }
-      ]
-    },
-    {
-      "Route": "Images/milliyrasm.h4hcyk3597.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\milliyrasm.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "123295"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sYO+Y51m1W9VhCvc6eh5+Of/Voho4fGaKWEPwvM+nLE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 09:58:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "h4hcyk3597"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/milliyrasm.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sYO+Y51m1W9VhCvc6eh5+Of/Voho4fGaKWEPwvM+nLE="
-        }
-      ]
-    },
-    {
-      "Route": "Images/milliyrasm.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\milliyrasm.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "123295"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sYO+Y51m1W9VhCvc6eh5+Of/Voho4fGaKWEPwvM+nLE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 09:58:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-sYO+Y51m1W9VhCvc6eh5+Of/Voho4fGaKWEPwvM+nLE="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_4button.0hr455p6o1.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_4button.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13754"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"FM1CCx/H9sBNLlb443PXCIjMG04stmlL0ogaDXLqHT0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0hr455p6o1"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_4button.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-FM1CCx/H9sBNLlb443PXCIjMG04stmlL0ogaDXLqHT0="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_4button.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_4button.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13754"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"FM1CCx/H9sBNLlb443PXCIjMG04stmlL0ogaDXLqHT0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-FM1CCx/H9sBNLlb443PXCIjMG04stmlL0ogaDXLqHT0="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_7segmentdisplay.7hw6vmc3t8.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_7segmentdisplay.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "20818"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6wA2EyYdJVU+9KKr0HzamnaxSDXvnEktwgNQcXk6tGw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7hw6vmc3t8"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_7segmentdisplay.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6wA2EyYdJVU+9KKr0HzamnaxSDXvnEktwgNQcXk6tGw="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_7segmentdisplay.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_7segmentdisplay.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "20818"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6wA2EyYdJVU+9KKr0HzamnaxSDXvnEktwgNQcXk6tGw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6wA2EyYdJVU+9KKr0HzamnaxSDXvnEktwgNQcXk6tGw="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_buzzer.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_buzzer.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "20161"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ioD9gN3FN7nJ8xkrMLJEPvGtExvTc/WDqVXPz3nKw40=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ioD9gN3FN7nJ8xkrMLJEPvGtExvTc/WDqVXPz3nKw40="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_buzzer.y918r7l412.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_buzzer.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "20161"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ioD9gN3FN7nJ8xkrMLJEPvGtExvTc/WDqVXPz3nKw40=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "y918r7l412"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_buzzer.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ioD9gN3FN7nJ8xkrMLJEPvGtExvTc/WDqVXPz3nKw40="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_colorsensor.6o1lvlmk8x.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_colorsensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "31087"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SrESRcVrH5WXiuk8FTxSdYQ8jepq9PQ9eUfVhBvbBls=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6o1lvlmk8x"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_colorsensor.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-SrESRcVrH5WXiuk8FTxSdYQ8jepq9PQ9eUfVhBvbBls="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_colorsensor.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_colorsensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "31087"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SrESRcVrH5WXiuk8FTxSdYQ8jepq9PQ9eUfVhBvbBls=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-SrESRcVrH5WXiuk8FTxSdYQ8jepq9PQ9eUfVhBvbBls="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_compass.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_compass.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9510"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4Gv/KEb/ineilfV3VyAExskcB/EVnxVjB+DF8H2L4aQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4Gv/KEb/ineilfV3VyAExskcB/EVnxVjB+DF8H2L4aQ="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_compass.knl265wf0m.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_compass.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9510"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4Gv/KEb/ineilfV3VyAExskcB/EVnxVjB+DF8H2L4aQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "knl265wf0m"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_compass.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4Gv/KEb/ineilfV3VyAExskcB/EVnxVjB+DF8H2L4aQ="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_dcmotor.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_dcmotor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "15414"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pLTkx68FQZxkE47wPLuIRBM8togmgG7KuP2DPRrcJVs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-pLTkx68FQZxkE47wPLuIRBM8togmgG7KuP2DPRrcJVs="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_dcmotor.onlwznc0bi.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_dcmotor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "15414"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pLTkx68FQZxkE47wPLuIRBM8togmgG7KuP2DPRrcJVs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "onlwznc0bi"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_dcmotor.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pLTkx68FQZxkE47wPLuIRBM8togmgG7KuP2DPRrcJVs="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_flamesensor.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_flamesensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16648"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YqdMN0nUO8etd0fxWGA/dfaor42M8jxPRzauT5JrXVo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-YqdMN0nUO8etd0fxWGA/dfaor42M8jxPRzauT5JrXVo="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_flamesensor.qhul7pm8hq.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_flamesensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16648"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YqdMN0nUO8etd0fxWGA/dfaor42M8jxPRzauT5JrXVo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "qhul7pm8hq"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_flamesensor.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-YqdMN0nUO8etd0fxWGA/dfaor42M8jxPRzauT5JrXVo="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_gassensor.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_gassensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "22637"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gzQ80V1bnLre42lZLEL6zR1szP/WoUeSdmWI+/6YgfU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-gzQ80V1bnLre42lZLEL6zR1szP/WoUeSdmWI+/6YgfU="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_gassensor.pt5k5n1i5f.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_gassensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "22637"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gzQ80V1bnLre42lZLEL6zR1szP/WoUeSdmWI+/6YgfU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pt5k5n1i5f"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_gassensor.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gzQ80V1bnLre42lZLEL6zR1szP/WoUeSdmWI+/6YgfU="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_gyro.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_gyro.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "21196"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AvUa67FhBX5Cz5hr3J6bddklQg5T6zTC9ePP2egq33g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-AvUa67FhBX5Cz5hr3J6bddklQg5T6zTC9ePP2egq33g="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_gyro.mraq8l4use.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_gyro.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "21196"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AvUa67FhBX5Cz5hr3J6bddklQg5T6zTC9ePP2egq33g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mraq8l4use"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_gyro.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-AvUa67FhBX5Cz5hr3J6bddklQg5T6zTC9ePP2egq33g="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_humituresensor.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_humituresensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9722"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pBgTT0xTbs8qoht9DmWEF5w34xlBfHttugUm0f+VbBs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-pBgTT0xTbs8qoht9DmWEF5w34xlBfHttugUm0f+VbBs="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_humituresensor.ofb7f5cy3j.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_humituresensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9722"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pBgTT0xTbs8qoht9DmWEF5w34xlBfHttugUm0f+VbBs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ofb7f5cy3j"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_humituresensor.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pBgTT0xTbs8qoht9DmWEF5w34xlBfHttugUm0f+VbBs="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_i2scansensor.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_i2scansensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "50011"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"lFTYzP4FRogK6yLNGVRqQRQ3rDI5Im+cwsdfxTITjms=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-lFTYzP4FRogK6yLNGVRqQRQ3rDI5Im+cwsdfxTITjms="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_i2scansensor.ks9ox3anfn.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_i2scansensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "50011"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"lFTYzP4FRogK6yLNGVRqQRQ3rDI5Im+cwsdfxTITjms=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ks9ox3anfn"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_i2scansensor.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-lFTYzP4FRogK6yLNGVRqQRQ3rDI5Im+cwsdfxTITjms="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_Infraredreceiver.jkviceocdh.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_Infraredreceiver.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16587"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"U3QrYfQAdY95e/TM4ncuifuD/V4OdqpbmouiHzZoOhE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jkviceocdh"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_Infraredreceiver.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-U3QrYfQAdY95e/TM4ncuifuD/V4OdqpbmouiHzZoOhE="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_Infraredreceiver.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_Infraredreceiver.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16587"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"U3QrYfQAdY95e/TM4ncuifuD/V4OdqpbmouiHzZoOhE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-U3QrYfQAdY95e/TM4ncuifuD/V4OdqpbmouiHzZoOhE="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_joystic.c0i1s83bqh.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_joystic.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "15291"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"bL27+S6n5P5pCPVSu4iLXXzISlLEvWBjokFjloUvjiI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "c0i1s83bqh"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_joystic.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-bL27+S6n5P5pCPVSu4iLXXzISlLEvWBjokFjloUvjiI="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_joystic.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_joystic.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "15291"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"bL27+S6n5P5pCPVSu4iLXXzISlLEvWBjokFjloUvjiI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-bL27+S6n5P5pCPVSu4iLXXzISlLEvWBjokFjloUvjiI="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_ledmatrix.1bv2g8mxv0.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_ledmatrix.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "32817"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AyUe09Mq5fKZ+Xrb9WmCULlG16D8ulffk6ervkLCEls=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1bv2g8mxv0"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_ledmatrix.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-AyUe09Mq5fKZ+Xrb9WmCULlG16D8ulffk6ervkLCEls="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_ledmatrix.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_ledmatrix.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "32817"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AyUe09Mq5fKZ+Xrb9WmCULlG16D8ulffk6ervkLCEls=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-AyUe09Mq5fKZ+Xrb9WmCULlG16D8ulffk6ervkLCEls="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_ledmatrix1.e6g7jkap0t.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_ledmatrix1.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12913"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pvAvEGUBiiFhR6WQiiAdnkquMNIksQA/3ueZuy2k15o=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e6g7jkap0t"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_ledmatrix1.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pvAvEGUBiiFhR6WQiiAdnkquMNIksQA/3ueZuy2k15o="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_ledmatrix1.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_ledmatrix1.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12913"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pvAvEGUBiiFhR6WQiiAdnkquMNIksQA/3ueZuy2k15o=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-pvAvEGUBiiFhR6WQiiAdnkquMNIksQA/3ueZuy2k15o="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_lightsensor.55z17w6a9v.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_lightsensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "35214"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KS8nx5osclIpW5ZjQJ2B6a353n/DF9b1u+9XSEqdEFc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "55z17w6a9v"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_lightsensor.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-KS8nx5osclIpW5ZjQJ2B6a353n/DF9b1u+9XSEqdEFc="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_lightsensor.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_lightsensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "35214"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KS8nx5osclIpW5ZjQJ2B6a353n/DF9b1u+9XSEqdEFc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KS8nx5osclIpW5ZjQJ2B6a353n/DF9b1u+9XSEqdEFc="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_limitswitch.4eoe1rt2f5.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_limitswitch.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "15643"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BFBYWnHkitGFPFzFWbG6zecqiWsy75QBr4kDsxUt0XY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4eoe1rt2f5"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_limitswitch.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-BFBYWnHkitGFPFzFWbG6zecqiWsy75QBr4kDsxUt0XY="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_limitswitch.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_limitswitch.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "15643"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BFBYWnHkitGFPFzFWbG6zecqiWsy75QBr4kDsxUt0XY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-BFBYWnHkitGFPFzFWbG6zecqiWsy75QBr4kDsxUt0XY="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_linefollower.g58shjans6.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_linefollower.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17853"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vKrb8mW8auzvwzghu9Qvp1tWZH/GYsk719YFaCbFCKo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "g58shjans6"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_linefollower.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-vKrb8mW8auzvwzghu9Qvp1tWZH/GYsk719YFaCbFCKo="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_linefollower.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_linefollower.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17853"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vKrb8mW8auzvwzghu9Qvp1tWZH/GYsk719YFaCbFCKo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-vKrb8mW8auzvwzghu9Qvp1tWZH/GYsk719YFaCbFCKo="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_pirmotion.asnnsz3hyv.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_pirmotion.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "26957"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KlDAhREW4JdwszaQ1ZuS5kuYsekt61QWtn/E8SCfHdo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "asnnsz3hyv"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_pirmotion.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-KlDAhREW4JdwszaQ1ZuS5kuYsekt61QWtn/E8SCfHdo="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_pirmotion.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_pirmotion.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "26957"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KlDAhREW4JdwszaQ1ZuS5kuYsekt61QWtn/E8SCfHdo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KlDAhREW4JdwszaQ1ZuS5kuYsekt61QWtn/E8SCfHdo="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_pm25sensor.7nclyl6gxo.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_pm25sensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "26481"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vZYKo9UKtzLHIOmkuUZOvpkDWC8vtxJoHDPqQw4rDbk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7nclyl6gxo"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_pm25sensor.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-vZYKo9UKtzLHIOmkuUZOvpkDWC8vtxJoHDPqQw4rDbk="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_pm25sensor.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_pm25sensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "26481"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vZYKo9UKtzLHIOmkuUZOvpkDWC8vtxJoHDPqQw4rDbk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-vZYKo9UKtzLHIOmkuUZOvpkDWC8vtxJoHDPqQw4rDbk="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_potentiometer.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_potentiometer.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "19683"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"X4KbM49L8GrpLBJT1TU0cXSKDzcPT87AnQXt/4DyvuA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-X4KbM49L8GrpLBJT1TU0cXSKDzcPT87AnQXt/4DyvuA="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_potentiometer.x4z7o6i3uc.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_potentiometer.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "19683"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"X4KbM49L8GrpLBJT1TU0cXSKDzcPT87AnQXt/4DyvuA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "x4z7o6i3uc"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_potentiometer.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-X4KbM49L8GrpLBJT1TU0cXSKDzcPT87AnQXt/4DyvuA="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_pressuresensor.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_pressuresensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "83387"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fBZ8PdjmjCWqGtppTu7T0XhihkcZ+XydsbNSdPfs/DA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-fBZ8PdjmjCWqGtppTu7T0XhihkcZ+XydsbNSdPfs/DA="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_pressuresensor.k85odzik5g.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_pressuresensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "83387"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fBZ8PdjmjCWqGtppTu7T0XhihkcZ+XydsbNSdPfs/DA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "k85odzik5g"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_pressuresensor.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-fBZ8PdjmjCWqGtppTu7T0XhihkcZ+XydsbNSdPfs/DA="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_ps2.1ruuuwwwh8.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_ps2.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "25803"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"06op8ugnSAOXIefQ619/uOBef6Uy1/MdAfmfgx1RyPE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1ruuuwwwh8"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_ps2.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-06op8ugnSAOXIefQ619/uOBef6Uy1/MdAfmfgx1RyPE="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_ps2.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_ps2.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "25803"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"06op8ugnSAOXIefQ619/uOBef6Uy1/MdAfmfgx1RyPE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-06op8ugnSAOXIefQ619/uOBef6Uy1/MdAfmfgx1RyPE="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_rg25adapter.134xldys3e.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_rg25adapter.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "27006"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7Ttmb1a2mExPSgYBBwIqnd2ucVd6AmcbdA03ZsR5SaY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "134xldys3e"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_rg25adapter.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-7Ttmb1a2mExPSgYBBwIqnd2ucVd6AmcbdA03ZsR5SaY="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_rg25adapter.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_rg25adapter.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "27006"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7Ttmb1a2mExPSgYBBwIqnd2ucVd6AmcbdA03ZsR5SaY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-7Ttmb1a2mExPSgYBBwIqnd2ucVd6AmcbdA03ZsR5SaY="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_rgbled.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_rgbled.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16355"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"PVkLfjZzrZC9BSa2yCYrqV2cAYktpqgase9zSTbv4EI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-PVkLfjZzrZC9BSa2yCYrqV2cAYktpqgase9zSTbv4EI="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_rgbled.njknj7rz1q.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_rgbled.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16355"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"PVkLfjZzrZC9BSa2yCYrqV2cAYktpqgase9zSTbv4EI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "njknj7rz1q"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_rgbled.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-PVkLfjZzrZC9BSa2yCYrqV2cAYktpqgase9zSTbv4EI="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_servo.gbo2qtqotr.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_servo.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17320"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ZIrYnZtM1m7H0yI7I1B3PTU7d2a+J94mhDt6y0pmng8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "gbo2qtqotr"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_servo.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZIrYnZtM1m7H0yI7I1B3PTU7d2a+J94mhDt6y0pmng8="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_servo.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_servo.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17320"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ZIrYnZtM1m7H0yI7I1B3PTU7d2a+J94mhDt6y0pmng8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZIrYnZtM1m7H0yI7I1B3PTU7d2a+J94mhDt6y0pmng8="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_shutter.hnc7g3h3fa.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_shutter.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "14899"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"M/j+Siv5Q3bmw16wpUB9sg+eBVdKgoFr/d25DC1F5hE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "hnc7g3h3fa"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_shutter.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-M/j+Siv5Q3bmw16wpUB9sg+eBVdKgoFr/d25DC1F5hE="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_shutter.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_shutter.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "14899"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"M/j+Siv5Q3bmw16wpUB9sg+eBVdKgoFr/d25DC1F5hE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-M/j+Siv5Q3bmw16wpUB9sg+eBVdKgoFr/d25DC1F5hE="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_smartservo.4odzlx24pz.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_smartservo.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10351"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DFdx+EWZjjrzOFat3rxc3w0i+fg/u+NE4fNP8yxPBYs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4odzlx24pz"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_smartservo.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-DFdx+EWZjjrzOFat3rxc3w0i+fg/u+NE4fNP8yxPBYs="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_smartservo.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_smartservo.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10351"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DFdx+EWZjjrzOFat3rxc3w0i+fg/u+NE4fNP8yxPBYs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-DFdx+EWZjjrzOFat3rxc3w0i+fg/u+NE4fNP8yxPBYs="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_soundsensor.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_soundsensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "27619"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yarSwCsjO743h+luphTClZmOhl/rTqjRlUPcq21IGY0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-yarSwCsjO743h+luphTClZmOhl/rTqjRlUPcq21IGY0="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nsw_soundsensor.xiayd178zl.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nsw_soundsensor.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "27619"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yarSwCsjO743h+luphTClZmOhl/rTqjRlUPcq21IGY0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xiayd178zl"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nsw_soundsensor.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-yarSwCsjO743h+luphTClZmOhl/rTqjRlUPcq21IGY0="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nswmain.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nswmain.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "123873"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XNZfuUpolv5R1GMN2cjeUGr7RUsp63qPbensMdmlmz0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 08 Feb 2025 10:56:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-XNZfuUpolv5R1GMN2cjeUGr7RUsp63qPbensMdmlmz0="
-        }
-      ]
-    },
-    {
-      "Route": "Images/nswmain.s8iwu5ao64.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\nswmain.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "123873"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XNZfuUpolv5R1GMN2cjeUGr7RUsp63qPbensMdmlmz0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 08 Feb 2025 10:56:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "s8iwu5ao64"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/nswmain.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-XNZfuUpolv5R1GMN2cjeUGr7RUsp63qPbensMdmlmz0="
-        }
-      ]
-    },
-    {
-      "Route": "Images/productmanager.8ygc42hby4.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\productmanager.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16920"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0HyjDrG2scwc7vR6LUZsIE+jDpCehxRHXeNTR1vA9gw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 08 Feb 2025 08:19:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8ygc42hby4"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/productmanager.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0HyjDrG2scwc7vR6LUZsIE+jDpCehxRHXeNTR1vA9gw="
-        }
-      ]
-    },
-    {
-      "Route": "Images/productmanager.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\productmanager.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16920"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0HyjDrG2scwc7vR6LUZsIE+jDpCehxRHXeNTR1vA9gw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 08 Feb 2025 08:19:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0HyjDrG2scwc7vR6LUZsIE+jDpCehxRHXeNTR1vA9gw="
-        }
-      ]
-    },
-    {
-      "Route": "Images/starter-kit.ftwievb9q1.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\starter-kit.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "50105"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Xe/9RXzcbSG7Yv/JT5vIhtmXwE+0/j2N2/21r0xNIxM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Feb 2025 11:29:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ftwievb9q1"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/starter-kit.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Xe/9RXzcbSG7Yv/JT5vIhtmXwE+0/j2N2/21r0xNIxM="
-        }
-      ]
-    },
-    {
-      "Route": "Images/starter-kit.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\starter-kit.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "50105"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Xe/9RXzcbSG7Yv/JT5vIhtmXwE+0/j2N2/21r0xNIxM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Feb 2025 11:29:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Xe/9RXzcbSG7Yv/JT5vIhtmXwE+0/j2N2/21r0xNIxM="
-        }
-      ]
-    },
-    {
-      "Route": "Images/ulugbek.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\ulugbek.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "20338"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NczBQPLpxkNhvV1ybkW1gIjbjLJVfaaMsz7PpiwVf7s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Feb 2025 11:04:04 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NczBQPLpxkNhvV1ybkW1gIjbjLJVfaaMsz7PpiwVf7s="
-        }
-      ]
-    },
-    {
-      "Route": "Images/ulugbek.pjfuepdi3l.jpg",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\Images\\ulugbek.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "20338"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NczBQPLpxkNhvV1ybkW1gIjbjLJVfaaMsz7PpiwVf7s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Feb 2025 11:04:04 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pjfuepdi3l"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/ulugbek.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NczBQPLpxkNhvV1ybkW1gIjbjLJVfaaMsz7PpiwVf7s="
-        }
-      ]
-    },
-    {
-      "Route": "index.html",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "663"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"72iH55Rt5Rste9W+KOUtXXwazqePK7XvZtrKVtvblHE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 06:17:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-72iH55Rt5Rste9W+KOUtXXwazqePK7XvZtrKVtvblHE="
-        }
-      ]
-    },
-    {
-      "Route": "index.vgll94x3vb.html",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "663"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"72iH55Rt5Rste9W+KOUtXXwazqePK7XvZtrKVtvblHE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 06:17:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vgll94x3vb"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-72iH55Rt5Rste9W+KOUtXXwazqePK7XvZtrKVtvblHE="
-        }
-      ]
-    },
-    {
-      "Route": "js/ModalHelper.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\js\\ModalHelper.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "405"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jaY99msrIcUg/PYaR0eCKNoCyFYT2CxM/ajZzhJ8g5k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 15:19:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-jaY99msrIcUg/PYaR0eCKNoCyFYT2CxM/ajZzhJ8g5k="
-        }
-      ]
-    },
-    {
-      "Route": "js/ModalHelper.l6mlzchmwl.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\js\\ModalHelper.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "405"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jaY99msrIcUg/PYaR0eCKNoCyFYT2CxM/ajZzhJ8g5k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Dec 2024 15:19:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "l6mlzchmwl"
-        },
-        {
-          "Name": "label",
-          "Value": "js/ModalHelper.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-jaY99msrIcUg/PYaR0eCKNoCyFYT2CxM/ajZzhJ8g5k="
-        }
-      ]
-    },
-    {
-      "Route": "js/scrollToTop.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\js\\scrollToTop.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "68"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ptAQUa58X5wBM8B8NnhBFxUgiRuwuIaLOpYNvLZLll0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ptAQUa58X5wBM8B8NnhBFxUgiRuwuIaLOpYNvLZLll0="
-        }
-      ]
-    },
-    {
-      "Route": "js/scrollToTop.y1eu2fhpw9.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\js\\scrollToTop.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "68"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ptAQUa58X5wBM8B8NnhBFxUgiRuwuIaLOpYNvLZLll0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "y1eu2fhpw9"
-        },
-        {
-          "Name": "label",
-          "Value": "js/scrollToTop.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ptAQUa58X5wBM8B8NnhBFxUgiRuwuIaLOpYNvLZLll0="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.bp2yfyk10c.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "389"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0QaSimuEnzDvaV2woOMuIkLCoyb5n6ZXhYEmkDZpoV0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 06:15:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "bp2yfyk10c"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0QaSimuEnzDvaV2woOMuIkLCoyb5n6ZXhYEmkDZpoV0="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "389"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0QaSimuEnzDvaV2woOMuIkLCoyb5n6ZXhYEmkDZpoV0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 06:15:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0QaSimuEnzDvaV2woOMuIkLCoyb5n6ZXhYEmkDZpoV0="
-        }
-      ]
-    },
-    {
-      "Route": "scrollToTop.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\scrollToTop.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "68"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ptAQUa58X5wBM8B8NnhBFxUgiRuwuIaLOpYNvLZLll0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ptAQUa58X5wBM8B8NnhBFxUgiRuwuIaLOpYNvLZLll0="
-        }
-      ]
-    },
-    {
-      "Route": "scrollToTop.y1eu2fhpw9.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\Develeoper Tools\\PROJECTS\\NSW.V1\\wwwroot\\scrollToTop.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "68"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ptAQUa58X5wBM8B8NnhBFxUgiRuwuIaLOpYNvLZLll0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 04:35:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "y1eu2fhpw9"
-        },
-        {
-          "Name": "label",
-          "Value": "scrollToTop.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ptAQUa58X5wBM8B8NnhBFxUgiRuwuIaLOpYNvLZLll0="
-        }
-      ]
     }
   ]
 }
