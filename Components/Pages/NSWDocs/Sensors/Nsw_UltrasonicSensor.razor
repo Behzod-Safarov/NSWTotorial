@@ -1,50 +1,54 @@
 @page "/nsw_ultrasonicsensor"
 @rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
+@inherits LayoutComponentBase
 <NSWLayout />
 <br>
 <br>
 
 <div class="container mt-5">
-    <h1 class="display-4 text-center">NSW Ultrasonik Sensor Moduli</h1>
-    <p class="lead text-center">Loyihalaringizda NSW Ultrasonik Sensor Moduli bilan masofani aniq o'lchang</p>
+    <h1 class="display-4 text-center">NSW ultrasonik sensor</h1>
+    <p class="lead text-center">Masofani aniq o‘lchash uchun NSW ultrasonik sensoridan foydalaning</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Ultrasonik Sensor Moduli masofani o'lchash uchun mo'ljallangan elektron modul bo'lib, 2 sm dan 400 sm gacha bo'lgan masofalarni aniqlay oladi. Bu modul sariq belgi bilan belgilangan bo'lib, u Nsw Boarddagi sariq belgili (Raqamli) portga ulanadi. Ultrasonik to'lqinlar yordamida masofani o'lchaydi, bu esa robotlarning to'siqlardan qochishi yoki masofa o'lchash loyihalari uchun ideal qiladi. Modulda ultrasonik transmitter (T) va qabul qiluvchi (R) mavjud bo'lib, 40 kHz chastotali to'lqinlar yuboradi va qaytgan aks sado vaqtini o'lchaydi.</p>
-        <img src="images/nsw_ultrasonicsensor.jpg" alt="NSW Ultrasonik Sensor Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW ultrasonik sensor masofani o‘lchash uchun mo‘ljallangan bo‘lib, 2 sm dan 400 sm gacha masofalarni aniqlay oladi. Sensor sariq identifikatorga ega bo‘lib, NSW boshqaruv platasining sariq (raqamli) portlariga ulanadi. Ultrasonik to‘lqinlar yordamida masofani o‘lchaydi, bu uni robototexnika, to‘siqlardan qochish va masofa monitoringi uchun ideal qiladi. Modulda transmitter (T) va qabul qiluvchi (R) mavjud bo‘lib, 40 kHz chastotali to‘lqinlar ishlatiladi.</p>
+        <div class="image-container">
+            <img src="images/ultrasonic.jpg" alt="NSW ultrasonik sensor" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW ultrasonik sensor – masofa o‘lchash uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
             <li>Ishlash kuchlanishi: 5V DC</li>
-            <li>Masofa diapazoni: 2 sm - 400 sm</li>
+            <li>Masofa diapazoni: 2–400 sm</li>
             <li>Aniqlik: ±3 mm</li>
             <li>Chiqish signali: Raqamli (impuls uzunligi)</li>
             <li>Chastota: 40 kHz</li>
-            <li>Modul hajmi: 45 x 20 x 15 mm (U x G x Y)</li>
-            <li>Ulanish: RJ25 yoki 3-pinli Dupont simlari</li>
-            <li>Energiya sarfi: ~15 mA (faol holatda)</li>
+            <li>Modul hajmi: 45×20×15 mm</li>
+            <li>Ulanish: RJ25 yoki 3/4-pinli Dupont simlari</li>
+            <li>Energiya sarfi: ~15 mA (faol)</li>
         </ul>
-        <p>Eslatma: Yumshoq materiallar (masalan, mato) aks sadoni yomon qaytarishi mumkin, bu esa o'lchov aniqligiga ta'sir qiladi. Sensorning old qismida to'siq bo'lmasligiga ishonch hosil qiling.</p>
+        <p>Eslatma: Yumshoq materiallar (mato, ko‘pik) aks sadoni yomon qaytarishi mumkin. Sensor oldida to‘siq bo‘lmasligiga ishonch hosil qiling.</p>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Ultrasonik Sensor Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW ultrasonik sensor quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Robototexnika loyihalarida to'siqlardan qochish</li>
-            <li>Masofa o'lchash va park radarlari</li>
-            <li>Ta'lim loyihalari va ultrasonik texnologiyani o'rganish</li>
-            <li>Aqlli qurilmalarda sath monitoringi</li>
-            <li>Avtomatik eshik ochish tizimlari</li>
+            <li>Robototexnikada to‘siqlardan qochish</li>
+            <li>Masofa o‘lchash va park radarlari</li>
+            <li>Ta’lim loyihalari</li>
+            <li>Sath monitoringi</li>
+            <li>Avtomatik eshik tizimlari</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Ta'rifi</h2>
-        <p>NSW Ultrasonik Sensor Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>NSW ultrasonik sensor odatda uchta pin (VCC, GND, SIG) yoki to‘rtta pin (VCC, GND, TRIG, ECHO) ga ega:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -55,79 +59,146 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to'k (Ground)</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvatlantirish manbai (5V)</td>
+                    <td>Quvvat manbai (5V)</td>
                 </tr>
                 <tr>
-                    <td>SIG</td>
-                    <td>Raqamli signal (Trigger va Echo birlashgan)</td>
+                    <td>SIG (yoki TRIG/ECHO)</td>
+                    <td>Raqamli signal (Trigger va Echo)</td>
+                </tr>
+                <tr>
+                    <td>ECHO (agar alohida bo‘lsa)</td>
+                    <td>Echo signali</td>
                 </tr>
             </tbody>
         </table>
-        <p>Eslatma: Agar modul 4-pinli (VCC, GND, TRIG, ECHO) bo'lsa, TRIG va ECHO alohida raqamli pinlarga ulanadi.</p>
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulanish Rejimi</h2>
-
+        <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Ultrasonik Sensor Moduli sariq IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da sariq ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 3, 4, 5, 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
-        <img src="images/ultrasonicsensor_rj25.jpg" alt="NSW Ultrasonik Sensor RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
-    </div>
-    <div class="my-5">
+        <p>Sensor sariq identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining sariq identifikatorli portlariga (masalan, №3–8) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/ultrasonicsensor_rj25.jpg" alt="Ultrasonik sensor RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
+
         <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, SIG pinini raqamli pinga (masalan, D9) ulash lozim. Quyidagi rasmda ulanish ko'rsatilgan:</p>
-        <img src="images/ultrasonicsensor_dupont.jpg" alt="NSW Ultrasonik Sensor Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda quyidagi pinlardan foydalaniladi (3-pinli modul uchun):</p>
+        <ul>
+            <li><b>VCC</b> → Arduino 5V</li>
+            <li><b>GND</b> → Arduino GND</li>
+            <li><b>SIG</b> → Arduino D9 (yoki boshqa raqamli pin)</li>
+        </ul>
+        <p>4-pinli modul uchun:</p>
+        <ul>
+            <li><b>VCC</b> → Arduino 5V</li>
+            <li><b>GND</b> → Arduino GND</li>
+            <li><b>TRIG</b> → Arduino D9</li>
+            <li><b>ECHO</b> → Arduino D10</li>
+        </ul>
+        <div class="image-container">
+            <img src="images/ultrasonicsensor_dupont.jpg" alt="Ultrasonik sensor Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash bo'yicha Qo'llanma</h2>
-
-        <p>Arduino dasturlash</p>
-        <p>Arduino yordamida NSW Ultrasonik Sensor Modulini boshqarish uchun SIG piniga 10 mikrosekundlik impuls yuborish va qaytgan impuls uzunligini o'lchash kerak. Quyidagi misol masofani o'lchab, ketma-ket monitorga chop etadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino funktsiyalari yetarli:</p>
-        <pre>
-const int sigPin = 9; // SIG pinini D9 ga uladik
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino IDE yordamida NSW ultrasonik sensorini boshqarish uchun maxsus kutubxona talab qilinmaydi. Quyidagi kodlar 3-pinli va 4-pinli modullar uchun masofani o‘lchaydi va Serial monitorda ko‘rsatadi.</p>
+        
+        <h3>3-pinli modul uchun</h3>
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi (3-pinli)</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+const int sigPin = 9; // SIG pinini D9 ga ulash
 
 void setup() {
-  pinMode(sigPin, OUTPUT); // SIG pinini chiqish sifatida sozlash
-  pinMode(sigPin, INPUT);  // Keyin kirish sifatida ishlatiladi
-  Serial.begin(9600);      // Ketma-ket portni ishga tushirish
+    Serial.begin(9600); // Serial monitorni ishga tushirish
 }
 
 void loop() {
-  digitalWrite(sigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(sigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(sigPin, LOW);
-  
-  long duration = pulseIn(sigPin, HIGH); // Impuls uzunligini o'lchash
-  float distance = duration * 0.034 / 2; // Masofani sm da hisoblash
-  
-  Serial.print("Masofa: ");
-  Serial.print(distance);
-  Serial.println(" sm");
-  
-  delay(100); // 100 ms kutish
+    pinMode(sigPin, OUTPUT); // Trigger uchun chiqish
+    digitalWrite(sigPin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(sigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(sigPin, LOW);
+
+    pinMode(sigPin, INPUT); // Echo uchun kirish
+    long duration = pulseIn(sigPin, HIGH); // Impuls uzunligini o‘lchash
+    float distance = duration * 0.034 / 2; // Masofani sm da hisoblash
+
+    Serial.print("Masofa: ");
+    Serial.print(distance);
+    Serial.println(" sm");
+
+    delay(100); // 100 ms kutish
 }
-        </pre>
-        <p>Ushbu kod SIG piniga impuls yuboradi, qaytgan aks sado impulsini o'lchaydi va masofani santimetrda hisoblab, ketma-ket monitorga chiqaradi. Masofa hisoblash formulasi: <code>masofa = (impuls vaqti * tovush tezligi) / 2</code>, bu erda tovush tezligi 340 m/s.</p>
+            </code></pre>
+        </div>
+
+        <h3>4-pinli modul uchun</h3>
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi (4-pinli)</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+const int trigPin = 9; // TRIG pinini D9 ga ulash
+const int echoPin = 10; // ECHO pinini D10 ga ulash
+
+void setup() {
+    pinMode(trigPin, OUTPUT); // Trigger pinini chiqish sifatida sozlash
+    pinMode(echoPin, INPUT);  // Echo pinini kirish sifatida sozlash
+    Serial.begin(9600);       // Serial monitorni ishga tushirish
+}
+
+void loop() {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+
+    long duration = pulseIn(echoPin, HIGH); // Impuls uzunligini o‘lchash
+    float distance = duration * 0.034 / 2;  // Masofani sm da hisoblash
+
+    Serial.print("Masofa: ");
+    Serial.print(distance);
+    Serial.println(" sm");
+
+    delay(100); // 100 ms kutish
+}
+            </code></pre>
+        </div>
+
+        <p>Eslatma: Masofa hisoblashda tovush tezligi 340 m/s sifatida qabul qilinadi. Harorat va namlik tovush tezligiga ta’sir qilishi mumkin (masalan, 20°C da 343 m/s). Aniqroq o‘lchov uchun harorat sensoridan foydalaning.</p>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Ultrasonik Sensor Moduli sonar printsipiga asoslanadi. Ultrasonik transmitter 40 kHz chastotali to'lqinlarni yuboradi, bu to'lqinlar to'siqqa urilib qaytadi. Qabul qiluvchi qaytgan aks sadoni aniqlaydi va SIG pinida impuls hosil qiladi. Impuls uzunligi to'lqinlarning borib-kelish vaqtiga bog'liq. Masofa quyidagi formula yordamida hisoblanadi: <code>s = (340 m/s × t) / 2</code>, bu erda <code>t</code> — impuls vaqti. Sensorning aniqligi akustik shovqin va yumshoq materiallardan ta'sirlanishi mumkin.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW ultrasonik sensor sonar printsipiga asoslanadi. Transmitter 40 kHz to‘lqinlarni yuboradi, to‘siqdan qaytgan aks sado qabul qiluvchi tomonidan aniqlanadi. Impuls uzunligi masofani hisoblash uchun ishlatiladi: <code>masofa = (tovush tezligi × vaqt) / 2</code>. Sensorning aniqligi akustik shovqin yoki yumshoq materiallardan ta’sirlanishi mumkin.</p>
     </div>
 
     <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_soilsensor" role="button">
-            Oldingisi <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_4button" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 </div>
@@ -157,13 +228,126 @@ void loop() {
 .custom-btn i {
     margin: 0 8px;
 }
+
+.code-container {
+    position: relative;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.code-container:hover {
+    transform: translateY(-5px);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 12px 20px;
+    border-bottom: 1px solid #004085;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.copy-btn.copied {
+    background: #17a2b8;
+}
+
+.copy-btn.copied::after {
+    content: "Nusxa olindi!";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #17a2b8;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    animation: fadeInOut 1.5s ease;
+}
+
+@@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+pre.line-numbers {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 15px;
+}
+
+.prism-coy .line-numbers-rows {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+    border-radius: 10px;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
 </style>
 
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await JSRuntime.InvokeVoidAsync("scrollToTop");
-        await JSRuntime.InvokeVoidAsync("openNavMenu");
     }
 }
 
@@ -172,10 +356,15 @@ void loop() {
         window.scrollTo(0, 0);
     };
 
-    window.openNavMenu = function () {
-        let toggler = document.querySelector('.navbar-toggler');
-        if (toggler && !toggler.checked) {
-            toggler.click();  // Simulate a click to open the menu
-        }
-    };
+    function copyCode(button) {
+        const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            button.classList.add('copied');
+            button.textContent = 'Nusxa olindi!';
+            setTimeout(() => {
+                button.classList.remove('copied');
+                button.textContent = 'Nusxa olish';
+            }, 2000);
+        });
+    }
 </script>

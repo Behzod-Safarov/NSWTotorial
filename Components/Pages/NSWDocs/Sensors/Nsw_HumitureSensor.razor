@@ -1,46 +1,50 @@
 ﻿@page "/nsw_humituresensor"
-@inherits LayoutComponentBase
-@inject IJSRuntime JSRuntime
 @rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+@inherits LayoutComponentBase
 <NSWLayout />
 <br>
 <br>
+
 <div class="container mt-5">
-    <h1 class="display-4 text-center">NSW Namlik va Harorat Datchigi</h1>
-    <p class="lead text-center">NSW Namlik va Harorat Datchigi bilan Atrof-muhitni Nazorat qiling</p>
+    <h1 class="display-4 text-center">NSW namlik va harorat datchigi</h1>
+    <p class="lead text-center">Atrof-muhitni nazorat qilish uchun NSW namlik va harorat datchigidan foydalaning</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Namlik va Harorat Datchigi namlik va haroratni o'lchash uchun mo'ljallangan. Bu datchik havo sifati monitoringi, avtomatlashtirish tizimlari va boshqa turli xil loyihalarda keng qo'llanilishi mumkin. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
-        <img src="images/nsw_humituresensor.jpg" alt="NSW Namlik va Harorat Datchigi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW namlik va harorat datchigi atrof-muhitdagi namlik va haroratni o‘lchash uchun mo‘ljallangan. Ushbu datchik havo sifatini monitoring qilish, avtomatlashtirish tizimlari va ta’lim loyihalarida keng qo‘llaniladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
+        <div class="image-container">
+            <img src="images/humitureSensor.jpg" alt="NSW namlik va harorat datchigi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW namlik va harorat datchigi – atrof-muhitni monitoring qilish uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V-5V DC</li>
-            <li>Namlik diapazoni: 0-100%</li>
-            <li>Harorat diapazoni: -40°C dan 80°C gacha</li>
-            <li>O'lchov aniqligi: ±2% RH, ±0.5°C</li>
-            <li>Modul hajmi: 35 x 20 x 10 mm</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
+            <li>Namlik diapazoni: 0–100% RH</li>
+            <li>Harorat diapazoni: -40°C dan +80°C gacha</li>
+            <li>O‘lchov aniqligi: ±2% RH, ±0.5°C</li>
+            <li>Modul hajmi: 35×20×10 mm</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Namlik va Harorat Datchigi quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW namlik va harorat datchigi quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Havo Sifatini Monitoring</li>
-            <li>Avtomatlashtirish Tizimlari</li>
-            <li>Robototexnika</li>
-            <li>DIY Gadjetlar</li>
-            <li>Ta'lim Loyiha</li>
+            <li>Havo sifatini monitoring qilish</li>
+            <li>Avtomatlashtirish tizimlarida iqlim nazorati</li>
+            <li>Robototexnikada muhit monitoringi</li>
+            <li>Mustaqil gadjetlar</li>
+            <li>Ta’lim loyihalari</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Tafsilotlari</h2>
-        <p>NSW Namlik va Harorat Datchigi portida quyidagi pinlar mavjud:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>NSW namlik va harorat datchigi quyidagi pinlarga ega:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -51,11 +55,11 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to'k</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvatlantirish manbai</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
                 </tr>
                 <tr>
                     <td>SCL</td>
@@ -63,75 +67,101 @@
                 </tr>
                 <tr>
                     <td>SDA</td>
-                    <td>I2C ma'lumot liniyasi</td>
+                    <td>I2C ma’lumot liniyasi</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulash Rejimi</h2>
+        <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Namlik va Harorat Datchigi RJ25 porti orqali ulanishi mumkin. Makeblock Orion-da RJ25 portidan foydalanganda, uni mos keluvchi portga ulashingiz kerak:</p>
-        <img src="images/nsw_humituresensor_rj25.jpg" alt="NSW Namlik va Harorat Datchigi RJ25 Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>NSW namlik va harorat datchigi ko‘k identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining ko‘k identifikatorli portlariga (masalan, A4 va A5) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_humituresensor_rj25.jpg" alt="Namlik va harorat datchigi RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
 
         <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asos paneliga ulash uchun foydalanilganda, uning SCL va SDA pinlarini Arduino SCL va SDA pinlariga quyidagicha ulash lozim:</p>
-        <img src="images/nsw_humituresensor_dupont.jpg" alt="NSW Namlik va Harorat Datchigi Dupont Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda SCL va SDA pinlari mos ravishda Arduino’ning A5 (SCL) va A4 (SDA) pinlariga ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_humituresensor_dupont.jpg" alt="Namlik va harorat datchigi Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash Bo'yicha Qo'llanma</h2>
-        <p>Arduino Dasturlash</p>
-        <p>Agar dastur yozish uchun Arduino dan foydalansangiz, NSW Namlik va Harorat Datchigini boshqarish uchun quyidagi koddan foydalanishingiz mumkin:</p>
-        <pre><code class="language-cpp">
-// Arduino dastur kodi
-#include &ltWire.h>
-#include &ltAdafruit_Sensor.h>
-#include &ltAdafruit_SHT31.h>
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino IDE yordamida NSW namlik va harorat datchigini (masalan, SHT31 asosida) boshqarish uchun <code>Adafruit_SHT31</code> va <code>Wire</code> kutubxonalaridan foydalaniladi. Quyidagi kod harorat va namlik ma’lumotlarini o‘qib, Serial monitorda ko‘rsatadi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+#include &lt;Wire.h>
+#include &lt;Adafruit_Sensor.h>
+#include &lt;Adafruit_SHT31.h>
 
 Adafruit_SHT31 sht31 = Adafruit_SHT31();
 
 void setup() {
-    Serial.begin(9600);
-    if (!sht31.begin(0x44)) {
-        Serial.println("SHT31 aniqlanmadi ... Tekshiring!");
-        while (1);
+    Serial.begin(9600); // Serial monitorni ishga tushirish
+    if (!sht31.begin(0x44)) { // SHT31 ulanishini tekshirish
+        Serial.println("SHT31 aniqlanmadi! Ulanishni tekshiring.");
+        while (1); // Agar ulanmasa, dastur to‘xtaydi
     }
-    Serial.println("SHT31 tasdiqlandi");
+    Serial.println("SHT31 muvaffaqiyatli ulandi!");
 }
 
 void loop() {
-    float temp = sht31.readTemperature();
-    float hum = sht31.readHumidity();
+    float temp = sht31.readTemperature(); // Haroratni o‘qish
+    float hum = sht31.readHumidity(); // Namlikni o‘qish
 
-    Serial.print("Harorat: ");
-    Serial.print(temp);
-    Serial.print(" *C");
+    if (!isnan(temp)) { // Harorat ma’lumotini tekshirish
+        Serial.print("Harorat: ");
+        Serial.print(temp);
+        Serial.print(" °C");
+    } else {
+        Serial.println("Harorat o‘qishda xatolik!");
+    }
 
-    Serial.print("   Namlik: ");
-    Serial.print(hum);
-    Serial.println(" %");
+    if (!isnan(hum)) { // Namlik ma’lumotini tekshirish
+        Serial.print("  Namlik: ");
+        Serial.print(hum);
+        Serial.println(" %");
+    } else {
+        Serial.println("Namlik o‘qishda xatolik!");
+    }
 
-    delay(1000);
+    delay(1000); // 1 soniya kutish
 }
-        </code></pre>
+            </code></pre>
+        </div>
+
+        <p>Eslatma: Kodni ishlatishdan oldin <code>Adafruit_SHT31</code>, <code>Adafruit_Sensor</code> va <code>Wire</code> kutubxonalarini Arduino IDE’ga o‘rnatish kerak.</p>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Namlik va Harorat Datchigi atrof-muhitdagi namlik va haroratni aniqlash uchun mo'ljallangan. Bu modulning asosiy funktsiyasi havo sifati monitoringi va avtomatlashtirish tizimlarida ishlatiladi. SCL va SDA pinlari orqali ma'lumot uzatish va qabul qilish amalga oshiriladi.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW namlik va harorat datchigi (masalan, SHT31 asosida) I2C protokoli orqali yuqori aniqlikda harorat va namlik ma’lumotlarini uzatadi. Modulning kichik o‘lchami va past quvvat sarfi uni havo sifatini monitoring qilish, avtomatlashtirish va ta’lim loyihalari uchun qulay qiladi.</p>
     </div>
 
     <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_gyro" role="button">
-            <i class="fas fa-arrow-left"></i> Orqaga
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_i2cscanner" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
-
 </div>
 
 <style>
@@ -160,8 +190,120 @@ void loop() {
     margin: 0 8px;
 }
 
-</style>
+.code-container {
+    position: relative;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #007bff;
+    transition: transform 0.3s ease;
+}
 
+.code-container:hover {
+    transform: translateY(-5px);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 12px 20px;
+    border-bottom: 1px solid #004085;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.copy-btn.copied {
+    background: #17a2b8;
+}
+
+.copy-btn.copied::after {
+    content: "Nusxa olindi!";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #17a2b8;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    animation: fadeInOut 1.5s ease;
+}
+
+@@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+pre.line-numbers {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 15px;
+}
+
+.prism-coy .line-numbers-rows {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+    border-radius: 10px;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
+</style>
 
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -174,4 +316,16 @@ void loop() {
     window.scrollToTop = function () {
         window.scrollTo(0, 0);
     };
+
+    function copyCode(button) {
+        const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            button.classList.add('copied');
+            button.textContent = 'Nusxa olindi!';
+            setTimeout(() => {
+                button.classList.remove('copied');
+                button.textContent = 'Nusxa olish';
+            }, 2000);
+        });
+    }
 </script>

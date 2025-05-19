@@ -1,45 +1,49 @@
 ﻿@page "/nsw_infraredreceiver"
-@inherits LayoutComponentBase
-@inject IJSRuntime JSRuntime
 @rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+@inherits LayoutComponentBase
 <NSWLayout />
 <br>
 <br>
+
 <div class="container mt-5">
-    <h1 class="display-4 text-center">NSW Infraqizil Qabul Qiluvchi Moduli</h1>
-    <p class="lead text-center">NSW Infraqizil Qabul Qiluvchi Moduli bilan Masofaviy Boshqaruvni Nazorat qiling</p>
+    <h1 class="display-4 text-center">NSW infraqizil qabul qiluvchi modul</h1>
+    <p class="lead text-center">Masofaviy boshqaruv signallarini qabul qilish uchun NSW infraqizil modulidan foydalaning</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Infraqizil Qabul Qiluvchi Moduli infraqizil signallarni qabul qilish uchun mo'ljallangan. Bu modul masofaviy boshqaruv, robototexnika va boshqa turli xil loyihalarda keng qo'llanilishi mumkin. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
-        <img src="images/nsw_infraredreceiver.jpg" alt="NSW Infraqizil Qabul Qiluvchi Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW infraqizil qabul qiluvchi modul infraqizil signallarni qabul qilish uchun mo‘ljallangan. Ushbu modul masofaviy boshqaruv tizimlari, robototexnika va ta’lim loyihalarida keng qo‘llaniladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
+        <div class="image-container">
+            <img src="images/receiver.jpg" alt="NSW infraqizil qabul qiluvchi modul" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW infraqizil qabul qiluvchi modul – masofaviy boshqaruv uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V-5V DC</li>
-            <li>Infraqizil chastota: 38kHz</li>
-            <li>O'lchov aniqligi: ±5%</li>
-            <li>Modul hajmi: 30 x 20 x 10 mm</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
+            <li>Infraqizil chastota: 38 kHz</li>
+            <li>Qabul masofasi: 5–10 m (atmosfera sharoitiga bog‘liq)</li>
+            <li>Modul hajmi: 30×20×10 mm</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Infraqizil Qabul Qiluvchi Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW infraqizil qabul qiluvchi modul quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Masofaviy Boshqaruv</li>
-            <li>Robototexnika</li>
-            <li>Xavfsizlik Tizimlari</li>
-            <li>DIY Gadjetlar</li>
-            <li>Ta'lim Loyiha</li>
+            <li>Masofaviy boshqaruv tizimlari</li>
+            <li>Robototexnikada signal qabul qilish</li>
+            <li>Xavfsizlik va monitoring tizimlari</li>
+            <li>Mustaqil gadjetlar</li>
+            <li>Ta’lim loyihalari</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Tafsilotlari</h2>
-        <p>NSW Infraqizil Qabul Qiluvchi Moduli portida quyidagi pinlar mavjud:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>NSW infraqizil qabul qiluvchi modul quyidagi pinlarga ega:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -50,71 +54,92 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to'k</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvatlantirish manbai</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
                 </tr>
                 <tr>
                     <td>OUT</td>
-                    <td>Infraqizil signal chiqishi</td>
+                    <td>Raqamli signal chiqishi</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulash Rejimi</h2>
+        <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Infraqizil Qabul Qiluvchi Moduli RJ25 porti orqali ulanishi mumkin. Makeblock Orion-da RJ25 portidan foydalanganda, uni mos keluvchi portga ulashingiz kerak:</p>
-        <img src="images/nsw_infraredreceiver_rj25.jpg" alt="NSW Infraqizil Qabul Qiluvchi RJ25 Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>NSW infraqizil qabul qiluvchi modul ko‘k identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining ko‘k identifikatorli portlariga (masalan, D11) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_infraredreceiver_rj25.jpg" alt="Infraqizil qabul qiluvchi RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
 
         <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asos paneliga ulash uchun foydalanilganda, uning OUT pinini digital pinga quyidagicha ulash lozim:</p>
-        <img src="images/nsw_infraredreceiver_dupont.jpg" alt="NSW Infraqizil Qabul Qiluvchi Dupont Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda OUT pini Arduino’ning raqamli piniga (masalan, D11) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_infraredreceiver_dupont.jpg" alt="Infraqizil qabul qiluvchi Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash Bo'yicha Qo'llanma</h2>
-        <p>Arduino Dasturlash</p>
-        <p>Agar dastur yozish uchun Arduino dan foydalansangiz, NSW Infraqizil Qabul Qiluvchi Modulini boshqarish uchun quyidagi koddan foydalanishingiz mumkin:</p>
-        <pre><code class="language-cpp">
-// Arduino dastur kodi
-#include &ltIRremote.h>
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino IDE yordamida NSW infraqizil qabul qiluvchi modulni boshqarish uchun <code>IRremote</code> kutubxonasidan foydalaniladi. Quyidagi kod masofaviy boshqaruvdan kelgan signallarni o‘qib, Serial monitorda ko‘rsatadi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+#include &lt;IRremote.h>
 
-const int recvPin = 11;
+const int recvPin = 11; // IR qabul qiluvchi pin
 IRrecv irrecv(recvPin);
 decode_results results;
 
 void setup() {
-    Serial.begin(9600);
-    irrecv.enableIRIn();
+    Serial.begin(9600); // Serial monitorni ishga tushirish
+    irrecv.enableIRIn(); // IR qabul qiluvchini yoqish
+    Serial.println("IR qabul qiluvchi ishga tushdi!");
 }
 
 void loop() {
-    if (irrecv.decode(&results)) {
-        Serial.println(results.value, HEX);
-        irrecv.resume();
+    if (irrecv.decode(&results)) { // Signal qabul qilinganda
+        Serial.print("Qabul qilingan signal: ");
+        Serial.println(results.value, HEX); // Signalni o‘n oltilik shaklda chiqarish
+        irrecv.resume(); // Keyingi signalni qabul qilishga tayyorlash
     }
+    delay(100); // Kichik kechikish
 }
-        </code></pre>
+            </code></pre>
+        </div>
+
+        <p>Eslatma: Kodni ishlatishdan oldin <code>IRremote</code> kutubxonasini Arduino IDE’ga o‘rnatish kerak. Masofaviy boshqaruv tugmalarining kodlarini aniqlash uchun ushbu kodni ishlatib, keyin loyihangizga mos ravishda sozlashingiz mumkin.</p>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Infraqizil Qabul Qiluvchi Moduli infraqizil signallarni qabul qilish uchun mo'ljallangan. Bu modulning asosiy funktsiyasi masofaviy boshqaruv, robototexnika va boshqa loyihalarda infraqizil signalni qabul qilishdir. OUT pini orqali infraqizil signal uzatish amalga oshiriladi.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW infraqizil qabul qiluvchi modul 38 kHz chastotali infraqizil signallarni qabul qiladi va ularni raqamli signal sifatida uzatadi. OUT pini orqali qabul qilingan ma’lumotlar Arduino tomonidan o‘qiladi. Modulning kichik o‘lchami va soddaligi uni masofaviy boshqaruv tizimlari, robototexnika va ta’lim loyihalari uchun qulay qiladi.</p>
     </div>
 
     <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_i2cscanner" role="button">
-            <i class="fas fa-arrow-left"></i> Orqaga
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_joystick" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
-
 </div>
 
 <style>
@@ -142,6 +167,120 @@ void loop() {
 .custom-btn i {
     margin: 0 8px;
 }
+
+.code-container {
+    position: relative;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.code-container:hover {
+    transform: translateY(-5px);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 12px 20px;
+    border-bottom: 1px solid #004085;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.copy-btn.copied {
+    background: #17a2b8;
+}
+
+.copy-btn.copied::after {
+    content: "Nusxa olindi!";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #17a2b8;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    animation: fadeInOut 1.5s ease;
+}
+
+@@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+pre.line-numbers {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 15px;
+}
+
+.prism-coy .line-numbers-rows {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+    border-radius: 10px;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
 </style>
 
 @code {
@@ -155,4 +294,16 @@ void loop() {
     window.scrollToTop = function () {
         window.scrollTo(0, 0);
     };
+
+    function copyCode(button) {
+        const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            button.classList.add('copied');
+            button.textContent = 'Nusxa olindi!';
+            setTimeout(() => {
+                button.classList.remove('copied');
+                button.textContent = 'Nusxa olish';
+            }, 2000);
+        });
+    }
 </script>

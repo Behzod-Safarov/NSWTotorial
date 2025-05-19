@@ -1,49 +1,53 @@
 @page "/nsw_touchsensor"
 @rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
+@inherits LayoutComponentBase
 <NSWLayout />
 <br>
 <br>
 
 <div class="container mt-5">
-    <h1 class="display-4 text-center">NSW Touch Sensor Moduli</h1>
-    <p class="lead text-center">Loyihalaringizga NSW Touch Sensor Moduli bilan zamonaviy sensorli boshqaruv qo'shing</p>
+    <h1 class="display-4 text-center">NSW tegish sensori</h1>
+    <p class="lead text-center">Loyihalaringizga sensorli boshqaruv qo‘shish uchun NSW tegish sensoridan foydalaning</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Touch Sensor Moduli kapacitiv sensorli kalit bo'lib, foydalanuvchi teginishini aniqlash uchun mo'ljallangan. Bu modul qora belgi bilan belgilangan bo'lib, u Nsw Boarddagi qora belgili (Raqamli) portga ulanadi. Modul odatda TTP223 sensorli IC asosida ishlaydi, tegilganda yuqori darajali (HIGH) signal, teginish bo'lmaganda esa past darajali (LOW) signal ishlab chiqaradi. An'anaviy mexanik tugmalar o'rniga ishlatiladigan bu modul loyihalarga zamonaviy va silliq interfeys qo'shadi, masalan, yorug'likni yoqish/o'chirish yoki boshqa qurilmalarni boshqarish uchun.</p>
-        <img src="images/nsw_touchsensor.jpg" alt="NSW Touch Sensor Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW tegish sensori kapacitiv teginish texnologiyasiga asoslangan bo‘lib, foydalanuvchi teginishini aniqlash uchun mo‘ljallangan. Sensor qora identifikatorga ega bo‘lib, NSW boshqaruv platasining qora (raqamli) portlariga ulanadi. Odatda TTP223 IC asosida ishlaydi va tegilganda HIGH signal, teginish bo‘lmaganda LOW signal ishlab chiqaradi. Mexanik tugmalar o‘rniga ishlatiladigan bu sensor loyihalarga silliq va zamonaviy interfeys qo‘shadi.</p>
+        <div class="image-container">
+            <img src="images/touch.jpg" alt="NSW tegish sensori" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW tegish sensori – sensorli boshqaruv uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 2.0V - 5.5V DC</li>
-            <li>Chiqish signali: Raqamli (HIGH tegilganda, LOW teginish bo'lmaganda)</li>
-            <li>Sensor maydoni: Taxminan 11 x 10.5 mm</li>
-            <li>Sezuvchanlik diapazoni: ~5 mm (nozik sirtlar orqali ishlaydi)</li>
-            <li>Modul hajmi: 15 x 11 x 5 mm (U x G x Y)</li>
+            <li>Ishlash kuchlanishi: 2.0V–5.5V DC</li>
+            <li>Chiqish signali: Raqamli (HIGH/LOW)</li>
+            <li>Sensor maydoni: 11×10.5 mm</li>
+            <li>Sezuvchanlik diapazoni: ~5 mm (nozik sirtlar orqali)</li>
+            <li>Modul hajmi: 15×11×5 mm</li>
             <li>Ulanish: RJ25 yoki 3-pinli Dupont simlari</li>
-            <li>Energiya sarfi: 6 µA (sokin holatda), 16 mA (faol holatda)</li>
+            <li>Energiya sarfi: ~6 µA (sokin), ~16 mA (faol)</li>
         </ul>
-        <p>Eslatma: Modul nozik sirtlar (masalan, shisha yoki plastmassa) orqali teginishni aniqlay oladi, lekin metall yuzalar bilan ishlatilganda sezuvchanlikni sozlash talab qilinishi mumkin.</p>
+        <p>Eslatma: Sensor nozik sirtlar (shisha, plastmassa) orqali ishlaydi. Metall yuzalarda sezuvchanlikni sozlash uchun TTP223 IC’ning rezistorini o‘zgartirish talab qilinishi mumkin.</p>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Touch Sensor Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW tegish sensori quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Uy avtomatlashtirish tizimlari (masalan, sensorli yorug'lik kalitlari)</li>
-            <li>Robototexnika loyihalarida interaktiv boshqaruv</li>
-            <li>Ta'lim loyihalari va kapacitiv sensorlarni o'rganish</li>
-            <li>DIY elektron loyihalar (masalan, sensorli lampalar)</li>
-            <li>Prototip ishlab chiqish va tezkor sinovlar</li>
+            <li>Uy avtomatlashtirish (sensorli kalitlar)</li>
+            <li>Robototexnika va interaktiv boshqaruv</li>
+            <li>Ta’lim loyihalari</li>
+            <li>DIY elektron loyihalar (sensorli lampalar)</li>
+            <li>Prototip ishlab chiqish</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Ta'rifi</h2>
-        <p>NSW Touch Sensor Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>NSW tegish sensori quyidagi pinlarga ega:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -54,14 +58,14 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to'k (Ground)</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvatlantirish manbai (2.0V - 5.5V)</td>
+                    <td>Quvvat manbai (2.0V–5.5V)</td>
                 </tr>
                 <tr>
-                    <td>Signal (OUT)</td>
+                    <td>OUT</td>
                     <td>Raqamli signal chiqishi (HIGH/LOW)</td>
                 </tr>
             </tbody>
@@ -69,58 +73,79 @@
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulanish Rejimi</h2>
-
+        <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Touch Sensor Moduli qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
-        <img src="images/touchsensor_rj25.jpg" alt="NSW Touch Sensor RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
-    </div>
-    <div class="my-5">
+        <p>Sensor qora identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining qora identifikatorli portlariga (masalan, №6, №7 yoki №8) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/touch.jpg" alt="Tegish sensori RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
+
         <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, Signal pinini raqamli pinga (masalan, D2) ulash lozim. Quyidagi rasmda ulanish ko'rsatilgan:</p>
-        <img src="images/touchsensor_dupont.jpg" alt="NSW Touch Sensor Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda quyidagi pinlardan foydalaniladi:</p>
+        <ul>
+            <li><b>VCC</b> → Arduino 5V</li>
+            <li><b>GND</b> → Arduino GND</li>
+            <li><b>OUT</b> → Arduino D2 (yoki boshqa raqamli pin)</li>
+        </ul>
+        <div class="image-container">
+            <img src="images/touchsensor_dupont.jpg" alt="Tegish sensori Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash bo'yicha Qo'llanma</h2>
-
-        <p>Arduino dasturlash</p>
-        <p>Arduino yordamida NSW Touch Sensor Modulini boshqarish uchun oddiy dastur yozish kifoya. Quyidagi misol sensor tegilganini aniqlab, ketma-ket monitorga holatni chop etadi va Arduino'dagi o'rnatilgan LEDni yoqadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino funktsiyalari yetarli:</p>
-        <pre>
-const int touchPin = 2; // Signal pinini D2 ga uladik
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino IDE yordamida NSW tegish sensorini boshqarish uchun maxsus kutubxona talab qilinmaydi. Quyidagi kod sensor tegilganini aniqlab, Serial monitorda holatni ko‘rsatadi va o‘rnatilgan LEDni boshqaradi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+const int touchPin = 2;    // OUT pinini D2 ga ulash
 
 void setup() {
-  pinMode(touchPin, INPUT);         // Sensor pinini kirish sifatida sozlash
-  pinMode(LED_BUILTIN, OUTPUT);     // O'rnatilgan LEDni chiqish sifatida sozlash
-  Serial.begin(9600);               // Ketma-ket portni ishga tushirish
+    pinMode(touchPin, INPUT);       // Sensor pinini kirish sifatida sozlash
+    pinMode(LED_BUILTIN, OUTPUT);   // O‘rnatilgan LEDni chiqish sifatida sozlash
+    Serial.begin(9600);             // Serial monitorni ishga tushirish
 }
 
 void loop() {
-  int touchState = digitalRead(touchPin); // Sensor holatini o'qish
-  if (touchState == HIGH) {
-    Serial.println("Tegildi!");
-    digitalWrite(LED_BUILTIN, HIGH); // LEDni yoqish
-  } else {
-    Serial.println("Tegilmadi...");
-    digitalWrite(LED_BUILTIN, LOW);  // LEDni o'chirish
-  }
-  delay(100); // 100 ms kutish
+    int touchState = digitalRead(touchPin); // Sensor holatini o‘qish
+    if (touchState == HIGH) {
+        Serial.println("Tegildi!");
+        digitalWrite(LED_BUILTIN, HIGH); // LEDni yoqish
+    } else {
+        Serial.println("Tegilmadi...");
+        digitalWrite(LED_BUILTIN, LOW);  // LEDni o‘chirish
+    }
+    delay(100); // 100 ms kutish
 }
-        </pre>
-        <p>Ushbu kod sensor tegilganini aniqlaydi va holatni ketma-ket monitorga chiqaradi, shu bilan birga LEDni boshqaradi. Sensor tegilganda HIGH signal, teginish bo'lmaganda LOW signal yuboriladi.</p>
+            </code></pre>
+        </div>
+
+        <p>Eslatma: Sensor tegilganda HIGH signal, teginish bo‘lmaganda LOW signal yuboradi. Sezuvchanlikni sozlash uchun TTP223 IC’ning hujjatlariga murojaat qiling.</p>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Touch Sensor Moduli kapacitiv teginish texnologiyasiga asoslanadi, odatda TTP223 IC yordamida ishlaydi. Foydalanuvchi sensor yuzasiga tegib, uning sig'imini o'zgartirganda, modul ichki sxemasi bu o'zgarishni aniqlaydi va Signal pinida HIGH signal ishlab chiqaradi. Tegnish bo'lmaganda, Signal pini LOW holatda qoladi. Modul past quvvat sarfi va 5 mm gacha bo'lgan nozik sirtlar orqali ishlash qobiliyatiga ega bo'lib, zamonaviy va ishonchli boshqaruv interfeysini ta'minlaydi.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW tegish sensori kapacitiv teginish texnologiyasiga asoslanadi va TTP223 IC yordamida ishlaydi. Foydalanuvchi teginishi sig‘im o‘zgarishini keltirib chiqaradi, bu esa raqamli signal sifatida uzatiladi. Sensorning past quvvat sarfi va nozik sirtlar orqali ishlash qobiliyati uni zamonaviy boshqaruv tizimlari uchun ideal qiladi.</p>
     </div>
 
     <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_button" role="button">
-            Oldingisi <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
-        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_4button" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_soilsensor" role="button">
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 </div>
@@ -150,13 +175,126 @@ void loop() {
 .custom-btn i {
     margin: 0 8px;
 }
+
+.code-container {
+    position: relative;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.code-container:hover {
+    transform: translateY(-5px);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 12px 20px;
+    border-bottom: 1px solid #004085;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.copy-btn.copied {
+    background: #17a2b8;
+}
+
+.copy-btn.copied::after {
+    content: "Nusxa olindi!";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #17a2b8;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    animation: fadeInOut 1.5s ease;
+}
+
+@@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+pre.line-numbers {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 15px;
+}
+
+.prism-coy .line-numbers-rows {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+    border-radius: 10px;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
 </style>
 
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await JSRuntime.InvokeVoidAsync("scrollToTop");
-        await JSRuntime.InvokeVoidAsync("openNavMenu");
     }
 }
 
@@ -165,10 +303,15 @@ void loop() {
         window.scrollTo(0, 0);
     };
 
-    window.openNavMenu = function () {
-        let toggler = document.querySelector('.navbar-toggler');
-        if (toggler && !toggler.checked) {
-            toggler.click();  // Simulate a click to open the menu
-        }
-    };
+    function copyCode(button) {
+        const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            button.classList.add('copied');
+            button.textContent = 'Nusxa olindi!';
+            setTimeout(() => {
+                button.classList.remove('copied');
+                button.textContent = 'Nusxa olish';
+            }, 2000);
+        });
+    }
 </script>

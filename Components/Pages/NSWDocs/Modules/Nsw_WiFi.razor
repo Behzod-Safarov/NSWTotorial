@@ -1,49 +1,54 @@
 @page "/nsw_wifimodule"
 @rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
+@inherits LayoutComponentBase
 <NSWLayout />
 <br>
 <br>
 
 <div class="container mt-5">
-    <h1 class="display-4 text-center">NSW Wi-Fi Moduli</h1>
+    <h1 class="display-4 text-center">NSW Wi-Fi moduli</h1>
     <p class="lead text-center">IoT loyihalaringiz uchun simsiz aloqani oson tashkil qiling</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Wi-Fi Moduli simsiz (wireless) tarmoq orqali ma’lumot almashish imkonini beruvchi IoT komponentidir. Bu modul yordamida Arduino yoki boshqa mikrokontrollerlarni internetga ulash, masofadan boshqaruv, ma’lumotlarni serverga yuborish yoki olish, real vaqtli monitoring kabi vazifalarni bajarish mumkin.</p>
-        <p>NSW Wi-Fi moduli odatda ESP8266 yoki ESP32 chiplariga asoslangan bo‘lib, o‘zida Wi-Fi tarmog‘iga ulanadigan imkoniyat, HTTP/HTTPS so‘rovlarni yuborish va hatto o‘rnatilgan web-serverlarni ishga tushirish funksiyalarini o‘z ichiga oladi.</p>
-        <img src="images/nsw_wifi.jpg" alt="NSW Wi-Fi Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW Wi-Fi moduli simsiz tarmoq orqali ma’lumot almashish imkonini beruvchi IoT komponentidir. Ushbu modul yordamida Arduino yoki boshqa mikrokontrollerlarni internetga ulash, masofadan boshqarish, ma’lumotlarni serverga yuborish yoki olish, real vaqtda monitoring kabi vazifalarni bajarish mumkin.</p>
+        <p>Modul odatda ESP8266 yoki ESP32 chiplariga asoslanadi va Wi-Fi tarmog‘iga ulanib, HTTP/HTTPS so‘rovlarini yuborish, shuningdek, o‘rnatilgan veb-serverlarni ishga tushirish funksiyalarini taqdim etadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_wifi.jpg" alt="NSW Wi-Fi moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW Wi-Fi moduli – simsiz aloqa uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V (ba'zilari 5V converter bilan)</li>
+            <li>Ishlash kuchlanishi: 3.3V (ba’zi modellar 5V konverter bilan)</li>
             <li>Wi-Fi standarti: 802.11 b/g/n</li>
             <li>Protokollar: TCP/IP, UDP, HTTP, MQTT va boshqalar</li>
             <li>Serial aloqa: UART (RX/TX)</li>
-            <li>Ichki flash xotira: 1 MB – 4 MB (modelga qarab)</li>
+            <li>Ichki flesh-xotira: 1–4 MB (modelga qarab)</li>
             <li>Modul turi: ESP8266 yoki ESP32 (ko‘p yadroli variant)</li>
         </ul>
-        <p>Eslatma: Modulni 3.3V da ishlating yoki darajani tushiruvchi (level shifter) sxemadan foydalaning. 5V to‘g‘ridan-to‘g‘ri ulash modulga zarar yetkazishi mumkin.</p>
+        <p>Eslatma: Modulni 3.3V da ishlating yoki kuchlanish darajasini tushiruvchi (level shifter) sxemadan foydalaning. 5V ga to‘g‘ridan-to‘g‘ri ulash modulga zarar yetkazishi mumkin.</p>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
+        <p>NSW Wi-Fi moduli quyidagi sohalarda qo‘llaniladi:</p>
         <ul>
-            <li>Sensorlardan ma’lumotlarni bulutga yuborish</li>
-            <li>Telegram botlar orqali boshqaruv</li>
-            <li>Smart Home (aqlli uy) tizimlari</li>
+            <li>Sensorlardan ma’lumotlarni bulut xizmatlariga yuborish</li>
+            <li>Telegram botlari orqali masofadan boshqarish</li>
+            <li>Aqlli uy tizimlari</li>
             <li>Masofadan monitoring va nazorat qilish</li>
-            <li>HTTP server yoki klient sifatida ishlatish</li>
+            <li>HTTP server yoki mijoz sifatida ishlatish</li>
             <li>Firebase, Blynk, ThingSpeak, MQTT kabi xizmatlar bilan integratsiya</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Ta'rifi</h2>
-        <p>Wi-Fi modulining pinlar soni va tartibi modellar orasida farqlanishi mumkin. Quyida ESP8266 (ESP-01) modulining asosiy pinlari keltirilgan:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>Wi-Fi modulining pinlari soni va tartibi modelga qarab farqlanadi. Quyida ESP8266 (ESP-01) modulining asosiy pinlari keltirilgan:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -54,11 +59,11 @@
             <tbody>
                 <tr>
                     <td>VCC</td>
-                    <td>3.3V kuchlanish</td>
+                    <td>Quvvat manbai (3.3V)</td>
                 </tr>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to‘k (Ground)</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>TX</td>
@@ -70,7 +75,7 @@
                 </tr>
                 <tr>
                     <td>CH_PD / EN</td>
-                    <td>Chipni faollashtirish (HIGH holatga ulanishi kerak)</td>
+                    <td>Chipni faollashtirish (HIGH holatda bo‘lishi kerak)</td>
                 </tr>
                 <tr>
                     <td>GPIO0, GPIO2</td>
@@ -82,23 +87,77 @@
 
     <div class="my-5">
         <h2>Ulanish (Arduino bilan)</h2>
+        <p>Modulni Arduino platasiga ulash uchun quyidagi pinlardan foydalaniladi:</p>
         <ul>
-            <li><b>VCC</b> → 3.3V (e’tibor bering: 5V ulanmasin!)</li>
+            <li><b>VCC</b> → 3.3V (Eslatma: 5V ulanmasin!)</li>
             <li><b>GND</b> → GND</li>
-            <li><b>TX</b> → Arduino RX (past kuchlanishga moslashtirilgan)</li>
+            <li><b>TX</b> → Arduino RX (kuchlanishni moslashtirish kerak)</li>
             <li><b>RX</b> → Arduino TX (darajani tushiruvchi orqali)</li>
-            <li><b>CH_PD</b> → 3.3V (doimiy HIGH bo‘lishi kerak)</li>
+            <li><b>CH_PD</b> → 3.3V (doimiy HIGH holatda)</li>
         </ul>
-        <img src="images/wifi_arduino_connection.jpg" alt="Wi-Fi Arduino bilan ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
-        <p>ESP32 modeli bo‘lsa, u mustaqil mikrokontroller bo‘lib, qo‘shimcha Arduino kerak emas.</p>
+        <div class="image-container">
+            <img src="images/wifi_arduino_connection.jpg" alt="Wi-Fi moduli Arduino bilan ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Arduino bilan ulanish sxemasi</p>
+        </div>
+        <p>Eslatma: ESP32 modeli mustaqil mikrokontroller sifatida ishlaydi va qo‘shimcha Arduino talab qilmaydi.</p>
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Quyidagi Arduino kodi <code>ESP8266WiFi</code> kutubxonasi yordamida Wi-Fi tarmog‘iga ulanib, oddiy HTTP so‘rovini yuboradi:</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+#include &lt;ESP8266WiFi.h>
+
+const char* ssid = "SIZNING_WIFI_NOMINGIZ"; // Wi-Fi tarmoq nomi
+const char* password = "SIZNING_WIFI_PAROLINGIZ"; // Wi-Fi paroli
+
+void setup() {
+    Serial.begin(115200);
+    WiFi.begin(ssid, password);
+    Serial.print("Wi-Fi ga ulanmoqda");
+    
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+    }
+    
+    Serial.println("");
+    Serial.println("Wi-Fi ga ulandi!");
+    Serial.print("IP manzil: ");
+    Serial.println(WiFi.localIP());
+}
+
+void loop() {
+    // Bu yerga qo‘shimcha kod yoziladi (masalan, HTTP so‘rovlari)
+}
+            </code></pre>
+        </div>
+        <p>Ushbu kod ESP8266 modulini Wi-Fi tarmog‘iga ulaydi va IP manzilni Serial monitorda ko‘rsatadi. Qo‘shimcha funksiyalar uchun HTTP yoki MQTT kutubxonalaridan foydalaning.</p>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+    </div>
+
+    <div class="my-5">
+        <h2>Umumiy tahlil</h2>
+        <p>NSW Wi-Fi moduli ESP8266 yoki ESP32 chiplari asosida ishlaydi va IoT loyihalari uchun simsiz aloqa imkoniyatlarini taqdim etadi. Modulning kichik o‘lchami, kam quvvat sarfi va ko‘p protokollarni qo‘llab-quvvatlashi uni aqlli uy tizimlari, masofadan monitoring va ta’lim loyihalari uchun ideal qiladi. Arduino bilan integratsiya qilish oson bo‘lib, bulut xizmatlari bilan ishlash imkonini beradi.</p>
     </div>
 
     <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_flamesensor" role="button">
-            Oldingisi <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_colorsensor" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 </div>
@@ -128,13 +187,126 @@
 .custom-btn i {
     margin: 0 8px;
 }
+
+.code-container {
+    position: relative;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.code-container:hover {
+    transform: translateY(-5px);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 12px 20px;
+    border-bottom: 1px solid #004085;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.copy-btn.copied {
+    background: #17a2b8;
+}
+
+.copy-btn.copied::after {
+    content: "Nusxa olindi!";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #17a2b8;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    animation: fadeInOut 1.5s ease;
+}
+
+@@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+pre.line-numbers {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 15px;
+}
+
+.prism-coy .line-numbers-rows {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+    border-radius: 10px;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
 </style>
 
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await JSRuntime.InvokeVoidAsync("scrollToTop");
-        await JSRuntime.InvokeVoidAsync("openNavMenu");
     }
 }
 
@@ -143,10 +315,15 @@
         window.scrollTo(0, 0);
     };
 
-    window.openNavMenu = function () {
-        let toggler = document.querySelector('.navbar-toggler');
-        if (toggler && !toggler.checked) {
-            toggler.click();
-        }
-    };
+    function copyCode(button) {
+        const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            button.classList.add('copied');
+            button.textContent = 'Nusxa olindi!';
+            setTimeout(() => {
+                button.classList.remove('copied');
+                button.textContent = 'Nusxa olish';
+            }, 2000);
+        });
+    }
 </script>

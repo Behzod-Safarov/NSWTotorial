@@ -1,45 +1,49 @@
 ﻿@page "/nsw_soundsensor"
-@inherits LayoutComponentBase
-@inject IJSRuntime JSRuntime
 @rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+@inherits LayoutComponentBase
 <NSWLayout />
 <br>
 <br>
+
 <div class="container mt-5">
-    <h1 class="display-4 text-center">NSW Ovoz Sensor Moduli</h1>
-    <p class="lead text-center">NSW Ovoz Sensor Moduli bilan Ovoz Darajasini Aniqlang</p>
+    <h1 class="display-4 text-center">NSW ovoz sensori</h1>
+    <p class="lead text-center">Atrof-muhitdagi ovoz darajasini aniqlash uchun NSW ovoz sensoridan foydalaning</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Ovoz Sensor Moduli atrof-muhitdagi ovoz darajasini aniqlash uchun mo'ljallangan. Bu modul robototexnika, avtomatlashtirish tizimlari va boshqa turli xil loyihalarda keng qo'llanilishi mumkin. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
-        <img src="images/nsw_soundsensor.jpg" alt="NSW Ovoz Sensor Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW ovoz sensori atrof-muhitdagi ovoz darajasini o‘lchash uchun mo‘ljallangan. Ushbu sensor ovoz intensivligini analog va raqamli signallar orqali uzatadi, bu uni robototexnika, xavfsizlik tizimlari va ta’lim loyihalarida qo‘llash uchun qulay qiladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
+        <div class="image-container">
+            <img src="images/sound.jpg" alt="NSW ovoz sensori" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW ovoz sensori – ovoz darajasini monitoring qilish uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V-5V DC</li>
-            <li>Ovoz darajasini aniqlash</li>
-            <li>Analog va raqamli chiqishlar</li>
-            <li>Modul hajmi: 30 x 20 x 10 mm</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
+            <li>O‘lchash diapazoni: 0–1023 (analog chiqish, Arduino o‘qishi)</li>
+            <li>Chiqish signali: Analog (AOUT) va raqamli (DOUT)</li>
+            <li>Modul hajmi: 30×20×10 mm</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Ovoz Sensor Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW ovoz sensori quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Robototexnika</li>
-            <li>Avtomatlashtirish Tizimlari</li>
-            <li>Xavfsizlik Tizimlari</li>
-            <li>DIY Gadjetlar</li>
-            <li>Ta'lim Loyiha</li>
+            <li>Ovozga asoslangan robototexnika</li>
+            <li>Avtomatlashtirish va xavfsizlik tizimlari</li>
+            <li>Ovoz darajasini monitoring qilish</li>
+            <li>Mustaqil gadjetlar</li>
+            <li>Ta’lim loyihalari</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Tafsilotlari</h2>
-        <p>NSW Ovoz Sensor Moduli portida quyidagi pinlar mavjud:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>NSW ovoz sensori quyidagi pinlarga ega:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -50,81 +54,110 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to'k</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvatlantirish manbai</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
                 </tr>
                 <tr>
                     <td>AOUT</td>
-                    <td>Analog chiqish</td>
+                    <td>Analog signal chiqishi</td>
                 </tr>
                 <tr>
                     <td>DOUT</td>
-                    <td>Raqamli chiqish</td>
+                    <td>Raqamli signal chiqishi</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulash Rejimi</h2>
+        <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Ovoz Sensor Moduli RJ25 porti orqali ulanishi mumkin. Makeblock Orion-da RJ25 portidan foydalanganda, uni mos keluvchi portga ulashingiz kerak:</p>
-        <img src="images/nsw_soundsensor_rj25.jpg" alt="NSW Ovoz Sensor RJ25 Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>NSW ovoz sensori ko‘k identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining ko‘k identifikatorli portlariga (masalan, A0 yoki D2) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_soundsensor_rj25.jpg" alt="Ovoz sensori RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
 
         <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asos paneliga ulash uchun foydalanilganda, uning AOUT va DOUT pinlarini analog va raqamli pinlarga quyidagicha ulash lozim:</p>
-        <img src="images/nsw_soundsensor_dupont.jpg" alt="NSW Ovoz Sensor Dupont Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda quyidagi pinlardan foydalaniladi:</p>
+        <ul>
+            <li><b>VCC</b> → Arduino 5V</li>
+            <li><b>GND</b> → Arduino GND</li>
+            <li><b>AOUT</b> → Arduino A0 (yoki boshqa analog pin)</li>
+            <li><b>DOUT</b> → Arduino D2 (yoki boshqa raqamli pin)</li>
+        </ul>
+        <div class="image-container">
+            <img src="images/nsw_soundsensor_dupont.jpg" alt="Ovoz sensori Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash Bo'yicha Qo'llanma</h2>
-        <p>Arduino Dasturlash</p>
-        <p>Agar dastur yozish uchun Arduino dan foydalansangiz, NSW Ovoz Sensor Modulini boshqarish uchun quyidagi koddan foydalanishingiz mumkin:</p>
-        <pre><code class="language-cpp">
-// Arduino dastur kodi
-const int analogPin = A0;
-const int digitalPin = 2;
-const int ledPin = 13;
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino IDE yordamida NSW ovoz sensorini boshqarish uchun maxsus kutubxona talab qilinmaydi. Quyidagi kod analog va raqamli chiqishlarni o‘qib, ovoz darajasini Serial monitorda ko‘rsatadi va LEDni boshqaradi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+const int analogPin = A0;  // AOUT pinini A0 ga ulash
+const int digitalPin = 2;  // DOUT pinini D2 ga ulash
+const int ledPin = 13;     // LED chiqishi
 
 void setup() {
-    pinMode(digitalPin, INPUT);
-    pinMode(ledPin, OUTPUT);
-    Serial.begin(9600);
+    pinMode(digitalPin, INPUT);  // Raqamli pinni kirish sifatida sozlash
+    pinMode(ledPin, OUTPUT);     // LED pinni chiqish sifatida sozlash
+    Serial.begin(9600);          // Serial monitorni ishga tushirish
 }
 
 void loop() {
-    int analogValue = analogRead(analogPin);
-    int digitalValue = digitalRead(digitalPin);
-    
-    Serial.print("Analog Qiymat: ");
-    Serial.print(analogValue);
-    Serial.print(" | Raqamli Qiymat: ");
+    int analogValue = analogRead(analogPin); // Analog qiymatni o‘qish (0–1023)
+    int digitalValue = digitalRead(digitalPin); // Raqamli qiymatni o‘qish (0 yoki 1)
+    float dB = (analogValue / 1023.0) * 120; // Taxminiy desibellarga aylantirish
+
+    Serial.print("Ovoz darajasi: ");
+    Serial.print(dB);
+    Serial.print(" dB | Raqamli: ");
     Serial.println(digitalValue);
-    
-    if (digitalValue == HIGH) {
-        digitalWrite(ledPin, HIGH);
+
+    if (digitalValue == HIGH) { // Agar ovoz chegaradan yuqori bo‘lsa
+        digitalWrite(ledPin, HIGH); // LEDni yoqish
     } else {
-        digitalWrite(ledPin, LOW);
+        digitalWrite(ledPin, LOW);  // LEDni o‘chirish
     }
-    delay(100);
+
+    delay(100); // 100 ms kutish
 }
-        </code></pre>
+            </code></pre>
+        </div>
+
+        <p>Eslatma: Kodda desibellarga aylantirish taxminiy hisoblanadi. Aniq o‘lchash uchun kalibrlash va maxsus ovoz o‘lchagich kerak bo‘lishi mumkin.</p>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Ovoz Sensor Moduli atrof-muhitdagi ovoz darajasini aniqlash uchun mo'ljallangan. Bu modulning asosiy funktsiyasi ovoz darajasini aniqlash va avtomatlashtirish tizimlarida foydalanishdir. AOUT va DOUT pinlari orqali analog va raqamli signal uzatish amalga oshiriladi.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW ovoz sensori atrof-muhitdagi ovoz intensivligini analog (AOUT) va raqamli (DOUT) signallar orqali uzatadi. Modulning kichik o‘lchami va soddaligi uni ovozga asoslangan avtomatlashtirish, xavfsizlik tizimlari va ta’lim loyihalari uchun qulay qiladi.</p>
     </div>
 
-  <div class="text-center my-5">
+    <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_smartservo" role="button">
-            <i class="fas fa-arrow-left"></i> Orqaga
+            <i class="fas fa-arrow-left"></i> Oldingi
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_nextmodule" role="button">
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
-
 </div>
 
 <style>
@@ -152,6 +185,120 @@ void loop() {
 .custom-btn i {
     margin: 0 8px;
 }
+
+.code-container {
+    position: relative;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.code-container:hover {
+    transform: translateY(-5px);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 12px 20px;
+    border-bottom: 1px solid #004085;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.copy-btn.copied {
+    background: #17a2b8;
+}
+
+.copy-btn.copied::after {
+    content: "Nusxa olindi!";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #17a2b8;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    animation: fadeInOut 1.5s ease;
+}
+
+@@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+pre.line-numbers {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 15px;
+}
+
+.prism-coy .line-numbers-rows {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+    border-radius: 10px;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
 </style>
 
 @code {
@@ -165,4 +312,16 @@ void loop() {
     window.scrollToTop = function () {
         window.scrollTo(0, 0);
     };
+
+    function copyCode(button) {
+        const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            button.classList.add('copied');
+            button.textContent = 'Nusxa olindi!';
+            setTimeout(() => {
+                button.classList.remove('copied');
+                button.textContent = 'Nusxa olish';
+            }, 2000);
+        });
+    }
 </script>

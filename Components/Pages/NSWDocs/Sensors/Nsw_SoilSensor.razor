@@ -1,49 +1,53 @@
 @page "/nsw_soilsensor"
 @rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
+@inherits LayoutComponentBase
 <NSWLayout />
 <br>
 <br>
 
 <div class="container mt-5">
-    <h1 class="display-4 text-center">NSW Soil Sensor Moduli</h1>
-    <p class="lead text-center">Loyihalaringizda NSW Soil Sensor Moduli bilan tuproq namligini samarali monitoring qiling</p>
+    <h1 class="display-4 text-center">NSW tuproq namlik sensori</h1>
+    <p class="lead text-center">Tuproq namligini samarali monitoring qilish uchun NSW sensoridan foydalaning</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Soil Sensor Moduli tuproqning namlik darajasini o'lchash uchun mo'ljallangan kapacitiv sensor bo'lib, qishloq xo'jaligi va aqlli bog'dorchilik loyihalari uchun ideal. Bu modul qora belgi bilan belgilangan bo'lib, u Nsw Boarddagi qora belgili (Analog) portga ulanadi. Modul tuproqdagi suv miqdorini kapacitiv o'lchash orqali aniqlaydi, bu korroziyaga chidamli bo'lib, an'anaviy rezistiv sensorlarga nisbatan uzoq muddatli ishonchlilikni ta'minlaydi. Sensor tuproq namligiga qarab analog signal (0-3.3V yoki 0-5V) chiqaradi, bu signal mikrocontroller (masalan, Arduino) yordamida o'qiladi.</p>
-        <img src="images/nsw_soilsensor.jpg" alt="NSW Soil Sensor Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW tuproq namlik sensori tuproqning namlik darajasini o‘lchash uchun mo‘ljallangan kapacitiv sensor bo‘lib, qishloq xo‘jaligi va aqlli bog‘dorchilik loyihalari uchun ideal. Sensor qora identifikatorga ega bo‘lib, NSW boshqaruv platasining qora (analog) portlariga ulanadi. U tuproqdagi suv miqdorini kapacitiv o‘lchash orqali aniqlaydi, bu esa korroziyaga chidamlilik va uzoq muddatli ishonchlilikni ta’minlaydi. Sensor tuproq namligiga qarab analog signal (0–3.3V yoki 0–5V) chiqaradi, bu signal Arduino yoki boshqa mikrokontroller yordamida o‘qiladi.</p>
+        <div class="image-container">
+            <img src="images/nsw_soilsensor.jpg" alt="NSW tuproq namlik sensori" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW tuproq namlik sensori – aqlli sug‘orish uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V - 5V DC</li>
-            <li>Chiqish signali: Analog (0V dan VCC gacha, namlikka teskari proportsional)</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
+            <li>Chiqish signali: Analog (0–VCC, namlikka teskari proportsional)</li>
             <li>Sensor turi: Kapacitiv, korroziyaga chidamli</li>
-            <li>O'lchash diapazoni: Quruq tuproq (~600-1000) dan nam tuproq (~200-500) gacha</li>
-            <li>Modul hajmi: 98 x 23 x 4 mm (U x G x Y)</li>
+            <li>O‘lchash diapazoni: 0–1023 (Arduino analog o‘qishi)</li>
+            <li>Modul hajmi: 98×23×4 mm</li>
             <li>Ulanish: PH2.54-3P yoki Dupont simlari</li>
-            <li>Energiya sarfi: ~5 mA (faol holatda)</li>
+            <li>Energiya sarfi: ~5 mA</li>
         </ul>
-        <p>Eslatma: Sensorning elektronik qismini tuproqqa yoki suvga botirmaslik kerak, faqat zond qismi tuproqqa joylashtiriladi. Kalibrlash tuproq turi va sharoitlariga qarab talab qilinishi mumkin.</p>
+        <p>Eslatma: Sensorning elektronik qismini tuproq yoki suvga botirmang, faqat zond qismi tuproqqa joylashtiriladi. Kalibrlash tuproq turi va sharoitlariga qarab zarur bo‘lishi mumkin.</p>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Soil Sensor Moduli quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW tuproq namlik sensori quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Aqlli sug'orish tizimlari (avtomatik sug'orish)</li>
-            <li>Qishloq xo'jaligi va issiqxona monitoringi</li>
-            <li>Ta'lim loyihalari va tuproq namligini o'rganish</li>
-            <li>Uy o'simliklari uchun avtomatlashtirilgan parvarish</li>
-            <li>IoT asosidagi tuproq monitoring tizimlari</li>
+            <li>Avtomatik sug‘orish tizimlari</li>
+            <li>Qishloq xo‘jaligi va issiqxona monitoringi</li>
+            <li>Ta’lim loyihalari</li>
+            <li>Uy o‘simliklarini avtomatlashtirilgan parvarish qilish</li>
+            <li>IoT asosidagi tuproq monitoringi</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Ta'rifi</h2>
-        <p>NSW Soil Sensor Modulida uchta pin mavjud bo'lib, ularning vazifalari quyidagicha:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>NSW tuproq namlik sensori quyidagi pinlarga ega:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -54,73 +58,94 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to'k (Ground)</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvatlantirish manbai (3.3V - 5V)</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
                 </tr>
                 <tr>
                     <td>AOUT</td>
-                    <td>Analog signal chiqishi (namlikka teskari proportsional)</td>
+                    <td>Analog signal chiqishi</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulanish Rejimi</h2>
-
+        <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Soil Sensor Moduli qora IDga ega bo'lgani uchun RJ25 portidan foydalanganda Makeblock Orion-da qora ID bilan belgilangan portlarga ulanadi. Masalan, Makeblock Orionda № 6, 7 yoki 8 portlarga quyidagicha ulashingiz mumkin:</p>
-        <img src="images/soilsensor_rj25.jpg" alt="NSW Soil Sensor RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
-    </div>
-    <div class="my-5">
+        <p>Sensor qora identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining qora identifikatorli portlariga (masalan, №6, №7 yoki №8) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/soilsensor_rj25.jpg" alt="Tuproq namlik sensori RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
+
         <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asosiy paneliga ulashda, AOUT pinini analog pinga (masalan, A0) ulash lozim. Quyidagi rasmda ulanish ko'rsatilgan:</p>
-        <img src="images/soilsensor_dupont.jpg" alt="NSW Soil Sensor Dupont Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda quyidagi pinlardan foydalaniladi:</p>
+        <ul>
+            <li><b>VCC</b> → Arduino 5V</li>
+            <li><b>GND</b> → Arduino GND</li>
+            <li><b>AOUT</b> → Arduino A0 (yoki boshqa analog pin)</li>
+        </ul>
+        <div class="image-container">
+            <img src="images/soilsensor_dupont.jpg" alt="Tuproq namlik sensori Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash bo'yicha Qo'llanma</h2>
-
-        <p>Arduino dasturlash</p>
-        <p>Arduino yordamida NSW Soil Sensor Modulini boshqarish uchun analog signalni o'qish kifoya. Quyidagi misol sensorning analog chiqishini o'qib, tuproq namligini foiz sifatida hisoblaydi va ketma-ket monitorga chop etadi. Makeblock-Library-master kutubxonasi ixtiyoriy ravishda qo'llanilishi mumkin, lekin standart Arduino funktsiyalari yetarli:</p>
-        <pre>
-const int soilPin = A0; // AOUT pinini A0 ga uladik
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino IDE yordamida NSW tuproq namlik sensorini boshqarish uchun maxsus kutubxona talab qilinmaydi. Quyidagi kod analog chiqish orqali tuproq namligini o‘qib, foiz sifatida Serial monitorda ko‘rsatadi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+const int soilPin = A0;    // AOUT pinini A0 ga ulash
 const int dryValue = 1000; // Quruq tuproq qiymati (kalibrlash kerak)
 const int wetValue = 300;  // Nam tuproq qiymati (kalibrlash kerak)
 
 void setup() {
-  Serial.begin(9600); // Ketma-ket portni ishga tushirish
+    Serial.begin(9600); // Serial monitorni ishga tushirish
 }
 
 void loop() {
-  int sensorValue = analogRead(soilPin); // Sensor qiymatini o'qish
-  int moisturePercent = map(sensorValue, dryValue, wetValue, 0, 100); // Foizga aylantirish
-  moisturePercent = constrain(moisturePercent, 0, 100); // Qiymatni 0-100 oralig'ida cheklash
-  
-  Serial.print("Tuproq namligi: ");
-  Serial.print(moisturePercent);
-  Serial.println("%");
-  
-  delay(1000); // 1 soniya kutish
+    int sensorValue = analogRead(soilPin); // Sensor qiymatini o‘qish
+    int moisturePercent = map(sensorValue, dryValue, wetValue, 0, 100); // Foizga aylantirish
+    moisturePercent = constrain(moisturePercent, 0, 100); // Qiymatni 0–100 oralig‘ida cheklash
+
+    Serial.print("Tuproq namligi: ");
+    Serial.print(moisturePercent);
+    Serial.println("%");
+
+    delay(1000); // 1 soniya kutish
 }
-        </pre>
-        <p>Ushbu kod tuproq namligini foiz sifatida hisoblaydi va ketma-ket monitorga chiqaradi. Quruq va nam tuproq uchun <code>dryValue</code> va <code>wetValue</code> qiymatlari tuproq turi va sharoitlariga qarab kalibrlanishi kerak.</p>
+            </code></pre>
+        </div>
+
+        <p>Eslatma: <code>dryValue</code> va <code>wetValue</code> qiymatlari tuproq turi va sharoitlariga qarab kalibrlanishi kerak. Bu qiymatlarni aniqlash uchun quruq va nam tuproqda sinov o‘tkazing.</p>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Soil Sensor Moduli kapacitiv o'lchash texnologiyasiga asoslanadi, bu tuproqdagi suv miqdorini dielektrik o'tkazuvchanlik orqali aniqlaydi. Sensorning zond qismida joylashgan elektrodlar tuproqdagi suv miqdoriga qarab sig'im o'zgarishini hosil qiladi, bu esa analog signal sifatida chiqariladi. Suv miqdori ko'p bo'lganda, dielektrik o'tkazuvchanlik yuqori bo'ladi va chiqish kuchlanishi pasayadi. Kapacitiv sensorlar korroziyaga chidamli bo'lib, tuproqqa oqim o'tkazmaydi, bu ularni rezistiv sensorlardan afzal qiladi.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW tuproq namlik sensori kapacitiv texnologiyaga asoslanadi, bu tuproqdagi suv miqdorini dielektrik o‘tkazuvchanlik orqali aniqlaydi. Sensorning korroziyaga chidamliligi va soddaligi uni aqlli sug‘orish, qishloq xo‘jaligi va ta’lim loyihalari uchun ideal qiladi. Analog chiqish tuproq namligiga teskari proportsional bo‘lib, namlik ko‘p bo‘lganda signal qiymati pasayadi.</p>
     </div>
 
     <div class="text-center my-5">
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_touchsensor" role="button">
-            Oldingisi <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-left"></i> Oldingi
         </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_4button" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 </div>
@@ -150,13 +175,126 @@ void loop() {
 .custom-btn i {
     margin: 0 8px;
 }
+
+.code-container {
+    position: relative;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.code-container:hover {
+    transform: translateY(-5px);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 12px 20px;
+    border-bottom: 1px solid #004085;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.copy-btn.copied {
+    background: #17a2b8;
+}
+
+.copy-btn.copied::after {
+    content: "Nusxa olindi!";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #17a2b8;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    animation: fadeInOut 1.5s ease;
+}
+
+@@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+pre.line-numbers {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 15px;
+}
+
+.prism-coy .line-numbers-rows {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+    border-radius: 10px;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
 </style>
 
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await JSRuntime.InvokeVoidAsync("scrollToTop");
-        await JSRuntime.InvokeVoidAsync("openNavMenu");
     }
 }
 
@@ -165,10 +303,15 @@ void loop() {
         window.scrollTo(0, 0);
     };
 
-    window.openNavMenu = function () {
-        let toggler = document.querySelector('.navbar-toggler');
-        if (toggler && !toggler.checked) {
-            toggler.click();  // Simulate a click to open the menu
-        }
-    };
+    function copyCode(button) {
+        const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            button.classList.add('copied');
+            button.textContent = 'Nusxa olindi!';
+            setTimeout(() => {
+                button.classList.remove('copied');
+                button.textContent = 'Nusxa olish';
+            }, 2000);
+        });
+    }
 </script>

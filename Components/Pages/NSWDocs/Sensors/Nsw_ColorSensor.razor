@@ -1,45 +1,49 @@
 ﻿@page "/nsw_colorsensor"
-@inherits LayoutComponentBase
-@inject IJSRuntime JSRuntime
 @rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+@inherits LayoutComponentBase
 <NSWLayout />
 <br>
 <br>
+
 <div class="container mt-5">
-    <h1 class="display-4 text-center">NSW Rang Datchigi</h1>
-    <p class="lead text-center">NSW Rang Datchigi bilan Ranglarni Aniqlang</p>
+    <h1 class="display-4 text-center">NSW rang datchigi</h1>
+    <p class="lead text-center">Ranglarni aniq aniqlash uchun NSW rang datchigidan foydalaning</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Rang Datchigi turli xil ranglarni aniqlash uchun mo'ljallangan. Bu datchik turli xil loyihalarda, jumladan robototexnika, avtomatlashtirish va ta'limda keng qo'llanilishi mumkin. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
-        <img src="images/nsw_colorsensor.jpg" alt="NSW Rang Datchigi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW rang datchigi turli ranglarni aniqlash uchun mo‘ljallangan. Ushbu datchik robototexnika, avtomatlashtirish va ta’lim loyihalarida keng qo‘llaniladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
+        <div class="image-container">
+            <img src="images/nsw_colorsensor.jpg" alt="NSW rang datchigi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW rang datchigi – ranglarni aniqlash uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V-5V DC</li>
-            <li>O'lchov diapazoni: 380-780nm</li>
-            <li>O'lchov aniqligi: ±10%</li>
-            <li>Modul hajmi: 30 x 20 x 10 mm</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
+            <li>O‘lchov diapazoni: 380–780 nm</li>
+            <li>O‘lchov aniqligi: ±10%</li>
+            <li>Modul hajmi: 30×20×10 mm</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Rang Datchigi quyidagi turli loyihalarda ishlatilishi mumkin:</p>
+        <p>NSW rang datchigi quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Rangli Ob'ektlarni Aniqlash</li>
-            <li>Chiziq Qayta Joylash</li>
-            <li>Ovozli Ogohlantirishlar</li>
-            <li>O'yinchoqlar</li>
-            <li>Ta'lim Loyiha</li>
+            <li>Rangli obyektlarni aniqlash</li>
+            <li>Chiziqni kuzatish</li>
+            <li>Ovozli ogohlantirish tizimlari</li>
+            <li>O‘yinchoqlar va interaktiv qurilmalar</li>
+            <li>Ta’lim loyihalari</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Tafsilotlari</h2>
-        <p>NSW Rang Datchigi portida quyidagi pinlar mavjud:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>NSW rang datchigi quyidagi pinlarga ega:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -50,11 +54,11 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to'k</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvatlantirish manbai</td>
+                    <td>Quvvat manbai (3.3V yoki 5V)</td>
                 </tr>
                 <tr>
                     <td>S0</td>
@@ -81,27 +85,37 @@
     </div>
 
     <div class="my-5">
-        <h2>Simlarni Ulash Rejimi</h2>
+        <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Rang Datchigi RJ25 porti orqali ulanishi mumkin. Makeblock Orion-da RJ25 portidan foydalanganda, uni mos keluvchi portga ulashingiz kerak:</p>
-        <img src="images/nsw_colorsensor_rj25.jpg" alt="NSW Rang Datchigi RJ25 Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>NSW rang datchigi ko‘k identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining ko‘k identifikatorli portlariga (masalan, A0 yoki A1) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_colorsensor_rj25.jpg" alt="Rang datchigi RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
+        </div>
 
         <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simidan modulni Arduino UNO asos paneliga ulash uchun foydalanilganda, uning OUT pinini digital pinga quyidagicha ulash lozim:</p>
-        <img src="images/nsw_colorsensor_dupont.jpg" alt="NSW Rang Datchigi Dupont Ulash" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda OUT pini raqamli pinga (masalan, D8) ulanadi.</p>
+        <div class="image-container">
+            <img src="images/nsw_colorsensor_dupont.jpg" alt="Rang datchigi Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Dasturlash Bo'yicha Qo'llanma</h2>
-        <p>Arduino Dasturlash</p>
-        <p>Agar dastur yozish uchun Arduino dan foydalansangiz, NSW Rang Datchigini boshqarish uchun quyidagi koddan foydalanishingiz mumkin:</p>
-        <pre><code class="language-cpp">
-// Arduino dastur kodi
-const int S0 = 4;
-const int S1 = 5;
-const int S2 = 6;
-const int S3 = 7;
-const int sensorOut = 8;
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino IDE yordamida NSW rang datchigini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi. Quyidagi kod RGB ranglarini o‘qib, Serial monitorda ko‘rsatadi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+const int S0 = 4; // Chastota tanlash pini 0
+const int S1 = 5; // Chastota tanlash pini 1
+const int S2 = 6; // Filtr tanlash pini 0
+const int S3 = 7; // Filtr tanlash pini 1
+const int sensorOut = 8; // Signal chiqish pini
 
 int redFrequency = 0;
 int greenFrequency = 0;
@@ -114,7 +128,7 @@ void setup() {
     pinMode(S3, OUTPUT);
     pinMode(sensorOut, INPUT);
 
-    // Chastota tanlash
+    // Chastota sozlamasi: 20% chastota
     digitalWrite(S0, HIGH);
     digitalWrite(S1, LOW);
 
@@ -122,48 +136,52 @@ void setup() {
 }
 
 void loop() {
-    // Qizil rangni o'lchash
+    // Qizil rangni o‘lchash
     digitalWrite(S2, LOW);
     digitalWrite(S3, LOW);
     redFrequency = pulseIn(sensorOut, LOW);
+    Serial.print("Qizil: ");
+    Serial.print(redFrequency);
 
-    // Yashil rangni o'lchash
+    // Yashil rangni o‘lchash
     digitalWrite(S2, HIGH);
     digitalWrite(S3, HIGH);
     greenFrequency = pulseIn(sensorOut, LOW);
+    Serial.print("  Yashil: ");
+    Serial.print(greenFrequency);
 
-    // Ko'k rangni o'lchash
+    // Ko‘k rangni o‘lchash
     digitalWrite(S2, LOW);
     digitalWrite(S3, HIGH);
     blueFrequency = pulseIn(sensorOut, LOW);
-
-    // Natijalarni konsolda chiqarish
-    Serial.print("Qizil: ");
-    Serial.print(redFrequency);
-    Serial.print("  Yashil: ");
-    Serial.print(greenFrequency);
-    Serial.print("  Ko'k: ");
+    Serial.print("  Ko‘k: ");
     Serial.println(blueFrequency);
 
-    delay(1000);
+    delay(1000); // 1 soniya kutish
 }
-        </code></pre>
+            </code></pre>
+        </div>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
     </div>
 
     <div class="my-5">
-        <h3>Prinsipiy Tahlil</h3>
-        <p>NSW Rang Datchigi turli xil ranglarni aniqlash uchun mo'ljallangan. Bu modulning asosiy funktsiyasi ranglarni aniqlashdir, va bu loyihalaringizda rangli ob'ektlarni tanib olish va chiziqlarni qayta joylashda yordam beradi. S0 va S1 pinlari orqali chastotani tanlash, S2 va S3 pinlari orqali filtrni tanlash amalga oshiriladi.</p>
+        <h2>Umumiy tahlil</h2>
+        <p>NSW rang datchigi (masalan, TCS34725 yoki TCS3200 asosida) RGB ranglarini aniqlash uchun fotodiodlar va filtrlar yordamida ishlaydi. S0 va S1 pinlari chastota sozlamalarini, S2 va S3 pinlari esa rang filtrlarini boshqaradi. Modulning soddaligi va yuqori aniqligi uni robototexnika, ta’lim va interaktiv loyihalar uchun ideal qiladi.</p>
     </div>
 
-<div class="text-center my-5">
-    <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_buzzer" role="button">
-        <i class="fas fa-arrow-left"></i> Orqaga
-    </a>
-    <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_compass" role="button">
-        Keyingisi <i class="fas fa-arrow-right"></i>
-    </a>
-</div>
-
+    <div class="text-center my-5">
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_buzzer" role="button">
+            <i class="fas fa-arrow-left"></i> Oldingi
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_compass" role="button">
+            Keyingi <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
 </div>
 
 <style>
@@ -192,6 +210,119 @@ void loop() {
     margin: 0 8px;
 }
 
+.code-container {
+    position: relative;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.code-container:hover {
+    transform: translateY(-5px);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 12px 20px;
+    border-bottom: 1px solid #004085;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.copy-btn.copied {
+    background: #17a2b8;
+}
+
+.copy-btn.copied::after {
+    content: "Nusxa olindi!";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #17a2b8;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    animation: fadeInOut 1.5s ease;
+}
+
+@@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+pre.line-numbers {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 15px;
+}
+
+.prism-coy .line-numbers-rows {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+    border-radius: 10px;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
 </style>
 
 @code {
@@ -205,4 +336,16 @@ void loop() {
     window.scrollToTop = function () {
         window.scrollTo(0, 0);
     };
+
+    function copyCode(button) {
+        const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            button.classList.add('copied');
+            button.textContent = 'Nusxa olindi!';
+            setTimeout(() => {
+                button.classList.remove('copied');
+                button.textContent = 'Nusxa olish';
+            }, 2000);
+        });
+    }
 </script>

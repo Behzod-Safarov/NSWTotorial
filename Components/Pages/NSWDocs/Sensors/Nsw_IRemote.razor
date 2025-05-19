@@ -1,47 +1,52 @@
 @page "/nsw_irremote"
 @rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
+@inherits LayoutComponentBase
 <NSWLayout />
 <br>
 <br>
 
 <div class="container mt-5">
-    <h1 class="display-4 text-center">NSW Infraqizil Masofadan Boshqaruv (Remote) Moduli</h1>
-    <p class="lead text-center">Loyihalaringizni IR pult orqali qulay boshqaring</p>
+    <h1 class="display-4 text-center">NSW infraqizil masofadan boshqaruv moduli</h1>
+    <p class="lead text-center">Loyihalaringizni infraqizil pult orqali qulay boshqaring</p>
 
     <div class="my-5">
-        <h2>Umumiy Ma'lumot</h2>
-        <p>NSW Infraqizil Remote Moduli infraqizil (IR) texnologiyasiga asoslangan bo‘lib, foydalanuvchilarga qurilmalarni masofadan boshqarish imkonini beradi. Bu modul masofadan boshqaruv pulti (remote control) va qabul qiluvchi moduldan iborat bo‘lib, turli xil tugmalar orqali Arduino yoki boshqa mikrokontrollerga buyruqlar yuboriladi. U odatda televizor pultiga o‘xshash IR signal jo‘natadi, qabul qiluvchi modul esa ushbu signalni qabul qilib, raqamli signalga aylantiradi.</p>
-        <img src="images/nsw_remote.jpg" alt="NSW Remote Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <h2>Umumiy ma’lumot</h2>
+        <p>NSW infraqizil masofadan boshqaruv moduli infraqizil (IR) texnologiyasiga asoslangan bo‘lib, qurilmalarni masofadan boshqarish imkonini beradi. Modul masofadan boshqaruv pulti va qabul qiluvchi qismdan iborat bo‘lib, turli tugmalar orqali Arduino yoki boshqa mikrokontrollerga buyruqlar yuboradi. U odatda televizor pultiga o‘xshash IR signallar jo‘natadi, qabul qiluvchi esa ushbu signallarni raqamli shaklga aylantiradi.</p>
+        <div class="image-container">
+            <img src="images/remote.jpg" alt="NSW infraqizil masofadan boshqaruv moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">NSW infraqizil masofadan boshqaruv moduli – masofaviy boshqaruv uchun</p>
+        </div>
     </div>
 
     <div class="my-5">
-        <h2>Asosiy Xususiyatlari</h2>
+        <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 3.3V – 5V</li>
-            <li>Signal turi: Infraqizil (IR)</li>
-            <li>Masofa: 2 metrgacha samarali ishlaydi</li>
-            <li>Yuboruvchi qurilma: IR masofadan boshqaruv pulti (RC-5, NEC va h.k.)</li>
-            <li>Qabul qiluvchi chip: VS1838B yoki unga o‘xshash</li>
-            <li>Ulanish interfeysi: Raqamli pinlar orqali (OUT → Arduino pin)</li>
+            <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
+            <li>Signal turi: Infraqizil (IR), 38 kHz</li>
+            <li>Qabul masofasi: 5–10 m (atmosfera sharoitiga bog‘liq)</li>
+            <li>Yuboruvchi qurilma: IR masofadan boshqaruv pulti (NEC, RC-5 va boshqa protokollar)</li>
+            <li>Qabul qiluvchi chip: VS1838B yoki shunga o‘xshash</li>
+            <li>Ulanish interfeysi: Raqamli pinlar (OUT pini)</li>
         </ul>
-        <p>Eslatma: IR signal yoritilgan muhitda yoki to‘sqinlik mavjud bo‘lsa, qabul qilish samaradorligi pasayishi mumkin.</p>
+        <p>Eslatma: Yorug‘lik yoki to‘sqinliklar IR signalning qabul qilish samaradorligini pasaytirishi mumkin.</p>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
+        <p>NSW infraqizil masofadan boshqaruv moduli quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
-            <li>Masofadan LEDni yoqish/o‘chirish</li>
-            <li>Robotlarda harakatlarni masofadan boshqarish</li>
-            <li>Menular va interfeyslar uchun tugmali navigatsiya</li>
-            <li>O‘yinchoqlar va o‘quv qurilmalari</li>
-            <li>Havoni sovutish/tizimlarni faollashtirish yoki taymerni ishga tushirish</li>
+            <li>Masofadan LED yoki chiroqlarni boshqarish</li>
+            <li>Robotlarning harakatini masofadan boshqarish</li>
+            <li>Interfeyslar uchun navigatsiya tugmalari</li>
+            <li>O‘yinchoqlar va ta’lim qurilmalari</li>
+            <li>Iqlim tizimlari yoki taymerlarni boshqarish</li>
         </ul>
     </div>
 
     <div class="my-5">
-        <h2>Pin Ta'rifi</h2>
-        <p>IR qabul qiluvchi modulda odatda uchta pin mavjud:</p>
+        <h2>Pin ta’rifi</h2>
+        <p>IR qabul qiluvchi modul quyidagi pinlarga ega:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -52,7 +57,7 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy to‘k (Ground)</td>
+                    <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
@@ -60,29 +65,79 @@
                 </tr>
                 <tr>
                     <td>OUT</td>
-                    <td>Raqamli signal chiqishi (IR kod qabul qilinganida faollashadi)</td>
+                    <td>Raqamli signal chiqishi</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="my-5">
-        <h2>Ulanish</h2>
-        <p>NSW Remote modulini Arduino UNO ga quyidagicha ulash mumkin:</p>
+        <h2>Simlarni ulash rejimi</h2>
+        <p>NSW infraqizil masofadan boshqaruv modulini Arduino UNO platasiga ulash uchun quyidagi pinlardan foydalaniladi:</p>
         <ul>
-            <li><b>VCC</b> → 5V</li>
-            <li><b>GND</b> → GND</li>
-            <li><b>OUT</b> → D11 (yoki boshqa raqamli pin)</li>
+            <li><b>VCC</b> → Arduino 5V</li>
+            <li><b>GND</b> → Arduino GND</li>
+            <li><b>OUT</b> → Arduino D11 (yoki boshqa raqamli pin)</li>
         </ul>
-        <img src="images/remote_connection.jpg" alt="NSW Remote Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;">
+        <div class="image-container">
+            <img src="images/remote_connection.jpg" alt="Infraqizil masofadan boshqaruv ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <p class="image-caption">Arduino bilan ulanish sxemasi</p>
+        </div>
+    </div>
+
+    <div class="my-5">
+        <h2>Dasturlash bo‘yicha qo‘llanma</h2>
+        <p>Arduino IDE yordamida NSW infraqizil masofadan boshqaruv modulini boshqarish uchun <code>IRremote</code> kutubxonasidan foydalaniladi. Quyidagi kod masofadan boshqaruvdan kelgan signallarni o‘qib, Serial monitorda ko‘rsatadi.</p>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span>Arduino dastur namunasi</span>
+                <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
+            </div>
+            <pre class="line-numbers"><code class="language-cpp">
+#include &lt;IRremote.h>
+
+const int recvPin = 11; // IR qabul qiluvchi pin
+IRrecv irrecv(recvPin);
+decode_results results;
+
+void setup() {
+    Serial.begin(9600); // Serial monitorni ishga tushirish
+    irrecv.enableIRIn(); // IR qabul qiluvchini yoqish
+    Serial.println("IR masofadan boshqaruv moduli ishga tushdi!");
+}
+
+void loop() {
+    if (irrecv.decode(&results)) { // Signal qabul qilinganda
+        Serial.print("Qabul qilingan signal: ");
+        Serial.println(results.value, HEX); // Signalni o‘n oltilik shaklda chiqarish
+        irrecv.resume(); // Keyingi signalni qabul qilishga tayyorlash
+    }
+    delay(100); // Kichik kechikish
+}
+            </code></pre>
+        </div>
+
+        <p>Eslatma: Kodni ishlatishdan oldin <code>IRremote</code> kutubxonasini Arduino IDE’ga o‘rnatish kerak. Masofadan boshqaruv tugmalarining kodlarini aniqlash uchun ushbu kodni ishlatib, keyin loyihangizga mos ravishda sozlashingiz mumkin.</p>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+    </div>
+
+    <div class="my-5">
+        <h2>Umumiy tahlil</h2>
+        <p>NSW infraqizil masofadan boshqaruv moduli 38 kHz chastotali IR signallarni qabul qiladi va ularni raqamli signal sifatida uzatadi. OUT pini orqali qabul qilingan ma’lumotlar Arduino tomonidan o‘qiladi. Modulning soddaligi va kichik o‘lchami uni masofadan boshqaruv tizimlari, robototexnika va ta’lim loyihalari uchun ideal qiladi.</p>
     </div>
 
     <div class="text-center my-5">
-        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_7segment_display" role="button">
-            Oldingisi <i class="fas fa-arrow-left"></i>
-        </a>
         <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_flamesensor" role="button">
-            Keyingisi <i class="fas fa-arrow-right"></i>
+            <i class="fas fa-arrow-left"></i> Oldingi
+        </a>
+        <a class="btn btn-lg custom-btn shadow-lg mx-2" href="/nsw_7segment_display" role="button">
+            Keyingi <i class="fas fa-arrow-right"></i>
         </a>
     </div>
 </div>
@@ -112,6 +167,120 @@
 .custom-btn i {
     margin: 0 8px;
 }
+
+.code-container {
+    position: relative;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.code-container:hover {
+    transform: translateY(-5px);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 12px 20px;
+    border-bottom: 1px solid #004085;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.copy-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.copy-btn.copied {
+    background: #17a2b8;
+}
+
+.copy-btn.copied::after {
+    content: "Nusxa olindi!";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #17a2b8;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    animation: fadeInOut 1.5s ease;
+}
+
+@@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+pre.line-numbers {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 15px;
+}
+
+.prism-coy .line-numbers-rows {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #007bff, #00d4ff) border-box;
+    border-radius: 10px;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
 </style>
 
 @code {
@@ -133,4 +302,16 @@
             toggler.click();
         }
     };
+
+    function copyCode(button) {
+        const code = button.parentElement.nextElementSibling.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            button.classList.add('copied');
+            button.textContent = 'Nusxa olindi!';
+            setTimeout(() => {
+                button.classList.remove('copied');
+                button.textContent = 'Nusxa olish';
+            }, 2000);
+        });
+    }
 </script>
