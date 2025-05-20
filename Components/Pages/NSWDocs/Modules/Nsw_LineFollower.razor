@@ -15,7 +15,7 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW Chiziq Kuzatuvchi Moduli oq chiziqlar yoki qora yo‘llarni aniqlash uchun mo‘ljallangan infraqizil sensorli qurilma. Robototexnika, avtomatlashtirish tizimlari va ta’lim loyihalarida keng qo‘llaniladi. Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
         <div class="image-container">
-            <img src="images/lineFollow.jpg" alt="NSW Chiziq Kuzatuvchi Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/lineFollow.jpg" alt="NSW Chiziq Kuzatuvchi Moduli" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW Chiziq Kuzatuvchi Moduli – robotlar uchun yo‘l aniqlash</p>
         </div>
     </div>
@@ -26,7 +26,7 @@
             <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
             <li>Aniqlash: Oq chiziq yoki qora yo‘l</li>
             <li>Chiqish: Raqamli signal (HIGH/LOW)</li>
-            <li>Modul hajmi: 35×20×10 mm (U×B×H)</li>
+            <li>Modul hajmi: 35×20×10 mm</li>
         </ul>
     </div>
 
@@ -72,8 +72,8 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Chiziq Kuzatuvchi Moduli sariq identifikatorga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv Platasining sariq identifikatorli raqamli portlariga (masalan, №6 yoki №8) ulanadi.</p>
-        <div class="image-container">
+        <p>NSW Chiziq Kuzatuvchi Moduli sariq rangga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv platasining sariq rangli raqamli portlariga ulanadi.</p>
+        @* <div class="image-container">
             <img src="images/nsw_linefollower_rj25.jpg" alt="NSW Chiziq Kuzatuvchi RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
         </div>
@@ -83,13 +83,13 @@
         <div class="image-container">
             <img src="images/nsw_linefollower_dupont.jpg" alt="NSW Chiziq Kuzatuvchi Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduino dasturlash</p>
-        <p>Arduino IDE yordamida NSW Chiziq Kuzatuvchi Modulini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi. Quyidagi dastur sensor holatini o‘qib, chiziq aniqlanganda LED’ni yoqadi.</p>
+        <p>Arduino IDE yordamida NSW Chiziq Kuzatuvchi Modulini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi ammo <code>NswLineFollower.h</code> kutubxonasi orqali soddaroq kod yozish mumkin. </p>
         
         <div class="code-container">
             <div class="code-header">
@@ -97,25 +97,27 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-const int lineSensorPin = 2; // OUT pini D2 ga ulangan
-const int ledPin = 13;       // LED pini D13 ga ulangan
+#include &lt;NswLineFollower.h>
+
+// 📌 Chiziq kuzatuvchi datchikni PORT_4 ga ulaymiz (pin 8, 9)
+NswLineFollower chiziqDatchik(PORT_4);
 
 void setup() {
-    pinMode(lineSensorPin, INPUT); // Sensor pinini kirish sifatida sozlash
-    pinMode(ledPin, OUTPUT);       // LED pinini chiqish sifatida sozlash
-    Serial.begin(9600);            // Serial portni ishga tushirish
+    Serial.begin(115200); // 📌 Seriyali monitorni ishga tushiramiz
 }
 
 void loop() {
-    int sensorState = digitalRead(lineSensorPin); // Sensor holatini o‘qish
-    Serial.println(sensorState);                  // Holatni Serial monitorga chiqarish
-    if (sensorState == LOW) {                     // Chiziq aniqlanganda
-        digitalWrite(ledPin, HIGH);              // LED’ni yoqish
-    } else {
-        digitalWrite(ledPin, LOW);               // LED’ni o‘chirish
-    }
-    delay(100);                                  // 100 ms kutish
+    uint8_t chap = chiziqDatchik.oqishChap();   // 📌 Chap sensor qiymati
+    uint8_t ong = chiziqDatchik.oqishOng();    // 📌 O'ng sensor qiymati
+
+    Serial.print("Chap: ");
+    Serial.print(chap);  // 📌 Chap sensorni chiqarish (1 - qora, 0 - oq)
+    Serial.print(" | Ong: ");
+    Serial.println(ong); // 📌 O'ng sensorni chiqarish (1 - qora, 0 - oq)
+
+    delay(200); // ⏳ 200ms kutish
 }
+
             </code></pre>
         </div>
 

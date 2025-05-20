@@ -13,7 +13,7 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW Yashil Chiroq Moduli yorqin yashil chiroqdan iborat bo‘lib, loyihalaringizga vizual ko‘rsatkichlar qo‘shish uchun ideal tanlovdir. Ushbu modul sariq belgi bilan belgilangan bo‘lib, NSW Boshqaruv Platasidagi sariq belgili (raqamli) portga ulanadi. Oddiy signal ko‘rsatkichlaridan tortib dekorativ yoritishgacha bo‘lgan loyihalarda ishlatish uchun moslashuvchan va oson yechim taqdim etadi.</p>
         <div class="image-container">
-            <img src="images/greenLED.jpg" alt="NSW Yashil Chiroq Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/greenLED.jpg" alt="NSW Yashil Chiroq Moduli" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW Yashil Chiroq Moduli – yorqin va ishonchli yoritish</p>
         </div>
     </div>
@@ -71,14 +71,14 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Yashil Chiroq Moduli sariq identifikatorga ega bo‘lgani uchun RJ25 portidan foydalanganda boshqaruv platasidagi sariq identifikator bilan belgilangan portlarga ulanadi. Masalan, boshqaruv platasidagi №1, №2, №3, №4, №5, №6 yoki №7 portlarga ulashingiz mumkin.</p>
+        <p>NSW Yashil Chiroq Moduli sariq rangga ega bo‘lgani uchun RJ25 portidan foydalanganda boshqaruv platasidagi sariq rang bilan belgilangan portlarga ulanadi.</p>
         <!-- <img src="images/YashilChiroq_rj25.jpg" alt="NSW Yashil Chiroq RJ25 Ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;"> -->
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduinoda dasturlash</p>
-        <p>Arduino IDE yordamida NSW Yashil Chiroq Modulini boshqarish uchun oddiy dastur yozish kifoya. Quyidagi misol chiroqni har soniyada yoqib va o‘chirib turadi. NSWblock-Libraries kutubxonasi ixtiyoriy ravishda qo‘llanilishi mumkin, lekin oddiy chiroq boshqaruvi uchun standart Arduino funksiyalari yetarli.</p>
+        <p>Arduino IDE yordamida NSW Yashil Chiroq Modulini boshqarish uchun oddiy dastur yozish kifoya ammo <code>NswLed.h</code> kutubxonasi orqali soddaroq kod yozish mumkin. Quyidagi misol chiroqni har soniyada yoqib va o‘chirib turadi. NSWblock-Libraries kutubxonasi ixtiyoriy ravishda qo‘llanilishi mumkin, lekin oddiy chiroq boshqaruvi uchun standart Arduino funksiyalari yetarli.</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -86,16 +86,28 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Copy</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
+#include &lt;NswLed.h>
+
+// 📌 LEDni PORT_4 ga ulaymiz (pin 8, 9)
+NswLed led(PORT_4);
+
 void setup() {
-  pinMode(2, OUTPUT); // Signal pinini D2 ga uladik
+    // 📌 setup() bo‘limida hech qanday sozlama talab qilinmaydi.
 }
 
 void loop() {
-  digitalWrite(2, HIGH); // Chiroqni yoqish
-  delay(1000);           // 1 soniya kutish
-  digitalWrite(2, LOW);  // Chiroqni o'chirish
-  delay(1000);           // 1 soniya kutish
+    led.on();    // 📌 LEDni yoqish
+    delay(1000); // ⏳ 1 soniya kutish
+    
+    led.off();   // 📌 LEDni o‘chirish
+    delay(1000); // ⏳ 1 soniya kutish
+    
+    led.toggle(); // 📌 LEDni hozirgi holatiga qarab yoqish yoki o‘chirish
+    delay(1000);  // ⏳ 1 soniya kutish
+    
+    led.blink(500); // 📌 LEDni har 500ms da miltillatish
 }
+
             </code></pre>
         </div>
 
@@ -235,7 +247,7 @@ void loop() {
         }
         </script>
 
-        <p>Ushbu kod chiroqni miltillatib turadi. Signal pinini o‘zgartirish uchun pin raqamini moslashtiring.</p>
+        @* <p>Ushbu kod chiroqni miltillatib turadi. Signal pinini o‘zgartirish uchun pin raqamini moslashtiring.</p> *@
     </div>
 
     <div class="my-5">

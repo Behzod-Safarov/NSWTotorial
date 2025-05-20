@@ -15,7 +15,7 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW LED Matrix Moduli 8×16 matritsada joylashgan LED chiroqlardan iborat bo‘lib, grafikalar, matnlar va animatsiyalarni ko‘rsatish uchun mo‘ljallangan. Ushbu modul robototexnika, displey tizimlari va turli loyihalarda keng qo‘llaniladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
         <div class="image-container">
-            <img src="images/nsw_ledmatrix1.jpg" alt="NSW LED Matrix Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/nsw_ledmatrix1.jpg" alt="NSW LED Matrix Moduli" class="img-fluid rounded shadow my-3" style="max-width: 200px;" loading="lazy">
             <p class="image-caption">NSW LED Matrix Moduli – yorqin grafik ko‘rsatish</p>
         </div>
     </div>
@@ -26,7 +26,7 @@
             <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
             <li>Matritsa o‘lchami: 8×16 LED</li>
             <li>Har bir LED uchun individual boshqaruv</li>
-            <li>Modul hajmi: 60×120×10 mm (U×B×H)</li>
+            <li>Modul hajmi: 60×120×10 mm </li>
         </ul>
     </div>
 
@@ -80,8 +80,8 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW LED Matrix Moduli RJ25 porti orqali ulanadi. Makeblock Orion’da RJ25 portidan foydalanganda, uni mos portga ulashingiz kerak.</p>
-        <div class="image-container">
+        <p>NSW LED Matrix Moduli RJ25 porti orqali ulanadi. Boshqarish platasidagi RJ25 portidan foydalanganda, uni ko'k rangli portga ulashingiz kerak.</p>
+        @* <div class="image-container">
             <img src="images/nsw_ledmatrix_rj25.jpg" alt="NSW LED Matrix RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
         </div>
@@ -91,13 +91,13 @@
         <div class="image-container">
             <img src="images/nsw_ledmatrix_dupont.jpg" alt="NSW LED Matrix Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduino dasturlash</p>
-        <p>Arduino IDE yordamida NSW LED Matrix Modulini boshqarish uchun LedControl kutubxonasi ishlatiladi. Quyidagi dastur namunasi matritsada naqshlarni ko‘rsatadi.</p>
+        <p>Arduino IDE yordamida NSW LED Matrix Modulini boshqarish uchun Nswblock-Libraries kutubxonasi ishlatiladi. Quyidagi dasturdan namuna sifatida foydalanish mumkin</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -105,32 +105,32 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
 <pre class="line-numbers"><code class="language-cpp">
-#include &lt;LedControl.h&gt;
+#include "NswLEDMatrix.h"  // 📌 NswBlock LED Matriks kutubxonasini chaqiramiz
 
-const int DIN = 12;
-const int CS = 11;
-const int CLK = 10;
-
-LedControl lc = LedControl(DIN, CLK, CS, 2); // 2 ta displey
+// 📌 LED matriksni PORT_4 ga ulaymiz (PORT_4 = 8, 9)
+NswLEDMatrix ledMx(PORT_4);
 
 void setup() {
-    for (int i = 0; i &lt; 2; i++) {
-        lc.shutdown(i, false);
-        lc.setIntensity(i, 8);
-        lc.clearDisplay(i);
-    }
+    ledMx.setBrightness(6);  // 📌 Yorqinlik darajasini 6 ga sozlaymiz (0-7 oralig‘ida)
+    ledMx.setColorIndex(1);  // 📌 Rang indeksini o‘rnatamiz (agar mavjud bo‘lsa)
 }
 
+char *s = "AB";  // 📌 Ekranda chiqariladigan matn
+
 void loop() {
-    for (int row = 0; row &lt; 8; row++) {
-        lc.setRow(0, row, B10101010);
-        lc.setRow(1, row, B10101010);
-        delay(500);
-        lc.setRow(0, row, B01010101);
-        lc.setRow(1, row, B01010101);
-        delay(500);
-    }
+    ledMx.showClock(12, 03, 1);  // 📌 LED ekranda soat 12:03 ni ko‘rsatamiz
+    delay(2000);  // 2 soniya kutamiz
+
+    ledMx.drawStr(0, 7, s);  // 📌 "AB" matnini 0,7 koordinatasida chiqaramiz
+    delay(2000);  // 2 soniya kutamiz
+
+    ledMx.showNum(1.23);  // 📌 LED ekranda 1.23 sonini chiqaramiz
+    delay(2000);  // 2 soniya kutamiz
+
+    ledMx.fillScreen();
+    delay(2000);
 }
+
 </code></pre>
         </div>
 

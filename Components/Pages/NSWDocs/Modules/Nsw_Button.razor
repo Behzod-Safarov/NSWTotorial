@@ -12,9 +12,9 @@
 
     <div class="my-5">
         <h2>Umumiy ma’lumot</h2>
-        <p>NSW Button Moduli bitta bosma tugmadan iborat bo‘lib, sariq identifikatorga ega va NSW Boshqaruv Platasining sariq (raqamli) portlariga ulanadi. Tugma bosilganda LOW signal, qo‘yib yuborilganda esa HIGH signal ishlab chiqaradi. Ta’lim loyihalaridan uy avtomatlashtirish tizimlarigacha keng qo‘llaniladi.</p>
+        <p>NSW Button Moduli bitta bosma tugmadan iborat bo‘lib, sariq identifikatorga ega va NSW Boshqaruv platasining sariq rangli (raqamli) portlariga ulanadi. Tugma bosilganda LOW signal, qo‘yib yuborilganda esa HIGH signal ishlab chiqaradi. Ta’lim loyihalaridan uy avtomatlashtirish tizimlarigacha keng qo‘llaniladi.</p>
         <div class="image-container">
-            <img src="images/button.jpg" alt="NSW Button Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/button.jpg" alt="NSW Button Moduli" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW Button Moduli – oddiy va interaktiv boshqaruv</p>
         </div>
     </div>
@@ -72,24 +72,24 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Button Moduli sariq identifikatorga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv Platasining sariq identifikatorli raqamli portlariga ulanadi.</p>
-        <div class="image-container">
+        <p>NSW Button Moduli sariq rangga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv Platasining sariq rangli portlariga ulanadi.</p>
+        @* <div class="image-container">
             <img src="images/button_rj25.jpg" alt="NSW Button RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
 
-        <p>● Dupont simi bilan ulanish</p>
+        @* <p>● Dupont simi bilan ulanish</p>
         <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda Signal pini raqamli pinga (masalan, D7) ulanadi.</p>
         <div class="image-container">
             <img src="images/nsw_button_dupont.jpg" alt="NSW Button Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduino dasturlash</p>
-        <p>Arduino IDE yordamida NSW Button Modulini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi. Quyidagi dastur tugma bosilishini aniqlab, holatni Serial monitorga chiqaradi.</p>
+        <p>Arduino IDE yordamida NSW Button Modulini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi ammo <code>NswButton.h</code> kutubxonasi orqali soddaroq kod yozish mumkin. Quyidagi dastur tugma bosilishini aniqlab, holatni Serial monitorga chiqaradi.</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -97,22 +97,26 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-int buttonPin = 7; // Signal pini D7 ga ulangan
+#include &lt;NswButton.h>  // NswBlock uchun tugma (button) kutubxonasi chaqirilmoqda
+
+// 📌 Tugmani PORT_4 ga ulaymiz (PORT_4 = pin 8 va 9)
+NswButton button(PORT_4);  
 
 void setup() {
-    pinMode(buttonPin, INPUT_PULLUP); // Tugma pinini kirish sifatida sozlash
-    Serial.begin(9600);              // Serial portni ishga tushirish
+    Serial.begin(115200);  // 📌 Seriyali monitor orqali ma'lumot chiqarish uchun boshlaymiz
 }
 
 void loop() {
-    int buttonState = digitalRead(buttonPin); // Tugma holatini o‘qish
-    if (buttonState == LOW) {
-        Serial.println("Tugma bosildi");
+    // 📌 Tugma bosilganmi yoki yo‘qmi tekshiramiz
+    if (button.isPressed()) {  
+        Serial.println("Tugma bosildi!");  // Agar tugma bosilsa, ekranga chiqaramiz
     } else {
-        Serial.println("Tugma bosilmadi");
+        Serial.println("Tugma qo‘yib yuborildi!");  // Agar tugma qo‘yib yuborilsa, ekranga chiqaramiz
     }
-    delay(100); // 100 ms kutish
+    
+    delay(200);  // 📌 Har 200 millisekundda bir marta tugma holatini tekshiramiz
 }
+
             </code></pre>
         </div>
 

@@ -14,8 +14,8 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW taymer moduli vaqtni o‘lchash, soniya sanash va taymer funksiyalarini bajarish uchun mo‘ljallangan. Ushbu modul yordamida foydalanuvchi belgilangan vaqtdan keyin LEDni yoqish, signal chiqarish yoki boshqa harakatlarni amalga oshirishi mumkin. Modulda odatda raqamli displey va tugmalar mavjud bo‘lib, u real vaqtda taymer sifatida ishlaydi.</p>
         <div class="image-container">
-            <img src="images/timerModule.jpg" alt="NSW taymer moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
-            <p class="image-caption">NSW taymer moduli – vaqtni boshqarish uchun</p>
+            <img src="images/timerModule.jpg" alt="NSW taymer moduli" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
+            <p class="image-caption">NSW taymer moduli – vaqtni tahlil qilish uchun</p>
         </div>
     </div>
 
@@ -76,47 +76,60 @@
     </div>
 
     <div class="my-5">
-        <h2>Ulanish (Arduino bilan)</h2>
-        <p>Modulni Arduino platasiga ulash uchun quyidagi pinlardan foydalaniladi:</p>
+        <h2>Simlarni ulash rejimi</h2>
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Taymer Moduli qora rangga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv platasining qora rangli analog portlariga ulanadi.</p>
+
+        
+        @* <p>Modulni Arduino platasiga ulash uchun quyidagi pinlardan foydalaniladi:</p>
         <ul>
             <li><b>VCC</b> → 5V</li>
             <li><b>GND</b> → GND</li>
             <li><b>DIO</b> → D2</li>
             <li><b>CLK</b> → D3</li>
-        </ul>
-        <div class="image-container">
+        </ul> *@
+        @* <div class="image-container">
             <img src="images/timer_arduino_connection.jpg" alt="Taymer moduli Arduino bilan ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Arduino bilan ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
-        <p>Quyidagi Arduino kodi <code>TM1637Display</code> kutubxonasi yordamida displeyda sonlarni ko‘rsatadi:</p>
+        
         
         <div class="code-container">
             <div class="code-header">
                 <span>Arduino dastur namunasi</span>
+                
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-#include &lt;TM1637Display.h>
+#include &lt; Wire.h>
+#include "NswTime.h"
 
-#define CLK 3
-#define DIO 2
-
-TM1637Display display(CLK, DIO);
+// 📌 Soat moduli bilan ishlash
+NswTime clock;
 
 void setup() {
-    display.setBrightness(0x0f); // Maksimal yorqinlik
+    Serial.begin(9600);
+    clock.begin();
+
+    // 📌 Vaqtni qo‘lda sozlash (faqat bir marta yozish kerak!)
+    // clock.setTime(0, 30, 12);  // ⏰ 12:30:00
+    // clock.setDate(2, 18, 3, 25);  // 📆 Seshanba, 18-Mart, 2025
 }
 
 void loop() {
-    for (int i = 0; i &lt; 100; i++) {
-        display.showNumberDec(i, true); // Raqamlarni ko‘rsatish
-        delay(1000); // Har bir soniyada yangilash
-    }
+    Serial.print("⏰ Vaqt: ");
+    Serial.println(clock.getTime()); // 📌 Joriy vaqtni olish (HH:MM:SS)
+
+    Serial.print("📆 Sana: ");
+    Serial.println(clock.getDate()); // 📌 Joriy sanani olish (DD/MM/YYYY)
+
+    delay(1000); // ⏳ 1 soniyada yangilanadi
 }
+
             </code></pre>
         </div>
         <p>Ushbu kod displeyda 0 dan 99 gacha bo‘lgan sonlarni har soniyada ko‘rsatadi.</p>

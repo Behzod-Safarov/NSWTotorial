@@ -8,15 +8,15 @@
 <br>
 
 <div class="container mt-5">
-    <h1 class="display-4 text-center">NSW Bluetooth Moduli</h1>
+    <h1 class="display-4 text-center">NSW Bulutus Moduli</h1>
     <p class="lead text-center">Loyihalaringizni simsiz ulang</p>
 
     <div class="my-5">
         <h2>Umumiy ma’lumot</h2>
-        <p>NSW Bluetooth Moduli simsiz aloqa imkonini beradi va loyihalarni boshqa qurilmalarga ulashda qo‘llaniladi. Arduino, Raspberry Pi va boshqa mikrokontrollerlar bilan mos keladi, bu uni turli loyihalar uchun ideal qiladi.</p>
+        <p>NSW Bulutus Moduli simsiz aloqa imkonini beradi va loyihalarni boshqa qurilmalarga ulashda qo‘llaniladi. Arduino, Raspberry Pi va boshqa mikrokontrollerlar bilan mos keladi, bu uni turli loyihalar uchun ideal qiladi.</p>
         <div class="image-container">
-            <img src="images/bluetooth.jpg" alt="NSW Bluetooth Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
-            <p class="image-caption">NSW Bluetooth Moduli – simsiz aloqa uchun</p>
+            <img src="images/bluetooth.jpg" alt="NSW Bulutus Moduli" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
+            <p class="image-caption">NSW Bulutus Moduli – simsiz aloqa uchun</p>
         </div>
     </div>
 
@@ -32,7 +32,7 @@
 
     <div class="my-5">
         <h2>Ilovalar</h2>
-        <p>NSW Bluetooth Moduli quyidagi loyihalarda qo‘llanilishi mumkin:</p>
+        <p>NSW Bulutus Moduli quyidagi loyihalarda qo‘llanilishi mumkin:</p>
         <ul>
             <li>Simsiz ma’lumot uzatish</li>
             <li>Uy avtomatlashtirish</li>
@@ -44,7 +44,7 @@
 
     <div class="my-5">
         <h2>Pin ta’rifi</h2>
-        <p>NSW Bluetooth Modulida quyidagi pinlar mavjud:</p>
+        <p>NSW Bulutus Modulida quyidagi pinlar mavjud:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -80,24 +80,24 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Bluetooth Moduli RJ25 porti orqali Makeblock Orion’dagi mos portlarga ulanadi.</p>
-        <div class="image-container">
-            <img src="images/nsw_bluetooth_rj25.jpg" alt="NSW Bluetooth RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+        <p>NSW Bulutus Moduli RJ25 porti orqali boshqarish platasiga sariq rangli portlarga ulanadi.</p>
+        @* <div class="image-container">
+            <img src="images/nsw_bluetooth_rj25.jpg" alt="NSW Bulutus RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
 
-        <p>● Dupont simi bilan ulanish</p>
+        @* <p>● Dupont simi bilan ulanish</p>
         <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda TXD va RXD pinlari Arduino’ning RX va TX pinlariga ulanadi.</p>
         <div class="image-container">
-            <img src="images/nsw_bluetooth_dupont.jpg" alt="NSW Bluetooth Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/nsw_bluetooth_dupont.jpg" alt="NSW Bulutus Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduino dasturlash</p>
-        <p>Arduino IDE yordamida NSW Bluetooth Moduli orqali simsiz aloqa o‘rnatish uchun <code>SoftwareSerial</code> kutubxonasi ishlatiladi. Quyidagi dastur namunasi Bluetooth orqali ma’lumot almashishni ko‘rsatadi.</p>
+        <p>Arduino IDE yordamida NSW Bulutus Moduli orqali simsiz aloqa o‘rnatish uchun <code>NswBluetooth.h</code> kutubxonasi ishlatiladi. Quyidagi dastur namunasi Bluetooth orqali ma’lumot almashishni ko‘rsatadi.</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -106,23 +106,44 @@
             </div>
             <pre class="line-numbers"><code class="language-cpp">
 #include &lt;SoftwareSerial.h>
+#include &lt;NswBluetooth.h>
 
-SoftwareSerial bluetooth(10, 11); // RX, TX
+// 📌 Bluetooth modulini PORT_5 ga ulaymiz (PORT_5 = RX: 6, TX: 7)
+NswBluetooth bluetooth(PORT_5);
 
 void setup() {
-    Serial.begin(9600);
-    bluetooth.begin(9600);
-    Serial.println("Bluetooth moduli tayyor");
+    Serial.begin(9600);  // 📌 Kompyuter bilan serial aloqa uchun
+    while (!Serial) {
+        ; // 📌 Serial port ulanishini kutamiz
+    }
+
+    bluetooth.begin(9600);  // 📌 Bluetooth moduli uchun baud tezligini o‘rnatamiz (HC-05 va HC-06 odatda 9600)
+    Serial.println("Bluetooth PORT_5 da ishga tushdi (RX=6, TX=7). Ma'lumot yuboring...");
 }
 
 void loop() {
+    // 📌 Bluetooth orqali kelgan ma’lumotni tekshiramiz
     if (bluetooth.available()) {
-        Serial.write(bluetooth.read());
+        char c = bluetooth.read();  // 📌 Kelgan ma'lumotni o‘qiymiz
+        Serial.print("Bluetoothdan qabul qilindi: ");
+        Serial.println(c);
+
+        // 📌 Qayta javob qaytaramiz (Echo)
+        bluetooth.print("Echo: ");
+        bluetooth.println(c);
     }
+
+    // 📌 Kompyuterdan (Serial Monitor) yozilgan ma’lumotni Bluetooth'ga jo‘natamiz
     if (Serial.available()) {
-        bluetooth.write(Serial.read());
+        char c = Serial.read();
+        bluetooth.write(c);
+        Serial.print("Bluetooth'ga yuborildi: ");
+        Serial.println(c);
     }
+
+    delay(10);  // 📌 Overload bo‘lmasligi uchun kichik kechikish
 }
+
             </code></pre>
         </div>
 
@@ -266,7 +287,7 @@ void loop() {
 
     <div class="my-5">
         <h2>Umumiy tahlil</h2>
-        <p>NSW Bluetooth Moduli Bluetooth 4.0 protokoli asosida ishlaydi va UART interfeysi orqali ma’lumot almashadi. TXD va RXD pinlari orqali ikki tomonlama aloqa ta’minlanadi, bu esa qurilmalarni simsiz boshqarish va ma’lumot uzatishni osonlashtiradi. Modulning kichik o‘lchami va kam quvvat sarfi uni IoT va robototexnika loyihalari uchun samarali qiladi.</p>
+        <p>NSW Bulutus Moduli Bluetooth 4.0 protokoli asosida ishlaydi va UART interfeysi orqali ma’lumot almashadi. TXD va RXD pinlari orqali ikki tomonlama aloqa ta’minlanadi, bu esa qurilmalarni simsiz boshqarish va ma’lumot uzatishni osonlashtiradi. Modulning kichik o‘lchami va kam quvvat sarfi uni IoT va robototexnika loyihalari uchun samarali qiladi.</p>
     </div>
 
     <div class="text-center my-5">

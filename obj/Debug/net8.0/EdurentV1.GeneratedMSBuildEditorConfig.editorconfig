@@ -17,153 +17,153 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EdurentV1
 build_property.RootNamespace = EdurentV1
-build_property.ProjectDir = C:\Users\hp\scr\NSWTotorial\
+build_property.ProjectDir = C:\Users\user\Desktop\Develeoper Tools\Shaxsiy\NSWTotorial\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\hp\scr\NSWTotorial
+build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\Develeoper Tools\Shaxsiy\NSWTotorial
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/App.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/Error.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/Home.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Displays/Nsw_OledDisplay.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Displays/Nsw_OledDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXERpc3BsYXlzXE5zd19PbGVkRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_Button.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_Button.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXE1vZHVsZXNcTnN3X0J1dHRvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_BuzzerActive.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_BuzzerActive.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXE1vZHVsZXNcTnN3X0J1enplckFjdGl2ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_BuzzerPassive.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_BuzzerPassive.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXE1vZHVsZXNcTnN3X0J1enplclBhc3NpdmUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_Timer.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_Timer.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXE1vZHVsZXNcTnN3X1RpbWVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_WiFi.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_WiFi.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXE1vZHVsZXNcTnN3X1dpRmkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/NSWLayout.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/NSWLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXE5TV0xheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_IRemote.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_IRemote.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X0lSZW1vdGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_SoilSensor.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_SoilSensor.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X1NvaWxTZW5zb3IucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_TouchSensor.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_TouchSensor.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X1RvdWNoU2Vuc29yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_UltrasonicSensor.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_UltrasonicSensor.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X1VsdHJhc29uaWNTZW5zb3IucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Shows/Nsw_GreenLED.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Shows/Nsw_GreenLED.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNob3dzXE5zd19HcmVlbkxFRC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Shows/Nsw_RedLED.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Shows/Nsw_RedLED.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNob3dzXE5zd19SZWRMRUQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Shows/Nsw_YellowLED.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Shows/Nsw_YellowLED.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNob3dzXE5zd19ZZWxsb3dMRUQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Routes.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/_Imports.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/scr/NSWTotorial/Components/Layout/MainLayout.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-u6xw4346bj
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Actions/Nsw_Servo.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Actions/Nsw_Servo.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXEFjdGlvbnNcTnN3X1NlcnZvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-ezdugsov5l
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Displays/Nsw_7SegmentDisplay.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Displays/Nsw_7SegmentDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXERpc3BsYXlzXE5zd183U2VnbWVudERpc3BsYXkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-772ni97hnh
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Displays/Nsw_LedMatrix.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Displays/Nsw_LedMatrix.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXERpc3BsYXlzXE5zd19MZWRNYXRyaXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-zf33c30b81
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_4button.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_4button.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXE1vZHVsZXNcTnN3XzRidXR0b24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rh5bn41k0x
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_Bloetooth.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_Bloetooth.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXE1vZHVsZXNcTnN3X0Jsb2V0b290aC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-qp9w40tut7
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_LineFollower.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_LineFollower.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXE1vZHVsZXNcTnN3X0xpbmVGb2xsb3dlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-5qxvyidhlm
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_Potentiometer.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Modules/Nsw_Potentiometer.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXE1vZHVsZXNcTnN3X1BvdGVudGlvbWV0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-89cw8sbmxn
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_ColorSensor.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_ColorSensor.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X0NvbG9yU2Vuc29yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-jjqw3l1h4h
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_FlameSensor.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_FlameSensor.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X0ZsYW1lU2Vuc29yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-4wrywhkcbd
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_Gyro.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_Gyro.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X0d5cm8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-pmqbvudpor
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_HumitureSensor.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_HumitureSensor.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X0h1bWl0dXJlU2Vuc29yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-krcf8855kv
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_InfraredReceiver.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_InfraredReceiver.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X0luZnJhcmVkUmVjZWl2ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-u1ygaxbbmj
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_LightSensor.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_LightSensor.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X0xpZ2h0U2Vuc29yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-urzte4bci7
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_SoundSensor.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Sensors/Nsw_SoundSensor.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNlbnNvcnNcTnN3X1NvdW5kU2Vuc29yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-egv9gdefc2
 
-[C:/Users/hp/scr/NSWTotorial/Components/Pages/NSWDocs/Shows/Nsw_RGBLed.razor]
+[C:/Users/user/Desktop/Develeoper Tools/Shaxsiy/NSWTotorial/Components/Pages/NSWDocs/Shows/Nsw_RGBLed.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOU1dEb2NzXFNob3dzXE5zd19SR0JMZWQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-5xf0b2mwa7

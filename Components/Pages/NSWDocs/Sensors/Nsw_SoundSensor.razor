@@ -14,7 +14,7 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW ovoz sensori atrof-muhitdagi ovoz darajasini o‘lchash uchun mo‘ljallangan. Ushbu sensor ovoz intensivligini analog va raqamli signallar orqali uzatadi, bu uni robototexnika, xavfsizlik tizimlari va ta’lim loyihalarida qo‘llash uchun qulay qiladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
         <div class="image-container">
-            <img src="images/sound.jpg" alt="NSW ovoz sensori" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/sound.jpg" alt="NSW ovoz sensori" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW ovoz sensori – ovoz darajasini monitoring qilish uchun</p>
         </div>
     </div>
@@ -75,8 +75,8 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW ovoz sensori ko‘k identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining ko‘k identifikatorli portlariga (masalan, A0 yoki D2) ulanadi.</p>
-        <div class="image-container">
+        <p>NSW ovoz sensori ko‘k rangga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining ko‘k rangli portlariga ulanadi.</p>
+        @* <div class="image-container">
             <img src="images/nsw_soundsensor_rj25.jpg" alt="Ovoz sensori RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
         </div>
@@ -92,12 +92,12 @@
         <div class="image-container">
             <img src="images/nsw_soundsensor_dupont.jpg" alt="Ovoz sensori Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
-        <p>Arduino IDE yordamida NSW ovoz sensorini boshqarish uchun maxsus kutubxona talab qilinmaydi. Quyidagi kod analog va raqamli chiqishlarni o‘qib, ovoz darajasini Serial monitorda ko‘rsatadi va LEDni boshqaradi.</p>
+        <p>Arduino IDE yordamida NSW ovoz sensorini boshqarish uchun maxsus kutubxona talab qilinmaydi ammo <code>NswVoice.h</code> kutubxonasi orqali soddaroq kod yozish mumkin. Quyidagi kod analog va raqamli chiqishlarni o‘qib, ovoz darajasini Serial monitorda ko‘rsatadi</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -105,34 +105,30 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-const int analogPin = A0;  // AOUT pinini A0 ga ulash
-const int digitalPin = 2;  // DOUT pinini D2 ga ulash
-const int ledPin = 13;     // LED chiqishi
+#include "NswPort.h"     // Portlarni belgilovchi kutubxona
+#include "NswVoice.h"    // Mikrofon moduli kutubxonasi
+
+NswVoice voice(PORT_2);  // Mikrofon PORT_2 ga ulangan (A0 kirish pini orqali)
 
 void setup() {
-    pinMode(digitalPin, INPUT);  // Raqamli pinni kirish sifatida sozlash
-    pinMode(ledPin, OUTPUT);     // LED pinni chiqish sifatida sozlash
-    Serial.begin(9600);          // Serial monitorni ishga tushirish
+    Serial.begin(9600);           // Serial monitor ochiladi (tezlik: 9600 baud)
+    voice.begin();                // Mikrofon kirish pini INPUT holatida ishga tushiriladi
+    voice.setThreshold(500);      // Threshold qiymati o‘rnatiladi (masalan 550) — bu sezuvchanlik darajasidir
 }
 
 void loop() {
-    int analogValue = analogRead(analogPin); // Analog qiymatni o‘qish (0–1023)
-    int digitalValue = digitalRead(digitalPin); // Raqamli qiymatni o‘qish (0 yoki 1)
-    float dB = (analogValue / 1023.0) * 120; // Taxminiy desibellarga aylantirish
+    int sound = voice.readRaw();  // Mikrofon orqali analog signal qiymati o‘qiladi (0–1023)
 
-    Serial.print("Ovoz darajasi: ");
-    Serial.print(dB);
-    Serial.print(" dB | Raqamli: ");
-    Serial.println(digitalValue);
+    Serial.print("Sound Level: ");  // Natija yozuv bilan chiqariladi
+    Serial.println(sound);          // Signal qiymati serialga uzatiladi
 
-    if (digitalValue == HIGH) { // Agar ovoz chegaradan yuqori bo‘lsa
-        digitalWrite(ledPin, HIGH); // LEDni yoqish
-    } else {
-        digitalWrite(ledPin, LOW);  // LEDni o‘chirish
+    if (voice.isSoundDetected()) {  // Agar signal threshold dan katta bo‘lsa:
+        Serial.println("🚨 Loud sound detected!");  // Ogohlantirish chiqariladi
     }
 
-    delay(100); // 100 ms kutish
+    delay(100);  // 100 millisekund kutish — bu signalni barqaror o‘qish uchun kerak
 }
+
             </code></pre>
         </div>
 

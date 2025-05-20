@@ -12,9 +12,9 @@
 
     <div class="my-5">
         <h2>Umumiy ma’lumot</h2>
-        <p>NSW Active Buzzer Moduli pyezolektrik komponent bo‘lib, loyihalarga ovozli ogohlantirishlar yoki ko‘rsatkichlar qo‘shish uchun mo‘ljallangan. Sariq identifikatorga ega bu modul NSW Boshqaruv Platasining sariq (raqamli) portlariga ulanadi. Ichki osilator tufayli ~2.5 kHz chastotali doimiy ovoz chiqaradi, bu uni signalizatsiya va tasdiqlash loyihalari uchun qulay qiladi.</p>
+        <p>NSW Active Buzzer Moduli pyezolektrik komponent bo‘lib, loyihalarga ovozli ogohlantirishlar yoki ko‘rsatkichlar qo‘shish uchun mo‘ljallangan. Sariq rangli portga ega bu modul NSW Boshqaruv platasining sariq (raqamli) portlariga ulanadi. Ichki osilator tufayli ~2.5 kHz chastotali doimiy ovoz chiqaradi, bu uni signalizatsiya va tasdiqlash loyihalari uchun qulay qiladi.</p>
         <div class="image-container">
-            <img src="images/activebuzzer.jpg" alt="NSW Active Buzzer Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/activebuzzer.jpg" alt="NSW Active Buzzer Moduli" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW Active Buzzer Moduli – ovozli signal uchun</p>
         </div>
     </div>
@@ -25,7 +25,7 @@
             <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
             <li>Ovoz chastotasi: ~2.5 kHz</li>
             <li>Boshqarish rejimi: Raqamli signal</li>
-            <li>Modul hajmi: 34×15×11 mm (U×B×H)</li>
+            <li>Modul hajmi: 34×15×11 mm</li>
             <li>Ulanish: RJ25 yoki Dupont simlari</li>
             <li>Ovoz balandligi: ~85 dB (10 sm masofada)</li>
         </ul>
@@ -73,24 +73,24 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW Active Buzzer Moduli sariq identifikatorga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv Platasining sariq identifikatorli raqamli portlariga (masalan, №6 yoki №8) ulanadi.</p>
-        <div class="image-container">
+        <p>NSW Active Buzzer Moduli sariq rangga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv platasining sariq rangli portlariga ulanadi.</p>
+        @* <div class="image-container">
             <img src="images/activebuzzer_rj25.jpg" alt="NSW Active Buzzer RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
 
-        <p>● Dupont simi bilan ulanish</p>
+        @* <p>● Dupont simi bilan ulanish</p>
         <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda Signal pini raqamli pinga (masalan, D9) ulanadi.</p>
         <div class="image-container">
             <img src="images/activebuzzer_dupont.jpg" alt="NSW Active Buzzer Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduino dasturlash</p>
-        <p>Arduino IDE yordamida NSW Active Buzzer Modulini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi. Quyidagi dastur buzzer’ni har soniyada yoqib-o‘chirib, qisqa ovozli signallar hosil qiladi.</p>
+        <p>Arduino IDE yordamida NSW Active Buzzer Modulini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi ammo <code>NswBuzzer.h</code> kutubxonasi orqali soddaroq kod yozish mumkin. Quyidagi dastur buzzer’ni har soniyada yoqib-o‘chirib, qisqa ovozli signallar hosil qiladi.</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -98,17 +98,21 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-int buzzerPin = 9; // Signal pini D9 ga ulangan
+int buzzerPin = 8; // Signal pini D8 ga ulangan
 
 void setup() {
     pinMode(buzzerPin, OUTPUT); // Buzzer pinini chiqish sifatida sozlash
 }
 
 void loop() {
-    digitalWrite(buzzerPin, HIGH); // Buzzer’ni yoqish
-    delay(500);                   // 0.5 soniya kutish
-    digitalWrite(buzzerPin, LOW);  // Buzzer’ni o‘chirish
-    delay(500);                   // 0.5 soniya kutish
+    tone(buzzerPin, 1000); // 1 kHz ohang (eslatma: passive buzzer uchun 1.5 kHz dan yuqori yaxshiroq)
+    delay(1000);          // 1 soniya kutish
+    noTone(buzzerPin);    // Ovozni to‘xtatish
+    delay(500);           // 0.5 soniya kutish
+    tone(buzzerPin, 2000); // 2 kHz ohang
+    delay(1000);          // 1 soniya kutish
+    noTone(buzzerPin);    // Ovozni to‘xtatish
+    delay(500);           // 0.5 soniya kutish
 }
             </code></pre>
         </div>

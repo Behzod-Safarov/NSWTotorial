@@ -15,7 +15,7 @@
         <p>NSW Wi-Fi moduli simsiz tarmoq orqali ma’lumot almashish imkonini beruvchi IoT komponentidir. Ushbu modul yordamida Arduino yoki boshqa mikrokontrollerlarni internetga ulash, masofadan boshqarish, ma’lumotlarni serverga yuborish yoki olish, real vaqtda monitoring kabi vazifalarni bajarish mumkin.</p>
         <p>Modul odatda ESP8266 yoki ESP32 chiplariga asoslanadi va Wi-Fi tarmog‘iga ulanib, HTTP/HTTPS so‘rovlarini yuborish, shuningdek, o‘rnatilgan veb-serverlarni ishga tushirish funksiyalarini taqdim etadi.</p>
         <div class="image-container">
-            <img src="images/nsw_wifi.jpg" alt="NSW Wi-Fi moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/nsw_wifi.jpg" alt="NSW Wi-Fi moduli" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW Wi-Fi moduli – simsiz aloqa uchun</p>
         </div>
     </div>
@@ -86,7 +86,11 @@
     </div>
 
     <div class="my-5">
-        <h2>Ulanish (Arduino bilan)</h2>
+        <h2>Simlarni ulash rejimi</h2>
+        <p>● RJ25 bilan ulanish</p>
+        <p>NSW Wi-Fi Moduli oq-kulrang ranglariga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv platasining oq-kulrang rangli portlariga ulanadi.</p>
+
+        @* <h2>Ulanish (Arduino bilan)</h2>
         <p>Modulni Arduino platasiga ulash uchun quyidagi pinlardan foydalaniladi:</p>
         <ul>
             <li><b>VCC</b> → 3.3V (Eslatma: 5V ulanmasin!)</li>
@@ -98,13 +102,13 @@
         <div class="image-container">
             <img src="images/wifi_arduino_connection.jpg" alt="Wi-Fi moduli Arduino bilan ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Arduino bilan ulanish sxemasi</p>
-        </div>
-        <p>Eslatma: ESP32 modeli mustaqil mikrokontroller sifatida ishlaydi va qo‘shimcha Arduino talab qilmaydi.</p>
+        </div> *@
+        <p>Eslatma: ESP32 modeli mustaqil mikrokontroller sifatida ishlaydi va qo‘shimcha kontroller talab qilmaydi.</p>
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
-        <p>Quyidagi Arduino kodi <code>ESP8266WiFi</code> kutubxonasi yordamida Wi-Fi tarmog‘iga ulanib, oddiy HTTP so‘rovini yuboradi:</p>
+        <p>Quyidagi Arduino kodi <code>NswWiFi.h</code> kutubxonasi yordamida Wi-Fi tarmog‘iga ulanib, oddiy HTTP so‘rovini yuboradi:</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -112,30 +116,41 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-#include &lt;ESP8266WiFi.h>
+#include &lt; NswWiFi.h>
 
-const char* ssid = "SIZNING_WIFI_NOMINGIZ"; // Wi-Fi tarmoq nomi
-const char* password = "SIZNING_WIFI_PAROLINGIZ"; // Wi-Fi paroli
+// 📌 Wi-Fi tarmog'ining nomi va paroli
+#define SSID "SizningWiFiTarmog'ingiz"
+#define PAROL "SizningWiFiParolingiz"
+
+// 📌 Wi-Fi modulini PORT_6 ga ulaymiz (TXD, RXD)
+NswWiFi wifi(PORT_6);
 
 void setup() {
-    Serial.begin(115200);
-    WiFi.begin(ssid, password);
-    Serial.print("Wi-Fi ga ulanmoqda");
-    
-    while (WiFi.status() != WL_CONNECTED) {
-        delay(500);
-        Serial.print(".");
+    Serial.begin(9600);
+    wifi.begin(115200); // 📌 Wi-Fi modulining baud rate'ini sozlash
+
+    Serial.println("📡 Wi-Fi ga ulanmoqda...");
+    if (wifi.connectWiFi(SSID, PAROL)) {
+        Serial.println("✅ Wi-Fi ga muvaffaqiyatli ulandi!");
+        Serial.print("🌐 IP manzil: ");
+        Serial.println(wifi.getIP());
+    } else {
+        Serial.println("❌ Ulanish amalga oshmadi!");
     }
-    
-    Serial.println("");
-    Serial.println("Wi-Fi ga ulandi!");
-    Serial.print("IP manzil: ");
-    Serial.println(WiFi.localIP());
 }
 
 void loop() {
-    // Bu yerga qo‘shimcha kod yoziladi (masalan, HTTP so‘rovlari)
+    // 📌 Wi-Fi orqali kelayotgan ma'lumotlarni chiqarish
+    if (wifi.available()) {
+        Serial.write(wifi.read());
+    }
+
+    // 📌 Serial monitor orqali Wi-Fi moduliga ma'lumot yuborish
+    if (Serial.available()) {
+        wifi.write(Serial.read());
+    }
 }
+
             </code></pre>
         </div>
         <p>Ushbu kod ESP8266 modulini Wi-Fi tarmog‘iga ulaydi va IP manzilni Serial monitorda ko‘rsatadi. Qo‘shimcha funksiyalar uchun HTTP yoki MQTT kutubxonalaridan foydalaning.</p>

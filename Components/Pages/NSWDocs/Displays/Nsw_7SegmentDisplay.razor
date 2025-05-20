@@ -15,7 +15,7 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW 7-Segment Displey raqamli ma’lumotlarni ko‘rsatish uchun mo‘ljallangan komponent bo‘lib, oddiy hisoblagichlardan tortib murakkab displey tizimlarigacha ishlatiladi. Ushbu displey loyihalaringizni vizual jihatdan jozibador qiladi.</p>
         <div class="image-container">
-            <img src="images/7Segment.jpg" alt="NSW 7-Segment Displey" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/7Segment.jpg" alt="NSW 7-Segment Displey" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW 7-Segment Displey – raqamli ko‘rsatish uchun ideal</p>
         </div>
     </div>
@@ -26,7 +26,7 @@
             <li>Ishlash kuchlanishi: 5V DC</li>
             <li>Segmentlar soni: 7</li>
             <li>Boshqarish rejimi: raqamli port</li>
-            <li>Modul hajmi: 51×24×18 mm (U×B×H)</li>
+            <li>Modul hajmi: 51×24×18 mm </li>
         </ul>
     </div>
 
@@ -72,8 +72,8 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW 7-Segment Displey qora identifikatorga ega bo‘lgani uchun RJ25 portidan foydalanganda Makeblock Orion’dagi qora identifikatorli portlarga ulanadi. Masalan, №6, №7 yoki №8 portlarga ulashingiz mumkin.</p>
-        <div class="image-container">
+        <p>NSW 7-Segment Displey ko'k rangga ega bo‘lgani uchun RJ25 portidan foydalanganda Boshqarish platasidagi ko'k rangli portlarga ulanadi.</p>
+        @* <div class="image-container">
             <img src="images/nsw_7segment_rj25.jpg" alt="NSW 7-Segment RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
         </div>
@@ -83,13 +83,13 @@
         <div class="image-container">
             <img src="images/nsw_7segment_dupont.jpg" alt="NSW 7-Segment Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduino dasturlash</p>
-        <p>Arduino IDE yordamida NSW 7-Segment Displeyni boshqarish uchun Makeblock-Library-master kutubxonasi talab qilinadi. Quyidagi dastur namunasi displeyda raqamlarni ko‘rsatadi.</p>
+        <p>Arduino IDE yordamida NSW 7-Segment Displeyni boshqarish uchun Nswblock-Libraries kutubxonasi talab qilinadi. Quyidagi dastur namunasi displeyda raqamlarni ko‘rsatadi.</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -98,27 +98,36 @@
             </div>
             <pre class="line-numbers"><code class="language-cpp">
 <text>
-#include &lt;Arduino.h&gt;
-#include &lt;SevSeg.h&gt;
+#include "Nsw7SegmentDisplay.h"
 
-SevSeg sevseg;
+// PORT_4 (CLK=9, DIO=8) portidan foydalanamiz
+Nsw7SegmentDisplay displey(PORT_4);
 
 void setup() {
-    byte numDigits = 4;
-    byte digitPins[] = {2, 3, 4, 5};
-    byte segmentPins[] = {6, 7, 8, 9, 10, 11, 12, 13};
-    bool resistorsOnSegments = false;
-    bool updateWithDelays = false;
-    bool leadingZeros = true;
-    bool disableDecPoint = false;
-
-    sevseg.begin(COMMON_ANODE, numDigits, digitPins, segmentPins, resistorsOnSegments, updateWithDelays, leadingZeros, disableDecPoint);
-    sevseg.setBrightness(90);
+    displey.begin();  // Displeyni ishga tushirish
+    
+    // Birinchi oddiy raqam ko'rsatish
+    displey.displayNumber(2023);  // "2023" ni ko'rsatadi (yil)
+    delay(2000);  // 2 soniya kutib turadi
+    
+    // O'nlik raqam ko'rsatish
+    displey.display(25.5);  // "25.5" ni ko'rsatadi (xona harorati)
+    delay(2000);  // 2 soniya kutib turadi
 }
 
 void loop() {
-    sevseg.setNumber(1234, 1);
-    sevseg.refreshDisplay();
+    // Har 2 soniyada raqamlar almashadi
+    displey.displayNumber(1234);  // "1234" ni ko'rsatadi
+    delay(2000);  // 2 soniya kutib turadi
+    
+    displey.display(98.6);  // "98.6" ni ko'rsatadi (tana harorati)
+    delay(2000);  // 2 soniya kutib turadi
+    
+    displey.display(-12.3);  // "-12.3" ni ko'rsatadi (sovuq harorat)
+    delay(2000);  // 2 soniya kutib turadi
+    
+    displey.clear();  // Displeyni tozalash
+    delay(1000);  // 1 soniya kutib turadi
 }
 </text>
             </code></pre>
@@ -262,7 +271,7 @@ void loop() {
     </div>
 
     <div class="my-5">
-        <h3>Prinsipial tahlil</h3>
+        <h3>Umumiy tahlil</h3>
         <p>NSW 7-Segment Displey raqamli ma’lumotlarni ko‘rsatish uchun yoritilgan segmentlardan foydalanadi. Har bir segment mustaqil ravishda boshqariladi va raqamlarni ko‘rsatish uchun yoqiladi yoki o‘chiriladi. Turli segmentlarning kombinatsiyasi orqali raqamlar va ba’zi belgilar aks ettiriladi.</p>
     </div>
 

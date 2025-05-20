@@ -14,7 +14,7 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW namlik va harorat datchigi atrof-muhitdagi namlik va haroratni o‘lchash uchun mo‘ljallangan. Ushbu datchik havo sifatini monitoring qilish, avtomatlashtirish tizimlari va ta’lim loyihalarida keng qo‘llaniladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
         <div class="image-container">
-            <img src="images/humitureSensor.jpg" alt="NSW namlik va harorat datchigi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/humitureSensor.jpg" alt="NSW namlik va harorat datchigi" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW namlik va harorat datchigi – atrof-muhitni monitoring qilish uchun</p>
         </div>
     </div>
@@ -76,8 +76,8 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW namlik va harorat datchigi ko‘k identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining ko‘k identifikatorli portlariga (masalan, A4 va A5) ulanadi.</p>
-        <div class="image-container">
+        <p>NSW namlik va harorat datchigi sariq rangga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining sariq rangli portlariga ulanadi.</p>
+        @* <div class="image-container">
             <img src="images/nsw_humituresensor_rj25.jpg" alt="Namlik va harorat datchigi RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
         </div>
@@ -87,12 +87,12 @@
         <div class="image-container">
             <img src="images/nsw_humituresensor_dupont.jpg" alt="Namlik va harorat datchigi Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
-        <p>Arduino IDE yordamida NSW namlik va harorat datchigini (masalan, SHT31 asosida) boshqarish uchun <code>Adafruit_SHT31</code> va <code>Wire</code> kutubxonalaridan foydalaniladi. Quyidagi kod harorat va namlik ma’lumotlarini o‘qib, Serial monitorda ko‘rsatadi.</p>
+        <p>Arduino IDE yordamida NSW namlik va harorat datchigini (masalan, SHT31 asosida) boshqarish uchun <code>NswHumitureSensor.h</code> kutubxonalaridan foydalaniladi. Quyidagi kod harorat va namlik ma’lumotlarini o‘qib, Serial monitorda ko‘rsatadi.</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -101,46 +101,37 @@
             </div>
             <pre class="line-numbers"><code class="language-cpp">
 #include &lt;Wire.h>
-#include &lt;Adafruit_Sensor.h>
-#include &lt;Adafruit_SHT31.h>
+#include &lt;NswHumitureSensor.h>  // NswBlock uchun DHT11 harorat va namlik sensor kutubxonasi chaqirilmoqda
 
-Adafruit_SHT31 sht31 = Adafruit_SHT31();
+// 📌 DHT11 sensorini PORT_4 ga ulaymiz (PORT_4 = pin 8 va 9)
+NswHumitureSensor humitureSensor(PORT_4);
 
 void setup() {
-    Serial.begin(9600); // Serial monitorni ishga tushirish
-    if (!sht31.begin(0x44)) { // SHT31 ulanishini tekshirish
-        Serial.println("SHT31 aniqlanmadi! Ulanishni tekshiring.");
-        while (1); // Agar ulanmasa, dastur to‘xtaydi
-    }
-    Serial.println("SHT31 muvaffaqiyatli ulandi!");
+    Serial.begin(9600);  // 📌 Seriyali monitorni 9600 baud tezlikda ishga tushiramiz
+    Serial.println("DHT11 Sensor Test boshlandi...");  
 }
 
 void loop() {
-    float temp = sht31.readTemperature(); // Haroratni o‘qish
-    float hum = sht31.readHumidity(); // Namlikni o‘qish
+    float temperature = humitureSensor.getTemperature();  // 📌 Haroratni o‘qib olish (°C)
+    float humidity = humitureSensor.getHumidity();        // 📌 Namlikni o‘qib olish (%)
 
-    if (!isnan(temp)) { // Harorat ma’lumotini tekshirish
-        Serial.print("Harorat: ");
-        Serial.print(temp);
-        Serial.print(" °C");
-    } else {
-        Serial.println("Harorat o‘qishda xatolik!");
-    }
+    // 📌 Haroratni chiqaramiz
+    Serial.print("Harorat: ");
+    Serial.print(temperature);
+    Serial.println(" °C");
 
-    if (!isnan(hum)) { // Namlik ma’lumotini tekshirish
-        Serial.print("  Namlik: ");
-        Serial.print(hum);
-        Serial.println(" %");
-    } else {
-        Serial.println("Namlik o‘qishda xatolik!");
-    }
+    // 📌 Namlikni chiqaramiz
+    Serial.print("Namlik: ");
+    Serial.print(humidity);
+    Serial.println(" %");
 
-    delay(1000); // 1 soniya kutish
+    Serial.println("--------------------------");  // 📌 Chiziq qo‘shib, natijalarni ajratamiz
+    delay(2000);  // 📌 Har 2 soniyada natijalarni yangilab turamiz
 }
+
             </code></pre>
         </div>
 
-        <p>Eslatma: Kodni ishlatishdan oldin <code>Adafruit_SHT31</code>, <code>Adafruit_Sensor</code> va <code>Wire</code> kutubxonalarini Arduino IDE’ga o‘rnatish kerak.</p>
         
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>

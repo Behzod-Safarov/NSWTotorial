@@ -87,23 +87,23 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW rang datchigi ko‘k identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining ko‘k identifikatorli portlariga (masalan, A0 yoki A1) ulanadi.</p>
-        <div class="image-container">
+        <p>NSW rang datchigi oq rangga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining oq rangli portlariga ulanadi.</p>
+        @* <div class="image-container">
             <img src="images/nsw_colorsensor_rj25.jpg" alt="Rang datchigi RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
 
-        <p>● Dupont simi bilan ulanish</p>
+        @* <p>● Dupont simi bilan ulanish</p>
         <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda OUT pini raqamli pinga (masalan, D8) ulanadi.</p>
         <div class="image-container">
             <img src="images/nsw_colorsensor_dupont.jpg" alt="Rang datchigi Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
-        <p>Arduino IDE yordamida NSW rang datchigini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi. Quyidagi kod RGB ranglarini o‘qib, Serial monitorda ko‘rsatadi.</p>
+        <p>Arduino IDE yordamida NSW rang datchigini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi ammo <code>NswColorSensor.h</code> kutubxonasi orqali soddaroq kod yozish mumkin. Quyidagi kod RGB ranglarini o‘qib, Serial monitorda ko‘rsatadi.</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -111,54 +111,73 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-const int S0 = 4; // Chastota tanlash pini 0
-const int S1 = 5; // Chastota tanlash pini 1
-const int S2 = 6; // Filtr tanlash pini 0
-const int S3 = 7; // Filtr tanlash pini 1
-const int sensorOut = 8; // Signal chiqish pini
+/* 📌 Kutubxonalarni chaqiramiz */
+#include "NswColorSensor.h"
 
-int redFrequency = 0;
-int greenFrequency = 0;
-int blueFrequency = 0;
+// 📌 Rang sensorini standart I2C adres bilan ishga tushiramiz (0x38)
+NswColorSensor colorSensor;
 
 void setup() {
-    pinMode(S0, OUTPUT);
-    pinMode(S1, OUTPUT);
-    pinMode(S2, OUTPUT);
-    pinMode(S3, OUTPUT);
-    pinMode(sensorOut, INPUT);
+  Serial.begin(9600);  // 📌 Serial portni ishga tushiramiz
+  delay(1000);         // 📌 Sensor ishga tushishi uchun kutish
 
-    // Chastota sozlamasi: 20% chastota
-    digitalWrite(S0, HIGH);
-    digitalWrite(S1, LOW);
+  colorSensor.begin(); // 📌 Sensor ishga tushiriladi
 
-    Serial.begin(9600);
+  Serial.print("Sensor ID: 0x");
+  Serial.println(colorSensor.reportId(), HEX);
+  Serial.println("Color Sensor Ishga Tushdi!");
 }
 
 void loop() {
-    // Qizil rangni o‘lchash
-    digitalWrite(S2, LOW);
-    digitalWrite(S3, LOW);
-    redFrequency = pulseIn(sensorOut, LOW);
-    Serial.print("Qizil: ");
-    Serial.print(redFrequency);
+  // 📌 Rang ma'lumotlarini o‘qib olamiz
+  colorSensor.readColorData();
 
-    // Yashil rangni o‘lchash
-    digitalWrite(S2, HIGH);
-    digitalWrite(S3, HIGH);
-    greenFrequency = pulseIn(sensorOut, LOW);
-    Serial.print("  Yashil: ");
-    Serial.print(greenFrequency);
+  // 📌 RGB va Clear (yorug‘lik darajasi) qiymatlarini chiqaramiz
+  Serial.print("Raw Red: "); Serial.print(colorSensor.getRedData());
+  Serial.print(" | Green: "); Serial.print(colorSensor.getGreenData());
+  Serial.print(" | Blue: "); Serial.print(colorSensor.getBlueData());
+  Serial.print(" | Clear: "); Serial.println(colorSensor.getClearData());
 
-    // Ko‘k rangni o‘lchash
-    digitalWrite(S2, LOW);
-    digitalWrite(S3, HIGH);
-    blueFrequency = pulseIn(sensorOut, LOW);
-    Serial.print("  Ko‘k: ");
-    Serial.println(blueFrequency);
+  // 📌 Sensor tomonidan aniqlangan rangni chiqaramiz
+  uint8_t color = colorSensor.identifyColor();
+  Serial.print("Aniqlangan rang (identifyColor): ");
+  switch (color) {
+    case NSW_WHITE:  Serial.println("Oq (White)"); break;
+    case NSW_PINKE:  Serial.println("Pushti (Pink)"); break;
+    case NSW_RED:    Serial.println("Qizil (Red)"); break;
+    case NSW_ORANGE: Serial.println("To‘q sariq (Orange)"); break;
+    case NSW_YELLOW: Serial.println("Sariq (Yellow)"); break;
+    case NSW_GREEN:  Serial.println("Yashil (Green)"); break;
+    case NSW_CYAN:   Serial.println("Ko‘kimtir (Cyan)"); break;
+    case NSW_BLUE:   Serial.println("Ko‘k (Blue)"); break;
+    case NSW_PURPLE: Serial.println("Binafsha (Purple)"); break;
+    case NSW_BLACK:  Serial.println("Qora (Black)"); break;
+    case NSW_GOLD:   Serial.println("Tilla (Gold)"); break;
+    default:         Serial.println("Noma'lum rang"); break;
+  }
 
-    delay(1000); // 1 soniya kutish
+  // 📌 getResult() bilan aniqlangan rangni chiqaramiz
+  uint8_t result = colorSensor.getResult();
+  Serial.print("Aniqlangan rang (getResult): ");
+  switch (result) {
+    case NSW_WHITE:  Serial.println("Oq (White)"); break;
+    case NSW_PINKE:  Serial.println("Pushti (Pink)"); break;
+    case NSW_RED:    Serial.println("Qizil (Red)"); break;
+    case NSW_ORANGE: Serial.println("To‘q sariq (Orange)"); break;
+    case NSW_YELLOW: Serial.println("Sariq (Yellow)"); break;
+    case NSW_GREEN:  Serial.println("Yashil (Green)"); break;
+    case NSW_CYAN:   Serial.println("Ko‘kimtir (Cyan)"); break;
+    case NSW_BLUE:   Serial.println("Ko‘k (Blue)"); break;
+    case NSW_PURPLE: Serial.println("Binafsha (Purple)"); break;
+    case NSW_BLACK:  Serial.println("Qora (Black)"); break;
+    case NSW_GOLD:   Serial.println("Tilla (Gold)"); break;
+    default:         Serial.println("Noma'lum rang"); break;
+  }
+
+  Serial.println("---");
+  delay(1000);  // 📌 Keyingi o‘lchovga tayyorgarlik
 }
+
             </code></pre>
         </div>
 

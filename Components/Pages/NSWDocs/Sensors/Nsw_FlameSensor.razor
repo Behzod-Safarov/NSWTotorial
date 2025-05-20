@@ -14,7 +14,7 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW olov datchigi olov va infraqizil nurlarni aniqlash uchun mo‘ljallangan. Ushbu datchik olov xavfsizligi tizimlari, robototexnika va ta’lim loyihalarida keng qo‘llaniladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
         <div class="image-container">
-            <img src="images/nsw_flamesensor.jpg" alt="NSW olov datchigi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="images/nsw_flamesensor.jpg" alt="NSW olov datchigi" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW olov datchigi – olovni aniqlash uchun</p>
         </div>
     </div>
@@ -75,8 +75,8 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW olov datchigi ko‘k identifikatorga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining ko‘k identifikatorli portlariga (masalan, A0 yoki A1) ulanadi.</p>
-        <div class="image-container">
+        <p>NSW olov datchigi qora rangga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining qora rangli portlariga ulanadi.</p>
+        @* <div class="image-container">
             <img src="images/nsw_flamesensor_rj25.jpg" alt="Olov datchigi RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
         </div>
@@ -86,12 +86,12 @@
         <div class="image-container">
             <img src="images/nsw_flamesensor_dupont.jpg" alt="Olov datchigi Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
-        <p>Arduino IDE yordamida NSW olov datchigini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi. Quyidagi kod olov aniqlanganda buzzer orqali ogohlantirish beradi.</p>
+        <p>Arduino IDE yordamida NSW olov datchigini boshqarish uchun qo‘shimcha kutubxonalar talab qilinmaydi ammo <code>NswFlameSensor.h</code> kutubxonasi orqali soddaroq kod yozish mumkin. Quyidagi kod olov aniqlanganda buzzer orqali ogohlantirish beradi.</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -99,27 +99,46 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-const int flamePin = A0; // Olov datchigi analog chiqishi
-const int buzzerPin = 9; // Buzzer chiqish pini
+#include "NswFlameSensor.h"
+
+// Olov sensori PORT_1 da ishga tushiriladi (pin1 = 2, pin2 = 3)
+// Bu yerda sensorning analog signali pin2 (3) va raqamli signali pin1 (2) ga ulanadi
+NswFlameSensor olov(PORT_1);
 
 void setup() {
-    pinMode(flamePin, INPUT); // Analog pinni kirish sifatida sozlash
-    pinMode(buzzerPin, OUTPUT); // Buzzer pinni chiqish sifatida sozlash
-    Serial.begin(9600); // Serial monitorni ishga tushirish
+  // Serial aloqani boshlash, tezligi 9600 baud
+  // Bu kompyuter bilan ma'lumot almashish uchun ishlatiladi
+  Serial.begin(9600);
+
+  // Olov sensorini ishga tushirish
+  // Pinlarni kirish sifatida sozlaydi (analog va raqamli)
+  olov.begin();
 }
 
 void loop() {
-    int flameValue = analogRead(flamePin); // Analog qiymatni o‘qish
-    Serial.print("Olov intensivligi: ");
-    Serial.println(flameValue);
-    
-    if (flameValue > 100) { // Olov aniqlanganda
-        digitalWrite(buzzerPin, HIGH); // Buzzer yoqiladi
-    } else {
-        digitalWrite(buzzerPin, LOW); // Buzzer o‘chiriladi
-    }
-    
-    delay(1000); // 1 soniya kutish
+  // Analog qiymatni o'qish (0-1023 oralig'ida)
+  // Bu olovning intensivligini ko'rsatadi, yaqinroq olov kichikroq qiymat beradi
+  int analogQiymat = olov.readAnalog();
+
+  // Raqamli qiymatni o'qish (true yoki false)
+  // True - olov bor (pin1 LOW), False - olov yo'q (pin1 HIGH)
+  bool raqamliQiymat = olov.readDigital();
+
+  // Olov aniqlanganligini tekshirish, chegarasi 500
+  // Agar analog qiymat 500 dan kichik bo'lsa, olov bor deb hisoblanadi
+  bool olovAniqlandi = olov.isFlameDetected(500);
+
+  // Natijalarni Serial Monitor ga chiqarish
+  Serial.print("Analog: ");          // "Analog:" so'zini chiqaradi
+  Serial.print(analogQiymat);        // Analog qiymatni chiqaradi
+  Serial.print("  Raqamli: ");       // "Raqamli:" so'zini chiqaradi
+  Serial.print(raqamliQiymat ? "Olov" : "Olov yo'q");  // Olov bor yoki yo'qligini ko'rsatadi
+  Serial.print("  Aniqlangan: ");    // "Aniqlangan:" so'zini chiqaradi
+  Serial.println(olovAniqlandi ? "Ha" : "Yo'q");       // Ha yoki Yo'q chiqaradi
+
+  // 1 soniya kutish (1000 millisekund)
+  // Har bir o'qishdan keyin yangi ma'lumot olish uchun pauza
+  delay(1000);
 }
             </code></pre>
         </div>

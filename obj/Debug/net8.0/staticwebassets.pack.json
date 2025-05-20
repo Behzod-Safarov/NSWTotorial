@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\Images\\greenLED.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\humitureSensor.jpg",
+      "PackagePath": "staticwebassets\\Images\\humitureSensor.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\image.png",
       "PackagePath": "staticwebassets\\Images\\image.png"
     },
@@ -193,6 +197,10 @@
       "PackagePath": "staticwebassets\\Images\\nsw_soundsensor.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\nsw_wifi.jpg",
+      "PackagePath": "staticwebassets\\Images\\nsw_wifi.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\nswmain.jpg",
       "PackagePath": "staticwebassets\\Images\\nswmain.jpg"
     },
@@ -205,8 +213,16 @@
       "PackagePath": "staticwebassets\\Images\\productmanager.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\receiver.jpg",
+      "PackagePath": "staticwebassets\\Images\\receiver.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\redLED.jpg",
       "PackagePath": "staticwebassets\\Images\\redLED.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\remote.jpg",
+      "PackagePath": "staticwebassets\\Images\\remote.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\rgbLED.jpg",
@@ -217,12 +233,36 @@
       "PackagePath": "staticwebassets\\Images\\rgb_LED.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\sound.jpg",
+      "PackagePath": "staticwebassets\\Images\\sound.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\starter-kit.jpg",
       "PackagePath": "staticwebassets\\Images\\starter-kit.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\timerModule.jpg",
+      "PackagePath": "staticwebassets\\Images\\timerModule.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\touch.jpg",
+      "PackagePath": "staticwebassets\\Images\\touch.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\touchSensor.jpg",
+      "PackagePath": "staticwebassets\\Images\\touchSensor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\ultrasonic.jpg",
+      "PackagePath": "staticwebassets\\Images\\ultrasonic.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\ulugbek.jpg",
       "PackagePath": "staticwebassets\\Images\\ulugbek.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\Images\\yellowLED.jpg",
+      "PackagePath": "staticwebassets\\Images\\yellowLED.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Develeoper Tools\\Shaxsiy\\NSWTotorial\\wwwroot\\app.css",
