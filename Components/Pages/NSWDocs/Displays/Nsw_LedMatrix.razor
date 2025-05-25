@@ -15,7 +15,7 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW LED Matrix Moduli 8×16 matritsada joylashgan LED chiroqlardan iborat bo‘lib, grafikalar, matnlar va animatsiyalarni ko‘rsatish uchun mo‘ljallangan. Ushbu modul robototexnika, displey tizimlari va turli loyihalarda keng qo‘llaniladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
         <div class="image-container">
-            <img src="images/nsw_ledmatrix1.jpg" alt="NSW LED Matrix Moduli" class="img-fluid rounded shadow my-3" style="max-width: 200px;" loading="lazy">
+            <img src="Images/nsw_ledmatrix1.jpg" alt="NSW LED Matrix Moduli" class="img-fluid rounded shadow my-3" style="max-width: 200px;" loading="lazy">
             <p class="image-caption">NSW LED Matrix Moduli – yorqin grafik ko‘rsatish</p>
         </div>
     </div>
@@ -55,7 +55,7 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy quvvat (yer)</td>
+                    <td>Manfiy quvvat</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
@@ -64,10 +64,6 @@
                 <tr>
                     <td>DIN</td>
                     <td>Ma’lumot kiritish</td>
-                </tr>
-                <tr>
-                    <td>CS</td>
-                    <td>Chip tanlash</td>
                 </tr>
                 <tr>
                     <td>CLK</td>
@@ -82,14 +78,14 @@
         <p>● RJ25 bilan ulanish</p>
         <p>NSW LED Matrix Moduli RJ25 porti orqali ulanadi. Boshqarish platasidagi RJ25 portidan foydalanganda, uni ko'k rangli portga ulashingiz kerak.</p>
         @* <div class="image-container">
-            <img src="images/nsw_ledmatrix_rj25.jpg" alt="NSW LED Matrix RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="Images/nsw_ledmatrix_rj25.jpg" alt="NSW LED Matrix RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
         </div>
 
         <p>● Dupont simi bilan ulanish</p>
         <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda DIN, CS va CLK pinlarini raqamli pinlarga ulash lozim.</p>
         <div class="image-container">
-            <img src="images/nsw_ledmatrix_dupont.jpg" alt="NSW LED Matrix Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="Images/nsw_ledmatrix_dupont.jpg" alt="NSW LED Matrix Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
         </div> *@
     </div>
@@ -97,8 +93,12 @@
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduino dasturlash</p>
-        <p>Arduino IDE yordamida NSW LED Matrix Modulini boshqarish uchun Nswblock-Libraries kutubxonasi ishlatiladi. Quyidagi dasturdan namuna sifatida foydalanish mumkin</p>
-        
+        <p>
+            Arduino IDE yordamida NSW LED Matrix Modulini boshqarish uchun 
+            <a href="https://github.com/Behzod-Safarov/Nswblock-Libraries" target="_blank">Nswblock-Libraries</a> 
+            kutubxonasi ishlatiladi. Quyidagi dasturdan namuna sifatida foydalanish mumkin.
+        </p>
+
         <div class="code-container">
             <div class="code-header">
                 <span>Arduino dastur namunasi</span>
@@ -273,7 +273,7 @@ void loop() {
 
     <div class="my-5">
         <h3>Umumiy tahlil</h3>
-        <p>NSW LED Matrix Moduli 8×16 LED matritsadan iborat bo‘lib, grafikalar, matnlar va animatsiyalarni ko‘rsatishga mo‘ljallangan. DIN, CS va CLK pinlari orqali ma’lumot uzatiladi, bu esa har bir LEDni mustaqil ravishda boshqarish imkonini beradi.</p>
+        <p>NSW LED Matrix Moduli 8×16 LED matritsadan iborat bo‘lib, grafikalar, matnlar va animatsiyalarni ko‘rsatishga mo‘ljallangan. DIN va CLK pinlari orqali ma’lumot uzatiladi, bu esa har bir LEDni mustaqil ravishda boshqarish imkonini beradi.</p>
     </div>
 
     <div class="text-center my-5">

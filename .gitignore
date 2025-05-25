@@ -1,0 +1,29 @@
+# Arduino build files
+*.hex
+*.elf
+*.eep
+*.bin
+*.d
+*.o
+*.a
+*.lst
+*.map
+
+# Arduino specific folders
+build/
+*.cpp.d
+
+# Mac and Linux hidden files
+.DS_Store
+._*
+
+# Windows thumbnail cache
+Thumbs.db
+
+# VS Code folder (if using)
+.vscode/
+
+# Backup files
+*~
+*.swp
+*.bak

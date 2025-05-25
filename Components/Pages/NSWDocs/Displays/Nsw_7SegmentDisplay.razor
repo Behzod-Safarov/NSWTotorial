@@ -15,7 +15,7 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW 7-Segment Displey raqamli ma’lumotlarni ko‘rsatish uchun mo‘ljallangan komponent bo‘lib, oddiy hisoblagichlardan tortib murakkab displey tizimlarigacha ishlatiladi. Ushbu displey loyihalaringizni vizual jihatdan jozibador qiladi.</p>
         <div class="image-container">
-            <img src="images/7Segment.jpg" alt="NSW 7-Segment Displey" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
+            <img src="Images/7Segment.jpg" alt="NSW 7-Segment Displey" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW 7-Segment Displey – raqamli ko‘rsatish uchun ideal</p>
         </div>
     </div>
@@ -55,15 +55,19 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy quvvat (yer)</td>
+                    <td>Manfiy quvvat </td>
                 </tr>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvat manbai (5V)</td>
+                    <td>Quvvat manbai (odatda 5V yoki 3.3V)</td>
                 </tr>
                 <tr>
-                    <td>Signal</td>
-                    <td>Raqamli ma’lumotlarni uzatish</td>
+                    <td>CLK</td>
+                    <td>Soat signali (Clock) – ma’lumotlar uzatishda sinxronlashtirish uchun ishlatiladi</td>
+                </tr>
+                <tr>
+                    <td>DIO</td>
+                    <td>Ma’lumot kirish/chiqish (Data In/Out) – ma’lumot almashish uchun ishlatiladi</td>
                 </tr>
             </tbody>
         </table>
@@ -74,14 +78,14 @@
         <p>● RJ25 bilan ulanish</p>
         <p>NSW 7-Segment Displey ko'k rangga ega bo‘lgani uchun RJ25 portidan foydalanganda Boshqarish platasidagi ko'k rangli portlarga ulanadi.</p>
         @* <div class="image-container">
-            <img src="images/nsw_7segment_rj25.jpg" alt="NSW 7-Segment RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="Images/nsw_7segment_rj25.jpg" alt="NSW 7-Segment RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
         </div>
 
         <p>● Dupont simi bilan ulanish</p>
         <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda signal pinini analog piniga ulash lozim.</p>
         <div class="image-container">
-            <img src="images/nsw_7segment_dupont.jpg" alt="NSW 7-Segment Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="Images/nsw_7segment_dupont.jpg" alt="NSW 7-Segment Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
         </div> *@
     </div>
@@ -89,8 +93,12 @@
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduino dasturlash</p>
-        <p>Arduino IDE yordamida NSW 7-Segment Displeyni boshqarish uchun Nswblock-Libraries kutubxonasi talab qilinadi. Quyidagi dastur namunasi displeyda raqamlarni ko‘rsatadi.</p>
-        
+        <p>
+            Arduino IDE yordamida NSW 7-Segment Displeyni boshqarish uchun 
+            <a href="https://github.com/Behzod-Safarov/Nswblock-Libraries" target="_blank">Nswblock-Libraries</a> 
+            kutubxonasi talab qilinadi. Quyidagi dastur namunasi displeyda raqamlarni ko‘rsatadi.
+        </p>
+
         <div class="code-container">
             <div class="code-header">
                 <span>Arduino dastur namunasi</span>

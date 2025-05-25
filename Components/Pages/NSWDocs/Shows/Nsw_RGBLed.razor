@@ -14,7 +14,7 @@
         <h2>Umumiy ma’lumot</h2>
         <p>NSW RGB LED Moduli turli ranglarni yaratish uchun mo‘ljallangan bo‘lib, robototexnika, avtomatlashtirish tizimlari va boshqa loyihalarda keng qo‘llaniladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
         <div class="image-container">
-            <img src="images/rgbLED.jpg" alt="NSW RGB LED Moduli" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="Images/rgbLED.jpg" alt="NSW RGB LED Moduli" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW RGB LED Moduli – rang-barang yoritish</p>
         </div>
     </div>
@@ -25,7 +25,7 @@
             <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
             <li>RGB ranglarini yaratish imkoniyati</li>
             <li>PWM chiqishi uchun mos</li>
-            <li>Modul hajmi: 30×20×10 mm (U×B×H)</li>
+            <li>Modul hajmi: 30×20×10 mm</li>
         </ul>
     </div>
 
@@ -54,7 +54,7 @@
             <tbody>
                 <tr>
                     <td>GND</td>
-                    <td>Manfiy quvvat (yer)</td>
+                    <td>Manfiy manba</td>
                 </tr>
                 <tr>
                     <td>VCC</td>
@@ -79,17 +79,17 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW RGB LED Moduli RJ25 porti orqali ulanadi. Boshqaruv platasida RJ25 portidan foydalanganda, uni mos portga ulashingiz kerak.</p>
-        <div class="image-container">
-            <img src="images/nsw_rgbled_rj25.jpg" alt="NSW RGB LED RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+        <p>NSW RGB LED Moduli RJ25 porti orqali ulanadi. Boshqaruv platasida RJ25 portidan foydalanganda, uni sariq rangli portga ulashingiz kerak.</p>
+        @* <div class="image-container">
+            <img src="Images/nsw_rgbled_rj25.jpg" alt="NSW RGB LED RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
-        </div>
+        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
         <p>Arduino dasturlash</p>
-        <p>Arduino IDE yordamida NSW RGB LED Modulini boshqarish uchun quyidagi dastur namunasi ishlatilishi mumkin. Ushbu kod qizil, yashil va ko‘k ranglarni ketma-ket yoqadi.</p>
+        <p>Arduino IDE yordamida NSW RGB LED Modulini boshqarish uchun quyidagi dastur namunasi ishlatilishi mumkin.</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -97,30 +97,50 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-// Arduino dastur kodi
-const int redPin = 9;
-const int greenPin = 10;
-const int bluePin = 11;
+#include "NswRGBLed.h"
+
+// PORT_4 (pin2=9) bilan 4 ta LED ishlatamiz (avtomatik)
+NswRGBLed led(PORT_4);  // LED soni kiritish shart emas
 
 void setup() {
-    pinMode(redPin, OUTPUT);
-    pinMode(greenPin, OUTPUT);
-    pinMode(bluePin, OUTPUT);
+    led.begin();  // LEDlarni ishga tushiramiz
+    
+    // Har bir LEDni birma-bir sinab ko'ramiz
+    led.clear();
+    led.setColor(0, 255, 0, 0);  // 1-LED qizil
+    led.setColor(1, 0, 255, 0);  // 2-LED yashil
+    led.setColor(2, 0, 0, 255);  // 3-LED ko'k
+    led.setColor(3, 255, 255, 0);  // 4-LED sariq
+    led.show();
+    delay(2000);  // 2 soniya kutamiz
 }
 
 void loop() {
-    setColor(255, 0, 0); // Qizil
+    // Har bir LEDni navbat bilan yoqamiz
+    led.clear();
+    led.setColor(0, 255, 0, 0);  // Faqat 1-LED qizil
+    led.show();
     delay(1000);
-    setColor(0, 255, 0); // Yashil
+    
+    led.clear();
+    led.setColor(1, 0, 255, 0);  // Faqat 2-LED yashil
+    led.show();
     delay(1000);
-    setColor(0, 0, 255); // Ko'k
+    
+    led.clear();
+    led.setColor(2, 0, 0, 255);  // Faqat 3-LED ko'k
+    led.show();
     delay(1000);
-}
-
-void setColor(int red, int green, int blue) {
-    analogWrite(redPin, red);
-    analogWrite(greenPin, green);
-    analogWrite(bluePin, blue);
+    
+    led.clear();
+    led.setColor(3, 255, 255, 0);  // Faqat 4-LED sariq
+    led.show();
+    delay(1000);
+    
+    // Hamma LEDlarni oq qilamiz
+    led.setColor(255, 255, 255);  // Oq rang
+    led.show();
+    delay(2000);
 }
             </code></pre>
         </div>

@@ -12,7 +12,7 @@
 
     <div class="my-5">
         <h2>Umumiy ma’lumot</h2>
-        <p>NSW ultrasonik sensor masofani o‘lchash uchun mo‘ljallangan bo‘lib, 2 sm dan 400 sm gacha masofalarni aniqlay oladi. Sensor sariq rangga ega bo‘lib, NSW boshqaruv platasining sariq (raqamli) portlariga ulanadi. Ultrasonik to‘lqinlar yordamida masofani o‘lchaydi, bu uni robototexnika, to‘siqlardan qochish va masofa monitoringi uchun ideal qiladi. Modulda transmitter (T) va qabul qiluvchi (R) mavjud bo‘lib, 40 kHz chastotali to‘lqinlar ishlatiladi.</p>
+        <p>NSW ultrasonik sensor masofani o‘lchash uchun mo‘ljallangan bo‘lib, 2 sm dan 400 sm gacha masofalarni aniqlay oladi. Sensor sariq rangga ega bo‘lib, NSW boshqaruv platasining sariq (raqamli) portlariga ulanadi. Ultrasonik to‘lqinlar yordamida masofani o‘lchaydi, bu uni robototexnika, to‘siqlardan qochish va masofa monitoringi uchun ideal qiladi. Modulda transmitter (T)  to'lqin tarqatuvchi va shu to'lqinni qabul qiluvchi resever (R) mavjud bo‘lib, 40 kHz chastotali to‘lqinlar tarqatiladi.</p>
         <div class="image-container">
             <img src="images/ultrasonic.jpg" alt="NSW ultrasonik sensor" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW ultrasonik sensor – masofa o‘lchash uchun</p>
@@ -39,7 +39,7 @@
         <p>NSW ultrasonik sensor quyidagi loyihalarda qo‘llaniladi:</p>
         <ul>
             <li>Robototexnikada to‘siqlardan qochish</li>
-            <li>Masofa o‘lchash va park radarlari</li>
+            <li>Masofa o‘lchash va yo'l radarlari</li>
             <li>Ta’lim loyihalari</li>
             <li>Sath monitoringi</li>
             <li>Avtomatik eshik tizimlari</li>
@@ -48,7 +48,7 @@
 
     <div class="my-5">
         <h2>Pin ta’rifi</h2>
-        <p>NSW ultrasonik sensor odatda uchta pin (VCC, GND, SIG) yoki to‘rtta pin (VCC, GND, TRIG, ECHO) ga ega:</p>
+        <p>NSW ultrasonik sensor odatda uchta pin (VCC, GND, SIG) yoki to‘rtta pin (VCC, GND, TRIG) ga ega:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -66,8 +66,8 @@
                     <td>Quvvat manbai (5V)</td>
                 </tr>
                 <tr>
-                    <td>SIG (yoki TRIG/ECHO)</td>
-                    <td>Raqamli signal (Trigger va Echo)</td>
+                    <td>SIG (yoki TRIG)</td>
+                    <td>Raqamli signal (Trigger)</td>
                 </tr>
                 <tr>
                     <td>ECHO (agar alohida bo‘lsa)</td>
@@ -154,7 +154,7 @@ void loop() {
 
     <div class="my-5">
         <h2>Umumiy tahlil</h2>
-        <p>NSW ultrasonik sensor sonar printsipiga asoslanadi. Transmitter 40 kHz to‘lqinlarni yuboradi, to‘siqdan qaytgan aks sado qabul qiluvchi tomonidan aniqlanadi. Impuls uzunligi masofani hisoblash uchun ishlatiladi: <code>masofa = (tovush tezligi × vaqt) / 2</code>. Sensorning aniqligi akustik shovqin yoki yumshoq materiallardan ta’sirlanishi mumkin.</p>
+        <p>NSW ultrasonik sensor tovush to‘lqinlari orqali atrofdagi obyektlar joylashuvini aniqlashga asoslangan texnologiyadir. Transmitter 40 kHz to‘lqinlarni yuboradi, to‘siqdan qaytgan aks sado qabul qiluvchi tomonidan aniqlanadi. Impuls uzunligi masofani hisoblash uchun ishlatiladi: <code>masofa = (tovush tezligi × vaqt) / 2</code>. Sensorning aniqligi akustik shovqin yoki yumshoq materiallardan ta’sirlanishi mumkin.</p>
     </div>
 
     <div class="text-center my-5">

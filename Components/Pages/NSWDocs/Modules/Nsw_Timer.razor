@@ -8,45 +8,44 @@
 
 <div class="container mt-5">
     <h1 class="display-4 text-center">NSW Taymer moduli</h1>
-    <p class="lead text-center">Vaqtni aniq o‘lchash, taymer va sanash funksiyalari uchun NSW taymer modulidan foydalaning</p>
+    <p class="lead text-center">Vaqtni aniq o‘lchash va real vaqt soati (RTC) funksiyalari uchun NSW taymer modulidan foydalaning</p>
 
     <div class="my-5">
         <h2>Umumiy ma’lumot</h2>
-        <p>NSW taymer moduli vaqtni o‘lchash, soniya sanash va taymer funksiyalarini bajarish uchun mo‘ljallangan. Ushbu modul yordamida foydalanuvchi belgilangan vaqtdan keyin LEDni yoqish, signal chiqarish yoki boshqa harakatlarni amalga oshirishi mumkin. Modulda odatda raqamli displey va tugmalar mavjud bo‘lib, u real vaqtda taymer sifatida ishlaydi.</p>
+        <p>NSW taymer moduli real vaqt soati (RTC) sifatida ishlaydi va vaqtni o‘lchash, sana va vaqtni saqlash hamda taymer funksiyalarini bajarish uchun mo‘ljallangan. Ushbu modul yordamida foydalanuvchi belgilangan vaqtdan keyin LEDni yoqish, signal chiqarish yoki boshqa harakatlarni amalga oshirishi mumkin. Modul odatda DS3231 yoki shunga o‘xshash RTC chipi asosida ishlaydi va I2C interfeysi orqali boshqariladi.</p>
         <div class="image-container">
-            <img src="images/timerModule.jpg" alt="NSW taymer moduli" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
-            <p class="image-caption">NSW taymer moduli – vaqtni tahlil qilish uchun</p>
+            <img src="Images/timerModule.jpg" alt="NSW taymer moduli" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
+            <p class="image-caption">NSW taymer moduli – real vaqtni tahlil qilish uchun</p>
         </div>
     </div>
 
     <div class="my-5">
         <h2>Asosiy xususiyatlar</h2>
         <ul>
-            <li>Ishlash kuchlanishi: 5V DC</li>
-            <li>Displey: 4 raqamli 7-segment (ko‘pincha TM1637 asosida)</li>
-            <li>Interfeys: Raqamli pinlar (CLK, DIO)</li>
-            <li>Taymer funksiyasi: Oldinga yoki orqaga sanash</li>
+            <li>Ishlash kuchlanishi: 5V DC (yoki 3.3V, chipga qarab)</li>
+            <li>Interfeys: I2C (SDA, SCL)</li>
+            <li>Taymer funksiyasi: Real vaqt soati va budilnik sozlamalari</li>
+            <li>Batareya zaxirasi: Vaqtni saqlash uchun CR2032 batareyasi</li>
             <li>Qo‘llab-quvvatlash: LED yoki signal chiqaruvchi qurilmalarni boshqarish</li>
-            <li>Modul hajmi: Taxminan 42×24 mm</li>
+            <li>Modul hajmi: Taxminan 38×22 mm</li>
         </ul>
-        <p>Eslatma: Moduldan samarali foydalanish uchun <code>TM1637Display</code> kutubxonasidan foydalaning.</p>
     </div>
 
     <div class="my-5">
         <h2>Ilovalar</h2>
         <p>NSW taymer moduli quyidagi sohalarda qo‘llaniladi:</p>
         <ul>
-            <li>Orqaga sanovchi taymer (countdown timer)</li>
-            <li>Sport o‘yinlari uchun vaqtni boshqarish</li>
+            <li>Real vaqt soati sifatida ishlatish</li>
+            <li>Budilnik tizimlari</li>
             <li>Signallarni vaqt bo‘yicha faollashtirish</li>
-            <li>LED yoritish tizimlarida vaqt asosida boshqaruv</li>
-            <li>Dars vaqti yoki tanaffusni hisoblash tizimlari</li>
+            <li>Ma’lumotlarni vaqt asosida yozib olish (datalogging)</li>
+            <li>Avtomatlashtirish loyihalarida vaqtni boshqarish</li>
         </ul>
     </div>
 
     <div class="my-5">
         <h2>Pin ta’rifi</h2>
-        <p>Taymer modulining ulanish pinlari (TM1637 asosidagi versiya uchun):</p>
+        <p>Taymer modulining ulanish pinlari (DS3231 asosidagi versiya uchun):</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -57,18 +56,18 @@
             <tbody>
                 <tr>
                     <td>VCC</td>
-                    <td>Quvvat manbai (5V)</td>
+                    <td>Quvvat manbai (5V yoki 3.3V)</td>
                 </tr>
                 <tr>
                     <td>GND</td>
                     <td>Manfiy quvvat (yer)</td>
                 </tr>
                 <tr>
-                    <td>DIO</td>
+                    <td>SDA</td>
                     <td>Ma’lumot liniyasi (Data)</td>
                 </tr>
                 <tr>
-                    <td>CLK</td>
+                    <td>SCL</td>
                     <td>Soat liniyasi (Clock)</td>
                 </tr>
             </tbody>
@@ -79,29 +78,13 @@
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
         <p>NSW Taymer Moduli qora rangga ega bo‘lib, RJ25 porti orqali NSW Boshqaruv platasining qora rangli analog portlariga ulanadi.</p>
-
-        
-        @* <p>Modulni Arduino platasiga ulash uchun quyidagi pinlardan foydalaniladi:</p>
-        <ul>
-            <li><b>VCC</b> → 5V</li>
-            <li><b>GND</b> → GND</li>
-            <li><b>DIO</b> → D2</li>
-            <li><b>CLK</b> → D3</li>
-        </ul> *@
-        @* <div class="image-container">
-            <img src="images/timer_arduino_connection.jpg" alt="Taymer moduli Arduino bilan ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
-            <p class="image-caption">Arduino bilan ulanish sxemasi</p>
-        </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
-        
-        
         <div class="code-container">
             <div class="code-header">
                 <span>Arduino dastur namunasi</span>
-                
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
@@ -129,10 +112,9 @@ void loop() {
 
     delay(1000); // ⏳ 1 soniyada yangilanadi
 }
-
             </code></pre>
         </div>
-        <p>Ushbu kod displeyda 0 dan 99 gacha bo‘lgan sonlarni har soniyada ko‘rsatadi.</p>
+        <p>Ushbu kod real vaqt soati modulidan joriy vaqt va sanani o‘qib, ularni serial monitor orqali chiqaradi.</p>
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
@@ -143,7 +125,7 @@ void loop() {
 
     <div class="my-5">
         <h2>Umumiy tahlil</h2>
-        <p>NSW taymer moduli TM1637 chipi asosida ishlab, 4 raqamli 7-segmentli displey orqali vaqtni aniq ko‘rsatadi. Modulning soddaligi va raqamli interfeysi uni Arduino va boshqa mikrokontrollerlar bilan oson integratsiya qilish imkonini beradi. Ushbu modul ta’lim, sport va avtomatlashtirish loyihalari uchun ideal hisoblanadi.</p>
+        <p>NSW taymer moduli DS3231 yoki shunga o‘xshash RTC chipi asosida ishlaydi va real vaqt soati sifatida aniq vaqtni ta’minlaydi. Modulning I2C interfeysi uni Arduino va boshqa mikrokontrollerlar bilan oson integratsiya qilish imkonini beradi. Ushbu modul ta’lim, avtomatlashtirish va vaqt asosidagi loyihalar uchun ideal hisoblanadi.</p>
     </div>
 
     <div class="text-center my-5">

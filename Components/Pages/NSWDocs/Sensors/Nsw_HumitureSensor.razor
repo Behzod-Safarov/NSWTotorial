@@ -12,9 +12,9 @@
 
     <div class="my-5">
         <h2>Umumiy ma’lumot</h2>
-        <p>NSW namlik va harorat datchigi atrof-muhitdagi namlik va haroratni o‘lchash uchun mo‘ljallangan. Ushbu datchik havo sifatini monitoring qilish, avtomatlashtirish tizimlari va ta’lim loyihalarida keng qo‘llaniladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
+        <p>NSW namlik va harorat datchigi DHT11 asosida atrof-muhitdagi namlik va haroratni o‘lchash uchun mo‘ljallangan. Ushbu datchik havo sifatini monitoring qilish, avtomatlashtirish tizimlari va ta’lim loyihalarida keng qo‘llaniladi. U Arduino va boshqa mikrokontrollerlar bilan mos keladi.</p>
         <div class="image-container">
-            <img src="images/humitureSensor.jpg" alt="NSW namlik va harorat datchigi" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
+            <img src="Images/humitureSensor.jpg" alt="NSW namlik va harorat datchigi" class="img-fluid rounded shadow my-3" style="max-width: 150px;" loading="lazy">
             <p class="image-caption">NSW namlik va harorat datchigi – atrof-muhitni monitoring qilish uchun</p>
         </div>
     </div>
@@ -23,9 +23,9 @@
         <h2>Asosiy xususiyatlar</h2>
         <ul>
             <li>Ishlash kuchlanishi: 3.3V–5V DC</li>
-            <li>Namlik diapazoni: 0–100% RH</li>
-            <li>Harorat diapazoni: -40°C dan +80°C gacha</li>
-            <li>O‘lchov aniqligi: ±2% RH, ±0.5°C</li>
+            <li>Namlik diapazoni: 20–80% RH (DHT11 uchun optimal)</li>
+            <li>Harorat diapazoni: 0°C dan +50°C gacha (DHT11 uchun optimal)</li>
+            <li>O‘lchov aniqligi: ±5% RH, ±2°C (DHT11 uchun)</li>
             <li>Modul hajmi: 35×20×10 mm</li>
         </ul>
     </div>
@@ -44,7 +44,7 @@
 
     <div class="my-5">
         <h2>Pin ta’rifi</h2>
-        <p>NSW namlik va harorat datchigi quyidagi pinlarga ega:</p>
+        <p>NSW namlik va harorat datchigi (DHT11 asosida) quyidagi pinlarga ega:</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -62,12 +62,8 @@
                     <td>Quvvat manbai (3.3V yoki 5V)</td>
                 </tr>
                 <tr>
-                    <td>SCL</td>
-                    <td>I2C soat liniyasi</td>
-                </tr>
-                <tr>
-                    <td>SDA</td>
-                    <td>I2C ma’lumot liniyasi</td>
+                    <td>DATA</td>
+                    <td>DHT11 ma’lumot liniyasi (bitta simli raqamli signal)</td>
                 </tr>
             </tbody>
         </table>
@@ -76,23 +72,23 @@
     <div class="my-5">
         <h2>Simlarni ulash rejimi</h2>
         <p>● RJ25 bilan ulanish</p>
-        <p>NSW namlik va harorat datchigi sariq rangga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining sariq rangli portlariga ulanadi.</p>
+        <p>NSW namlik va harorat datchigi sariq rangga ega bo‘lib, RJ25 porti orqali NSW boshqaruv platasining sariq rangli portlariga ulanadi (masalan, PORT_4, pin 8 va 9).</p>
         @* <div class="image-container">
-            <img src="images/nsw_humituresensor_rj25.jpg" alt="Namlik va harorat datchigi RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="Images/nsw_humituresensor_rj25.jpg" alt="Namlik va harorat datchigi RJ25 ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">RJ25 porti orqali ulanish sxemasi</p>
         </div>
 
         <p>● Dupont simi bilan ulanish</p>
-        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda SCL va SDA pinlari mos ravishda Arduino’ning A5 (SCL) va A4 (SDA) pinlariga ulanadi.</p>
+        <p>Dupont simi yordamida modulni Arduino UNO platasiga ulashda DATA pinini Arduino’ning raqamli pinlaridan biriga (masalan, D2) ulang. VCC va GND mos ravishda 5V va GND pinlariga ulanadi.</p>
         <div class="image-container">
-            <img src="images/nsw_humituresensor_dupont.jpg" alt="Namlik va harorat datchigi Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
+            <img src="Images/nsw_humituresensor_dupont.jpg" alt="Namlik va harorat datchigi Dupont ulanishi" class="img-fluid rounded shadow my-3" style="max-width: 400px;" loading="lazy">
             <p class="image-caption">Dupont simi orqali ulanish sxemasi</p>
         </div> *@
     </div>
 
     <div class="my-5">
         <h2>Dasturlash bo‘yicha qo‘llanma</h2>
-        <p>Arduino IDE yordamida NSW namlik va harorat datchigini (masalan, SHT31 asosida) boshqarish uchun <code>NswHumitureSensor.h</code> kutubxonalaridan foydalaniladi. Quyidagi kod harorat va namlik ma’lumotlarini o‘qib, Serial monitorda ko‘rsatadi.</p>
+        <p>Arduino IDE yordamida NSW namlik va harorat datchigini (DHT11 asosida) boshqarish uchun <code>NswHumitureSensor.h</code> kutubxonalaridan foydalaniladi. Quyidagi kod harorat va namlik ma’lumotlarini o‘qib, Serial monitorda ko‘rsatadi va xatolarni tekshiradi.</p>
         
         <div class="code-container">
             <div class="code-header">
@@ -101,38 +97,41 @@
             </div>
             <pre class="line-numbers"><code class="language-cpp">
 #include &lt;Wire.h>
-#include &lt;NswHumitureSensor.h>  // NswBlock uchun DHT11 harorat va namlik sensor kutubxonasi chaqirilmoqda
+#include &lt;NswHumitureSensor.h>  // NswBlock uchun DHT11 harorat va namlik sensor kutubxonasi
 
 // 📌 DHT11 sensorini PORT_4 ga ulaymiz (PORT_4 = pin 8 va 9)
 NswHumitureSensor humitureSensor(PORT_4);
 
 void setup() {
     Serial.begin(9600);  // 📌 Seriyali monitorni 9600 baud tezlikda ishga tushiramiz
-    Serial.println("DHT11 Sensor Test boshlandi...");  
+    Serial.println("DHT11 Sensor Test boshlandi...");
 }
 
 void loop() {
     float temperature = humitureSensor.getTemperature();  // 📌 Haroratni o‘qib olish (°C)
     float humidity = humitureSensor.getHumidity();        // 📌 Namlikni o‘qib olish (%)
 
-    // 📌 Haroratni chiqaramiz
-    Serial.print("Harorat: ");
-    Serial.print(temperature);
-    Serial.println(" °C");
+    // 📌 Ma’lumotlarni tekshirish
+    if (isnan(temperature) || isnan(humidity)) {
+        Serial.println("Datchikdan ma’lumot o‘qib bo‘lmadi!");
+    } else {
+        // 📌 Haroratni chiqaramiz
+        Serial.print("Harorat: ");
+        Serial.print(temperature);
+        Serial.println(" °C");
 
-    // 📌 Namlikni chiqaramiz
-    Serial.print("Namlik: ");
-    Serial.print(humidity);
-    Serial.println(" %");
+        // 📌 Namlikni chiqaramiz
+        Serial.print("Namlik: ");
+        Serial.print(humidity);
+        Serial.println(" %");
+    }
 
     Serial.println("--------------------------");  // 📌 Chiziq qo‘shib, natijalarni ajratamiz
     delay(2000);  // 📌 Har 2 soniyada natijalarni yangilab turamiz
 }
-
             </code></pre>
         </div>
 
-        
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
@@ -142,7 +141,7 @@ void loop() {
 
     <div class="my-5">
         <h2>Umumiy tahlil</h2>
-        <p>NSW namlik va harorat datchigi (masalan, SHT31 asosida) I2C protokoli orqali yuqori aniqlikda harorat va namlik ma’lumotlarini uzatadi. Modulning kichik o‘lchami va past quvvat sarfi uni havo sifatini monitoring qilish, avtomatlashtirish va ta’lim loyihalari uchun qulay qiladi.</p>
+        <p>NSW namlik va harorat datchigi (DHT11 asosida) bitta simli raqamli protokol orqali harorat va namlik ma’lumotlarini uzatadi. Modulning kichik o‘lchami, past quvvat sarfi va oddiy ulanishi uni havo sifatini monitoring qilish, avtomatlashtirish va ta’lim loyihalari uchun qulay qiladi.</p>
     </div>
 
     <div class="text-center my-5">
