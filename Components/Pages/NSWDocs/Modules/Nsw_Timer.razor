@@ -88,7 +88,7 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-#include &lt; Wire.h>
+#include &lt;Wire.h>
 #include "NswTime.h"
 
 // 📌 Soat moduli bilan ishlash
@@ -99,7 +99,9 @@ void setup() {
     clock.begin();
 
     // 📌 Vaqtni qo‘lda sozlash (faqat bir marta yozish kerak!)
+    //               sekond/minut/soat
     // clock.setTime(0, 30, 12);  // ⏰ 12:30:00
+    //        hafta kuni/ oy kuni / oy / yil
     // clock.setDate(2, 18, 3, 25);  // 📆 Seshanba, 18-Mart, 2025
 }
 
@@ -112,6 +114,7 @@ void loop() {
 
     delay(1000); // ⏳ 1 soniyada yangilanadi
 }
+
             </code></pre>
         </div>
         <p>Ushbu kod real vaqt soati modulidan joriy vaqt va sanani o‘qib, ularni serial monitor orqali chiqaradi.</p>

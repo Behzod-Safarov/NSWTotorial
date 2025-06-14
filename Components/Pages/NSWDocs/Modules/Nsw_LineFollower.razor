@@ -97,26 +97,38 @@
                 <button class="copy-btn" onclick="copyCode(this)" title="Nusxa olish">Nusxa olish</button>
             </div>
             <pre class="line-numbers"><code class="language-cpp">
-#include &lt;NswLineFollower.h>
+#include "NswLineFollower.h"
 
-// 📌 Chiziq kuzatuvchi datchikni PORT_4 ga ulaymiz (pin 8, 9)
-NswLineFollower chiziqDatchik(PORT_4);
+// NSWbloc’ning PORT_3 ga ulangan deb faraz qilamiz
+NswLineFollower lineFinder(PORT_3); 
 
 void setup() {
-    Serial.begin(115200); // 📌 Seriyali monitorni ishga tushiramiz
+  Serial.begin(9600);
+  Serial.println("NSW Line Follower Test boshlandi");
 }
 
 void loop() {
-    uint8_t chap = chiziqDatchik.oqishChap();   // 📌 Chap sensor qiymati
-    uint8_t ong = chiziqDatchik.oqishOng();    // 📌 O'ng sensor qiymati
-
-    Serial.print("Chap: ");
-    Serial.print(chap);  // 📌 Chap sensorni chiqarish (1 - qora, 0 - oq)
-    Serial.print(" | Ong: ");
-    Serial.println(ong); // 📌 O'ng sensorni chiqarish (1 - qora, 0 - oq)
-
-    delay(200); // ⏳ 200ms kutish
+  int sensorState = lineFinder.readSensors();
+  switch (sensorState) {
+    case S1_IN_S2_IN:
+      Serial.println("Sensor 1 va 2 qora chiziqda (ichkarida)");
+      break;
+    case S1_IN_S2_OUT:
+      Serial.println("Sensor 2 oq fon (tashqarida)");
+      break;
+    case S1_OUT_S2_IN:
+      Serial.println("Sensor 1 oq fon (tashqarida)");
+      break;
+    case S1_OUT_S2_OUT:
+      Serial.println("Sensor 1 va 2 oq fonda (tashqarida)");
+      break;
+    default:
+      Serial.println("Noma’lum holat");
+      break;
+  }
+  delay(200);
 }
+
 
             </code></pre>
         </div>

@@ -39,7 +39,8 @@
 }
 
 .logo {
-    height: 60px;
+    width: 100px;
+    height: 70px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
